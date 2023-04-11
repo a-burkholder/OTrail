@@ -212,8 +212,11 @@ public class Date {
      * */
     public void setTemp(int climateZone) {
         int dtemp = rand.nextInt(40);
-        //ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-        currentTemp = avgTemps[climateZone][date[1]]+ dtemp;
+
+        if (dtemp < 20)
+            currentTemp = avgTemps[climateZone][date[1]]- dtemp;
+        else if (dtemp >= 20)
+            currentTemp = avgTemps[climateZone][date[1]]+ dtemp;
     }
 
     /**setGrass(int climateZone)
