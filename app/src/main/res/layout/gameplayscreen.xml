@@ -9,65 +9,77 @@
         android:id="@+id/action"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:text="@string/action"
-        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="53dp" />
 
     <Button
         android:id="@+id/timeline"
         android:layout_width="622dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/timeline"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Talk"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/talk"
-        tools:layout_editor_absoluteX="586dp"
-        tools:layout_editor_absoluteY="126dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continueAction" />
 
     <Button
         android:id="@+id/Trade"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/trade"
-        tools:layout_editor_absoluteX="586dp"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Shop" />
 
     <Button
         android:id="@+id/Shop"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/shop"
-        tools:layout_editor_absoluteX="586dp"
-        tools:layout_editor_absoluteY="199dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Talk" />
 
     <Button
         android:id="@+id/Inventory"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginStart="16dp"
         android:text="@string/inventory"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="126dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action" />
 
     <Button
         android:id="@+id/continueAction"
         android:layout_width="130dp"
         android:layout_height="73dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/continue_trail"
-        tools:layout_editor_absoluteX="586dp"
-        tools:layout_editor_absoluteY="53dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="699dp"
         android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/trailinfo"
-        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="8dp" />
 
     <TextView
@@ -78,6 +90,16 @@
         android:text="@string/datetodisplay"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/announcementdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/announcement"
+        app:layout_constraintBottom_toTopOf="@+id/timeline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/weatherdisplay"
