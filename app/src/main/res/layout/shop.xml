@@ -7,347 +7,379 @@
     tools:layout_editor_absoluteY="0dp">
 
     <TextView
-        android:id="@+id/textView64"
+        android:id="@+id/textView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <TextView
-        android:id="@+id/textView55"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <TextView
-        android:id="@+id/textView57"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wagon Wheel"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="204dp" />
+        android:text="Baskets"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="141dp" />
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$2"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="288dp" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wagon Tongue"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="260dp" />
-
-    <TextView
-        android:id="@+id/textView62"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sets of Clothing"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="204dp" />
-
-    <TextView
-        android:id="@+id/textView48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="260dp" />
-
-    <TextView
-        android:id="@+id/textView47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$20"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <TextView
-        android:id="@+id/textView50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wagon Axle"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="232dp" />
-
-    <TextView
-        android:id="@+id/textView59"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$1 for 2 pounds"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="83dp" />
-
-    <TextView
-        android:id="@+id/textView52"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$5"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="149dp" />
-
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <TextView
-        android:id="@+id/textView60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="232dp" />
-
-    <TextView
-        android:id="@+id/textView56"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medical Supply"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="290dp" />
-
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pounds of Food"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="83dp" />
-
-    <TextView
-        android:id="@+id/textView61"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Baskets"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="330dp" />
 
     <TextView
         android:id="@+id/textView58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Oxen"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="177dp" />
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="179dp" />
 
     <TextView
-        android:id="@+id/textView63"
+        android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to the Shop"
-        tools:layout_editor_absoluteX="299dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/textView65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy (Yes/No)"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="48dp" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="75dp" />
-
-    <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="106dp" />
-
-    <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="284dp"
-        tools:layout_editor_absoluteY="142dp" />
-
-    <Switch
-        android:id="@+id/switch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="284dp"
-        tools:layout_editor_absoluteY="172dp" />
-
-    <Switch
-        android:id="@+id/switch5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="205dp" />
+        android:text="Sets of Clothing"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="100dp" />
 
     <Switch
         android:id="@+id/switch6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="231dp" />
+        tools:layout_editor_absoluteX="354dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="215dp" />
 
     <Switch
-        android:id="@+id/switch7"
+        android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="259dp" />
+        tools:layout_editor_absoluteX="368dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy (Yes/No)"
+        tools:layout_editor_absoluteX="378dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="132dp" />
 
     <Switch
         android:id="@+id/switch8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="289dp" />
+        tools:layout_editor_absoluteX="354dp"
+        tools:layout_editor_absoluteY="322dp" />
 
-    <Button
-        android:id="@+id/button35"
+    <TextView
+        android:id="@+id/textView72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="454dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:text="#"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="253dp" />
 
-    <Button
-        android:id="@+id/button37"
+    <TextView
+        android:id="@+id/textView60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="549dp"
+        android:text="$10"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medical Supply"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pounds of Food"
+        tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="61dp" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wagon Tongue"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Inventory"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wagon Wheel"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$20"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wagon Axle"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <Switch
+        android:id="@+id/switch7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="354dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1 for 2 pounds"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="363dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$5"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="363dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Shop"
+        tools:layout_editor_absoluteX="539dp"
+        tools:layout_editor_absoluteY="9dp" />
 
     <Button
         android:id="@+id/button38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="644dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:text="Continue on the Trail"
+        tools:layout_editor_absoluteX="494dp"
+        tools:layout_editor_absoluteY="365dp" />
 
-    <Button
-        android:id="@+id/button39"
+    <TextView
+        android:id="@+id/textView76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="452dp"
-        tools:layout_editor_absoluteY="105dp" />
+        android:text="Item #"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-    <Button
-        android:id="@+id/button40"
+    <TextView
+        android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="550dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:text="1"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="58dp" />
 
-    <Button
-        android:id="@+id/button41"
+    <TextView
+        android:id="@+id/textView79"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="648dp"
-        tools:layout_editor_absoluteY="103dp" />
+        android:text="3"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="139dp" />
 
-    <Button
-        android:id="@+id/button42"
+    <TextView
+        android:id="@+id/textView83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="452dp"
-        tools:layout_editor_absoluteY="143dp" />
+        android:text="7"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="293dp" />
 
-    <Button
-        android:id="@+id/button43"
+    <TextView
+        android:id="@+id/textView81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="544dp"
-        tools:layout_editor_absoluteY="146dp" />
+        android:text="5"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="212dp" />
 
-    <Button
-        android:id="@+id/button44"
+    <TextView
+        android:id="@+id/textView84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="638dp"
-        tools:layout_editor_absoluteY="144dp" />
+        android:text="8"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="328dp" />
 
-    <Button
-        android:id="@+id/button45"
+    <TextView
+        android:id="@+id/textView82"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="452dp"
-        tools:layout_editor_absoluteY="179dp" />
+        android:text="6"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="244dp" />
 
-    <Button
-        android:id="@+id/button46"
+    <TextView
+        android:id="@+id/textView80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="549dp"
-        tools:layout_editor_absoluteY="190dp" />
+        android:text="4"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="178dp" />
 
-    <Button
-        android:id="@+id/button47"
+    <TextView
+        android:id="@+id/textView78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="642dp"
-        tools:layout_editor_absoluteY="190dp" />
-
-    <Button
-        android:id="@+id/button48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="442dp"
-        tools:layout_editor_absoluteY="220dp" />
-
-    <Button
-        android:id="@+id/button49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="536dp"
-        tools:layout_editor_absoluteY="227dp" />
+        android:text="2"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="98dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
