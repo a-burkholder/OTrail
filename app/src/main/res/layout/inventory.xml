@@ -179,4 +179,12 @@
         android:text="#"
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="315dp" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://garystockbridge617.getarchive.net/media/horse-drawn-wagon-loaded-with-sacks-of-potatoes-nara-285529-beb6ac"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="93dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
