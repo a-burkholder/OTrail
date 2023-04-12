@@ -38,14 +38,6 @@
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="100dp" />
 
-    <Switch
-        android:id="@+id/switch6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="354dp"
-        tools:layout_editor_absoluteY="248dp" />
-
     <TextView
         android:id="@+id/textView45"
         android:layout_width="wrap_content"
@@ -53,30 +45,6 @@
         android:text="$10"
         tools:layout_editor_absoluteX="196dp"
         tools:layout_editor_absoluteY="215dp" />
-
-    <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="368dp"
-        tools:layout_editor_absoluteY="92dp" />
-
-    <Switch
-        android:id="@+id/switch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="360dp"
-        tools:layout_editor_absoluteY="179dp" />
-
-    <TextView
-        android:id="@+id/textView65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy (Yes/No)"
-        tools:layout_editor_absoluteX="378dp"
-        tools:layout_editor_absoluteY="18dp" />
 
     <TextView
         android:id="@+id/textView44"
@@ -93,14 +61,6 @@
         android:text="#"
         tools:layout_editor_absoluteX="314dp"
         tools:layout_editor_absoluteY="132dp" />
-
-    <Switch
-        android:id="@+id/switch8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="354dp"
-        tools:layout_editor_absoluteY="322dp" />
 
     <TextView
         android:id="@+id/textView72"
@@ -230,14 +190,6 @@
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="253dp" />
 
-    <Switch
-        android:id="@+id/switch7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="354dp"
-        tools:layout_editor_absoluteY="284dp" />
-
     <TextView
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
@@ -254,36 +206,12 @@
         tools:layout_editor_absoluteX="320dp"
         tools:layout_editor_absoluteY="61dp" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="363dp"
-        tools:layout_editor_absoluteY="58dp" />
-
-    <Switch
-        android:id="@+id/switch5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="360dp"
-        tools:layout_editor_absoluteY="215dp" />
-
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$5"
         tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="132dp" />
-
-    <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="363dp"
         tools:layout_editor_absoluteY="132dp" />
 
     <TextView
@@ -381,5 +309,29 @@
         android:text="2"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose an item to buy"
+        tools:layout_editor_absoluteX="442dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of that item to buy"
+        tools:layout_editor_absoluteX="441dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy"
+        tools:layout_editor_absoluteX="495dp"
+        tools:layout_editor_absoluteY="300dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
