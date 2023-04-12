@@ -9,7 +9,7 @@
  * move along the Oregon Trail.
  */
 package com.example.OTrail;
-
+import java.util.Random;
 public class Inventory
 {
     private int playerMoneyCount = 1600;
@@ -22,7 +22,17 @@ public class Inventory
     private int wagonTongueCount = 1;
     private int medicalSupplyCount = 0;
     private boolean wagonUsable = false;
-
+    private String tradeList[] = {
+            "-5 clothes, + wheel",
+            "-5 clothes, + Axle",
+            "-5 clothes, + Tongue",
+            "-1 oxen, +5 clothes",
+            "-20 food, +2 clothes",
+            "-wheel, + Tongue",
+            "-wheel, + axle",
+            "-axle, + wheel",
+            "-axle, + tongue",
+            "-tongue, + wheel"};
 
     /**
      * Default constructor for the Inventory class.
@@ -249,5 +259,90 @@ public class Inventory
         System.out.println("Your Items: \nPounds of Food = " + foodCount + "\nClothingSets = " + clothingCount + "\nNumber of Bullets = "
                 + bulletsCount + "\nNumber of Oxen = " + oxenCount + "\nNumber of Wagon Wheels = " + wagonWheelCount + "\nNumber of Wagon Axels = "
                 + wagonAxleCount +"\nNumber of Wagon Tongues = " + wagonTongueCount +"\nNumber of Medical Supplies = " + medicalSupplyCount);
+    }
+
+    /**canTrade(Map map)
+     * tries to create a trade.
+     * @param map The current map object, used for doing location checks
+     * @return -1 if no trade, the trade number if there is one availible
+     */
+    public int getTrade(Map map){
+        Random rand =  new Random();
+        int chance = rand.nextInt(100);
+        if (map.getDistFromLM() == 0 || map.getDistToLM() == 0){
+            return rand.nextInt(10);
+        }
+        else if (chance<6){
+            return rand.nextInt(10);
+        }
+        else return -1;
+    }
+
+    /**getTrade(int tradeNumber)
+     * shares the exact trade to be done
+     * @param tradeNumber The trade to be received
+     * @return a string with the data of the trade
+     * */
+    public String getTrade(int tradeNumber){
+        return tradeList[tradeNumber];
+    }
+
+    /**confirmTrade(boolean answer, int tradeNumber)
+     * confirms the trade by taking in an input asking if the trade is ok
+     * */
+    public void confirmTrade(boolean answer, int trade){
+        switch (trade){
+            case 0: if (this.clothingCount >= 5){
+                this.clothingCount -= 5;
+                this.wagonWheelCount++;
+            }
+            else break;
+            case 1: if (this.clothingCount >= 5){
+                this.clothingCount -= 5;
+                this.wagonAxleCount++;
+            }
+            else break;
+            case 2: if (this.clothingCount >= 5){
+                this.clothingCount -= 5;
+                this.wagonTongueCount++;
+            }
+            else break;
+            case 3: if (this.oxenCount > 1){
+                this.oxenCount--;
+                this.clothingCount += 5;
+            }
+            else break;
+            case 4: if (this.foodCount > 20){
+                this.foodCount -= 20;
+                this.clothingCount += 2;
+            }
+            else break;
+            case 5: if (this.wagonWheelCount > 4){
+                this.wagonWheelCount--;
+                this.wagonTongueCount++;
+            }
+            else break;
+            case 6: if (this.wagonWheelCount > 4){
+                this.wagonWheelCount--;
+                this.wagonAxleCount++;
+            }
+            else break;
+            case 7: if (this.wagonAxleCount > 2){
+                this.wagonAxleCount--;
+                this.wagonWheelCount++;
+            }
+            else break;
+            case 8: if (this.wagonAxleCount > 2){
+                this.wagonAxleCount--;
+                this.wagonTongueCount++;
+            }
+            else break;
+            case 9: if (this.wagonTongueCount > 1){
+                this.wagonTongueCount--;
+                this.wagonWheelCount++;
+            }
+            else break;
+            default:break;
+        }
     }
 }
