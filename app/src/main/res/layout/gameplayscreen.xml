@@ -155,4 +155,21 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         tools:layout_editor_absoluteY="16dp" />
 
+    <ImageView
+        android:id="@+id/gameplaybackground"
+        android:layout_width="1000dp"
+        android:layout_height="500dp"
+        android:adjustViewBounds="false"
+        android:background="#000000"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gameplayBackground_1_Plaines" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
