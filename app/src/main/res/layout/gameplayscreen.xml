@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/action"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/action"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <Button
+        android:id="@+id/timeline"
+        android:layout_width="622dp"
+        android:layout_height="43dp"
+        android:text="@string/timeline"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/Talk"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/talk"
+        tools:layout_editor_absoluteX="586dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <Button
+        android:id="@+id/Trade"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/trade"
+        tools:layout_editor_absoluteX="586dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <Button
+        android:id="@+id/Shop"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/shop"
+        tools:layout_editor_absoluteX="586dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <Button
+        android:id="@+id/Inventory"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/inventory"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <Button
+        android:id="@+id/continueAction"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:text="@string/continue_trail"
+        tools:layout_editor_absoluteX="586dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="699dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/trailinfo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="152dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="98dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

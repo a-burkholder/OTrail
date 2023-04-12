@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">OTrail</string>
+    <string name="timeline">Game Timeline</string>
+    <string name="continue_trail">Continue Trail</string>
+    <string name="talk">Talk</string>
+    <string name="shop">Shop</string>
+    <string name="trade">Trade</string>
+    <string name="inventory">Inventory</string>
+    <string name="action">Do Actions</string>
 </resources>
