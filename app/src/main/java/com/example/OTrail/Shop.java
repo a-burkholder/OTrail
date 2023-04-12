@@ -10,11 +10,16 @@
  */
 
 package com.example.OTrail;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Scanner;
 
 
 
-public class Shop
+public class Shop extends AppCompatActivity
 {
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
@@ -27,6 +32,40 @@ public class Shop
     private int medicalSupplyPurchased = 0;
     private int moneyUsed = 0;
     private Inventory inv;
+
+    private int items = 0;
+    private int amount = 0;
+
+
+
+    final int FOODPRICE = 1;
+    final int CLOTHINGPRICE = 10;
+    final int BULLETSBOXPRICE = 2;
+    final int OXENPRICE = 20;
+    final int WAGONPARTPRICE = 10;
+    final int MEDICALSUPPLYPRICE = 2;
+
+
+
+
+    RadioGroup radioGroup1;
+    RadioGroup radioGroup2;
+
+    RadioButton buyFood;
+    RadioButton buyClothing;
+    RadioButton buyBaskets;
+    RadioButton buyOxen;
+    RadioButton buyWagonWheel;
+    RadioButton buyWagonAxle;
+    RadioButton buyWagonTongue;
+    RadioButton buyMedicalSupply;
+
+    RadioButton buy100;
+    RadioButton buy50;
+    RadioButton buy25;
+    RadioButton buy10;
+    RadioButton buy2;
+    RadioButton buy1;
 
     /**
      * Constructor for the Shop class.
@@ -44,116 +83,90 @@ public class Shop
      * Allows the player to buy items from the shops along the oregon trail. Will calculate the players total amount of
      * money spent.
      */
-    public void buyItems()
+    public void onRadioButtonClicked(View view)
     {
-        Scanner in = new Scanner(System.in);
+        boolean checked = ((RadioButton) view).isChecked();
 
-        final int FOODPRICE = 1;
-        final int CLOTHINGPRICE = 10;
-        final int BULLETSBOXPRICE = 2;
-        final int OXENPRICE = 20;
-        final int WAGONPARTPRICE = 10;
-        final int MEDICALSUPPLYPRICE = 2;
-
-        // items that can be bough from the shop
-        int item = 0;
-
-        //number of an item that the player is buying
-        int amount = 0;
 
         while(item != 9)
         {
-            // list of items that the player can buy from the Shop
-            System.out.println("You can buy: \n 1: Food ($1 for 2 pounds) \n 2: Set of Clothing ($10 for one set) " +
-                               "\n 3: Box of Bullets ($2 per box, 20 bullets per box) \n 4: Oxen ($20 each) \n 5: Extra " +
-                               "Wagon Wheel ($10 each) \n 6: Extra Wagon Axle ($10 each) \n 7: Extra Wagon Tongue ($10 each) " +
-                               "\n 8: Medical Supply Box ($2 each) \n Type '9' to exit");
-
-
-
-            System.out.println("You have $" + (playerMoneyCount - moneyUsed));
-            System.out.print("What item would you like to buy? ");
-            item = in.nextInt();
-
-            if(item !=9)
-            {
-                System.out.print("How many of this item do you want? ");
-                amount = in.nextInt();
-            }
-
-            System.out.println("[========================================================================]");
 
             // Updates the amount of money the player has along with their inventory of items.
-            switch(item)
-            {
-                case 1:
-                {
-                    foodPurchased = amount;
+            switch (view.getId()) {
+                case R.id.buyFood: {
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            foodPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            foodPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            foodPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            foodPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            foodPurchased = 2;
+                        }
+                        break;
+
+                        case R.id
+                    }
                     moneyUsed = moneyUsed + foodPurchased * FOODPRICE;
                 }
                 break;
-                case 2:
-                {
+                case R.id.buyClothing: {
                     clothingPurchased = amount;
-                    moneyUsed = moneyUsed + clothingPurchased* CLOTHINGPRICE;
+                    moneyUsed = moneyUsed + clothingPurchased * CLOTHINGPRICE;
                 }
                 break;
-                case 3:
-                {
+                case R.id.buyBaskets: {
                     bulletsBoxPurchased = amount;
-                    moneyUsed = moneyUsed + bulletsBoxPurchased* BULLETSBOXPRICE;
+                    moneyUsed = moneyUsed + bulletsBoxPurchased * BULLETSBOXPRICE;
                 }
                 break;
-                case 4:
-                {
+                case R.id.buyOxen: {
                     oxenPurchased = amount;
-                    moneyUsed = moneyUsed + oxenPurchased* OXENPRICE;
+                    moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
                 }
                 break;
-                case 5:
-                {
+                case R.id.buyWagonWheel: {
                     wagonWheelPurchased = amount;
-                    moneyUsed = moneyUsed + wagonWheelPurchased* WAGONPARTPRICE;
+                    moneyUsed = moneyUsed + wagonWheelPurchased * WAGONPARTPRICE;
                 }
                 break;
-                case 6:
-                {
+                case R.id.buyWagonAxle: {
                     wagonAxlePurchased = amount;
-                    moneyUsed = moneyUsed + wagonAxlePurchased* WAGONPARTPRICE;
+                    moneyUsed = moneyUsed + wagonAxlePurchased * WAGONPARTPRICE;
                 }
                 break;
-                case 7:
-                {
+                case R.id.buyWagonTongue: {
                     wagonTonguePurchased = amount;
-                    moneyUsed = moneyUsed + wagonTonguePurchased* WAGONPARTPRICE;
+                    moneyUsed = moneyUsed + wagonTonguePurchased * WAGONPARTPRICE;
                 }
                 break;
-                case 8:
-                {
+                case R.id.buyMedicalSupply: {
                     medicalSupplyPurchased = amount;
-                    moneyUsed = moneyUsed + medicalSupplyPurchased* MEDICALSUPPLYPRICE;
-                }
-                break;
-                case 9:
-                {
-                    resetItems();
-                    System.out.println("Exiting the shop...");
-                    System.out.println("[========================================================================]");
-                    moneyUsed = 0;
+                    moneyUsed = moneyUsed + medicalSupplyPurchased * MEDICALSUPPLYPRICE;
                 }
                 break;
                 default:
-                {
-                    System.out.println("That is not an item!");
-                    System.out.println("[========================================================================]");
-
-                }
-            }
-
-            if(item != 9)
-            {
-                item = 0;
-                amount = 0;
             }
         }
     }
