@@ -126,7 +126,12 @@ public class Shop extends AppCompatActivity
                         }
                         break;
 
-                        case R.id
+                        case R.id.buy1:
+                        {
+                            foodPurchased = 1;
+                        }
+                        break;
+                        default:
                     }
                     moneyUsed = moneyUsed + foodPurchased * FOODPRICE;
                 }
