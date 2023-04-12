@@ -9,6 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to Independence, Missouri"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://oregontrailcenter.org/starting-point"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="198dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
