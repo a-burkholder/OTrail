@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">OTrail</string>
+    <string name="timeline">Game Timeline</string>
+    <string name="continue_trail">Continue Trail</string>
+    <string name="talk">Talk</string>
+    <string name="shop">Shop</string>
+    <string name="trade">Trade</string>
+    <string name="inventory">Inventory</string>
+    <string name="action">Do Actions</string>
+    <string name="rations">Rations</string>
+    <string name="health">Health</string>
+    <string name="speed">Speed</string>
+    <string name="lbsOfFood">1000 lbs</string>
+    <string name="temperature">Temp</string>
+    <string name="datetodisplay">Date</string>
+    <string name="weather">Weather</string>
     <string name="announcement">Announcements Go Here</string>
+    <string name="Oinfo1">The Oregon Trail was a legendary 2170 mile stretch of land from Independence, Missouri to Oregon City, Oregon.In the early 1800s, the trail was utilized by fur traders, only traveling the tail on horseback.By 1836, wagon trains from Independence, Missouri began clearing the trail to Oregon.sAs the years went on, roads, bridges, and ferries were built to speed up the journey.sIn the 1840\'s, the Organic Laws of Oregon promised free land to any settlers who chose to move to Oregon.The term "Manifest Destiny" was coined to describe the thousands of families who traveled the trails, inspired by that very promise.Many other families were inspired by the California Gold rush in 1848, inspired from the promise of riches.By the 1860's, many were traveling on ferries, with rivers and canals bring created to aid the pioneers.Finally, in 1869, the transcontinental railroad was completed, leading many to chose it over the trail.</string>
+    <string name="Oinfo2">While natural hazards and dangerous river crossings were very common along the trail, many emigrants feared contact with Native Americans. However, this fear was often misplaced, as contact was rare, and not always hostile. The emigrants were far more likely to die from accidents; diseases, such as cholera and typhoid; starvation; drowning while attempting a river crossing; or the perils of an unexpected blizzard. The wagon trains often encountered grass fires, hailstorms, floods, and other powerful forces of nature.</string>
+    <string name="Oinfo3">At least 27 different Indian tribes lived near the Oregon Trail, with most offering trades with the emigrants, and only a small portion choosing to stealing small portions of supplies. Because the emigrants were ignorant about Indian cultures, they often behaved in an unnecessarily hostile manner toward the Indians.</string>
+    <string name="Oinfo4">There was rarely any medical care available on the trail, so they would pack primitive medicinals and remedies  like laudanum (an opium medicinal) and camphor for general ailments, quinine, castor oil, and harts horn for  snakebites.The cost of the entire trip, to outfit and transport each family, was about five hundred dollars.</string>
+    <string name="Oinfo5">Though there was very little formal schooling, children learned a great deal — from how to care for animals to the names of flowers. Women and teenage girls worked extremely hard. In addition to cooking and caring for the younger children, they also pitched tents, built fires, drove oxen, protected camp, and assumed other traditionally male duties.</string>
+    <string name="Oinfo6">Most emigrants walked next to their covered wagons, rather than riding, so that the livestock would have less weight to pull, and because there was very little room to sit inside. Firewood was always scarce, and during the day, women and children collected weeds and buffalo chips (dung) to use to heat their evening meal.</string>
+    <string name="hattie_info1">Hattie Campbell is a 13 year old pioneer, eldest child to Charles and Augusta Campbell, spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving from Independence, Missouri in 1847, Hattie and her family are joining the Great Migration to Oregon. Their simple farm life had been uprooted by overcrowding, high taxes, and annual rounds of the deadly swamp fever.</string>
+    <string name="hattie_info2">Over the past few months, Hattie\'s father, Charles Campbell, shares his passion for traveling the Oregon Trail, buying booklets about the journey and speaking of partaking in a part of America\'s "Manifest Destiny." However, Hattie's mother continues to share her fears of the trail, warning of the death toll and tearing up when thinking about how she will never see her sisters again. </string>
+    <string name="hattie_info3">In March, Hattie\'s father sold the house, chickens, three horses, and a cow to a neighbor for $65, which when added their original savings and a riverboat passage to Independence, Missouri, should be enough to get them to Oregon.</string>
 </resources>
