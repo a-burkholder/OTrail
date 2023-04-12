@@ -7,12 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Hattie's Oregon Trail"
+        android:textSize="70sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="75dp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Busy People"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Your Journey"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="294dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
