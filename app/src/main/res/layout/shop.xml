@@ -8,14 +8,6 @@
 
 
     <TextView
-        android:id="@+id/textView88"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 2"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="246dp" />
-
-    <TextView
         android:id="@+id/textView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -158,18 +150,17 @@
     </RadioGroup>
 
 
-
-
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="189dp"
+        android:layout_height="187dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        tools:layout_editor_absoluteX="521dp"
+        tools:layout_editor_absoluteY="96dp">
+
+        <!--adding a radio button -->
 
         <!--adding a radio button -->
         <RadioButton
@@ -195,7 +186,6 @@
             android:textAlignment="center"
             android:textSize="15sp" />
 
-        <!--adding a radio button -->
         <RadioButton
             android:id="@+id/buy25"
             android:layout_width="200dp"
@@ -241,43 +231,6 @@
             android:textSize="15sp" />
 
     </RadioGroup>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <TextView
         android:id="@+id/textView51"
@@ -542,45 +495,5 @@
         android:text="Buy"
         tools:layout_editor_absoluteX="495dp"
         tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:id="@+id/textView65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 100"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="112dp" />
-
-    <TextView
-        android:id="@+id/textView85"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 25"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="175dp" />
-
-    <TextView
-        android:id="@+id/textView87"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 10"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="212dp" />
-
-    <TextView
-        android:id="@+id/textView86"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 1"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="273dp" />
-
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy 50"
-        tools:layout_editor_absoluteX="562dp"
-        tools:layout_editor_absoluteY="143dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
