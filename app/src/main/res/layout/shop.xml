@@ -6,6 +6,90 @@
     tools:layout_editor_absoluteX="29dp"
     tools:layout_editor_absoluteY="0dp">
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center">
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyFood"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="2dp" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyClothing"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyBaskets"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyOxen"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonWheel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonAxle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonTongue"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyMedicalSupply"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+    </RadioGroup>
+
+
+
+
+
+
     <TextView
         android:id="@+id/textView61"
         android:layout_width="wrap_content"
@@ -315,16 +399,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choose an item to buy"
-        tools:layout_editor_absoluteX="442dp"
-        tools:layout_editor_absoluteY="58dp" />
+        tools:layout_editor_absoluteX="378dp"
+        tools:layout_editor_absoluteY="34dp" />
 
     <TextView
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Number of that item to buy"
-        tools:layout_editor_absoluteX="441dp"
-        tools:layout_editor_absoluteY="135dp" />
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="74dp" />
 
     <Button
         android:id="@+id/button35"
