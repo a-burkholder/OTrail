@@ -4,6 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue on the Trail"
+        tools:layout_editor_absoluteX="486dp"
+        tools:layout_editor_absoluteY="317dp" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -11,4 +19,12 @@
         android:text="Welcome to the Big Blue River Crossing"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talk to a Local"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="67dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

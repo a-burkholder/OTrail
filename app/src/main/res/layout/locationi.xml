@@ -4,6 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue on the Trail"
+        tools:layout_editor_absoluteX="486dp"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talk to a Local"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="67dp" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
