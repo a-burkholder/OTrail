@@ -6,89 +6,6 @@
     tools:layout_editor_absoluteX="29dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center">
-
-        <!--adding a radio button -->
-        <RadioButton
-            android:id="@+id/buyFood"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:padding="2dp" />
-
-        <!--adding a radio button -->
-        <RadioButton
-            android:id="@+id/buyClothing"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <!--adding a radio button -->
-        <RadioButton
-            android:id="@+id/buyBaskets"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <RadioButton
-            android:id="@+id/buyOxen"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <RadioButton
-            android:id="@+id/buyWagonWheel"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <RadioButton
-            android:id="@+id/buyWagonAxle"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <RadioButton
-            android:id="@+id/buyWagonTongue"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-        <RadioButton
-            android:id="@+id/buyMedicalSupply"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp" />
-
-    </RadioGroup>
-
-
-
-
-
 
     <TextView
         android:id="@+id/textView61"
@@ -99,36 +16,12 @@
         tools:layout_editor_absoluteY="141dp" />
 
     <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$2"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="330dp" />
-
-    <TextView
-        android:id="@+id/textView58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Oxen"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="179dp" />
-
-    <TextView
         android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sets of Clothing"
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="100dp" />
-
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="215dp" />
 
     <TextView
         android:id="@+id/textView44"
@@ -147,28 +40,12 @@
         tools:layout_editor_absoluteY="132dp" />
 
     <TextView
-        android:id="@+id/textView72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="#"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="253dp" />
-
-    <TextView
-        android:id="@+id/textView60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="253dp" />
-
-    <TextView
         android:id="@+id/textView56"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medical Supply"
         tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteY="346dp" />
 
     <TextView
         android:id="@+id/textView74"
@@ -176,7 +53,101 @@
         android:layout_height="wrap_content"
         android:text="#"
         tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteY="346dp" />
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$2"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="198dp"
+        android:layout_height="396dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="349dp"
+        tools:layout_editor_absoluteY="18dp">
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyFood"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:checked="false"
+            android:padding="2dp" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyClothing"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/buyBaskets"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyOxen"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonWheel"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonAxle"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyWagonTongue"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+        <RadioButton
+            android:id="@+id/buyMedicalSupply"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp" />
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView51"
@@ -185,22 +156,6 @@
         android:text="Pounds of Food"
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="61dp" />
-
-    <TextView
-        android:id="@+id/textView73"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="#"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="292dp" />
-
-    <TextView
-        android:id="@+id/textView71"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="#"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="215dp" />
 
     <TextView
         android:id="@+id/textView55"
@@ -215,8 +170,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wagon Tongue"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="292dp" />
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/textView83"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="311dp" />
 
     <TextView
         android:id="@+id/textView66"
@@ -239,8 +218,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wagon Wheel"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="215dp" />
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="220dp" />
 
     <TextView
         android:id="@+id/textView68"
@@ -251,28 +254,68 @@
         tools:layout_editor_absoluteY="93dp" />
 
     <TextView
-        android:id="@+id/textView48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$10"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="292dp" />
-
-    <TextView
         android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$20"
         tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="173dp" />
+        tools:layout_editor_absoluteY="178dp" />
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oxen"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="177dp" />
 
     <TextView
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wagon Axle"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="253dp" />
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <TextView
+        android:id="@+id/textView82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="264dp" />
 
     <TextView
         android:id="@+id/textView59"
@@ -297,14 +340,6 @@
         android:text="$5"
         tools:layout_editor_absoluteX="196dp"
         tools:layout_editor_absoluteY="132dp" />
-
-    <TextView
-        android:id="@+id/textView70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="#"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="172dp" />
 
     <TextView
         android:id="@+id/textView43"
@@ -345,46 +380,6 @@
         android:text="3"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="139dp" />
-
-    <TextView
-        android:id="@+id/textView83"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="7"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="293dp" />
-
-    <TextView
-        android:id="@+id/textView81"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="212dp" />
-
-    <TextView
-        android:id="@+id/textView84"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="8"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="328dp" />
-
-    <TextView
-        android:id="@+id/textView82"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="244dp" />
-
-    <TextView
-        android:id="@+id/textView80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="178dp" />
 
     <TextView
         android:id="@+id/textView78"
