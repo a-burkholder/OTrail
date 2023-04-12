@@ -70,14 +70,67 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="8dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="152dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="98dp" />
+    <TextView
+        android:id="@+id/datedisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="@string/datetodisplay"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/weatherdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:text="@string/weather"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/temperatureDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:text="@string/temperature"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/speedDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="372dp"
+        android:text="@string/speed"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/rationDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="468dp"
+        android:text="@string/rations"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/healthDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="576dp"
+        android:text="@string/health"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/foodremainingdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="650dp"
+        android:text="@string/lbsOfFood"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

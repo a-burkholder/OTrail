@@ -7,4 +7,11 @@
     <string name="trade">Trade</string>
     <string name="inventory">Inventory</string>
     <string name="action">Do Actions</string>
+    <string name="rations">Rations</string>
+    <string name="health">Health</string>
+    <string name="speed">Speed</string>
+    <string name="lbsOfFood">1000 lbs</string>
+    <string name="temperature">Temp</string>
+    <string name="datetodisplay">Date</string>
+    <string name="weather">Weather</string>
 </resources>
