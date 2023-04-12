@@ -8,20 +8,20 @@
 
     <Button
         android:id="@+id/title3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="512dp"
+        android:layout_width="263dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="28dp"
         android:text="Learn about Hattie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/title6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="267dp"
+        android:layout_height="36dp"
         android:layout_marginTop="344dp"
-        android:layout_marginEnd="560dp"
+        android:layout_marginEnd="28dp"
         android:text="Management"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,17 +30,17 @@
         android:id="@+id/title5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="528dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="16dp"
         android:text="visit graveyard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/title1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="264dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="436dp"
         android:layout_marginTop="44dp"
         android:text="Travel the trail"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,10 +48,10 @@
 
     <Button
         android:id="@+id/title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="488dp"
+        android:layout_width="265dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="28dp"
         android:text="Learn about the trail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,9 +60,17 @@
         android:id="@+id/title4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="284dp"
         android:text="See top 10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hattiesmall"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="62dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
