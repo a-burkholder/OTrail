@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:text="Input party names"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name2"
+        android:layout_width="322dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="68dp"
+        android:editable="true"
+        app:layout_constraintStart_toEndOf="@+id/name1"
+        app:layout_constraintTop_toTopOf="@+id/name1" />
+
+    <EditText
+        android:id="@+id/name3"
+        android:layout_width="315dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:editable="true"
+        app:layout_constraintEnd_toStartOf="@+id/name4"
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
+
+    <EditText
+        android:id="@+id/name1"
+        android:layout_width="318dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="100dp"
+        android:editable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name4"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:editable="true"
+        app:layout_constraintEnd_toEndOf="@+id/name2"
+        app:layout_constraintTop_toTopOf="@+id/name3" />
+
+    <EditText
+        android:id="@+id/name5"
+        android:layout_width="311dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:editable="true"
+        app:layout_constraintStart_toStartOf="@+id/name3"
+        app:layout_constraintTop_toBottomOf="@+id/name4" />
+
+    <Button
+        android:id="@+id/toGame"
+        android:layout_width="308dp"
+        android:layout_height="60dp"
+        android:text="Continue"
+        app:layout_constraintEnd_toEndOf="@+id/name4"
+        app:layout_constraintTop_toTopOf="@+id/name5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

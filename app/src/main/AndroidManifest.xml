@@ -12,6 +12,24 @@
         android:theme="@style/Theme.OTrail"
         tools:targetApi="31">
         <activity
+            android:name=".OpenNames"
+            android:exported="false" />
+        <activity
+            android:name=".OpenTrailInfo"
+            android:exported="false" />
+        <activity
+            android:name=".OpenCattieInfo"
+            android:exported="false" />
+        <activity
+            android:name=".OpenTop"
+            android:exported="false" />
+        <activity
+            android:name=".OpenGrave"
+            android:exported="false" />
+        <activity
+            android:name=".OpenOptions"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

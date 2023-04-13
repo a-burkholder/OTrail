@@ -1,6 +1,8 @@
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -8,6 +10,7 @@ import android.widget.Button;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,37 +33,43 @@ public class MainActivity extends AppCompatActivity {
                 toTrail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.name_input);
+                        Intent intent = new Intent(MainActivity.this, OpenNames.class);
+                        startActivity(intent);
                     }
                 });
                 toOTrailInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.trail_info);
+                        Intent intent = new Intent(MainActivity.this, OpenTrailInfo.class);
+                        startActivity(intent);
                     }
                 });
                 toCattieInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.cattie_info);
+                        Intent intent = new Intent(MainActivity.this, OpenCattieInfo.class);
+                        startActivity(intent);
                     }
                 });
                 top10.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.top_10);
+                        Intent intent = new Intent(MainActivity.this, OpenTop.class);
+                        startActivity(intent);
                     }
                 });
                 graves.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.graveyard);
+                        Intent intent = new Intent(MainActivity.this, OpenGrave.class);
+                        startActivity(intent);
                     }
                 });
                 options.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        setContentView(R.layout.options);
+                        Intent intent = new Intent(MainActivity.this, OpenOptions.class);
+                        startActivity(intent);
                     }
                 });
             }
