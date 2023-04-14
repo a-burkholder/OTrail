@@ -42,7 +42,7 @@ public class OpenNames extends AppCompatActivity {
                 String name4 = text4.getText().toString();
                 String name5 = text5.getText().toString();
 
-                Intent intent = new Intent(this, nextActivity.class);
+                Intent intent = new Intent(OpenNames.this, MainGame.class);
                 intent.putExtra(Name1, name1);
                 intent.putExtra(Name2, name2);
                 intent.putExtra(Name3, name3);
