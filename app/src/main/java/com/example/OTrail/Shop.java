@@ -50,6 +50,7 @@ public class Shop extends AppCompatActivity
     final int WAGONPARTPRICE = 10;
     final int MEDICALSUPPLYPRICE = 2;
 
+    final TextView textView89 = findViewById(R.id.textView89);
 
 
 
@@ -417,8 +418,8 @@ public class Shop extends AppCompatActivity
         else
         {
             inv.setPlayerMoneyCount(playerMoneyCount);
-            System.out.println("You do not have enough money!");
-            System.out.println("Get out of my shop!!!");
+
+            textView89.setText("Get out of my shop kid!!!");
         }
     }
 }
