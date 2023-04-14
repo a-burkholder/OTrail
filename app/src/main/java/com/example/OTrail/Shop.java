@@ -10,10 +10,15 @@
  */
 
 package com.example.OTrail;
+import android.view.View;
+
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView;
+
+
 
 import java.util.Scanner;
 
@@ -83,368 +88,314 @@ public class Shop extends AppCompatActivity
      * Allows the player to buy items from the shops along the oregon trail. Will calculate the players total amount of
      * money spent.
      */
-    public void onRadioButtonClicked(View view)
-    {
-        boolean checked = ((RadioButton) view).isChecked();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.shop);
 
-        while(item != 9)
+        public void onRadioButtonClicked(View view)
         {
+            boolean checked = ((RadioButton) view).isChecked();
 
-            // Updates the amount of money the player has along with their inventory of items.
-            switch (view.getId()) {
-                case R.id.buyFood: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            foodPurchased = 100;
-                        }
-                        break;
+                // Updates the amount of money the player has along with their inventory of items.
+                switch (view.getId()) {
+                    case R.id.buyFood: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                foodPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            foodPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                foodPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            foodPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                foodPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            foodPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                foodPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            foodPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                foodPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            foodPurchased = 1;
+                            case R.id.buy1: {
+                                foodPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + foodPurchased * FOODPRICE;
                     }
-                    moneyUsed = moneyUsed + foodPurchased * FOODPRICE;
-                }
-                break;
-                case R.id.buyClothing: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            clothingPurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyClothing: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                clothingPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            clothingPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                clothingPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            clothingPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                clothingPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            clothingPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                clothingPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            clothingPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                clothingPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            clothingPurchased = 1;
+                            case R.id.buy1: {
+                                clothingPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + clothingPurchased * CLOTHINGPRICE;
                     }
-                    moneyUsed = moneyUsed + clothingPurchased * CLOTHINGPRICE;
-                }
-                break;
-                case R.id.buyBaskets: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            basketPurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyBaskets: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                basketPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            basketPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                basketPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            basketPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                basketPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            basketPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                basketPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            basketPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                basketPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            basketPurchased = 1;
+                            case R.id.buy1: {
+                                basketPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + basketPurchased * BULLETSBOXPRICE;
                     }
-                    moneyUsed = moneyUsed + basketPurchased * BULLETSBOXPRICE;
-                }
-                break;
-                case R.id.buyOxen: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            oxenPurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyOxen: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                oxenPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            oxenPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                oxenPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            oxenPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                oxenPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            oxenPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                oxenPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            oxenPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                oxenPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            oxenPurchased = 1;
+                            case R.id.buy1: {
+                                oxenPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
                     }
-                    moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
-                }
-                break;
-                case R.id.buyWagonWheel: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            wagonWheelPurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyWagonWheel: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                wagonWheelPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            wagonWheelPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                wagonWheelPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            wagonWheelPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                wagonWheelPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            wagonWheelPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                wagonWheelPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            wagonWheelPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                wagonWheelPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            wagonWheelPurchased = 1;
+                            case R.id.buy1: {
+                                wagonWheelPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + wagonWheelPurchased * WAGONPARTPRICE;
                     }
-                    moneyUsed = moneyUsed + wagonWheelPurchased * WAGONPARTPRICE;
-                }
-                break;
-                case R.id.buyWagonAxle: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            wagonAxlePurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyWagonAxle: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                wagonAxlePurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            wagonAxlePurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                wagonAxlePurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            wagonAxlePurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                wagonAxlePurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            wagonAxlePurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                wagonAxlePurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            wagonAxlePurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                wagonAxlePurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            wagonAxlePurchased = 1;
+                            case R.id.buy1: {
+                                wagonAxlePurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + wagonAxlePurchased * WAGONPARTPRICE;
                     }
-                    moneyUsed = moneyUsed + wagonAxlePurchased * WAGONPARTPRICE;
-                }
-                break;
-                case R.id.buyWagonTongue: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            wagonTonguePurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyWagonTongue: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                wagonTonguePurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            wagonTonguePurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                wagonTonguePurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            wagonTonguePurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                wagonTonguePurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            wagonTonguePurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                wagonTonguePurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            wagonTonguePurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                wagonTonguePurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            wagonTonguePurchased = 1;
+                            case R.id.buy1: {
+                                wagonTonguePurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + wagonTonguePurchased * WAGONPARTPRICE;
                     }
-                    moneyUsed = moneyUsed + wagonTonguePurchased * WAGONPARTPRICE;
-                }
-                break;
-                case R.id.buyMedicalSupply: {
-                    switch(view.getId())
-                    {
-                        case R.id.buy100:
-                        {
-                            medicalSupplyPurchased = 100;
-                        }
-                        break;
+                    break;
+                    case R.id.buyMedicalSupply: {
+                        switch (view.getId()) {
+                            case R.id.buy100: {
+                                medicalSupplyPurchased = 100;
+                            }
+                            break;
 
-                        case R.id.buy50:
-                        {
-                            medicalSupplyPurchased = 50;
-                        }
-                        break;
+                            case R.id.buy50: {
+                                medicalSupplyPurchased = 50;
+                            }
+                            break;
 
-                        case R.id.buy25:
-                        {
-                            medicalSupplyPurchased = 25;
-                        }
-                        break;
+                            case R.id.buy25: {
+                                medicalSupplyPurchased = 25;
+                            }
+                            break;
 
-                        case R.id.buy10:
-                        {
-                            medicalSupplyPurchased = 10;
-                        }
-                        break;
+                            case R.id.buy10: {
+                                medicalSupplyPurchased = 10;
+                            }
+                            break;
 
-                        case R.id.buy2:
-                        {
-                            medicalSupplyPurchased = 2;
-                        }
-                        break;
+                            case R.id.buy2: {
+                                medicalSupplyPurchased = 2;
+                            }
+                            break;
 
-                        case R.id.buy1:
-                        {
-                            medicalSupplyPurchased = 1;
+                            case R.id.buy1: {
+                                medicalSupplyPurchased = 1;
+                            }
+                            break;
+                            default:
                         }
-                        break;
-                        default:
+                        moneyUsed = moneyUsed + medicalSupplyPurchased * MEDICALSUPPLYPRICE;
                     }
-                    moneyUsed = moneyUsed + medicalSupplyPurchased * MEDICALSUPPLYPRICE;
+                    break;
+                    default:
                 }
-                break;
-                default:
-            }
-            if(inv.getPlayerMoneyCount() > moneyUsed)
-            {
-                resetItems();
+                if (inv.getPlayerMoneyCount() > moneyUsed) {
+                    resetItems();
+                }
             }
         }
-    }
+
 
     /**
      * Resets the player's money. Checks to make sure the player has enough money and will update the plays inventory.
