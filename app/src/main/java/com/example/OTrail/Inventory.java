@@ -9,8 +9,13 @@
  * move along the Oregon Trail.
  */
 package com.example.OTrail;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
-public class Inventory
+public class Inventory extends AppCompatActivity
 {
     private int playerMoneyCount = 1600;
     private int foodCount = 0;
@@ -34,6 +39,26 @@ public class Inventory
             "-axle, + wheel",
             "-axle, + tongue",
             "-tongue, + wheel"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        final TextView textView67 = findViewById(R.id.textView67);
+        final TextView textView68 = findViewById(R.id.textView68);
+        final TextView textView69 = findViewById(R.id.textView69);
+        final TextView textView70 = findViewById(R.id.textView70);
+        final TextView textView71 = findViewById(R.id.textView71);
+        final TextView textView72 = findViewById(R.id.textView72);
+        final TextView textView73 = findViewById(R.id.textView73);
+        final TextView textView74 = findViewById(R.id.textView74);
+
+    }
+
+
+
+
 
     /**
      * Default constructor for the Inventory class.
@@ -257,9 +282,15 @@ public class Inventory
      */
     public void getAllItems()
     {
-        System.out.println("Your Items: \nPounds of Food = " + foodCount + "\nClothingSets = " + clothingCount + "\nNumber of Bullets = "
-                + basketCount + "\nNumber of Oxen = " + oxenCount + "\nNumber of Wagon Wheels = " + wagonWheelCount + "\nNumber of Wagon Axels = "
-                + wagonAxleCount +"\nNumber of Wagon Tongues = " + wagonTongueCount +"\nNumber of Medical Supplies = " + medicalSupplyCount);
+        textView67.setText(foodCount);
+        textView68.setText(clothingCount);
+        textView69.setText(basketCount);
+        textView70.setText(oxenCount);
+        textView71.setText(wagonWheelCount);
+        textView72.setText(wagonAxleCount);
+        textView73.setText(wagonTongueCount);
+        textView74.setText(wagonTongueCount);
+        textView75.setText(medicalSupplyCount);
     }
 
     /**canTrade(Map map)

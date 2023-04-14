@@ -439,6 +439,10 @@ public class Shop extends AppCompatActivity
                 break;
                 default:
             }
+            if(inv.getPlayerMoneyCount() > moneyUsed)
+            {
+                resetItems();
+            }
         }
     }
 
