@@ -422,4 +422,7 @@ public class Shop extends AppCompatActivity
             textView89.setText("Get out of my shop kid!!!");
         }
     }
+
+    void buyItems(){};
 }
+

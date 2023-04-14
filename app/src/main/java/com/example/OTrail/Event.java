@@ -56,12 +56,12 @@ public class Event
         //raiderAttacck
         if (rand_int1 ==  2 || rand_int1 == 3){
             System.out.println("You have been attacked by raiders.\n" + "Minus 50 bullets.\n" + "Minus $100.\n" + "Minus 2 clothing.");
-            inv.setBulletsCount(-50);
-            if(inv.getBulletsCount() < 0)
+            inv.setBasketCount(-50);
+            if(inv.getBasketCount() < 0)
             {
-                inv.setBulletsCount(-1*inv.getBulletsCount());
+                inv.setBasketCount(-1*inv.getBasketCount());
             }
-            System.out.println("Bullet Count: " + inv.getBulletsCount());
+            System.out.println("Bullet Count: " + inv.getBasketCount());
             inv.setPlayerMoneyCount(-100);
             if(inv.getPlayerMoneyCount() < 0)
             {

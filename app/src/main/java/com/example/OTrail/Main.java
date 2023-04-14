@@ -35,7 +35,7 @@ public class Main {
 
         //Display blurb about starting cash, what they could buy, and what they should buy.  (maybe add lore here based on class)
         menu.initialCash(inv.getPlayerMoneyCount());
-        shop.buyItems();
+        //shop.buyItems();
         //Display graphic for "Beginning the journey"
         inv.isWagonUsable();
 
