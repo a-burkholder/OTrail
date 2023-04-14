@@ -24,7 +24,7 @@ public class Shop extends AppCompatActivity
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
-    private int bulletsBoxPurchased = 0;
+    private int basketPurchased = 0;
     private int oxenPurchased = 0;
     private int wagonWheelPurchased = 0;
     private int wagonAxlePurchased = 0;
@@ -137,37 +137,303 @@ public class Shop extends AppCompatActivity
                 }
                 break;
                 case R.id.buyClothing: {
-                    clothingPurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            clothingPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            clothingPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            clothingPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            clothingPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            clothingPurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            clothingPurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + clothingPurchased * CLOTHINGPRICE;
                 }
                 break;
                 case R.id.buyBaskets: {
-                    bulletsBoxPurchased = amount;
-                    moneyUsed = moneyUsed + bulletsBoxPurchased * BULLETSBOXPRICE;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            basketPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            basketPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            basketPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            basketPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            basketPurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            basketPurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
+                    moneyUsed = moneyUsed + basketPurchased * BULLETSBOXPRICE;
                 }
                 break;
                 case R.id.buyOxen: {
-                    oxenPurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            oxenPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            oxenPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            oxenPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            oxenPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            oxenPurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            oxenPurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
                 }
                 break;
                 case R.id.buyWagonWheel: {
-                    wagonWheelPurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            wagonWheelPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            wagonWheelPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            wagonWheelPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            wagonWheelPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            wagonWheelPurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            wagonWheelPurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + wagonWheelPurchased * WAGONPARTPRICE;
                 }
                 break;
                 case R.id.buyWagonAxle: {
-                    wagonAxlePurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            wagonAxlePurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            wagonAxlePurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            wagonAxlePurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            wagonAxlePurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            wagonAxlePurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            wagonAxlePurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + wagonAxlePurchased * WAGONPARTPRICE;
                 }
                 break;
                 case R.id.buyWagonTongue: {
-                    wagonTonguePurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            wagonTonguePurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            wagonTonguePurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            wagonTonguePurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            wagonTonguePurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            wagonTonguePurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            wagonTonguePurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + wagonTonguePurchased * WAGONPARTPRICE;
                 }
                 break;
                 case R.id.buyMedicalSupply: {
-                    medicalSupplyPurchased = amount;
+                    switch(view.getId())
+                    {
+                        case R.id.buy100:
+                        {
+                            medicalSupplyPurchased = 100;
+                        }
+                        break;
+
+                        case R.id.buy50:
+                        {
+                            medicalSupplyPurchased = 50;
+                        }
+                        break;
+
+                        case R.id.buy25:
+                        {
+                            medicalSupplyPurchased = 25;
+                        }
+                        break;
+
+                        case R.id.buy10:
+                        {
+                            medicalSupplyPurchased = 10;
+                        }
+                        break;
+
+                        case R.id.buy2:
+                        {
+                            medicalSupplyPurchased = 2;
+                        }
+                        break;
+
+                        case R.id.buy1:
+                        {
+                            medicalSupplyPurchased = 1;
+                        }
+                        break;
+                        default:
+                    }
                     moneyUsed = moneyUsed + medicalSupplyPurchased * MEDICALSUPPLYPRICE;
                 }
                 break;
@@ -186,7 +452,7 @@ public class Shop extends AppCompatActivity
             inv.setPlayerMoneyCount(playerMoneyCount - moneyUsed);
             inv.setFoodCount(foodPurchased * 2);
             inv.setClothingCount(clothingPurchased);
-            inv.setBulletsCount(bulletsBoxPurchased * 20);
+            inv.setBasketCount(basketPurchased);
             inv.setOxenCount(oxenPurchased);
             inv.setWagonWheelCount(wagonWheelPurchased);
             inv.setWagonAxleCount(wagonAxlePurchased);

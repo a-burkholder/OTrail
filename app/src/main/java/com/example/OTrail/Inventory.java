@@ -15,7 +15,8 @@ public class Inventory
     private int playerMoneyCount = 1600;
     private int foodCount = 0;
     private int clothingCount = 0;
-    private int bulletsCount = 0;
+
+    private int basketCount = 0;
     private int oxenCount = 0;
     private int wagonWheelCount = 4;
     private int wagonAxleCount = 2;
@@ -96,9 +97,9 @@ public class Inventory
      *
      * @return The player's current number of bullets.
      */
-    public int getBulletsCount()
+    public int getBasketCount()
     {
-        return bulletsCount;
+        return basketCount;
     }
 
     /**
@@ -196,9 +197,9 @@ public class Inventory
      *
      * @param bulletsCount The player's updated number of bullets.
      */
-    public void setBulletsCount(int bulletsCount)
+    public void setBasketCount(int bulletsCount)
     {
-        this.bulletsCount = this.bulletsCount + bulletsCount;
+        this.basketCount = this.basketCount + bulletsCount;
     }
 
     /**
@@ -257,7 +258,7 @@ public class Inventory
     public void getAllItems()
     {
         System.out.println("Your Items: \nPounds of Food = " + foodCount + "\nClothingSets = " + clothingCount + "\nNumber of Bullets = "
-                + bulletsCount + "\nNumber of Oxen = " + oxenCount + "\nNumber of Wagon Wheels = " + wagonWheelCount + "\nNumber of Wagon Axels = "
+                + basketCount + "\nNumber of Oxen = " + oxenCount + "\nNumber of Wagon Wheels = " + wagonWheelCount + "\nNumber of Wagon Axels = "
                 + wagonAxleCount +"\nNumber of Wagon Tongues = " + wagonTongueCount +"\nNumber of Medical Supplies = " + medicalSupplyCount);
     }
 
