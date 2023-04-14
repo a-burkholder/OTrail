@@ -11,11 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class OpenNames extends AppCompatActivity {
-    public static String Name1 = "Name1";
-    public static String Name2 = "Name2";
-    public static String Name3 = "Name3";
-    public static String Name4 = "Name4";
-    public static String Name5 = "Name5";
+    public static final String PARTY_NAMES = "com.example.OTrail.PARTY_NAMES";
+    public static final String START_DATE = "com.example.OTrail.START_DATE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +38,11 @@ public class OpenNames extends AppCompatActivity {
                 String name3 = text3.getText().toString();
                 String name4 = text4.getText().toString();
                 String name5 = text5.getText().toString();
+                String[] names = {name1, name2, name3, name4, name5};
 
-                Intent intent = new Intent(this, nextActivity.class);
-                intent.putExtra(Name1, name1);
-                intent.putExtra(Name2, name2);
-                intent.putExtra(Name3, name3);
-                intent.putExtra(Name4, name4);
-                intent.putExtra(Name5, name5);
+                Intent intent = new Intent(OpenNames.this, MainGame.class);
+                intent.putExtra(PARTY_NAMES, names);
+
                 startActivity(intent);
             }
         });
