@@ -93,9 +93,9 @@ public class Shop extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
-
-        public void onRadioButtonClicked(View view)
-        {
+    }
+    public void onRadioButtonClicked(View view)
+    {
             boolean checked = ((RadioButton) view).isChecked();
 
                 // Updates the amount of money the player has along with their inventory of items.
@@ -394,7 +394,7 @@ public class Shop extends AppCompatActivity
                     resetItems();
                 }
             }
-        }
+
 
 
     /**
