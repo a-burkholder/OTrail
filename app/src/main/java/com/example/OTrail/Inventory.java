@@ -40,11 +40,6 @@ public class Inventory extends AppCompatActivity
             "-axle, + tongue",
             "-tongue, + wheel"};
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-
         final TextView textView67 = findViewById(R.id.textView67);
         final TextView textView68 = findViewById(R.id.textView68);
         final TextView textView69 = findViewById(R.id.textView69);
@@ -54,7 +49,6 @@ public class Inventory extends AppCompatActivity
         final TextView textView73 = findViewById(R.id.textView73);
         final TextView textView74 = findViewById(R.id.textView74);
 
-    }
 
 
 
@@ -289,8 +283,7 @@ public class Inventory extends AppCompatActivity
         textView71.setText(wagonWheelCount);
         textView72.setText(wagonAxleCount);
         textView73.setText(wagonTongueCount);
-        textView74.setText(wagonTongueCount);
-        textView75.setText(medicalSupplyCount);
+        textView74.setText(medicalSupplyCount);
     }
 
     /**canTrade(Map map)
