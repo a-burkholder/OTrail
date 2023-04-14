@@ -9,13 +9,19 @@
  * move along the Oregon Trail.
  */
 package com.example.OTrail;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
-public class Inventory
+public class Inventory extends AppCompatActivity
 {
     private int playerMoneyCount = 1600;
     private int foodCount = 0;
     private int clothingCount = 0;
-    private int bulletsCount = 0;
+
+    private int basketCount = 0;
     private int oxenCount = 0;
     private int wagonWheelCount = 4;
     private int wagonAxleCount = 2;
@@ -33,6 +39,20 @@ public class Inventory
             "-axle, + wheel",
             "-axle, + tongue",
             "-tongue, + wheel"};
+
+        final TextView textView67 = findViewById(R.id.textView67);
+        final TextView textView68 = findViewById(R.id.textView68);
+        final TextView textView69 = findViewById(R.id.textView69);
+        final TextView textView70 = findViewById(R.id.textView70);
+        final TextView textView71 = findViewById(R.id.textView71);
+        final TextView textView72 = findViewById(R.id.textView72);
+        final TextView textView73 = findViewById(R.id.textView73);
+        final TextView textView74 = findViewById(R.id.textView74);
+
+
+
+
+
 
     /**
      * Default constructor for the Inventory class.
@@ -96,9 +116,9 @@ public class Inventory
      *
      * @return The player's current number of bullets.
      */
-    public int getBulletsCount()
+    public int getBasketCount()
     {
-        return bulletsCount;
+        return basketCount;
     }
 
     /**
@@ -196,9 +216,9 @@ public class Inventory
      *
      * @param bulletsCount The player's updated number of bullets.
      */
-    public void setBulletsCount(int bulletsCount)
+    public void setBasketCount(int bulletsCount)
     {
-        this.bulletsCount = this.bulletsCount + bulletsCount;
+        this.basketCount = this.basketCount + bulletsCount;
     }
 
     /**
@@ -256,9 +276,14 @@ public class Inventory
      */
     public void getAllItems()
     {
-        System.out.println("Your Items: \nPounds of Food = " + foodCount + "\nClothingSets = " + clothingCount + "\nNumber of Bullets = "
-                + bulletsCount + "\nNumber of Oxen = " + oxenCount + "\nNumber of Wagon Wheels = " + wagonWheelCount + "\nNumber of Wagon Axels = "
-                + wagonAxleCount +"\nNumber of Wagon Tongues = " + wagonTongueCount +"\nNumber of Medical Supplies = " + medicalSupplyCount);
+        textView67.setText(foodCount);
+        textView68.setText(clothingCount);
+        textView69.setText(basketCount);
+        textView70.setText(oxenCount);
+        textView71.setText(wagonWheelCount);
+        textView72.setText(wagonAxleCount);
+        textView73.setText(wagonTongueCount);
+        textView74.setText(medicalSupplyCount);
     }
 
     /**canTrade(Map map)
