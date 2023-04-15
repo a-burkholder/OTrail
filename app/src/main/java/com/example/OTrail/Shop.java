@@ -71,15 +71,6 @@ public class Shop extends AppCompatActivity {
     RadioButton buy2;
     RadioButton buy1;
 
-    final TextView textView67 = findViewById(R.id.textView67);
-    final TextView textView68 = findViewById(R.id.textView68);
-    final TextView textView69 = findViewById(R.id.textView69);
-    final TextView textView70 = findViewById(R.id.textView70);
-    final TextView textView71 = findViewById(R.id.textView71);
-    final TextView textView72 = findViewById(R.id.textView72);
-    final TextView textView73 = findViewById(R.id.textView73);
-    final TextView textView74 = findViewById(R.id.textView74);
-    final TextView textView89 = findViewById(R.id.textView89);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +79,17 @@ public class Shop extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
+
+
+        final TextView textView67 = findViewById(R.id.textView67);
+        final TextView textView68 = findViewById(R.id.textView68);
+        final TextView textView69 = findViewById(R.id.textView69);
+        final TextView textView70 = findViewById(R.id.textView70);
+        final TextView textView71 = findViewById(R.id.textView71);
+        final TextView textView72 = findViewById(R.id.textView72);
+        final TextView textView73 = findViewById(R.id.textView73);
+        final TextView textView74 = findViewById(R.id.textView74);
+        final TextView textView89 = findViewById(R.id.textView89);
 
         // tells the player how many items they current have
         textView67.setText(inv.getFoodCount());

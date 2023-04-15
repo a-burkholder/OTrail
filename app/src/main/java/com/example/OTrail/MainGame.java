@@ -39,7 +39,7 @@ public class MainGame extends AppCompatActivity {
         invBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainGame.this, OpenInv.class);
+                Intent intent = new Intent(MainGame.this, Inventory.class);
                 startActivity(intent);
             }
         });
