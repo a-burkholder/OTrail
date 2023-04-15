@@ -9,9 +9,12 @@
  * move along the Oregon Trail.
  */
 package com.example.OTrail;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,30 +54,38 @@ public class Inventory extends AppCompatActivity
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inventory);
-
-        final TextView textView32 = findViewById(R.id.textView32);
-        final TextView textView33 = findViewById(R.id.textView33);
-        final TextView textView34 = findViewById(R.id.textView34);
-        final TextView textView35 = findViewById(R.id.textView35);
-        final TextView textView36 = findViewById(R.id.textView36);
-        final TextView textView37 = findViewById(R.id.textView37);
-        final TextView textView38 = findViewById(R.id.textView38);
-        final TextView textView39 = findViewById(R.id.textView39);
-        final TextView textView40 = findViewById(R.id.textView40);
-
-        textView32.setText(playerMoneyCount);
-        textView33.setText(foodCount);
-        textView34.setText(clothingCount);
-        textView35.setText(basketCount);
-        textView36.setText(oxenCount);
-        textView37.setText(wagonWheelCount);
-        textView38.setText(wagonAxleCount);
-        textView39.setText(wagonTongueCount);
-        textView40.setText(medicalSupplyCount);
-
-
+//
+//        final TextView textView32 = (TextView)findViewById(R.id.textView32);
+//        final TextView textView33 = (TextView)findViewById(R.id.textView33);
+//        final TextView textView34 = (TextView)findViewById(R.id.textView34);
+//        final TextView textView35 = (TextView)findViewById(R.id.textView35);
+//        final TextView textView36 = (TextView)findViewById(R.id.textView36);
+//        final TextView textView37 = (TextView)findViewById(R.id.textView37);
+//        final TextView textView38 = (TextView)findViewById(R.id.textView38);
+//        final TextView textView39 = (TextView)findViewById(R.id.textView39);
+//        final TextView textView40 = (TextView)findViewById(R.id.textView40);
+//
+//        textView32.setText(playerMoneyCount);
+//        textView33.setText(foodCount);
+//        textView34.setText(clothingCount);
+//        textView35.setText(basketCount);
+//        textView36.setText(oxenCount);
+//        textView37.setText(wagonWheelCount);
+//        textView38.setText(wagonAxleCount);
+//        textView39.setText(wagonTongueCount);
+//        textView40.setText(medicalSupplyCount);
 
 
+
+
+        Button continueAlongTrail = (Button) findViewById(R.id.continueAlongTrail);
+        continueAlongTrail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(Inventory.this, MainGame.class);
+                startActivity(intent3);
+            }
+        });
     }
 
 

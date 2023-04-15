@@ -12,9 +12,6 @@
         android:theme="@style/Theme.OTrail"
         tools:targetApi="31">
         <activity
-            android:name=".OpenInv"
-            android:exported="false" />
-        <activity
             android:name=".MainGame"
             android:exported="false" />
         <activity

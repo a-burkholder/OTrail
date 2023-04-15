@@ -81,15 +81,15 @@ public class Shop extends AppCompatActivity {
         setContentView(R.layout.shop);
 
 
-        final TextView textView67 = findViewById(R.id.textView67);
-        final TextView textView68 = findViewById(R.id.textView68);
-        final TextView textView69 = findViewById(R.id.textView69);
-        final TextView textView70 = findViewById(R.id.textView70);
-        final TextView textView71 = findViewById(R.id.textView71);
-        final TextView textView72 = findViewById(R.id.textView72);
-        final TextView textView73 = findViewById(R.id.textView73);
-        final TextView textView74 = findViewById(R.id.textView74);
-        final TextView textView89 = findViewById(R.id.textView89);
+        final TextView textView67 = (TextView)findViewById(R.id.textView67);
+        final TextView textView68 = (TextView)findViewById(R.id.textView68);
+        final TextView textView69 = (TextView)findViewById(R.id.textView69);
+        final TextView textView70 = (TextView)findViewById(R.id.textView70);
+        final TextView textView71 = (TextView)findViewById(R.id.textView71);
+        final TextView textView72 = (TextView)findViewById(R.id.textView72);
+        final TextView textView73 = (TextView)findViewById(R.id.textView73);
+        final TextView textView74 = (TextView)findViewById(R.id.textView74);
+        final TextView textView89 = (TextView)findViewById(R.id.textView89);
 
         // tells the player how many items they current have
         textView67.setText(inv.getFoodCount());
@@ -416,8 +416,8 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Shop.this, MainGame.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(Shop.this, MainGame.class);
+                startActivity(intent2);
             }
         });
     }
