@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,65 +12,82 @@
         android:id="@+id/textView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="140dp"
         android:text="Baskets"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="141dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="100dp"
         android:text="Sets of Clothing"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="100dp"
         android:text="$10"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="98dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView69"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="140dp"
         android:text="#"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="132dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView56"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="344dp"
         android:text="Medical Supply"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView74"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="344dp"
         android:text="#"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="344dp"
         android:text="8"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="344dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="344dp"
         android:text="$2"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -77,11 +95,19 @@
         android:layout_height="396dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
+        android:layout_marginStart="348dp"
+        android:layout_marginTop="4dp"
         android:gravity="center"
-        tools:layout_editor_absoluteX="349dp"
-        tools:layout_editor_absoluteY="18dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--adding a radio button -->
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose an item to buy" />
+
         <RadioButton
             android:id="@+id/buyFood"
             android:layout_width="100dp"
@@ -149,7 +175,6 @@
 
     </RadioGroup>
 
-
     <RadioGroup
         android:id="@+id/radioGroup2"
         android:layout_width="189dp"
@@ -157,78 +182,14 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:gravity="center"
-        tools:layout_editor_absoluteX="521dp"
-        tools:layout_editor_absoluteY="96dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--adding a radio button -->
 
         <!--adding a radio button -->
-        <RadioButton
-            android:id="@+id/buy100"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 100"
-            android:textAlignment="center"
-            android:textSize="15sp" />
 
         <!--adding a radio button -->
-        <RadioButton
-            android:id="@+id/buy50"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 50"
-            android:textAlignment="center"
-            android:textSize="15sp" />
-
-        <RadioButton
-            android:id="@+id/buy25"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 25"
-            android:textAlignment="center"
-            android:textSize="15sp" />
-
-        <RadioButton
-            android:id="@+id/buy10"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 10"
-            android:textAlignment="center"
-            android:textSize="15sp" />
-
-        <RadioButton
-            android:id="@+id/buy2"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 2"
-            android:textAlignment="center"
-            android:textSize="15sp" />
-
-        <RadioButton
-            android:id="@+id/buy1"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 1"
-            android:textAlignment="center"
-            android:textSize="15sp" />
 
     </RadioGroup>
 
@@ -236,265 +197,321 @@
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="60dp"
         android:text="Pounds of Food"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="16dp"
         android:text="Item"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="15dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="300dp"
         android:text="Wagon Tongue"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="300dp"
         android:text="$10"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="300dp"
         android:text="7"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="300dp"
         android:text="#"
-        tools:layout_editor_absoluteX="306dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView66"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="16dp"
         android:text="In Inventory"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="18dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView63"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="16dp"
         android:text="Price"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="18dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView57"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="220dp"
         android:text="Wagon Wheel"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="220dp"
         android:text="#"
-        tools:layout_editor_absoluteX="312dp"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="220dp"
         android:text="$10"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="220dp"
         android:text="5"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="100dp"
         android:text="#"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="184dp"
         android:text="$20"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="178dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="184dp"
         android:text="4"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="184dp"
         android:text="Oxen"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="184dp"
         android:text="#"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="177dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="264dp"
         android:text="Wagon Axle"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="264dp"
         android:text="#"
-        tools:layout_editor_absoluteX="306dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="264dp"
         android:text="$10"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView82"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="264dp"
         android:text="6"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="264dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="60dp"
         android:text="$1 for 2 pounds"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView67"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="60dp"
         android:text="#"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="140dp"
         android:text="$5"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="132dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="580dp"
+        android:layout_marginTop="12dp"
         android:text="Welcome to the Shop"
-        tools:layout_editor_absoluteX="539dp"
-        tools:layout_editor_absoluteY="9dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button38"
+        android:id="@+id/continueOnTheTrail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="512dp"
+        android:layout_marginTop="352dp"
         android:text="Continue on the Trail"
-        tools:layout_editor_absoluteX="494dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Item #"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
         android:text="1"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView79"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
         android:text="3"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="139dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
         android:text="2"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="98dp" />
-
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose an item to buy"
-        tools:layout_editor_absoluteX="378dp"
-        tools:layout_editor_absoluteY="34dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="60dp"
         android:text="Number of that item to buy"
-        tools:layout_editor_absoluteX="547dp"
-        tools:layout_editor_absoluteY="74dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button35"
+        android:id="@+id/buyItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="580dp"
+        android:layout_marginTop="300dp"
         android:text="Buy"
-        tools:layout_editor_absoluteX="495dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView89"
@@ -502,5 +519,83 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="379dp" />
+
+    <RadioButton
+        android:id="@+id/buy25"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 25"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <RadioButton
+        android:id="@+id/buy100"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 100"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <RadioButton
+        android:id="@+id/buy50"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 50"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <RadioButton
+        android:id="@+id/buy10"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 10"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <RadioButton
+        android:id="@+id/buy2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 2"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <RadioButton
+        android:id="@+id/buy1"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:text="Buy 1"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="547dp"
+        tools:layout_editor_absoluteY="254dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

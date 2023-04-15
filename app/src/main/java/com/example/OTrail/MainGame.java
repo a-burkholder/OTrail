@@ -46,6 +46,15 @@ public class MainGame extends AppCompatActivity {
         final Button moveBut = findViewById(R.id.continueAction);
         final Button talkBut = findViewById(R.id.Talk);
         final Button shopBut = findViewById(R.id.Shop);
+        shopBut.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent1 = new Intent(MainGame.this, Shop.class);
+                startActivity(intent1);
+            }
+        });
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
 

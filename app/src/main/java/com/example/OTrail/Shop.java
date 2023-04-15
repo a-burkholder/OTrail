@@ -10,8 +10,12 @@
  */
 
 package com.example.OTrail;
+import android.content.Intent;
 import android.view.View;
 
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.os.Bundle;
@@ -24,8 +28,7 @@ import java.util.Scanner;
 
 
 
-public class Shop extends AppCompatActivity
-{
+public class Shop extends AppCompatActivity {
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
@@ -42,17 +45,12 @@ public class Shop extends AppCompatActivity
     private int amount = 0;
 
 
-
     final int FOODPRICE = 1;
     final int CLOTHINGPRICE = 10;
     final int BULLETSBOXPRICE = 2;
     final int OXENPRICE = 20;
     final int WAGONPARTPRICE = 10;
     final int MEDICALSUPPLYPRICE = 2;
-
-    final TextView textView89 = findViewById(R.id.textView89);
-
-
 
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
@@ -73,31 +71,41 @@ public class Shop extends AppCompatActivity
     RadioButton buy2;
     RadioButton buy1;
 
-    /**
-     * Constructor for the Shop class.
-     *
-     * @param inv Inventory object used to update the player's inventory.
-     * @param playerMoneyCount The amount of money the player has.
-     */
-    public Shop(Inventory inv, int playerMoneyCount)
-    {
-        this.inv = inv;
-        this.playerMoneyCount = playerMoneyCount;
-    }
+    final TextView textView67 = findViewById(R.id.textView67);
+    final TextView textView68 = findViewById(R.id.textView68);
+    final TextView textView69 = findViewById(R.id.textView69);
+    final TextView textView70 = findViewById(R.id.textView70);
+    final TextView textView71 = findViewById(R.id.textView71);
+    final TextView textView72 = findViewById(R.id.textView72);
+    final TextView textView73 = findViewById(R.id.textView73);
+    final TextView textView74 = findViewById(R.id.textView74);
+    final TextView textView89 = findViewById(R.id.textView89);
 
-    /**
-     * Allows the player to buy items from the shops along the oregon trail. Will calculate the players total amount of
-     * money spent.
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
-    }
-    public void onRadioButtonClicked(View view)
-    {
-            boolean checked = ((RadioButton) view).isChecked();
+
+        // tells the player how many items they current have
+        textView67.setText(inv.getFoodCount());
+        textView68.setText(inv.getClothingCount());
+        textView69.setText(inv.getBasketCount());
+        textView70.setText(inv.getOxenCount());
+        textView71.setText(inv.getWagonWheelCount());
+        textView72.setText(inv.getWagonAxleCount());
+        textView73.setText(inv.getWagonTongueCount());
+        textView74.setText(inv.getMedicalSupplyCount());
+
+        Button buyItem = (Button) findViewById(R.id.buyItem);
+        Button continueOnTheTrail = (Button) findViewById(R.id.continueOnTheTrail);
+
+        buyItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((RadioButton) view).isChecked();
 
                 // Updates the amount of money the player has along with their inventory of items.
                 switch (view.getId()) {
@@ -394,35 +402,55 @@ public class Shop extends AppCompatActivity
                 if (inv.getPlayerMoneyCount() > moneyUsed) {
                     resetItems();
                 }
+                else
+                {
+                    textView89.setText("Get out of my shop!!!");
+                }
+
+
             }
+        });
 
-
-
-    /**
-     * Resets the player's money. Checks to make sure the player has enough money and will update the plays inventory.
-     */
-    public void resetItems()
-    {
-        if (playerMoneyCount >= moneyUsed)
-        {
-            inv.setPlayerMoneyCount(playerMoneyCount - moneyUsed);
-            inv.setFoodCount(foodPurchased * 2);
-            inv.setClothingCount(clothingPurchased);
-            inv.setBasketCount(basketPurchased);
-            inv.setOxenCount(oxenPurchased);
-            inv.setWagonWheelCount(wagonWheelPurchased);
-            inv.setWagonAxleCount(wagonAxlePurchased);
-            inv.setWagonTongueCount(wagonTonguePurchased);
-            inv.setMedicalSupplyCount(medicalSupplyPurchased);
-        }
-        else
-        {
-            inv.setPlayerMoneyCount(playerMoneyCount);
-
-            textView89.setText("Get out of my shop kid!!!");
-        }
+        continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Shop.this, MainGame.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    void buyItems(){};
-}
+        /**
+         * Constructor for the Shop class.
+         *
+         * @param inv Inventory object used to update the player's inventory.
+         * @param playerMoneyCount The amount of money the player has.
+         */
+    public Shop(Inventory inv, int playerMoneyCount)
+        {
+            this.inv = inv;
+            this.playerMoneyCount = playerMoneyCount;
+        }
+
+
+        /**
+         * Resets the player's money. Checks to make sure the player has enough money and will update the plays inventory.
+         */
+        public void resetItems ()
+        {
+            if (playerMoneyCount >= moneyUsed) {
+                inv.setPlayerMoneyCount(playerMoneyCount - moneyUsed);
+                inv.setFoodCount(foodPurchased * 2);
+                inv.setClothingCount(clothingPurchased);
+                inv.setBasketCount(basketPurchased);
+                inv.setOxenCount(oxenPurchased);
+                inv.setWagonWheelCount(wagonWheelPurchased);
+                inv.setWagonAxleCount(wagonAxlePurchased);
+                inv.setWagonTongueCount(wagonTonguePurchased);
+                inv.setMedicalSupplyCount(medicalSupplyPurchased);
+            } else {
+                inv.setPlayerMoneyCount(playerMoneyCount);
+            }
+        }
+    }
 

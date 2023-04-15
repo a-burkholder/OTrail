@@ -221,7 +221,6 @@ public class Menu {
         if(option == 2)
         {
 
-            inv.getAllItems();
         }
         else if(option == 1)
         {
@@ -229,7 +228,7 @@ public class Menu {
         }
         else if(option == 3 && map.isShop())
         {
-            shop.buyItems();
+//            shop.buyItems();
         }
         else
         {

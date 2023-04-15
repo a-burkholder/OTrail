@@ -40,15 +40,6 @@ public class Inventory extends AppCompatActivity
             "-axle, + tongue",
             "-tongue, + wheel"};
 
-        final TextView textView67 = findViewById(R.id.textView67);
-        final TextView textView68 = findViewById(R.id.textView68);
-        final TextView textView69 = findViewById(R.id.textView69);
-        final TextView textView70 = findViewById(R.id.textView70);
-        final TextView textView71 = findViewById(R.id.textView71);
-        final TextView textView72 = findViewById(R.id.textView72);
-        final TextView textView73 = findViewById(R.id.textView73);
-        final TextView textView74 = findViewById(R.id.textView74);
-
 
 
 
@@ -271,20 +262,6 @@ public class Inventory extends AppCompatActivity
         this.medicalSupplyCount = this.medicalSupplyCount + medicalSupplyCount;
     }
 
-    /**
-     * This method lists all the player's items that they currently have.
-     */
-    public void getAllItems()
-    {
-        textView67.setText(foodCount);
-        textView68.setText(clothingCount);
-        textView69.setText(basketCount);
-        textView70.setText(oxenCount);
-        textView71.setText(wagonWheelCount);
-        textView72.setText(wagonAxleCount);
-        textView73.setText(wagonTongueCount);
-        textView74.setText(medicalSupplyCount);
-    }
 
     /**canTrade(Map map)
      * tries to create a trade.
