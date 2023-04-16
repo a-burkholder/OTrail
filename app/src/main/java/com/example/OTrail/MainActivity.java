@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.titlescreen2);
                 final Button toTrail = findViewById(R.id.title1);
                 final Button toOTrailInfo = findViewById(R.id.title2);
-                final Button toCattieInfo = findViewById(R.id.title3);
+                final Button toHattieInfo = findViewById(R.id.title3);
                 final Button top10 = findViewById(R.id.title4);
                 final Button graves = findViewById(R.id.title5);
                 final Button options = findViewById(R.id.title6);
@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                toCattieInfo.setOnClickListener(new View.OnClickListener() {
+                toHattieInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(MainActivity.this, OpenCattieInfo.class);
+                        Intent intent = new Intent(MainActivity.this, OpenHattieInfo.class);
                         startActivity(intent);
                     }
                 });

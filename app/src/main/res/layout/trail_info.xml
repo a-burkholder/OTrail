@@ -7,11 +7,11 @@
 
     <TextView
         android:id="@+id/textView64"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="364dp"
-        android:layout_marginTop="84dp"
-        android:text="About the trail"
+        android:layout_width="636dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="124dp"
+        android:text="The Oregon Trail was a legendary 2170 mile stretch of land from Independence, Missouri to Oregon City, Oregon. In the early 1800s, the trail was utilized by fur traders, only traveling the tail on horseback. By 1836, wagon trains from Independence, Missouri began clearing the trail to Oregon. As the years went on, roads, bridges, and ferries were built to speed up the journey. In the 1840's, the Organic Laws of Oregon promised free land to any settlers who chose to move to Oregon. The term &quot;Manifest Destiny&quot; was coined to describe the thousands of families who traveled the trails, inspired by that very promise. Many other families were inspired by the California Gold rush in 1848, inspired from the promise of riches. By the 1860's, many were traveling on ferries, with rivers and canals bring created to aid the pioneers.  Finally, in 1869, the transcontinental railroad was completed, leading many to chose it over the trail. "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,9 +19,9 @@
         android:id="@+id/textView65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="384dp"
-        android:text="Text here"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView64" />
+        android:text="About the Oregon Trail"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

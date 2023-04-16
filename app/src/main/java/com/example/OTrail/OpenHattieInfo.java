@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class OpenCattieInfo extends AppCompatActivity {
+public class OpenHattieInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +14,6 @@ public class OpenCattieInfo extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cattie_info);
+        setContentView(R.layout.hattie_info);
     }
 }
