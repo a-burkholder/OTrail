@@ -76,7 +76,6 @@ public class Shop extends AppCompatActivity {
 
     }
 
-
     /**
      * Constructor for the Shop class.
      *
