@@ -71,6 +71,23 @@ public class Shop extends AppCompatActivity {
     RadioButton buy2;
     RadioButton buy1;
 
+    public Shop()
+    {
+
+    }
+
+
+    /**
+     * Constructor for the Shop class.
+     *
+     * @param inv Inventory object used to update the player's inventory.
+     * @param playerMoneyCount The amount of money the player has.
+     */
+    public Shop(Inventory inv, int playerMoneyCount)
+    {
+        this.inv = inv;
+        this.playerMoneyCount = playerMoneyCount;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +109,14 @@ public class Shop extends AppCompatActivity {
         final TextView textView89 = (TextView)findViewById(R.id.textView89);
 
         // tells the player how many items they current have
-        textView67.setText(inv.getFoodCount());
-        textView68.setText(inv.getClothingCount());
-        textView69.setText(inv.getBasketCount());
-        textView70.setText(inv.getOxenCount());
-        textView71.setText(inv.getWagonWheelCount());
-        textView72.setText(inv.getWagonAxleCount());
-        textView73.setText(inv.getWagonTongueCount());
-        textView74.setText(inv.getMedicalSupplyCount());
+        textView67.setText(String.valueOf(inv.getFoodCount()));
+        textView68.setText(String.valueOf(inv.getClothingCount()));
+        textView69.setText(String.valueOf(inv.getBasketCount()));
+        textView70.setText(String.valueOf(inv.getOxenCount()));
+        textView71.setText(String.valueOf(inv.getWagonWheelCount()));
+        textView72.setText(String.valueOf(inv.getWagonAxleCount()));
+        textView73.setText(String.valueOf(inv.getWagonTongueCount()));
+        textView74.setText(String.valueOf(inv.getMedicalSupplyCount()));
 
         Button buyItem = (Button) findViewById(R.id.buyItem);
         Button continueOnTheTrail = (Button) findViewById(R.id.continueOnTheTrail);
@@ -107,8 +124,7 @@ public class Shop extends AppCompatActivity {
         buyItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean checked = ((RadioButton) view).isChecked();
-
+                int id = view.getId();
                 // Updates the amount of money the player has along with their inventory of items.
                 switch (view.getId()) {
                     case R.id.buyFood: {
@@ -421,18 +437,6 @@ public class Shop extends AppCompatActivity {
             }
         });
     }
-
-        /**
-         * Constructor for the Shop class.
-         *
-         * @param inv Inventory object used to update the player's inventory.
-         * @param playerMoneyCount The amount of money the player has.
-         */
-    public Shop(Inventory inv, int playerMoneyCount)
-        {
-            this.inv = inv;
-            this.playerMoneyCount = playerMoneyCount;
-        }
 
 
         /**
