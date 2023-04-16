@@ -138,6 +138,5 @@ public class MainGame extends AppCompatActivity {
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
-
     }
 }
