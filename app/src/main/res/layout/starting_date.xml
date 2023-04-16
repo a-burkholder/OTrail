@@ -104,8 +104,10 @@
         android:id="@+id/toTrail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="508dp"
+        android:layout_marginTop="344dp"
         android:text="Start on the Trail"
-        tools:layout_editor_absoluteX="522dp"
-        tools:layout_editor_absoluteY="332dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

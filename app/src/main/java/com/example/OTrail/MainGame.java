@@ -2,6 +2,7 @@ package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -50,9 +51,10 @@ public class MainGame extends AppCompatActivity {
         final Button moveBut = findViewById(R.id.continueAction);
         moveBut.setOnClickListener(new View.OnClickListener()
         {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                dateDisplay.setText(String.valueOf(date.getMonth()) + "/" + String.valueOf(date.getDate()) + "/" + String.valueOf(date.getYear()));
+//                dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                 inv.isWagonUsable();
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {

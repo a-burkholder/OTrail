@@ -72,12 +72,6 @@ public class Shop extends AppCompatActivity {
     RadioButton buy1;
 
 
-
-    public Shop()
-    {
-    }
-
-
     /**
      * Constructor for the Shop class.
      *
@@ -97,7 +91,6 @@ public class Shop extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
-
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);

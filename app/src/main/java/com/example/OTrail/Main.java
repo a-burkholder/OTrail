@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-//        MainActivity act = new MainActivity();
+        MainActivity act = new MainActivity();
 
 
 
