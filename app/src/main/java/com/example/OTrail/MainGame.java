@@ -73,10 +73,8 @@ public class MainGame extends AppCompatActivity {
                     date.setDate(1);
 
                     // Prints the current date out for the player to see.
-                    date.printDate();
 
                     // Prints out the player's health.
-                    party.printAllPeoplesHealth();
 
                     // Increment weather / terrian if needed.
                     map.setClimateZone();
@@ -91,11 +89,6 @@ public class MainGame extends AppCompatActivity {
                     event.randomEvents();
 
                     // Lists the daily choices for the player.
-                    int temp = 1;
-                    do {
-                        temp = menu.playerDailyChoices(map);
-
-                    } while (temp == 2);
 
                     // Increment distance to next location.
                     map.getDistToLM();
