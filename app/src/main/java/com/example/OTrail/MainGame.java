@@ -15,12 +15,6 @@ public class MainGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.gameplayscreen);
-
         Intent intent = getIntent();
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
         int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
@@ -34,12 +28,14 @@ public class MainGame extends AppCompatActivity {
         party.setNames(names);
         Event event = new Event(inv, party, date);
 
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.gameplayscreen);
+
         final TextView dateDisplay = findViewById(R.id.dateDisplay);
-
-//        dateDisplay.setText(String.valueOf(date.getMonth()) + "/" + String.valueOf(date.getDate()) + "/" + String.valueOf(date.getYear()));
-
-
-
 
 
         final Button actionsBut = findViewById(R.id.action);

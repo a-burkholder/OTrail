@@ -97,6 +97,8 @@ public class Shop extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
+        System.out.println(inv.getFoodCount() + "\n\n\n\n\n");
+
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
@@ -120,6 +122,14 @@ public class Shop extends AppCompatActivity {
 
         Button buyItem = (Button) findViewById(R.id.buyItem);
         Button continueOnTheTrail = (Button) findViewById(R.id.continueOnTheTrail);
+
+        radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
+        buy100 = (RadioButton) findViewById(R.id.buy100);
+        buy50 = (RadioButton) findViewById(R.id.buy50);
+        buy25 = (RadioButton) findViewById(R.id.buy25);
+        buy10 = (RadioButton) findViewById(R.id.buy10);
+        buy2 = (RadioButton) findViewById(R.id.buy2);
+        buy1 = (RadioButton) findViewById(R.id.buy1);
 
         buyItem.setOnClickListener(new View.OnClickListener() {
             @Override

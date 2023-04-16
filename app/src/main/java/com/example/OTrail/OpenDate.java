@@ -37,13 +37,14 @@ public class OpenDate extends AppCompatActivity
         setContentView(R.layout.starting_date);
 
         Button toTrail = findViewById(R.id.toTrail);
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
 
         toTrail.setOnClickListener(new View.OnClickListener() {
 
             int date[] = {0, 0, 0};
             @Override
             public void onClick(View view) {
-                int id = view.getId();
+                int id = radioGroup3.getCheckedRadioButtonId();
                 switch(view.getId()) {
                     case R.id.march: {
                         date = new int[]{1, 3, 1847};
