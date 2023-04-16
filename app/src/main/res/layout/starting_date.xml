@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="16dp"
+        android:text="Select Starting Date"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="198dp"
+        android:layout_height="396dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--adding a radio button -->
+        <TextView
+            android:id="@+id/selectMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Month" />
+
+        <RadioButton
+            android:id="@+id/march"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:checked="false"
+            android:padding="2dp"
+            android:text="March" />
+
+        <RadioButton
+            android:id="@+id/april"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:checked="false"
+            android:padding="2dp"
+            android:text="April" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/may"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="May" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/june"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="June" />
+
+        <RadioButton
+            android:id="@+id/july"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="July" />
+
+        <RadioButton
+            android:id="@+id/august"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="August" />
+
+        <RadioButton
+            android:id="@+id/september"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="September" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/toTrail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start on the Trail"
+        tools:layout_editor_absoluteX="522dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

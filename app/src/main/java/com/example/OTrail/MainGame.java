@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
@@ -22,7 +23,7 @@ public class MainGame extends AppCompatActivity {
 
         Intent intent = getIntent();
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
-        int[] startDate = intent.getIntArrayExtra(OpenNames.START_DATE);
+        int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
 
         Inventory inv = new Inventory();
         Shop shop = new Shop(inv, inv.getPlayerMoneyCount());
@@ -31,6 +32,12 @@ public class MainGame extends AppCompatActivity {
         Menu menu = new Menu(inv, party, map, shop);
         Date date = new Date(startDate);
         party.setNames(names);
+
+        final TextView dateDisplay = findViewById(R.id.dateDisplay);
+
+
+
+//        dateDisplay.setText(String.valueOf(date.getMonth()) + "/" + String.valueOf(date.getDate()) + "/" + String.valueOf(date.getYear()));
 
 
 
@@ -44,7 +51,19 @@ public class MainGame extends AppCompatActivity {
             }
         });
         final Button moveBut = findViewById(R.id.continueAction);
-        final Button talkBut = findViewById(R.id.Talk);
+        moveBut.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+//                date.setDate(1);
+            }
+        });
+
+
+
+
+//        final Button talkBut = findViewById(R.id.viewLocation);
         final Button shopBut = findViewById(R.id.Shop);
         shopBut.setOnClickListener(new View.OnClickListener(){
 

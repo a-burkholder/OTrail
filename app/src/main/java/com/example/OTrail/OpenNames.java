@@ -12,8 +12,6 @@ import android.widget.EditText;
 
 public class OpenNames extends AppCompatActivity {
     public static final String PARTY_NAMES = "com.example.OTrail.PARTY_NAMES";
-    public static final String START_DATE = "com.example.OTrail.START_DATE";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -40,9 +38,8 @@ public class OpenNames extends AppCompatActivity {
                 String name5 = text5.getText().toString();
                 String[] names = {name1, name2, name3, name4, name5};
 
-                Intent intent = new Intent(OpenNames.this, MainGame.class);
+                Intent intent = new Intent(OpenNames.this, OpenDate.class);
                 intent.putExtra(PARTY_NAMES, names);
-
                 startActivity(intent);
             }
         });
