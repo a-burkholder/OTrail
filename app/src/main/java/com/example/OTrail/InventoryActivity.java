@@ -18,8 +18,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
-import java.util.Random;
 public class InventoryActivity extends AppCompatActivity {
     private Inventory inv;
 
