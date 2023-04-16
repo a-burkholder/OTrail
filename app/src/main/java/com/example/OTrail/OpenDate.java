@@ -39,25 +39,45 @@ public class OpenDate extends AppCompatActivity
         Button toTrail = findViewById(R.id.toTrail);
 
         toTrail.setOnClickListener(new View.OnClickListener() {
+
+            int date[] = {0, 0, 0};
             @Override
-            public void onClick(View v) {
-
-                swich(radioGroup3)
-                {
-                    case 
+            public void onClick(View view) {
+                int id = view.getId();
+                switch(view.getId()) {
+                    case R.id.march: {
+                        date = new int[]{1, 3, 1847};
+                        break;
+                    }
+                    case R.id.april: {
+                        date = new int[]{1, 4, 1847};
+                        break;
+                    }
+                    case R.id.may: {
+                        date = new int[]{1, 5, 1847};
+                        break;
+                    }
+                    case R.id.june: {
+                        date = new int[]{1, 6, 1847};
+                        break;
+                    }
+                    case R.id.july: {
+                        date = new int[]{1, 7, 1847};
+                        break;
+                    }
+                    case R.id.august: {
+                        date = new int[]{1, 8, 1847};
+                        break;
+                    }
+                    case R.id.september: {
+                        date = new int[]{1, 9, 1847};
+                        break;
+                    }
+                    default: {
+                        date = new int[]{1, 3, 1847};
+                        break;
+                    }
                 }
-
-
-
-
-
-
-
-
-
-
-
-
                 Intent intent = new Intent(OpenDate.this, MainGame.class);
                 intent.putExtra(START_DATE, date);
                 startActivity(intent);
