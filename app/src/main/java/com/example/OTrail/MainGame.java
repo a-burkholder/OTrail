@@ -11,8 +11,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
-
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
 
@@ -22,8 +20,13 @@ public class MainGame extends AppCompatActivity {
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
         int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
 
-        Inventory inv = new Inventory();
-        Shop shop = new Shop(inv, inv.getPlayerMoneyCount());
+
+        Inventory inv;
+        if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
+        else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
+
+//        Shop shop = new Shop(inv, inv.getPlayerMoneyCount());
+        Shop shop = new Shop();
         Map map = new Map();
         Party party = new Party(inv);
         Menu menu = new Menu(inv, party, map, shop);
@@ -52,7 +55,8 @@ public class MainGame extends AppCompatActivity {
         invBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainGame.this, Inventory.class);
+                Intent intent = new Intent(MainGame.this, InventoryActivity.class);
+                intent.putExtra("passInventory", inv);
                 startActivity(intent);
             }
         });
@@ -127,6 +131,7 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view)
             {
                 Intent intent1 = new Intent(MainGame.this, Shop.class);
+                intent1.putExtra("Inventory object", inv);
                 startActivity(intent1);
             }
         });

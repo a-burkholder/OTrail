@@ -30,7 +30,7 @@
             android:name=".OpenDate"
             android:exported="false" />
         <activity
-            android:name=".Inventory"
+            android:name=".InventoryActivity"
             android:exported="false" />
         <activity
             android:name=".Shop"

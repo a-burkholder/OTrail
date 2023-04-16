@@ -11,6 +11,7 @@
 
 package com.example.OTrail;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 
 import android.view.Window;
@@ -21,11 +22,6 @@ import android.widget.RadioGroup;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
-
-
-
-import java.util.Scanner;
-
 
 
 public class Shop extends AppCompatActivity {
@@ -71,18 +67,10 @@ public class Shop extends AppCompatActivity {
     RadioButton buy2;
     RadioButton buy1;
 
-
-    /**
-     * Constructor for the Shop class.
-     *
-     * @param inv Inventory object used to update the player's inventory.
-     * @param playerMoneyCount The amount of money the player has.
-     */
-    public Shop(Inventory inv, int playerMoneyCount)
+    public Shop()
     {
-        this.inv = inv;
-        this.playerMoneyCount = playerMoneyCount;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +79,8 @@ public class Shop extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
+
+        inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
@@ -115,6 +105,7 @@ public class Shop extends AppCompatActivity {
         Button buyItem = (Button) findViewById(R.id.buyItem);
         Button continueOnTheTrail = (Button) findViewById(R.id.continueOnTheTrail);
 
+        radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
         radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
         buy100 = (RadioButton) findViewById(R.id.buy100);
         buy50 = (RadioButton) findViewById(R.id.buy50);
@@ -128,11 +119,12 @@ public class Shop extends AppCompatActivity {
             public void onClick(View view) {
                 int id = view.getId();
                 // Updates the amount of money the player has along with their inventory of items.
-                switch (view.getId()) {
+                switch (radioGroup1.getCheckedRadioButtonId()) {
                     case R.id.buyFood: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 foodPurchased = 100;
+                                System.out.println("Here");
                             }
                             break;
 
@@ -166,7 +158,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyClothing: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 clothingPurchased = 100;
                             }
@@ -238,7 +230,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyOxen: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 oxenPurchased = 100;
                             }
@@ -274,7 +266,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyWagonWheel: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 wagonWheelPurchased = 100;
                             }
@@ -310,7 +302,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyWagonAxle: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 wagonAxlePurchased = 100;
                             }
@@ -346,7 +338,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyWagonTongue: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 wagonTonguePurchased = 100;
                             }
@@ -382,7 +374,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyMedicalSupply: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 medicalSupplyPurchased = 100;
                             }
@@ -434,7 +426,10 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                resetItems();
+                Log.i("TAG", String.valueOf(inv.getFoodCount()));
                 Intent intent2 = new Intent(Shop.this, MainGame.class);
+                intent2.putExtra("passInventory", inv);
                 startActivity(intent2);
             }
         });
@@ -446,8 +441,9 @@ public class Shop extends AppCompatActivity {
          */
         public void resetItems ()
         {
-            if (playerMoneyCount >= moneyUsed) {
-                inv.setPlayerMoneyCount(playerMoneyCount - moneyUsed);
+
+            if (inv.getPlayerMoneyCount() >= moneyUsed) {
+                inv.setPlayerMoneyCount(inv.getPlayerMoneyCount() - moneyUsed);
                 inv.setFoodCount(foodPurchased * 2);
                 inv.setClothingCount(clothingPurchased);
                 inv.setBasketCount(basketPurchased);
@@ -459,6 +455,7 @@ public class Shop extends AppCompatActivity {
             } else {
                 inv.setPlayerMoneyCount(playerMoneyCount);
             }
+            Log.i("TAG", String.valueOf(inv.getFoodCount()));
         }
     }
 

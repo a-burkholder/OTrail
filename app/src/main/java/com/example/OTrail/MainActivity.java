@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.titlescreen);
         final Button start = findViewById(R.id.titleStart);
+
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

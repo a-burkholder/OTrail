@@ -9,7 +9,6 @@
 package com.example.OTrail;
 
 import java.util.Random;
-import java.util.Scanner;
 
 
 public class Party
