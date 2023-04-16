@@ -170,6 +170,7 @@
         android:adjustViewBounds="false"
         android:background="#000000"
         android:cropToPadding="true"
+        android:elevation="-50dp"
         android:scaleType="centerInside"
         android:scaleX="0.95"
         android:scaleY="0.95"

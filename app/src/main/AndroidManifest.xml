@@ -24,9 +24,6 @@
             android:name=".OpenCattieInfo"
             android:exported="false" />
         <activity
-            android:name=".OpenTop"
-            android:exported="false" />
-        <activity
             android:name=".OpenGrave"
             android:exported="false" />
         <activity

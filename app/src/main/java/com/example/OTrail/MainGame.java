@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
 
@@ -37,6 +39,12 @@ public class MainGame extends AppCompatActivity {
         setContentView(R.layout.gameplayscreen);
 
         final TextView dateDisplay = findViewById(R.id.dateDisplay);
+        final TextView weatherDisplay = findViewById(R.id.weatherdisplay);
+        final TextView temperatureDisplay = findViewById(R.id.temperatureDisplay);
+        final TextView speedDisplay = findViewById(R.id.speedDisplay);
+        final TextView rationsDisplay = findViewById(R.id.rationDisplay);
+        final TextView healthDisplay = findViewById(R.id.healthDisplay);
+        final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
 
 
         final Button actionsBut = findViewById(R.id.action);
@@ -54,7 +62,15 @@ public class MainGame extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-//                dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
+
+                dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
+                weatherDisplay.setText(date.getWeather());
+                temperatureDisplay.setText(String.valueOf(date.getTemp()) + "F");
+                speedDisplay.setText("10");
+                rationsDisplay.setText(String.valueOf(inv.getFoodCount())); // change this
+                healthDisplay.setText(""); // update this
+                foodDisplay.setText(String.valueOf(inv.getFoodCount()));
+
                 inv.isWagonUsable();
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
