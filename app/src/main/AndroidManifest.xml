@@ -30,6 +30,9 @@
             android:name=".OpenGrave"
             android:exported="false" />
         <activity
+            android:name=".OpenDate"
+            android:exported="false" />
+        <activity
             android:name=".Inventory"
             android:exported="false" />
         <activity

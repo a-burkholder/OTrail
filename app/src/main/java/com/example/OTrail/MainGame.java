@@ -32,12 +32,13 @@ public class MainGame extends AppCompatActivity {
         Menu menu = new Menu(inv, party, map, shop);
         Date date = new Date(startDate);
         party.setNames(names);
+        Event event = new Event(inv, party, date);
 
         final TextView dateDisplay = findViewById(R.id.dateDisplay);
 
-
-
 //        dateDisplay.setText(String.valueOf(date.getMonth()) + "/" + String.valueOf(date.getDate()) + "/" + String.valueOf(date.getYear()));
+
+
 
 
 
@@ -54,9 +55,56 @@ public class MainGame extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
-            {
-//                date.setDate(1);
+            public void onClick(View view) {
+                dateDisplay.setText(String.valueOf(date.getMonth()) + "/" + String.valueOf(date.getDate()) + "/" + String.valueOf(date.getYear()));
+                inv.isWagonUsable();
+
+                if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
+                    // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
+                    if (inv.isWagonUsable() && !party.getGameOverStatus()) {
+                        map.setPosition(10);
+                    }
+
+                    // If river crossing
+                    if (map.isRiver()) {
+                        menu.riverCrossing(event);
+                    }
+
+                    // Prints the progress percentage.
+                    map.progressBar();
+
+                    // Increments the date for each loop.
+                    date.setDate(1);
+
+                    // Prints the current date out for the player to see.
+                    date.printDate();
+
+                    // Prints out the player's health.
+                    party.printAllPeoplesHealth();
+
+                    // Increment weather / terrian if needed.
+                    map.setClimateZone();
+                    date.setWeather(map.getClimate());
+                    date.setTemp(map.getClimate());
+                    date.setGrass(map.getClimate());
+
+                    // Calculates the players food use.
+                    party.dailyFoodUsed();
+
+                    // Could generate a random number depending on the random number generated.
+                    event.randomEvents();
+
+                    // Lists the daily choices for the player.
+                    int temp = 1;
+                    do {
+                        temp = menu.playerDailyChoices(map);
+
+                    } while (temp == 2);
+
+                    // Increment distance to next location.
+                    map.getDistToLM();
+                }
+
             }
         });
 
@@ -65,7 +113,8 @@ public class MainGame extends AppCompatActivity {
 
 //        final Button talkBut = findViewById(R.id.viewLocation);
         final Button shopBut = findViewById(R.id.Shop);
-        shopBut.setOnClickListener(new View.OnClickListener(){
+        shopBut.setOnClickListener(new View.OnClickListener()
+            {
 
             @Override
             public void onClick(View view)
@@ -74,6 +123,7 @@ public class MainGame extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
 
