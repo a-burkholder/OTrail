@@ -14,23 +14,32 @@ import android.widget.TextView;
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
 
+    private static final String DATE_KEY = "com.example.OTrail.DATE";
+    private Date date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
-        int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
 
 
         Inventory inv;
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
-//        Shop shop = new Shop(inv, inv.getPlayerMoneyCount());
+        if(savedInstanceState != null)
+        {
+            date = (Date) savedInstanceState.getSerializable(DATE_KEY);
+        }
+        if(date == null)
+        {
+            int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
+            date = new Date(startDate);
+        }
         Shop shop = new Shop();
         Map map = new Map();
         Party party = new Party(inv);
         Menu menu = new Menu(inv, party, map, shop);
-        Date date = new Date(startDate);
         party.setNames(names);
         Event event = new Event(inv, party, date);
 
@@ -136,7 +145,14 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
+
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
+    }
+
+    protected void onSaveInstanceState(Bundle outState)
+    {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(DATE_KEY, date);
     }
 }

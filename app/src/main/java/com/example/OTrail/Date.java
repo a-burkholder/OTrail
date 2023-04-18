@@ -7,12 +7,14 @@
  */
 package com.example.OTrail;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Date {
+public class Date implements Serializable {
     Random rand = new Random();
     //-------------variables
     private int[] date;
+    private static Date instance = null;
     private int[] lastRain;
     private String currentWeather;
     private int currentTemp;
