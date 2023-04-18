@@ -27,10 +27,17 @@ public class MainGame extends AppCompatActivity {
 
 //        Shop shop = new Shop(inv, inv.getPlayerMoneyCount());
         Shop shop = new Shop();
-        Map map = new Map();
+
+        Map map;
+        if(getIntent().getSerializableExtra("passMap") == null) map = new Map();
+        else map = (Map)getIntent().getSerializableExtra("passMap");
+
+        Date date;
+        if(getIntent().getSerializableExtra("passDate") == null) date = new Date(startDate);
+        else date = (Date)getIntent().getSerializableExtra("passDate");
+
         Party party = new Party(inv);
         Menu menu = new Menu(inv, party, map, shop);
-        Date date = new Date(startDate);
         party.setNames(names);
         Event event = new Event(inv, party, date);
 

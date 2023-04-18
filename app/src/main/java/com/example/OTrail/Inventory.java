@@ -27,6 +27,11 @@ public class Inventory implements Serializable {
             "-axle, + tongue",
             "-tongue, + wheel"};
 
+    public Inventory()
+    {
+
+    }
+
     /**
      * Checks to make sure the wagon is usable.
      *

@@ -7,6 +7,8 @@
  */
 package com.example.OTrail;
 
+import static android.content.Intent.getIntent;
+
 import java.util.Random;
 
 public class Date {
