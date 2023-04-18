@@ -98,6 +98,7 @@ public class Main {
             System.out.println("YOU HAVE MADE IT TO THE FIRST FORT!!!");
             System.out.println("[========================================================================]");
         }
+        
         else
         {
             System.out.println("YOU HAVE DIED AND DID NOT MAKE IT TO OREGON CITY!!!");
