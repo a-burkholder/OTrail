@@ -23,12 +23,22 @@
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="43dp" />
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="780dp"
+        android:layout_height="396dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="7dp" />
+
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="367dp"
-        android:layout_height="131dp"
-        android:text="In July 1818 the North West Company opened a fur-trading post at the confluence of the Columbia and Walla Walla rivers. Originally called Fort Nez Perces, it was renamed Fort Walla Walla when the North West Company and the Hudson's Bay Company merged in 1821. This is the last fort before the end of your journey."
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="508dp"
-        tools:layout_editor_absoluteY="43dp" />
+        android:id="@+id/textView16"
+        android:layout_width="275dp"
+        android:layout_height="320dp"
+        android:text="In July 1818 the North West Company opened a fur-trading post at the confluence of the Columbia and Walla Walla rivers. Originally called Fort Nez Perces, it was renamed Fort Walla Walla when the North West Company and the Hudson's Bay Company merged in 1821. This is the last fort before the end of your journey!"
+        android:textColor="#000000"
+        android:textSize="21sp"
+        tools:layout_editor_absoluteX="561dp"
+        tools:layout_editor_absoluteY="45dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,32 +12,39 @@
         android:layout_height="627dp"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:srcCompat="@drawable/boiIn"
-        tools:layout_editor_absoluteX="-262dp" />
+        tools:layout_editor_absoluteX="-252dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="257dp"
         android:layout_height="44dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="176dp"
-        android:background="#F3EAD72F"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="44dp"
         android:text="Welcome to Fort Boise!"
+        android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="412dp"
+        android:layout_height="281dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="528dp"
+        tools:layout_editor_absoluteY="114dp" />
+
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="393dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="252dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="16dp"
-        android:background="#F3EAD72F"
-        android:text="Fort Boise was established 1834 and is quickly becoming one of the most important forts along the entire Oregon Trail. It is well known for its hospitality and quality of supplies provided to travelers."
-        android:textSize="18sp"
+        android:text="Fort Boise was established in 1834 and is quickly becoming one of the most important forts along the entire Oregon Trail. It is well known for its hospitality and quality of supplies provided to travelers."
+        android:textColor="#000000"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.773" />
 </androidx.constraintlayout.widget.ConstraintLayout>
