@@ -65,7 +65,7 @@ public class MainGame extends AppCompatActivity {
         final TextView weatherDisplay = findViewById(R.id.weatherdisplay);
         final TextView temperatureDisplay = findViewById(R.id.temperatureDisplay);
         final TextView speedDisplay = findViewById(R.id.speedDisplay);
-        final TextView rationsDisplay = findViewById(R.id.rationDisplay);
+        final TextView rationsDisplay = findViewById(R.id.displayDisplay);
         final TextView healthDisplay = findViewById(R.id.healthDisplay);
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
 

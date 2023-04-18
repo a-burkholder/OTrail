@@ -134,12 +134,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/rationDisplay"
+        android:id="@+id/displayDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="464dp"
         android:layout_marginTop="16dp"
-        android:text="@string/rations"
+        android:text="Distance"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
