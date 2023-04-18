@@ -8,18 +8,21 @@
  */
 package com.example.OTrail;
 
+import java.io.Serializable;
 import java.util.Random;
 
 
-public class Party
+public class Party implements Serializable
 {
     private String difficulty[] = {"Easy", "Medium", "Hard", "Hardcore"};
     private String currentDifficulty = "Easy";
     private String names[] = new String[5]; // five people and the pet
     private int health[] = {100, 100, 100, 100, 100};
+    private static Party instance = null;
+
     private boolean isAlive[] = {true, true, true, true, true};
     private boolean gameOver = false;
-    private Inventory inv;
+    private static Inventory inv;
 
     /**
      * Default constructor for the Inventory class.
@@ -181,5 +184,15 @@ public class Party
                 System.out.println(names[i] + " has a health of " + health[i] + ".");
             }
         }
+    }
+
+
+    public static Party getInstance(Inventory inv)
+    {
+        if(instance == null)
+        {
+            instance = new Party(inv);
+        }
+        return instance;
     }
 }

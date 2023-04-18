@@ -64,6 +64,14 @@ public class Date implements Serializable {
         lastRain = a;
     }
 
+    public static Date getInstance(int[] startDate)
+    {
+        if(instance == null)
+        {
+            instance = new Date(startDate);
+        }
+        return instance;
+    }
     //-------------functionality
 
     /**getDate()

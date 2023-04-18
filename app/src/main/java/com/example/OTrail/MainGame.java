@@ -15,7 +15,10 @@ public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
 
     private static final String DATE_KEY = "com.example.OTrail.DATE";
+    private static final String PARTY_KEY = "com.example.OTrail.PARTY";
+    private int[] startDate = {1, 3, 1847};
     private Date date;
+    private Party party;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +33,23 @@ public class MainGame extends AppCompatActivity {
         if(savedInstanceState != null)
         {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
+
+            party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
+
         }
-        if(date == null)
+        else
         {
-            int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
-            date = new Date(startDate);
+            startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
+            date = Date.getInstance(startDate);
+
+            party = Party.getInstance(inv);
+
         }
+
+
         Shop shop = new Shop();
         Map map = new Map();
-        Party party = new Party(inv);
+
         Menu menu = new Menu(inv, party, map, shop);
         party.setNames(names);
         Event event = new Event(inv, party, date);
@@ -154,5 +165,7 @@ public class MainGame extends AppCompatActivity {
     {
         super.onSaveInstanceState(outState);
         outState.putSerializable(DATE_KEY, date);
+        outState.putSerializable(PARTY_KEY, party);
     }
+
 }
