@@ -263,6 +263,8 @@ public class Shop extends AppCompatActivity {
                             default:
                         }
                         moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
+                        System.out.println(moneyUsed);
+
                     }
                     break;
                     case R.id.buyWagonWheel: {
@@ -426,8 +428,6 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resetItems();
-                Log.i("TAG", String.valueOf(inv.getFoodCount()));
                 Intent intent2 = new Intent(Shop.this, MainGame.class);
                 intent2.putExtra("passInventory", inv);
                 startActivity(intent2);
@@ -441,9 +441,9 @@ public class Shop extends AppCompatActivity {
          */
         public void resetItems ()
         {
-
+            System.out.println(oxenPurchased);
             if (inv.getPlayerMoneyCount() >= moneyUsed) {
-                inv.setPlayerMoneyCount(inv.getPlayerMoneyCount() - moneyUsed);
+                inv.setPlayerMoneyCount(inv.getPlayerMoneyCount()-moneyUsed);
                 inv.setFoodCount(foodPurchased * 2);
                 inv.setClothingCount(clothingPurchased);
                 inv.setBasketCount(basketPurchased);
