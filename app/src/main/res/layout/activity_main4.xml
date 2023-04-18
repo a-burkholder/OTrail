@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="1350dp"
+        android:layout_height="997dp"
+        app:srcCompat="@drawable/img_3"
+        tools:layout_editor_absoluteX="-181dp"
+        tools:layout_editor_absoluteY="-293dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:background="#040404"
+        android:text="Welcome to Fort Bridger!"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="638dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="727dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="881dp"
+        android:layout_height="33dp"
+        android:background="#000000"
+        android:backgroundTint="#000000"
+        android:text="Fort Bridger was established 1843 as a fur trading post, it is one of the smaller forts you will pass by on the trail. With much less traffic than other forts you will see, prices at this fort have been considered very high over the past few years by travelers."
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="362dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

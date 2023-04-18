@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="1103dp"
+        android:layout_height="633dp"
+        app:srcCompat="@drawable/img_2"
+        tools:layout_editor_absoluteX="-141dp"
+        tools:layout_editor_absoluteY="-96dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="424dp"
+        android:layout_height="71dp"
+        android:text="Welcome to Fort Walla Walla!"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="367dp"
+        android:layout_height="131dp"
+        android:text="In July 1818 the North West Company opened a fur-trading post at the confluence of the Columbia and Walla Walla rivers. Originally called Fort Nez Perces, it was renamed Fort Walla Walla when the North West Company and the Hudson's Bay Company merged in 1821. This is the last fort before the end of your journey."
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="508dp"
+        tools:layout_editor_absoluteY="43dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
