@@ -9,7 +9,10 @@
 package com.example.OTrail;
 
 
-public class Map {
+import java.io.Serializable;
+
+public class Map implements Serializable
+{
     //--------Variables
     private String[] landmarks = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};
     private int[] distLMsToOrigin = {0, 102, 200, 250, 490, 830, 950, 1055, 1170, 1240, 1320, 1420, 1700, 1880, 1930, 2000}; // distance from starting location in miles
@@ -19,6 +22,9 @@ public class Map {
     private int lastLandmark; // most recent index for gathering data from the arrays
     private int position; // in miles
     private int currentClimateZone;
+
+    private static Map instance = null;
+
     private int depthAtRiver;
 
     //----------------constructors
@@ -30,6 +36,17 @@ public class Map {
         position = 0;
         currentClimateZone = climates[lastLandmark];
     }
+
+
+    public static Map getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new Map();
+        }
+        return instance;
+    }
+
     //---------------functions
     /**getClimate()
      * Fetches the current climate zone to be used in other, classes such as date, to calculate position based data
@@ -102,7 +119,12 @@ public class Map {
      * Will stop progress
      * */
     public void setPosition(int distanceTraveled) {
-        if (position + distanceTraveled < distLMsToOrigin[lastLandmark + 1])
+        if ((position + distanceTraveled + 9 > distLMsToOrigin[lastLandmark + 1]) && ((position + distanceTraveled) < distLMsToOrigin[lastLandmark + 1]))
+        {
+            position = distLMsToOrigin[lastLandmark + 1];
+            lastLandmark++;
+        }
+        else if (position + distanceTraveled < distLMsToOrigin[lastLandmark + 1])
         position = position + distanceTraveled;
         else {
             position = distLMsToOrigin[lastLandmark+1];

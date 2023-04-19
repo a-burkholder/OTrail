@@ -16,9 +16,12 @@ public class MainGame extends AppCompatActivity {
 
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
+    private static final String MAP_KEY = "com.example.OTrail.MAP";
     private int[] startDate = {1, 3, 1847};
     private Date date;
     private Party party;
+    private Inventory inv;
+    private Map map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +29,13 @@ public class MainGame extends AppCompatActivity {
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
 
 
-        Inventory inv;
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
         if(savedInstanceState != null)
         {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
-
+            map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
 
         }
@@ -41,17 +43,16 @@ public class MainGame extends AppCompatActivity {
         {
             startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
             date = Date.getInstance(startDate);
-
+            map = Map.getInstance();
             party = Party.getInstance(inv);
+            party.setNames(names);
 
         }
 
 
         Shop shop = new Shop();
-        Map map = new Map();
 
         Menu menu = new Menu(inv, party, map, shop);
-        party.setNames(names);
         Event event = new Event(inv, party, date);
 
 
@@ -90,9 +91,8 @@ public class MainGame extends AppCompatActivity {
 
                 dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                 weatherDisplay.setText(date.getWeather());
-                temperatureDisplay.setText(String.valueOf(date.getTemp()) + "F");
+                temperatureDisplay.setText(String.valueOf(date.getTemp()));
                 speedDisplay.setText("10");
-                distanceDisplay.setText(String.valueOf(map.getDistFromLM()));
                 rationsDisplay.setText(String.valueOf(inv.getFoodCount())); // change this
                 healthDisplay.setText(""); // update this
                 foodDisplay.setText(String.valueOf(inv.getFoodCount()));
@@ -104,6 +104,8 @@ public class MainGame extends AppCompatActivity {
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
                         map.setPosition(10);
                     }
+                    distanceDisplay.setText(String.valueOf(map.getPosition()));
+
 
                     // If river crossing
                     if (map.isRiver()) {
@@ -145,18 +147,19 @@ public class MainGame extends AppCompatActivity {
 
 
 //        final Button talkBut = findViewById(R.id.viewLocation);
-        final Button shopBut = findViewById(R.id.Shop);
-        shopBut.setOnClickListener(new View.OnClickListener()
-            {
+        if(map.isShop() || map.getPosition() == 0) { // THIS IS NOT WORKING AND NEEDS FIXED.
+            final Button shopBut = findViewById(R.id.Shop);
 
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent1 = new Intent(MainGame.this, Shop.class);
-                intent1.putExtra("Inventory object", inv);
-                startActivity(intent1);
-            }
-        });
+            shopBut.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(MainGame.this, Shop.class);
+                    intent1.putExtra("Inventory object", inv);
+                    startActivity(intent1);
+                }
+            });
+        }
 
 
         final Button tradeBut = findViewById(R.id.Trade);
@@ -168,6 +171,7 @@ public class MainGame extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putSerializable(DATE_KEY, date);
         outState.putSerializable(PARTY_KEY, party);
+        outState.putSerializable(MAP_KEY, map);
     }
 
 }
