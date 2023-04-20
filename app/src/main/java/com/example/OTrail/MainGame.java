@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
-
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
     private static final String MAP_KEY = "com.example.OTrail.MAP";
