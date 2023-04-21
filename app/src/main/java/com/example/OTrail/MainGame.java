@@ -122,6 +122,7 @@ public class MainGame extends AppCompatActivity {
                     {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
+                        intent4.putExtra("passInventory", inv);
                         startActivity(intent4);
                     }
 

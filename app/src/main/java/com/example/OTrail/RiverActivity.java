@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RiverActivity extends AppCompatActivity
 {
     private Event event;
+    private Inventory inv;
 
     public RiverActivity()
     {
@@ -25,6 +26,7 @@ public class RiverActivity extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         event = (Event) getIntent().getSerializableExtra("passEvent");
+        inv = (Inventory) getIntent().getSerializableExtra("passInventory");
 
         final TextView textView92 = findViewById(R.id.textView92);
 
@@ -45,6 +47,7 @@ public class RiverActivity extends AppCompatActivity
                    event.riverCrossing(2);
                    Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
                    intent3.putExtra("passEvent", event);
+                   intent3.putExtra("passInventory", inv);
                    startActivity(intent3);
                }
            });
@@ -58,6 +61,7 @@ public class RiverActivity extends AppCompatActivity
                event.riverCrossing(3);
                Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
                intent3.putExtra("passEvent", event);
+               intent3.putExtra("passInventory", inv);
                startActivity(intent3);
            }
        });
