@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,56 +9,96 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="605dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="5dp"
+        android:text="BUY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="605dp"
-        tools:layout_editor_absoluteY="321dp" />
+        android:layout_marginStart="504dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="5dp"
+        android:text="CROSS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="384dp"
+        android:layout_marginTop="16dp"
+        android:elevation="5dp"
         android:text="River Crossing"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="26dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView91"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="88dp"
+        android:elevation="5dp"
         android:text="Hire a ferry ($100)"
-        tools:layout_editor_absoluteX="545dp"
-        tools:layout_editor_absoluteY="162dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView92"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="88dp"
+        android:elevation="5dp"
         android:text="Learn about the river:"
-        tools:layout_editor_absoluteX="545dp"
-        tools:layout_editor_absoluteY="55dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="504dp"
+        android:layout_marginBottom="88dp"
+        android:elevation="5dp"
         android:text="Cross without a ferry"
-        tools:layout_editor_absoluteX="545dp"
-        tools:layout_editor_absoluteY="302dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="607dp"
-        tools:layout_editor_absoluteY="74dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="5dp"
+        android:text="LEARN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="806dp"
+        android:layout_height="450dp"
+        android:elevation="-40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/river"
+        tools:layout_editor_absoluteX="-38dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="75dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="356dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wagon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
