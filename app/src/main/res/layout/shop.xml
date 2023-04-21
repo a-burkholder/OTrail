@@ -187,14 +187,14 @@
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="189dp"
-        android:layout_height="187dp"
+        android:layout_width="253dp"
+        android:layout_height="226dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginStart="-32dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="524dp"
+        android:layout_marginTop="88dp"
         android:gravity="center"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <!--adding a radio button -->
@@ -204,8 +204,25 @@
         <!--adding a radio button -->
 
         <RadioButton
+            android:id="@+id/buy100"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="Buy 100    "
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/buy50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.969"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <RadioButton
             android:id="@+id/buy50"
-            android:layout_width="200dp"
+            android:layout_width="229dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
@@ -220,7 +237,7 @@
 
         <RadioButton
             android:id="@+id/buy25"
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
@@ -234,8 +251,23 @@
             app:layout_constraintTop_toBottomOf="@+id/buy50" />
 
         <RadioButton
+            android:id="@+id/buy10"
+            android:layout_width="229dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="Buy 10"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/buy2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy25" />
+
+        <RadioButton
             android:id="@+id/buy2"
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
@@ -250,7 +282,7 @@
 
         <RadioButton
             android:id="@+id/buy1"
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
@@ -263,37 +295,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buy2" />
 
-        <RadioButton
-            android:id="@+id/buy100"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 100"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/buy50"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.969"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            app:layout_constraintVertical_chainStyle="spread" />
-
-        <RadioButton
-            android:id="@+id/buy10"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="16dp"
-            android:checked="false"
-            android:padding="4dp"
-            android:text="Buy 10"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/buy2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buy25" />
     </RadioGroup>
 
     <TextView
