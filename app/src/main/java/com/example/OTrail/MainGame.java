@@ -59,6 +59,9 @@ public class MainGame extends AppCompatActivity {
 
         final Button actionsBut = findViewById(R.id.action);
         final Button invBut = findViewById(R.id.Inventory);
+        final Button tradeBut = findViewById(R.id.Trade);
+        final Button timelineBut = findViewById(R.id.timeline);
+        final Button moveBut = findViewById(R.id.continueAction);
         invBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +70,7 @@ public class MainGame extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        final Button moveBut = findViewById(R.id.continueAction);
+
         moveBut.setOnClickListener(new View.OnClickListener()
         {
             @SuppressLint("SetTextI18n")
@@ -127,6 +130,15 @@ public class MainGame extends AppCompatActivity {
         });
 
 
+/* // Action button for Berry Picking Minigame
+        actionsBut.setOnClickListener(new View.OnClickListener() {
+       @Override
+            public void onClick(View view) {
+                Intent intentBerryMinigame = new Intent(MainGame.this, berryPickingMinigame.class);
+                startActivity(intentBerryMinigame);
+            }
+        });
+         */
 
 
 //        final Button talkBut = findViewById(R.id.viewLocation);
@@ -143,8 +155,7 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
-        final Button tradeBut = findViewById(R.id.Trade);
-        final Button timelineBut = findViewById(R.id.timeline);
+
 
     }
 }

@@ -1,6 +1,7 @@
-package com.example.berrypickingminigame;
+package com.example.OTrail;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -13,9 +14,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-import android.view.ViewGroup.MarginLayoutParams;
 
 public class berryPickingMinigame extends AppCompatActivity {
     int miniGame;
@@ -36,13 +34,11 @@ public class berryPickingMinigame extends AppCompatActivity {
     Random rand = new Random();
 
     protected void onCreate(Bundle savedInstanceState) {
-
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.berryberryminigame);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
 
         ImageButton berry1 = findViewById(R.id.imageButton);
         ImageButton berry2 = findViewById(R.id.imageButton2);
@@ -154,6 +150,17 @@ public class berryPickingMinigame extends AppCompatActivity {
                                         counter1.setVisibility(View.VISIBLE);
                                         counter1.setText("Finished!");
                                         miniGameRunning = false;
+
+
+                                        final Handler handler = new Handler();
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Intent intentEndBerryPickingMinigame = new Intent(berryPickingMinigame.this, MainGame.class);
+                                                //intentEndBerryPickingMinigame.putExtra("passInventory", inv);
+                                                startActivity(intentEndBerryPickingMinigame);
+                                            }
+                                        }, (4000));
                                     }
                                 }.start();
                             }
