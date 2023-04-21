@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button31"
+        android:id="@+id/button30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue on the Trail"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Talk to a Local"
@@ -21,10 +21,18 @@
         tools:layout_editor_absoluteY="67dp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fort Hall"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:text="Welcome to Soda Springs"
+        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="286dp"
+        android:layout_height="114dp"
+        android:text="Emigrants used the pools of water for medicinal and bathing purposes. Many pioneers and their animals became sick when they drank too much of the alkali water from the springs."
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="152dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

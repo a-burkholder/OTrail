@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/button26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue on the Trail"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Talk to a Local"
@@ -21,10 +21,19 @@
         tools:layout_editor_absoluteY="67dp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Green River"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:text="Welcome to Independence Rock"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/textView94"
+        android:layout_width="276dp"
+        android:layout_height="101dp"
+        android:text="Independence rock derived its name from a party of fur trappers who camped and celebrated Independence Day near the rock on July 4, 1830."
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="149dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

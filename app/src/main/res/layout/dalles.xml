@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button32"
+        android:id="@+id/button34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue on the Trail"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Talk to a Local"
@@ -21,10 +21,18 @@
         tools:layout_editor_absoluteY="67dp" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Snake River"
-        tools:layout_editor_absoluteX="278dp"
-        tools:layout_editor_absoluteY="40dp" />
+        android:text="Welcome to The Dalles"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="242dp"
+        android:layout_height="83dp"
+        android:text="The Dalles is considered the end of the Overland Oregon Trail."
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="118dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/button32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue on the Trail"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Talk to a Local"
@@ -21,10 +21,18 @@
         tools:layout_editor_absoluteY="67dp" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Soda Springs"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="46dp" />
+        android:text="Welcome to the Snake River"
+        tools:layout_editor_absoluteX="278dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="216dp"
+        android:layout_height="95dp"
+        android:text="The Snake River is named for the Snake Indians, through whose country the greater part of the river flows."
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="146dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

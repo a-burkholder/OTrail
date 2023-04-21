@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/button29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue on the Trail"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Talk to a Local"
@@ -21,10 +21,18 @@
         tools:layout_editor_absoluteY="67dp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chimney Rock"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:text="Welcome to the Green River"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="300dp"
+        android:layout_height="102dp"
+        android:text="Crossing rivers was the most dangerous activity emigrants faced on their journey west."
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="130dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
