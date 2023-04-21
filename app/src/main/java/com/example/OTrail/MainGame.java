@@ -56,7 +56,6 @@ public class MainGame extends AppCompatActivity {
         Shop shop = new Shop();
 
         Menu menu = new Menu(inv, party, map, shop);
-        Event event = new Event(inv, party, date);
 
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -104,8 +103,10 @@ public class MainGame extends AppCompatActivity {
                 inv.isWagonUsable();
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
+                    System.out.println("start of stuff" + inv.isWagonUsable() + !party.getGameOverStatus());
                     // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
+                        System.out.println("Increments the position");
                         map.setPosition(10);
                     }
                     distanceDisplay.setText(String.valueOf(map.getPosition()));
@@ -116,7 +117,6 @@ public class MainGame extends AppCompatActivity {
                     // Increments the date for each loop.
                     date.setDate(1);
 
-                    // Prints the current date out for the player to see.
 
                     if(map.isRiver())
                     {
@@ -124,7 +124,6 @@ public class MainGame extends AppCompatActivity {
                         intent4.putExtra("passEvent", event);
                         startActivity(intent4);
                     }
-
 
                     // Increment weather / terrian if needed.
                     map.setClimateZone();

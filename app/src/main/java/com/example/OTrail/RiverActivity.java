@@ -24,7 +24,6 @@ public class RiverActivity extends AppCompatActivity
         setContentView(R.layout.rivercrossing);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-
         event = (Event) getIntent().getSerializableExtra("passEvent");
 
         final TextView textView92 = findViewById(R.id.textView92);
@@ -40,16 +39,15 @@ public class RiverActivity extends AppCompatActivity
        });
 
        Button buy = (Button) findViewById(R.id.buy);
-       buy.setOnClickListener(new View.OnClickListener()
-       {
-           @Override
-           public void onClick(View view)
-           {
-               event.riverCrossing(2);
-               Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
-               startActivity(intent3);
-           }
-       });
+           buy.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   event.riverCrossing(2);
+                   Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
+                   intent3.putExtra("passEvent", event);
+                   startActivity(intent3);
+               }
+           });
 
        Button cross = (Button) findViewById(R.id.cross);
        cross.setOnClickListener(new View.OnClickListener()
@@ -59,6 +57,7 @@ public class RiverActivity extends AppCompatActivity
            {
                event.riverCrossing(3);
                Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
+               intent3.putExtra("passEvent", event);
                startActivity(intent3);
            }
        });

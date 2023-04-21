@@ -321,5 +321,6 @@ public class Inventory implements Serializable {
             default:break;
         }
     }
+
 }
 

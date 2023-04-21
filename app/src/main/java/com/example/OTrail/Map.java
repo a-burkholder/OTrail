@@ -160,7 +160,7 @@ public class Map implements Serializable
      * Prints the position as a percent of the total journey to be traveled
      * */
     public void progressBar() {
-        System.out.println("Progress Percentage: " + ((((double)position) / 250.0) *100) + "%");
+        System.out.println("Progress Percentage: " + ((((double)position) / 2000.0) *100) + "%");
     }
 
     /**isShop()
@@ -180,7 +180,10 @@ public class Map implements Serializable
      * */
     public boolean isRiver() {
         if (getDistFromLM() == 0){
-        return isRiverAtLandmark[lastLandmark];
+            lastLandmark++;
+            setPosition(1);
+
+            return isRiverAtLandmark[lastLandmark--];
         }
         else return false;
     }
