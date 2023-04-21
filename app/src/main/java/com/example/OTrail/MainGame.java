@@ -16,11 +16,13 @@ public class MainGame extends AppCompatActivity {
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
     private static final String MAP_KEY = "com.example.OTrail.MAP";
+    private static final String EVENT_KEY = "com.example.OTrail.EVENT";
     private int[] startDate = {1, 3, 1847};
     private Date date;
     private Party party;
     private Inventory inv;
     private Map map;
+    private Event event;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainGame extends AppCompatActivity {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
             map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
+            event = (Event) savedInstanceState.getSerializable(EVENT_KEY);
 
         }
         else
@@ -45,6 +48,7 @@ public class MainGame extends AppCompatActivity {
             map = Map.getInstance();
             party = Party.getInstance(inv);
             party.setNames(names);
+            event = Event.getInstance(inv, party, date);
 
         }
 
@@ -69,6 +73,7 @@ public class MainGame extends AppCompatActivity {
         final TextView healthDisplay = findViewById(R.id.healthDisplay);
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
         final TextView distanceDisplay = findViewById(R.id.distanceDisplay);
+
 
 
         final Button actionsBut = findViewById(R.id.action);
@@ -105,12 +110,6 @@ public class MainGame extends AppCompatActivity {
                     }
                     distanceDisplay.setText(String.valueOf(map.getPosition()));
 
-
-                    // If river crossing
-                    if (map.isRiver()) {
-                        menu.riverCrossing(event);
-                    }
-
                     // Prints the progress percentage.
                     map.progressBar();
 
@@ -119,7 +118,13 @@ public class MainGame extends AppCompatActivity {
 
                     // Prints the current date out for the player to see.
 
-                    // Prints out the player's health.
+                    if(map.isRiver())
+                    {
+                        Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
+                        intent4.putExtra("passEvent", event);
+                        startActivity(intent4);
+                    }
+
 
                     // Increment weather / terrian if needed.
                     map.setClimateZone();
@@ -171,6 +176,7 @@ public class MainGame extends AppCompatActivity {
         outState.putSerializable(DATE_KEY, date);
         outState.putSerializable(PARTY_KEY, party);
         outState.putSerializable(MAP_KEY, map);
+        outState.putSerializable(EVENT_KEY, event);
     }
 
 }

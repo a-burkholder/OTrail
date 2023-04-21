@@ -387,56 +387,7 @@ public class Menu {
         System.out.println("[=========================================================================]");
     }
 
-    /**River Crossing menu
-     * Determines river height and depth, then outputs menu for choices.
-     * @param event Passes object event into the code.
-     */
-    public void riverCrossing(Event event)
-    {
-        Random rand = new Random();
-        int rand_int1 = rand.nextInt(10);
-        int rand_int2 = rand.nextInt(50);
-        boolean correctInput = false;
 
-        do{
-            System.out.println("""
-                        You have come across a river!
-                        How would you like to proceed?
-                        
-                        1. Learn about river
-                        2. Hire a ferry (50$)
-                        3. Cross without a ferry
-                        """);
-            System.out.println("[========================================================================]");
-            Scanner in = new Scanner(System.in);    //Set up Scanner
-            int input = 0;                          //initialize input
-            input =  in.nextInt();                  //gets next integer input as input.
-            switch (input) {
-                case 1 -> {
-                    System.out.println("" +
-                            "The river is " + rand_int1 + " feet deep and " + rand_int2 + " feet across." +
-                            "\nYou could pay 50$ to safely travel the river via ferry." +
-                            "\nHowever, if you wish to cross by foot, there is a chance" +
-                            "\nto lose items in the heavy current.");
-                    correctInput = false;
-                }
-                case 2 -> {
-                    event.riverCrossing(2, rand_int1, rand_int2);
-                    correctInput = true;
-                }
-                case 3 -> {
-                    event.riverCrossing(3, rand_int1, rand_int2);
-                    correctInput = true;
-                }
-                default -> {
-                    System.out.println("Invalid input");
-                    correctInput = false;
-                }
-            }
-        }while (correctInput == false);
-            System.out.println("[========================================================================]");
-
-    }
 
     /**Continue Class
      * Adds: "submit "0" to continue"

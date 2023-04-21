@@ -7,13 +7,18 @@
  */
 package com.example.OTrail;
 
+import java.io.Serializable;
 import java.util.Random;
-public class Event
+import java.util.Scanner;
+
+public class Event implements Serializable
 {
     //-------------variables
     private Inventory inv;
     private Party party;
     private Date date;
+    private static Event instance = null;
+
 
 
     /**
@@ -27,6 +32,15 @@ public class Event
         this.inv = inv;
         this.party = party;
         this.date = date;
+    }
+
+    public static Event getInstance(Inventory inv, Party party, Date date)
+    {
+        if(instance == null)
+        {
+            instance = new Event(inv, party, date);
+        }
+        return instance;
     }
 
     /**
@@ -192,13 +206,45 @@ public class Event
         }
     }
 
+    /**River Crossing menu
+     * Determines river height and depth, then outputs menu for choices.
+     */
+    public String riverCrossing(int input)
+    {
+        int value = input;
+        Random rand = new Random();
+        int rand_int1 = rand.nextInt(10);
+        int rand_int2 = rand.nextInt(50);
+        String output = "";
+
+            switch (value) {
+                case 1 -> {
+                    output = "The river is " + rand_int1 + " feet deep and " + rand_int2 + " feet across." +
+                            "\nYou could pay $100 to safely travel the river via ferry." +
+                            "\nHowever, if you wish to cross by foot, there is a chance" +
+                            "\nto lose items in the heavy current.";
+                }
+                case 2 -> {
+                    riverCrossing(2, rand_int1, rand_int2);
+                }
+                case 3 -> {
+                    riverCrossing(3, rand_int1, rand_int2);
+                }
+                default -> {
+                    System.out.println("Invalid input");
+                }
+            }
+
+        return output;
+    }
+
     /**public void riverCrossing(int option)
      * Contains the functionality of options to cross the river
      * @param option The index for finding which option was selected
      * */
     public void riverCrossing(int option, int rand1, int rand2){
         if (option == 2){
-            inv.setPlayerMoneyCount(-50);
+            inv.setPlayerMoneyCount(-100);
             System.out.println("You have paid $50 to successfully cross the river!");
         }
         else if (option == 3){

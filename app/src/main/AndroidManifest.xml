@@ -21,7 +21,10 @@
             android:name=".OpenTrailInfo"
             android:exported="false" />
         <activity
-            android:name=".OpenCattieInfo"
+            android:name=".OpenHattieInfo"
+            android:exported="false" />
+        <activity
+            android:name=".RiverActivity"
             android:exported="false" />
         <activity
             android:name=".OpenGrave"
