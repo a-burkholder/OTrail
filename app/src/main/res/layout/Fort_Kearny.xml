@@ -11,7 +11,8 @@
         android:layout_width="1449dp"
         android:layout_height="750dp"
         app:srcCompat="@drawable/img"
-        tools:layout_editor_absoluteX="-165dp" />
+        tools:layout_editor_absoluteX="-150dp"
+        tools:layout_editor_absoluteY="2dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -21,7 +22,7 @@
         android:backgroundTint="#B5ABAB"
         android:text="Welcome to Fort Kearney!"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
@@ -29,7 +30,7 @@
         android:layout_width="748dp"
         android:layout_height="326dp"
         app:srcCompat="@drawable/img_4"
-        tools:layout_editor_absoluteX="-136dp"
+        tools:layout_editor_absoluteX="-222dp"
         tools:layout_editor_absoluteY="84dp" />
 
     <TextView
@@ -39,14 +40,14 @@
         android:text="Fort Kearney is a military fort currently being built for the purpose of aiding travelers like yourself on the Oregon Trail. Once competed it will be known as the ‘Ultimate Rest Stop’ for travelers. In order for the Fort to be successful the fort must sell a large amount of goods to the travelers passing by. In order to do this, the fort sells goods at very affordable prices, therefore it is greatly encouraged to stop buy the shop at this fort."
         android:textColor="#000000"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="112dp" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="110dp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Continue1"
         android:layout_width="206dp"
         android:layout_height="55dp"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="#C65C16"
         android:text="Continue With Game"
         tools:layout_editor_absoluteX="657dp"
         tools:layout_editor_absoluteY="29dp" />

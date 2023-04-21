@@ -49,10 +49,10 @@
         app:layout_constraintVertical_bias="0.773" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Continue5"
         android:layout_width="235dp"
         android:layout_height="62dp"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="#C65C16"
         android:text="Continue With Game"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="30dp" />

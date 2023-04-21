@@ -52,10 +52,10 @@
         tools:layout_editor_absoluteY="72dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Continue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF5722"
+        android:backgroundTint="#C65C16"
         android:text="Continue With Game"
         tools:layout_editor_absoluteX="650dp"
         tools:layout_editor_absoluteY="333dp" />
