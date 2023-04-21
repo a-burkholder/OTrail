@@ -42,4 +42,13 @@
         tools:layout_editor_absoluteX="125dp"
         tools:layout_editor_absoluteY="112dp" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="206dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#FF5722"
+        android:text="Continue With Game"
+        tools:layout_editor_absoluteX="657dp"
+        tools:layout_editor_absoluteY="29dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
