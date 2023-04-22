@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
     private static final String DATE_KEY = "com.example.OTrail.DATE";
@@ -154,6 +156,7 @@ public class MainGame extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
+//                System.out.println(Arrays.toString(party.getNames()));
                 Intent intent4 = new Intent(MainGame.this, PartyActivity.class);
                 intent4.putExtra("passParty", party);
                 startActivity(intent4);

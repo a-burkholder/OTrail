@@ -21,7 +21,6 @@ public class OpenNames extends AppCompatActivity {
         setContentView(R.layout.name_input);
 
         final Button toGame = findViewById(R.id.toGame);
-        EditText text1 = findViewById(R.id.name1);
         EditText text2 = findViewById(R.id.name2);
         EditText text3 = findViewById(R.id.name3);
         EditText text4 = findViewById(R.id.name4);
@@ -31,7 +30,7 @@ public class OpenNames extends AppCompatActivity {
         toGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name1 = text1.getText().toString();
+                String name1 = "Hattie";
                 String name2 = text2.getText().toString();
                 String name3 = text3.getText().toString();
                 String name4 = text4.getText().toString();

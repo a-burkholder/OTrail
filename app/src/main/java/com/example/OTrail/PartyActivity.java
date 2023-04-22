@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PartyActivity extends AppCompatActivity
 {
     private Party party;
-    private String names[] = new String[5];
-    private int health[] = new int[5];
+    private String names[] = {"", "", "", "", ""};
+    private int health[] = {100, 100, 100, 100, 100};
 
     public PartyActivity()
     {
