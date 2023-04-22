@@ -47,11 +47,13 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="598dp"
-        tools:layout_editor_absoluteY="336dp" />
+        android:layout_width="128dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="576dp"
+        android:layout_marginTop="312dp"
+        android:text="Continue On The Trail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView94"
