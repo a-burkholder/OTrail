@@ -75,7 +75,6 @@ public class MainGame extends AppCompatActivity {
 
 
 
-        final Button actionsBut = findViewById(R.id.action);
         final Button invBut = findViewById(R.id.Inventory);
         invBut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,6 +147,18 @@ public class MainGame extends AppCompatActivity {
         });
 
 
+        final Button healthBut = findViewById(R.id.healthBut);
+
+        healthBut.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent4 = new Intent(MainGame.this, PartyActivity.class);
+                intent4.putExtra("passParty", party);
+                startActivity(intent4);
+            }
+        });
 
 
 //        final Button talkBut = findViewById(R.id.viewLocation);
