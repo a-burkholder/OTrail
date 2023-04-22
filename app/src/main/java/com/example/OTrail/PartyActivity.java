@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PartyActivity extends AppCompatActivity
 {
     private Party party;
+    private String names[] = new String[5];
+    private int health[] = new int[5];
 
     public PartyActivity()
     {
@@ -27,36 +30,63 @@ public class PartyActivity extends AppCompatActivity
 
         party = (Party) getIntent().getSerializableExtra("passParty");
 
-        final TextView textView32 = findViewById(R.id.textView32);
-        final TextView textView33 = findViewById(R.id.textView33);
-        final TextView textView34 = findViewById(R.id.textView34);
-        final TextView textView35 = findViewById(R.id.textView35);
-        final TextView textView36 = findViewById(R.id.textView36);
-        final TextView textView37 = findViewById(R.id.textView37);
-        final TextView textView38 = findViewById(R.id.textView38);
-        final TextView textView39 = findViewById(R.id.textView39);
-        final TextView textView40 = findViewById(R.id.textView40);
+        names = party.getNames();
+        health = party.getHealth();
 
-        textView32.setText(String.valueOf(inv.getPlayerMoneyCount()));
-        textView33.setText(String.valueOf(inv.getFoodCount()));
-        textView34.setText(String.valueOf(inv.getClothingCount()));
-        textView35.setText(String.valueOf(inv.getBasketCount()));
-        textView36.setText(String.valueOf(inv.getOxenCount()));
-        textView37.setText(String.valueOf(inv.getWagonWheelCount()));
-        textView38.setText(String.valueOf(inv.getWagonAxleCount()));
-        textView39.setText(String.valueOf(inv.getWagonTongueCount()));
-        textView40.setText(String.valueOf(inv.getMedicalSupplyCount()));
+        final ImageView hattieDead = findViewById(R.id.hattieDead);
+        final ImageView member2Dead = findViewById(R.id.member2Dead);
+        final ImageView member3Dead = findViewById(R.id.member3Dead);
+        final ImageView member4Dead = findViewById(R.id.member4Dead);
+        final ImageView petDead = findViewById(R.id.petDead);
 
 
-        Button continueAlongTrail = (Button) findViewById(R.id.continueAlongTrail);
+
+        if(health[0] > 0) {
+            hattieDead.setVisibility(View.GONE);
+        }
+        if(health[1] > 0) {
+            member2Dead.setVisibility(View.GONE);
+        }
+        if(health[2] > 0) {
+            member3Dead.setVisibility(View.GONE);
+        }
+        if(health[3] > 0) {
+            member4Dead.setVisibility(View.GONE);
+        }
+        if(health[4] > 0) {
+            petDead.setVisibility(View.GONE);
+        }
+
+        final TextView member2 = findViewById(R.id.member2);
+        final TextView member3 = findViewById(R.id.member3);
+        final TextView member4 = findViewById(R.id.member4);
+        final TextView pet = findViewById(R.id.pet);
+        final TextView hattieHealth = findViewById(R.id.hattieHealth);
+        final TextView member2Health = findViewById(R.id.member2Health);
+        final TextView member3Health = findViewById(R.id.member3Health);
+        final TextView member4Health = findViewById(R.id.member4Health);
+        final TextView petHealth = findViewById(R.id.petHealth);
+
+        member2.setText(names[1]);
+        member3.setText(names[2]);
+        member4.setText(names[3]);
+        pet.setText(names[4]);
+        hattieHealth.setText("Health:" + String.valueOf(health[0]));
+        member2Health.setText("Health:" + String.valueOf(health[1]));
+        member3Health.setText("Health:" + String.valueOf(health[2]));
+        member4Health.setText("Health:" + String.valueOf(health[3]));
+        petHealth.setText("Health:" + String.valueOf(health[4]));
+
+
+        Button continueAlongTrail = (Button) findViewById(R.id.continueAlongTheTrail);
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(InventoryActivity.this, MainGame.class);
-                intent3.putExtra("passInventory", inv);
-                startActivity(intent3);
+                Intent intent4 = new Intent(PartyActivity.this, MainGame.class);
+                intent4.putExtra("passParty", party);
+                startActivity(intent4);
             }
         });
 
-
+    }
 }

@@ -3,7 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:elevation="41dp">
+
+    <ImageView
+        android:id="@+id/petDead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="436dp"
+        android:layout_marginTop="252dp"
+        android:elevation="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xmark" />
+
+    <ImageView
+        android:id="@+id/member4Dead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="252dp"
+        android:elevation="43dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xmark" />
+
+    <ImageView
+        android:id="@+id/member3Dead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="556dp"
+        android:layout_marginTop="88dp"
+        android:elevation="42dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xmark" />
+
+    <ImageView
+        android:id="@+id/member2Dead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="100dp"
+        android:elevation="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xmark" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -46,7 +91,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/continueAlongTheTrail"
         android:layout_width="128dp"
         android:layout_height="75dp"
         android:layout_marginStart="576dp"
@@ -70,7 +115,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView96"
+        android:id="@+id/hattieHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -79,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
-        android:id="@+id/textView103"
+        android:id="@+id/member2Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
@@ -88,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <TextView
-        android:id="@+id/textView104"
+        android:id="@+id/member3Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="552dp"
@@ -97,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <TextView
-        android:id="@+id/textView102"
+        android:id="@+id/member3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="588dp"
@@ -108,7 +153,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView99"
+        android:id="@+id/member4Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -117,7 +162,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <TextView
-        android:id="@+id/textView106"
+        android:id="@+id/pet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="484dp"
@@ -128,7 +173,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView98"
+        android:id="@+id/member4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="188dp"
@@ -139,7 +184,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView105"
+        android:id="@+id/petHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="428dp"
@@ -148,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <TextView
-        android:id="@+id/textView97"
+        android:id="@+id/member2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="332dp"
@@ -178,4 +223,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/hattieDead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xmark" />
 </androidx.constraintlayout.widget.ConstraintLayout>
