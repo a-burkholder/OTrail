@@ -31,7 +31,6 @@ public class MainGame extends AppCompatActivity {
         Intent intent = getIntent();
         String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
 
-
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
@@ -156,7 +155,7 @@ public class MainGame extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-//                System.out.println(Arrays.toString(party.getNames()));
+                System.out.println(Arrays.toString(party.getNames()));
                 Intent intent4 = new Intent(MainGame.this, PartyActivity.class);
                 intent4.putExtra("passParty", party);
                 startActivity(intent4);
