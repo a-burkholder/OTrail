@@ -25,6 +25,7 @@ public class OpenDate extends AppCompatActivity
     RadioButton september;
 
     public static final String START_DATE = "com.example.OTrail.START_DATE";
+    public static final String NAMES2 = "com.example.OTrail.NAMES2";
 
 
 
@@ -35,6 +36,11 @@ public class OpenDate extends AppCompatActivity
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.starting_date);
+
+        Intent intent = getIntent();
+        String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
+
+        System.out.println(names[1]);
 
         Button toTrail = findViewById(R.id.toTrail);
         RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
@@ -81,6 +87,7 @@ public class OpenDate extends AppCompatActivity
                 }
                 Intent intent = new Intent(OpenDate.this, MainGame.class);
                 intent.putExtra(START_DATE, date);
+                intent.putExtra(NAMES2, names);
                 startActivity(intent);
             }
         });

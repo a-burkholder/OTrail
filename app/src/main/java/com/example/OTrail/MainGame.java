@@ -29,8 +29,9 @@ public class MainGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
-        String[] names = intent.getStringArrayExtra(OpenNames.PARTY_NAMES);
+        String[] names = intent.getStringArrayExtra(OpenDate.NAMES2);
 
+        System.out.println(names[1]);
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
