@@ -37,9 +37,9 @@ public class OpenNames extends AppCompatActivity {
                 String name5 = text5.getText().toString();
                 String[] names = {name1, name2, name3, name4, name5};
 
-                Intent intent4 = new Intent(OpenNames.this, OpenDate.class);
-                intent4.putExtra(PARTY_NAMES, names);
-                startActivity(intent4);
+                Intent intent = new Intent(OpenNames.this, OpenDate.class);
+                intent.putExtra(PARTY_NAMES, names);
+                startActivity(intent);
             }
         });
     }
