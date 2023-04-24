@@ -93,6 +93,7 @@ public class Shop extends AppCompatActivity {
         final TextView textView73 = (TextView)findViewById(R.id.textView73);
         final TextView textView74 = (TextView)findViewById(R.id.textView74);
         final TextView textView89 = (TextView)findViewById(R.id.textView89);
+        final TextView moneyAmount = (TextView)findViewById(R.id.moneyAmount);
 
         // tells the player how many items they current have
         textView67.setText(String.valueOf(inv.getFoodCount()));
@@ -103,6 +104,7 @@ public class Shop extends AppCompatActivity {
         textView72.setText(String.valueOf(inv.getWagonAxleCount()));
         textView73.setText(String.valueOf(inv.getWagonTongueCount()));
         textView74.setText(String.valueOf(inv.getMedicalSupplyCount()));
+        moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));
 
         Button buyItem = (Button) findViewById(R.id.buyItem);
         Button continueOnTheTrail = (Button) findViewById(R.id.continueOnTheTrail);
@@ -421,7 +423,9 @@ public class Shop extends AppCompatActivity {
                 else
                 {
                     textView89.setText("Get out of my shop!!!");
+
                 }
+                moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));
 
 
             }
