@@ -28,7 +28,8 @@ public class PartyActivity extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        party = (Party) getIntent().getSerializableExtra("passParty");
+        Intent intent = getIntent();
+        party = (Party) intent.getSerializableExtra("passParty");
 
         names = party.getNames();
         health = party.getHealth();
@@ -82,9 +83,8 @@ public class PartyActivity extends AppCompatActivity
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent4 = new Intent(PartyActivity.this, MainGame.class);
-                intent4.putExtra("passParty", party);
-                startActivity(intent4);
+
+                finish();
             }
         });
 
