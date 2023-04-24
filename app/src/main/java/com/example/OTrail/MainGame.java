@@ -20,6 +20,7 @@ public class MainGame extends AppCompatActivity {
     private static final String MAP_KEY = "com.example.OTrail.MAP";
     private static final String EVENT_KEY = "com.example.OTrail.EVENT";
     private int[] startDate = {1, 3, 1847};
+    private String[] names = {"", "", "", "", ""};
     private Date date;
     private Party party;
     private Inventory inv;
@@ -32,27 +33,27 @@ public class MainGame extends AppCompatActivity {
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
-
         if(savedInstanceState != null)
         {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
             map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
             event = (Event) savedInstanceState.getSerializable(EVENT_KEY);
-
+            System.out.println("is not null");
         }
         else
         {
             Intent intent = getIntent();
-            String[] names = intent.getStringArrayExtra(OpenDate.NAMES2);
+            names = intent.getStringArrayExtra(OpenDate.NAMES2);
             startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
             date = Date.getInstance(startDate);
             map = Map.getInstance();
             party = Party.getInstance(inv);
             party.setNames(names);
             event = Event.getInstance(inv, party, date);
-
+            System.out.println("is null");
         }
+
 
 
         Shop shop = new Shop();
@@ -92,7 +93,7 @@ public class MainGame extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-
+                System.out.println(Arrays.toString(party.getNames()));
                 dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                 weatherDisplay.setText(date.getWeather());
                 temperatureDisplay.setText(String.valueOf(date.getTemp()));
@@ -174,6 +175,7 @@ public class MainGame extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent1 = new Intent(MainGame.this, Shop.class);
                     intent1.putExtra("Inventory object", inv);
+                    intent1.putExtra("passParty", party);
                     startActivity(intent1);
                 }
             });

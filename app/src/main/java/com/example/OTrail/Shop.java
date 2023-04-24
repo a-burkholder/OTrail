@@ -36,6 +36,7 @@ public class Shop extends AppCompatActivity {
     private int medicalSupplyPurchased = 0;
     private int moneyUsed = 0;
     private Inventory inv;
+    private Party party;
 
     private int items = 0;
     private int amount = 0;
@@ -81,6 +82,7 @@ public class Shop extends AppCompatActivity {
         setContentView(R.layout.shop);
 
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
+        party = (Party)getIntent().getSerializableExtra("passParty");
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
@@ -430,6 +432,7 @@ public class Shop extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent2 = new Intent(Shop.this, MainGame.class);
                 intent2.putExtra("passInventory", inv);
+                intent2.putExtra("passParty", party);
                 startActivity(intent2);
             }
         });
@@ -465,7 +468,6 @@ public class Shop extends AppCompatActivity {
             } else {
                 inv.setPlayerMoneyCount(playerMoneyCount);
             }
-            Log.i("TAG", String.valueOf(inv.getFoodCount()));
         }
     }
 

@@ -31,6 +31,10 @@ public class PartyActivity extends AppCompatActivity
         Intent intent = getIntent();
         party = (Party) intent.getSerializableExtra("passParty");
 
+        if(party.getNames() == null)
+        {
+            System.out.println("party get names is null and the start of PartyActivity");
+        }
         names = party.getNames();
         health = party.getHealth();
 
@@ -83,8 +87,9 @@ public class PartyActivity extends AppCompatActivity
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                finish();
+                Intent intent3 = new Intent(PartyActivity.this, MainGame.class);
+                intent3.putExtra("passParty", party);
+                startActivity(intent3);
             }
         });
 
