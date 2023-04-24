@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/startgame"
+        android:id="@+id/startGame"
         android:layout_width="154dp"
         android:layout_height="110dp"
         android:text="Play The Berry Picking Minigame"

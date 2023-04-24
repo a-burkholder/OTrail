@@ -61,9 +61,7 @@ public class Event implements Serializable
 
         //berrybush
         if (rand_int1 ==  0 || rand_int1 == 1){
-            System.out.println("You found a berry bush. Plus 20 pounds of food.");
-            inv.setFoodCount(20);
-            System.out.println("Food Count: " + inv.getFoodCount());
+
         }
 
 

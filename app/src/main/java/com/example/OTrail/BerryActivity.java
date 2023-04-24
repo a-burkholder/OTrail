@@ -1,4 +1,4 @@
-package com.example.berrypickingminigame;
+package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class BerryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +17,12 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.titlescreen);
-        final Button start = findViewById(R.id.startgame);
+        final Button start = findViewById(R.id.startGame);
+        
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, berryPickingMinigame.class);
+                Intent intent = new Intent(BerryActivity.this, berryPickingMinigame.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.berrypickingminigame;
+package com.example.OTrail;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -42,7 +42,7 @@ public class berryPickingMinigame extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.berryberryminigame);
+        setContentView(R.layout.berry_picking_minigame);
 
         ImageButton berry1 = findViewById(R.id.imageButton);
         ImageButton berry2 = findViewById(R.id.imageButton2);
