@@ -153,7 +153,7 @@ public class Inventory implements Serializable {
      */
     public void setPlayerMoneyCount(int playerMoneyCount)
     {
-        this.playerMoneyCount = playerMoneyCount;
+        this.playerMoneyCount = this.playerMoneyCount + playerMoneyCount;
     }
 
     /**

@@ -124,7 +124,6 @@ public class Shop extends AppCompatActivity {
                         switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 foodPurchased = 100;
-                                System.out.println("Here");
                             }
                             break;
 
@@ -413,6 +412,7 @@ public class Shop extends AppCompatActivity {
                     break;
                     default:
                 }
+
                 if (inv.getPlayerMoneyCount() > moneyUsed) {
                     resetItems();
                 }
@@ -443,7 +443,7 @@ public class Shop extends AppCompatActivity {
         {
             System.out.println(oxenPurchased);
             if (inv.getPlayerMoneyCount() >= moneyUsed) {
-                inv.setPlayerMoneyCount(inv.getPlayerMoneyCount()-moneyUsed);
+                inv.setPlayerMoneyCount(-moneyUsed);
                 inv.setFoodCount(foodPurchased * 2);
                 inv.setClothingCount(clothingPurchased);
                 inv.setBasketCount(basketPurchased);
@@ -452,6 +452,16 @@ public class Shop extends AppCompatActivity {
                 inv.setWagonAxleCount(wagonAxlePurchased);
                 inv.setWagonTongueCount(wagonTonguePurchased);
                 inv.setMedicalSupplyCount(medicalSupplyPurchased);
+
+                foodPurchased = 0;
+                clothingPurchased = 0;
+                basketPurchased = 0;
+                oxenPurchased = 0;
+                wagonWheelPurchased = 0;
+                wagonAxlePurchased = 0;
+                wagonTonguePurchased = 0;
+                medicalSupplyPurchased = 0;
+                moneyUsed = 0;
             } else {
                 inv.setPlayerMoneyCount(playerMoneyCount);
             }
