@@ -33,6 +33,8 @@ public class MainGame extends AppCompatActivity {
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
+        Intent intent = getIntent();
+
         if(savedInstanceState != null)
         {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
@@ -43,13 +45,11 @@ public class MainGame extends AppCompatActivity {
         }
         else
         {
-            Intent intent = getIntent();
-            names = intent.getStringArrayExtra(OpenDate.NAMES2);
             startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
             date = Date.getInstance(startDate);
+            names = intent.getStringArrayExtra(OpenDate.NAMES2);
             map = Map.getInstance();
-            party = Party.getInstance(inv);
-            party.setNames(names);
+            party = Party.getInstance(inv, names);
             event = Event.getInstance(inv, party, date);
             System.out.println("is null");
         }

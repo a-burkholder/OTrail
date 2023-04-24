@@ -27,9 +27,10 @@ public class Party implements Serializable
     /**
      * Default constructor for the Inventory class.
      */
-    public Party(Inventory inv)
+    public Party(Inventory inv, String names[])
     {
         this.inv = inv;
+        this.names = names;
     }
 
     /**
@@ -187,11 +188,11 @@ public class Party implements Serializable
     }
 
 
-    public static Party getInstance(Inventory inv)
+    public static Party getInstance(Inventory inv, String names[])
     {
         if(instance == null)
         {
-            instance = new Party(inv);
+            instance = new Party(inv, names);
         }
         return instance;
     }

@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+
 public class OpenDate extends AppCompatActivity
 {
 
@@ -88,6 +90,7 @@ public class OpenDate extends AppCompatActivity
                 Intent intent = new Intent(OpenDate.this, MainGame.class);
                 intent.putExtra(START_DATE, date);
                 intent.putExtra(NAMES2, names);
+
                 startActivity(intent);
             }
         });
