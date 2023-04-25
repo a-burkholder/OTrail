@@ -31,7 +31,7 @@ public class InventoryActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        inv = (Inventory) getIntent().getSerializableExtra("passInventory");
+        inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
         final TextView textView32 = findViewById(R.id.textView32);
         final TextView textView33 = findViewById(R.id.textView33);
@@ -58,9 +58,7 @@ public class InventoryActivity extends AppCompatActivity {
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(InventoryActivity.this, MainGame.class);
-                intent3.putExtra("passInventory", inv);
-                startActivity(intent3);
+                finish();
             }
         });
     }

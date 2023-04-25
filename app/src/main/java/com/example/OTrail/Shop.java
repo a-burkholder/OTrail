@@ -428,9 +428,7 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(Shop.this, MainGame.class);
-                intent2.putExtra("passInventory", inv);
-                startActivity(intent2);
+                finish();
             }
         });
     }
