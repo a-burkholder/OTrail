@@ -204,8 +204,6 @@ public class MainGame extends AppCompatActivity {
                     intent1.putExtra("passParty", party);
                     startActivity(intent1);
 
-                    intent1.putExtra(GAME_INV, inv);
-                    startActivityForResult(intent1, 1);
 
                 }
             });
