@@ -56,6 +56,7 @@ public class OpenDate extends AppCompatActivity
                 if (radioGroup3.getCheckedRadioButtonId() == R.id.march) {
                     date = new int[]{1, 3, 1847};
                 }
+
                 else if (radioGroup3.getCheckedRadioButtonId() == R.id.april){
                     date = new int[]{1, 4, 1847};
                 }
