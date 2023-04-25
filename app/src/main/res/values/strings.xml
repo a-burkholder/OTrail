@@ -15,5 +15,5 @@
     <string name="datetodisplay">Date</string>
     <string name="weather">Weather</string>
     <string name="announcement">Announcements Go Here</string>
-    <string name="dateInfo">Info about how to pick dates / history about dates.  </string>
+    <string name="dateInfo"> When selecting your starting date, consider how weather could effect your journey. Most settlers chose to start in April or May, arriving at Oregon before winter.  Those who chose to travel later in the year were often delayed by snowstorms and a lack of food.</string>
 </resources>
