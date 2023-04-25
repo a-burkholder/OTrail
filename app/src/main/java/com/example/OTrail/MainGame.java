@@ -181,8 +181,8 @@ public class MainGame extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent1 = new Intent(MainGame.this, Shop.class);
-                    intent1.putExtra("Inventory object", inv);
-                    startActivity(intent1);
+                    intent1.putExtra(GAME_INV, inv);
+                    startActivityForResult(intent1, 1);
                 }
             });
         }
@@ -190,6 +190,17 @@ public class MainGame extends AppCompatActivity {
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            if (resultCode == RESULT_OK){
+                Inventory result = (Inventory )data.getSerializableExtra(Shop.POST_SHOP);
+                inv = result;
+            }
+        }
     }
 
     protected void onSaveInstanceState(Bundle outState)

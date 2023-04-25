@@ -43,7 +43,10 @@ public class InventoryActivity extends AppCompatActivity {
         final TextView textView39 = findViewById(R.id.textView39);
         final TextView textView40 = findViewById(R.id.textView40);
 
+
+        System.out.println("Updated stuff");
         textView32.setText(String.valueOf(inv.getPlayerMoneyCount()));
+        System.out.println(inv.getPlayerMoneyCount());
         textView33.setText(String.valueOf(inv.getFoodCount()));
         textView34.setText(String.valueOf(inv.getClothingCount()));
         textView35.setText(String.valueOf(inv.getBasketCount()));
