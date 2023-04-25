@@ -29,7 +29,7 @@ public class PartyActivity extends AppCompatActivity
         getSupportActionBar().hide();
 
         Intent intent = getIntent();
-        party = (Party) intent.getSerializableExtra("passParty");
+        party = (Party) intent.getSerializableExtra(MainGame.PARTY_TO_HEALTH);
 
         if(party.getNames() == null)
         {

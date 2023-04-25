@@ -24,7 +24,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 
+
 public class Shop extends AppCompatActivity {
+
+    public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
+
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
@@ -75,14 +79,17 @@ public class Shop extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets up window
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
+
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
+
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
@@ -434,10 +441,12 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent2 = new Intent(Shop.this, MainGame.class);
                 intent2.putExtra("passInventory", inv);
                 intent2.putExtra("passParty", party);
                 startActivity(intent2);
+
             }
         });
     }

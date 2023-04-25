@@ -15,12 +15,22 @@ import java.util.Arrays;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
+    public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
+    //public static final String
+
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
     private static final String MAP_KEY = "com.example.OTrail.MAP";
     private static final String EVENT_KEY = "com.example.OTrail.EVENT";
+
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
+
+
+
+
+
+
     private Date date;
     private Party party;
     private Inventory inv;
@@ -30,10 +40,18 @@ public class MainGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
         Intent intent = getIntent();
+
+
+        if(getIntent().getSerializableExtra(GAME_INV) == null) inv = new Inventory();
+        else inv = (Inventory)getIntent().getSerializableExtra(GAME_INV);
+
+
+        Intent intent1 = getIntent();
 
         if(savedInstanceState != null)
         {
@@ -41,17 +59,28 @@ public class MainGame extends AppCompatActivity {
             map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
             event = (Event) savedInstanceState.getSerializable(EVENT_KEY);
+
             System.out.println("is not null");
+
+            System.out.println("savedInstanceState != null");
+
         }
         else
         {
-            startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
+
+            int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
+            String[] names = intent.getStringArrayExtra(OpenDate.NAMES2);
+
             date = Date.getInstance(startDate);
             names = intent.getStringArrayExtra(OpenDate.NAMES2);
             map = Map.getInstance();
             party = Party.getInstance(inv, names);
             event = Event.getInstance(inv, party, date);
+
             System.out.println("is null");
+
+            System.out.println("else");
+
         }
 
 
@@ -83,7 +112,7 @@ public class MainGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainGame.this, InventoryActivity.class);
-                intent.putExtra("passInventory", inv);
+                intent.putExtra(GAME_INV, inv);
                 startActivity(intent);
             }
         });
@@ -124,7 +153,7 @@ public class MainGame extends AppCompatActivity {
                     {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
-                        intent4.putExtra("passInventory", inv);
+                        intent4.putExtra(GAME_INV, inv);
                         startActivity(intent4);
                     }
 
@@ -159,7 +188,7 @@ public class MainGame extends AppCompatActivity {
             {
                 System.out.println(Arrays.toString(party.getNames()));
                 Intent intent4 = new Intent(MainGame.this, PartyActivity.class);
-                intent4.putExtra("passParty", party);
+                intent4.putExtra(PARTY_TO_HEALTH, party);
                 startActivity(intent4);
             }
         });
@@ -174,9 +203,14 @@ public class MainGame extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent1 = new Intent(MainGame.this, Shop.class);
+
                     intent1.putExtra("Inventory object", inv);
                     intent1.putExtra("passParty", party);
                     startActivity(intent1);
+
+                    intent1.putExtra(GAME_INV, inv);
+                    startActivityForResult(intent1, 1);
+
                 }
             });
         }
@@ -184,6 +218,17 @@ public class MainGame extends AppCompatActivity {
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            if (resultCode == RESULT_OK){
+                Inventory result = (Inventory )data.getSerializableExtra(Shop.POST_SHOP);
+                inv = result;
+            }
+        }
     }
 
     protected void onSaveInstanceState(Bundle outState)
