@@ -27,10 +27,6 @@ public class MainGame extends AppCompatActivity {
     private String[] names = {"", "", "", "", ""};
 
 
-
-
-
-
     private Date date;
     private Party party;
     private Inventory inv;
@@ -39,12 +35,10 @@ public class MainGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        Intent intent = getIntent();
 
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
-
-        Intent intent = getIntent();
 
 
         if(savedInstanceState != null)
@@ -56,14 +50,12 @@ public class MainGame extends AppCompatActivity {
 
             System.out.println("is not null");
 
-            System.out.println("savedInstanceState != null");
-
         }
         else
         {
 
-            int[] startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
-            String[] names = intent.getStringArrayExtra(OpenDate.NAMES2);
+            startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
+            names = intent.getStringArrayExtra(OpenDate.NAMES2);
 
             date = Date.getInstance(startDate);
             names = intent.getStringArrayExtra(OpenDate.NAMES2);
