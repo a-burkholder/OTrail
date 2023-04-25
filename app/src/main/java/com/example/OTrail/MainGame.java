@@ -26,7 +26,6 @@ public class MainGame extends AppCompatActivity {
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
 
-
     private Date date;
     private Party party;
     private Inventory inv;
@@ -64,17 +63,10 @@ public class MainGame extends AppCompatActivity {
             event = Event.getInstance(inv, party, date);
 
             System.out.println("is null");
-
-            System.out.println("else");
-
         }
 
-
-
         Shop shop = new Shop();
-
         Menu menu = new Menu(inv, party, map, shop);
-
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -90,6 +82,16 @@ public class MainGame extends AppCompatActivity {
         final TextView healthDisplay = findViewById(R.id.healthDisplay);
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
         final TextView distanceDisplay = findViewById(R.id.distanceDisplay);
+
+        dateDisplay.setText(date.toString());
+        weatherDisplay.setText(date.getWeather());
+        date.setTemp(map.getClimate());
+        temperatureDisplay.setText(" "+date.getTemp());
+        speedDisplay.setText("10");
+        healthDisplay.setText(" H ");
+        foodDisplay.setText(" "+ inv.getFoodCount());
+        distanceDisplay.setText(" "+map.getPosition());
+
 
 
 
