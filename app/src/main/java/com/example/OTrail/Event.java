@@ -62,10 +62,10 @@ public class Event implements Serializable
 
 
         //berrybush
-        if (rand_int1 ==  0 || rand_int1 == 1){
-            Intent intent = new Intent(Event.this, BerryActivity.class);
-            startActivity(intent);
-        }
+        //if (rand_int1 ==  0 || rand_int1 == 1){
+          //  Intent intent = new Intent(Event.this, BerryActivity.class);
+           // startActivity(intent);
+        //}
 
         //raiderAttacck
         if (rand_int1 ==  2 || rand_int1 == 3){

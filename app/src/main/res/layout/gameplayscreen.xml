@@ -5,6 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/gameplaybackground"
+        android:layout_width="1000dp"
+        android:layout_height="500dp"
+        android:adjustViewBounds="false"
+        android:background="#000000"
+        android:cropToPadding="true"
+        android:elevation="-50dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gameplay_background_1_plaines" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="699dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trailinfo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572"
+        app:srcCompat="@drawable/wagon" />
+
     <Button
         android:id="@+id/healthBut"
         android:layout_width="130dp"
@@ -72,16 +111,6 @@
         android:text="@string/continue_trail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="699dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trailinfo" />
 
     <TextView
         android:id="@+id/dateDisplay"
@@ -162,34 +191,5 @@
         android:text="@string/lbsOfFood"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/gameplaybackground"
-        android:layout_width="1000dp"
-        android:layout_height="500dp"
-        android:adjustViewBounds="false"
-        android:background="#000000"
-        android:cropToPadding="true"
-        android:elevation="-50dp"
-        android:scaleType="centerInside"
-        android:scaleX="0.95"
-        android:scaleY="0.95"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gameplay_background_1_plaines" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572"
-        app:srcCompat="@drawable/wagon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
