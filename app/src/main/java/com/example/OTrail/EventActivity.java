@@ -33,16 +33,15 @@ public class EventActivity extends AppCompatActivity
 
         eventInformation.setText(eventMessage);
 
-        if(eventMessage == "You found a berry bush.");
-        {
-            Intent intent3 = new Intent(EventActivity.this, berryPickingMinigame.class);
-            startActivity(intent3);
-        }
-
         Button buttonForContinuing = (Button) findViewById(R.id.buttonForContinuing);
         buttonForContinuing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(eventMessage == "You found a berry bush.");
+                {
+                    Intent intent3 = new Intent(EventActivity.this, BerryActivity.class);
+                    startActivity(intent3);
+                }
                 Intent intent3 = new Intent(EventActivity.this, MainGame.class);
                 startActivity(intent3);
             }

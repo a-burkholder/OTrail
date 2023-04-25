@@ -21,6 +21,9 @@
             android:name=".OpenTrailInfo"
             android:exported="false" />
         <activity
+            android:name=".EventActivity"
+            android:exported="false" />
+        <activity
             android:name=".OpenHattieInfo"
             android:exported="false" />
         <activity
@@ -37,6 +40,12 @@
             android:exported="false" />
         <activity
             android:name=".InventoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BerryPickingMinigame"
             android:exported="false" />
         <activity
             android:name=".Shop"

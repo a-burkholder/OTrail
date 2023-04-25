@@ -17,14 +17,14 @@ public class BerryActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        setContentView(R.layout.titlescreen);
-        final Button start = findViewById(R.id.startGame);
+        setContentView(R.layout.berry_picking_title);
+        Button startGame = (Button)findViewById(R.id.startGame);
 
 
-        start.setOnClickListener(new View.OnClickListener() {
+        startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BerryActivity.this, berryPickingMinigame.class);
+                Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
                 startActivity(intent);
             }
         });

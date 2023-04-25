@@ -162,8 +162,10 @@ public class MainGame extends AppCompatActivity {
 
                     // Could generate a random number depending on the random number generated.
                     event.randomEvents();
-                    Intent intent4 = new Intent(MainGame.this, BerryActivity.class);
+                    Intent intent4 = new Intent(MainGame.this, EventActivity.class);
                     intent4.putExtra("passEvent", event);
+                    startActivity(intent4);
+
 
                     // Lists the daily choices for the player.
 

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,11 +14,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-import android.view.ViewGroup.MarginLayoutParams;
 
-public class berryPickingMinigame extends AppCompatActivity {
+public class BerryPickingMinigame extends AppCompatActivity {
     int miniGame;
     ImageButton button;
     TextView textView;
@@ -37,7 +33,7 @@ public class berryPickingMinigame extends AppCompatActivity {
     private Boolean miniGameRunning = false;
     Random rand = new Random();
 
-    public berryPickingMinigame()
+    public BerryPickingMinigame()
     {
     }
 
@@ -46,7 +42,7 @@ public class berryPickingMinigame extends AppCompatActivity {
 
         if(inv.getBasketCount() == 0)
         {
-            Intent intent = new Intent(berryPickingMinigame.this, MainGame.class);
+            Intent intent = new Intent(BerryPickingMinigame.this, MainGame.class);
             startActivity(intent);
         }
 
@@ -183,7 +179,7 @@ public class berryPickingMinigame extends AppCompatActivity {
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(berryPickingMinigame.this, MainGame.class);
+                Intent intent3 = new Intent(BerryPickingMinigame.this, MainGame.class);
                 intent3.putExtra("passInventory", inv);
                 startActivity(intent3);
             }
