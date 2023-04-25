@@ -10,12 +10,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Starting Date"
-        android:typeface="serif"
         android:textSize="24sp"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="321dp"
+        android:layout_height="163dp"
+        android:text="@string/dateInfo"
+        android:textSize="14dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@+id/textView90"
+        app:layout_constraintStart_toStartOf="@+id/textView90"
+        tools:layout_editor_absoluteY="95dp" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
@@ -26,10 +37,9 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--adding a radio button -->
 
@@ -40,7 +50,7 @@
             android:checked="false"
             android:padding="2dp"
             android:text="March"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <RadioButton
             android:id="@+id/april"
@@ -49,7 +59,7 @@
             android:checked="false"
             android:padding="2dp"
             android:text="April"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -60,7 +70,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="May"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -71,7 +81,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="June"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <RadioButton
             android:id="@+id/july"
@@ -81,7 +91,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="July"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <RadioButton
             android:id="@+id/august"
@@ -91,7 +101,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="August"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
         <RadioButton
             android:id="@+id/september"
@@ -101,7 +111,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="September"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
     </RadioGroup>
 

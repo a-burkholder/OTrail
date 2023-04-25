@@ -15,4 +15,5 @@
     <string name="datetodisplay">Date</string>
     <string name="weather">Weather</string>
     <string name="announcement">Announcements Go Here</string>
+    <string name="dateInfo">Info about how to pick dates / history about dates.  </string>
 </resources>
