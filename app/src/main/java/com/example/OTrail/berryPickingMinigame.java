@@ -1,11 +1,13 @@
 package com.example.OTrail;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -23,7 +25,7 @@ public class berryPickingMinigame extends AppCompatActivity {
     TextView textView;
     EditText editText;
     TextView score;
-
+    Inventory inv;
     int numOfBerryPicked = 0;
     int BERRY_TIMER = 3;
     int GAMETIME = 10; // how long the game runs for
@@ -35,8 +37,18 @@ public class berryPickingMinigame extends AppCompatActivity {
     private Boolean miniGameRunning = false;
     Random rand = new Random();
 
-    protected void onCreate(Bundle savedInstanceState) {
+    public berryPickingMinigame()
+    {
+    }
 
+    protected void onCreate(Bundle savedInstanceState) {
+        inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
+
+        if(inv.getBasketCount() == 0)
+        {
+            Intent intent = new Intent(berryPickingMinigame.this, MainGame.class);
+            startActivity(intent);
+        }
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -163,6 +175,19 @@ public class berryPickingMinigame extends AppCompatActivity {
             }
         }.start();
         //food = food + 5 * berries picked.;
+
+        inv.setBasketCount(-1);
+        inv.setFoodCount(numOfBerryPicked);
+
+        Button returnButton = (Button) findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(berryPickingMinigame.this, MainGame.class);
+                intent3.putExtra("passInventory", inv);
+                startActivity(intent3);
+            }
+        });
     }
 
     private void berryPicked() {

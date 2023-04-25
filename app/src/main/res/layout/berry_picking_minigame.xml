@@ -125,4 +125,14 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/berrybackground" />
 
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="147dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="308dp"
+        android:text="Return to the Trail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

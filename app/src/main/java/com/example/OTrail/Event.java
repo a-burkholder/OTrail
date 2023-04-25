@@ -7,6 +7,8 @@
  */
 package com.example.OTrail;
 
+import android.content.Intent;
+
 import java.io.Serializable;
 import java.util.Random;
 import java.util.Scanner;
@@ -61,9 +63,9 @@ public class Event implements Serializable
 
         //berrybush
         if (rand_int1 ==  0 || rand_int1 == 1){
-
+            Intent intent = new Intent(Event.this, BerryActivity.class);
+            startActivity(intent);
         }
-
 
         //raiderAttacck
         if (rand_int1 ==  2 || rand_int1 == 3){

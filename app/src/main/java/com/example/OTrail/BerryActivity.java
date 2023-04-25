@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class BerryActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,8 @@ public class BerryActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.titlescreen);
         final Button start = findViewById(R.id.startGame);
-        
+
+
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
