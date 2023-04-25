@@ -1,38 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue on the Trail"
-        tools:layout_editor_absoluteX="486dp"
-        tools:layout_editor_absoluteY="317dp" />
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="1139dp"
+        android:layout_height="644dp"
+        app:srcCompat="@drawable/img_8"
+        tools:layout_editor_absoluteX="-101dp"
+        tools:layout_editor_absoluteY="-117dp" />
 
     <Button
-        android:id="@+id/button16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Talk to a Local"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="67dp" />
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#c65C16"
+        android:text="Talk To A Local"
+        tools:layout_editor_absoluteX="643dp"
+        tools:layout_editor_absoluteY="347dp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView99"
+        android:layout_width="267dp"
+        android:layout_height="80dp"
+        android:background="#C65C16"
+        android:backgroundTint="#C65C16"
+        android:text="Welcome to the Green River Crossing"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Green River"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        tools:layout_editor_absoluteX="632dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="301dp"
+        android:layout_height="276dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="108dp" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="300dp"
-        android:layout_height="102dp"
+        android:id="@+id/textView98"
+        android:layout_width="190dp"
+        android:layout_height="239dp"
+        android:backgroundTint="#673AB7"
         android:text="Crossing rivers was the most dangerous activity emigrants faced on their journey west."
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="130dp" />
+        android:textSize="27sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="128dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

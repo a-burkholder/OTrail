@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -35,4 +36,12 @@
         android:text="Emigrants used the pools of water for medicinal and bathing purposes. Many pioneers and their animals became sick when they drank too much of the alkali water from the springs."
         tools:layout_editor_absoluteX="308dp"
         tools:layout_editor_absoluteY="152dp" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="917dp"
+        android:layout_height="457dp"
+        app:srcCompat="@drawable/img_14"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="131dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

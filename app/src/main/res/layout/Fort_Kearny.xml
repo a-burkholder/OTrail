@@ -48,7 +48,7 @@
         android:layout_width="206dp"
         android:layout_height="55dp"
         android:backgroundTint="#C65C16"
-        android:text="Continue With Game"
+        android:text="Continue On The Trail"
         tools:layout_editor_absoluteX="657dp"
         tools:layout_editor_absoluteY="29dp" />
 

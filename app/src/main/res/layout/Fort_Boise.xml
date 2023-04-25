@@ -12,7 +12,7 @@
         android:layout_height="627dp"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:srcCompat="@drawable/boiIn"
-        tools:layout_editor_absoluteX="-252dp" />
+        tools:layout_editor_absoluteX="-253dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -53,7 +53,7 @@
         android:layout_width="235dp"
         android:layout_height="62dp"
         android:backgroundTint="#C65C16"
-        android:text="Continue With Game"
+        android:text="Continue On The Trail"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        tools:layout_editor_absoluteX="632dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#c65C16"
+        android:text="Talk To A Local"
+        tools:layout_editor_absoluteX="643dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="1166dp"
+        android:layout_height="637dp"
+        app:srcCompat="@drawable/img_8"
+        tools:layout_editor_absoluteX="-110dp"
+        tools:layout_editor_absoluteY="-113dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="385dp"
+        android:layout_height="269dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="-41dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <TextView
+        android:id="@+id/textView95"
+        android:layout_width="182dp"
+        android:layout_height="260dp"
+        android:text="Did You know the state of Kansas was named after the Kansas river? Its name (and nickname) come from the Kanza (Kaw) people who once inhabited the area."
+        android:textSize="19sp"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="241dp"
+        android:layout_height="65dp"
+        android:background="#C65C16"
+        android:text="Welcome To The Kansas River Crossing"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="355dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
