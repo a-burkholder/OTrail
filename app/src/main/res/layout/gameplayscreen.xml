@@ -51,15 +51,18 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:text="Health"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/timeline"
         android:layout_width="631dp"
-        android:layout_height="53dp"
+        android:layout_height="36dp"
         android:layout_marginBottom="12dp"
         android:text="@string/timeline"
+        android:typeface="serif"
+        android:textSize="12sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +74,7 @@
         android:layout_height="73dp"
         android:layout_marginEnd="16dp"
         android:text="View Location"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/continueAction" />
 
@@ -80,6 +84,7 @@
         android:layout_height="73dp"
         android:layout_marginEnd="16dp"
         android:text="@string/trade"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Shop" />
 
@@ -90,6 +95,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="16dp"
         android:text="@string/shop"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewLocation" />
 
@@ -99,6 +105,7 @@
         android:layout_height="73dp"
         android:layout_marginStart="16dp"
         android:text="@string/inventory"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/healthBut" />
 
@@ -109,6 +116,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
         android:text="@string/continue_trail"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,6 +127,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:text="@string/datetodisplay"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,8 +135,15 @@
         android:id="@+id/announcementdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="96dp"
+        android:background="#02040A"
+        android:elevation="50dp"
+        android:includeFontPadding="false"
         android:text="@string/announcement"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:visibility="invisible"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/timeline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -139,6 +155,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginTop="16dp"
         android:text="@string/weather"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,6 +166,7 @@
         android:layout_marginStart="244dp"
         android:layout_marginTop="16dp"
         android:text="@string/temperature"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -159,6 +177,7 @@
         android:layout_marginStart="368dp"
         android:layout_marginTop="16dp"
         android:text="@string/speed"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,6 +188,7 @@
         android:layout_marginStart="476dp"
         android:layout_marginTop="16dp"
         android:text="Distance"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -179,6 +199,7 @@
         android:layout_marginStart="568dp"
         android:layout_marginTop="16dp"
         android:text="@string/health"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -189,6 +210,7 @@
         android:layout_marginStart="644dp"
         android:layout_marginTop="16dp"
         android:text="@string/lbsOfFood"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 

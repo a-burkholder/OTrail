@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OTrail</string>
-    <string name="timeline">Game Timeline</string>
+    <string name="timeline">Distance To Oregon / Interactive Timeline</string>
     <string name="continue_trail">Continue Trail</string>
     <string name="talk">Talk</string>
     <string name="shop">Shop</string>
@@ -10,7 +10,7 @@
     <string name="rations">Rations</string>
     <string name="health">Health</string>
     <string name="speed">Speed</string>
-    <string name="lbsOfFood">1000 lbs</string>
+    <string name="lbsOfFood">FOOD</string>
     <string name="temperature">Temp</string>
     <string name="datetodisplay">Date</string>
     <string name="weather">Weather</string>
