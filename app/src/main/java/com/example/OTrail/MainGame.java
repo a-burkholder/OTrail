@@ -152,17 +152,17 @@ public class MainGame extends AppCompatActivity {
                     // Calculates the players food use.
                     party.dailyFoodUsed();
 
-                    // Could generate a random number depending on the random number generated.
-                    event.randomEvents();
-                    Intent intent4 = new Intent(MainGame.this, EventActivity.class);
-                    intent4.putExtra("passEvent", event);
-                    startActivity(intent4);
-
 
                     // Lists the daily choices for the player.
 
                     // Increment distance to next location.
                     map.getDistToLM();
+
+                    // Could generate a random number depending on the random number generated.
+                    event.randomEvents();
+                    Intent intent4 = new Intent(MainGame.this, EventActivity.class);
+                    intent4.putExtra("passEvent", event);
+                    startActivity(intent4);
                 }
 
             }

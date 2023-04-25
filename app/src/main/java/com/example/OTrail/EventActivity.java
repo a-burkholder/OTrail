@@ -40,10 +40,10 @@ public class EventActivity extends AppCompatActivity
                 if(eventMessage == "You found a berry bush.");
                 {
                     Intent intent3 = new Intent(EventActivity.this, BerryActivity.class);
+                    intent3.putExtra("passParty", event);
                     startActivity(intent3);
                 }
-                Intent intent3 = new Intent(EventActivity.this, MainGame.class);
-                startActivity(intent3);
+                finish();
             }
         });
     }

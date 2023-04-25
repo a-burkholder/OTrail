@@ -33,12 +33,15 @@ public class BerryPickingMinigame extends AppCompatActivity {
     private Boolean miniGameRunning = false;
     Random rand = new Random();
 
+    private Event event;
+
     public BerryPickingMinigame()
     {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
+        event = (Event) getIntent().getSerializableExtra("passEvent");
 
         if(inv.getBasketCount() == 0)
         {
@@ -181,6 +184,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent3 = new Intent(BerryPickingMinigame.this, MainGame.class);
                 intent3.putExtra("passInventory", inv);
+                intent3.putExtra("passParty", event);
                 startActivity(intent3);
             }
         });

@@ -44,7 +44,7 @@ public class Shop extends AppCompatActivity {
 
     final int FOODPRICE = 1;
     final int CLOTHINGPRICE = 10;
-    final int BULLETSBOXPRICE = 2;
+    final int BASKETPRICE = 2;
     final int OXENPRICE = 20;
     final int WAGONPARTPRICE = 10;
     final int MEDICALSUPPLYPRICE = 2;
@@ -229,7 +229,7 @@ public class Shop extends AppCompatActivity {
                             break;
                             default:
                         }
-                        moneyUsed = moneyUsed + basketPurchased * BULLETSBOXPRICE;
+                        moneyUsed = moneyUsed + basketPurchased * BASKETPRICE;
                     }
                     break;
                     case R.id.buyOxen: {

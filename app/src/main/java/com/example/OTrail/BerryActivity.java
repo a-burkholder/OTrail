@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class BerryActivity extends AppCompatActivity {
 
+    private Event event;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +21,13 @@ public class BerryActivity extends AppCompatActivity {
         setContentView(R.layout.berry_picking_title);
         Button startGame = (Button)findViewById(R.id.startGame);
 
+        event = (Event) getIntent().getSerializableExtra("passEvent");
 
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
+                intent.putExtra("passEvent", event);
                 startActivity(intent);
             }
         });
