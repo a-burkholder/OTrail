@@ -24,11 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 
-
 public class Shop extends AppCompatActivity {
-
-    public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
-
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
@@ -79,17 +75,14 @@ public class Shop extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //sets up window
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
-
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
-
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
@@ -441,46 +434,43 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent2 = new Intent(Shop.this, MainGame.class);
                 intent2.putExtra("passInventory", inv);
                 intent2.putExtra("passParty", party);
                 startActivity(intent2);
-
             }
         });
     }
 
 
-        /**
-         * Resets the player's money. Checks to make sure the player has enough money and will update the plays inventory.
-         */
-        public void resetItems ()
-        {
-            System.out.println(oxenPurchased);
-            if (inv.getPlayerMoneyCount() >= moneyUsed) {
-                inv.setPlayerMoneyCount(-moneyUsed);
-                inv.setFoodCount(foodPurchased * 2);
-                inv.setClothingCount(clothingPurchased);
-                inv.setBasketCount(basketPurchased);
-                inv.setOxenCount(oxenPurchased);
-                inv.setWagonWheelCount(wagonWheelPurchased);
-                inv.setWagonAxleCount(wagonAxlePurchased);
-                inv.setWagonTongueCount(wagonTonguePurchased);
-                inv.setMedicalSupplyCount(medicalSupplyPurchased);
+    /**
+     * Resets the player's money. Checks to make sure the player has enough money and will update the plays inventory.
+     */
+    public void resetItems ()
+    {
+        System.out.println(oxenPurchased);
+        if (inv.getPlayerMoneyCount() >= moneyUsed) {
+            inv.setPlayerMoneyCount(-moneyUsed);
+            inv.setFoodCount(foodPurchased * 2);
+            inv.setClothingCount(clothingPurchased);
+            inv.setBasketCount(basketPurchased);
+            inv.setOxenCount(oxenPurchased);
+            inv.setWagonWheelCount(wagonWheelPurchased);
+            inv.setWagonAxleCount(wagonAxlePurchased);
+            inv.setWagonTongueCount(wagonTonguePurchased);
+            inv.setMedicalSupplyCount(medicalSupplyPurchased);
 
-                foodPurchased = 0;
-                clothingPurchased = 0;
-                basketPurchased = 0;
-                oxenPurchased = 0;
-                wagonWheelPurchased = 0;
-                wagonAxlePurchased = 0;
-                wagonTonguePurchased = 0;
-                medicalSupplyPurchased = 0;
-                moneyUsed = 0;
-            } else {
-                inv.setPlayerMoneyCount(playerMoneyCount);
-            }
+            foodPurchased = 0;
+            clothingPurchased = 0;
+            basketPurchased = 0;
+            oxenPurchased = 0;
+            wagonWheelPurchased = 0;
+            wagonAxlePurchased = 0;
+            wagonTonguePurchased = 0;
+            medicalSupplyPurchased = 0;
+            moneyUsed = 0;
+        } else {
+            inv.setPlayerMoneyCount(playerMoneyCount);
         }
     }
-
+}

@@ -47,12 +47,6 @@ public class MainGame extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        if(getIntent().getSerializableExtra(GAME_INV) == null) inv = new Inventory();
-        else inv = (Inventory)getIntent().getSerializableExtra(GAME_INV);
-
-
-        Intent intent1 = getIntent();
-
         if(savedInstanceState != null)
         {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
@@ -168,6 +162,8 @@ public class MainGame extends AppCompatActivity {
 
                     // Could generate a random number depending on the random number generated.
                     event.randomEvents();
+                    Intent intent4 = new Intent(MainGame.this, BerryActivity.class);
+                    intent4.putExtra("passEvent", event);
 
                     // Lists the daily choices for the player.
 
@@ -218,17 +214,6 @@ public class MainGame extends AppCompatActivity {
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
-            if (resultCode == RESULT_OK){
-                Inventory result = (Inventory )data.getSerializableExtra(Shop.POST_SHOP);
-                inv = result;
-            }
-        }
     }
 
     protected void onSaveInstanceState(Bundle outState)
