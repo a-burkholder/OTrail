@@ -9,94 +9,99 @@
         android:id="@+id/textView90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="16dp"
         android:text="Select Starting Date"
+        android:typeface="serif"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/radioGroup3" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
-        android:layout_width="198dp"
-        android:layout_height="396dp"
+        android:layout_width="166dp"
+        android:layout_height="297dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
         <!--adding a radio button -->
-        <TextView
-            android:id="@+id/selectMonth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Month" />
 
         <RadioButton
             android:id="@+id/march"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:checked="false"
             android:padding="2dp"
-            android:text="March" />
+            android:text="March"
+            android:typeface="serif"/>
 
         <RadioButton
             android:id="@+id/april"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:checked="false"
             android:padding="2dp"
-            android:text="April" />
+            android:text="April"
+            android:typeface="serif"/>
 
         <!--adding a radio button -->
         <RadioButton
             android:id="@+id/may"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
-            android:text="May" />
+            android:text="May"
+            android:typeface="serif"/>
 
         <!--adding a radio button -->
         <RadioButton
             android:id="@+id/june"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
-            android:text="June" />
+            android:text="June"
+            android:typeface="serif"/>
 
         <RadioButton
             android:id="@+id/july"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
-            android:text="July" />
+            android:text="July"
+            android:typeface="serif"/>
 
         <RadioButton
             android:id="@+id/august"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
-            android:text="August" />
+            android:text="August"
+            android:typeface="serif"/>
 
         <RadioButton
             android:id="@+id/september"
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
-            android:text="September" />
+            android:text="September"
+            android:typeface="serif"/>
 
     </RadioGroup>
 
@@ -104,10 +109,12 @@
         android:id="@+id/toTrail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="508dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="236dp"
         android:text="Start on the Trail"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView90" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
