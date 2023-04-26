@@ -25,6 +25,8 @@ import android.widget.TextView;
 
 
 public class Shop extends AppCompatActivity {
+    public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
+
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
@@ -434,10 +436,11 @@ public class Shop extends AppCompatActivity {
         continueOnTheTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(Shop.this, MainGame.class);
-                intent2.putExtra("passInventory", inv);
-                intent2.putExtra("passParty", party);
-                startActivity(intent2);
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(POST_SHOP, inv);
+
+                setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
     }

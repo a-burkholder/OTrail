@@ -23,6 +23,8 @@ public class MainGame extends AppCompatActivity {
     private static final String MAP_KEY = "com.example.OTrail.MAP";
     private static final String EVENT_KEY = "com.example.OTrail.EVENT";
 
+    private static final int SHOP_RESULT = 1;
+
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
 
@@ -199,7 +201,7 @@ public class MainGame extends AppCompatActivity {
 
                     intent1.putExtra("Inventory object", inv);
                     intent1.putExtra("passParty", party);
-                    startActivity(intent1);
+                    startActivityForResult(intent1, SHOP_RESULT);
 
 
                 }
@@ -209,6 +211,16 @@ public class MainGame extends AppCompatActivity {
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SHOP_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(Shop.POST_SHOP);
+            }
+        }
     }
 
     protected void onSaveInstanceState(Bundle outState)
