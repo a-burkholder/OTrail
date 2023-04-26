@@ -87,9 +87,7 @@ public class PartyActivity extends AppCompatActivity
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(PartyActivity.this, MainGame.class);
-                intent3.putExtra("passParty", party);
-                startActivity(intent3);
+                finish();
             }
         });
 
