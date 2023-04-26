@@ -17,11 +17,11 @@ import java.util.Random;
 
 public class BerryPickingMinigame extends AppCompatActivity {
     int miniGame;
-    ImageButton button;
-    TextView textView;
-    EditText editText;
-    TextView score;
-    Inventory inv;
+    private ImageButton button;
+    private TextView textView;
+    private EditText editText;
+    private TextView score;
+    private Inventory inv;
     int numOfBerryPicked = 0;
     int BERRY_TIMER = 3;
     int GAMETIME = 10; // how long the game runs for
@@ -43,9 +43,13 @@ public class BerryPickingMinigame extends AppCompatActivity {
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         event = (Event) getIntent().getSerializableExtra("passEvent");
 
+        System.out.println("The basket count is " + inv.getBasketCount() + "\n\n\n\n\n");
+
         if(inv.getBasketCount() == 0)
         {
             Intent intent = new Intent(BerryPickingMinigame.this, MainGame.class);
+            intent.putExtra("Inventory object", inv);
+            intent.putExtra("passEvent", event);
             startActivity(intent);
         }
 

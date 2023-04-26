@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class EventActivity extends AppCompatActivity
 {
     Event event;
+    Inventory inv;
     private String eventMessage;
 
     public EventActivity()
@@ -26,6 +27,7 @@ public class EventActivity extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
+        inv = (Inventory) getIntent().getSerializableExtra("Inventory object");
         event = (Event) getIntent().getSerializableExtra("passEvent");
         eventMessage = event.getEventMessage();
 
@@ -41,6 +43,7 @@ public class EventActivity extends AppCompatActivity
                 {
                     Intent intent3 = new Intent(EventActivity.this, BerryActivity.class);
                     intent3.putExtra("passParty", event);
+                    intent3.putExtra("Inventory object", inv);
                     startActivity(intent3);
                 }
                 finish();

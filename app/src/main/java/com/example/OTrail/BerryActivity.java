@@ -12,6 +12,7 @@ import android.widget.Button;
 public class BerryActivity extends AppCompatActivity {
 
     private Event event;
+    private Inventory inv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +23,14 @@ public class BerryActivity extends AppCompatActivity {
         Button startGame = (Button)findViewById(R.id.startGame);
 
         event = (Event) getIntent().getSerializableExtra("passEvent");
+        inv = (Inventory) getIntent().getSerializableExtra("Inventory object");
 
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
                 intent.putExtra("passEvent", event);
+                intent.putExtra("Inventory object", inv);
                 startActivity(intent);
             }
         });

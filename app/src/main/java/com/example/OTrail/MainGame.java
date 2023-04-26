@@ -164,6 +164,7 @@ public class MainGame extends AppCompatActivity {
                     event.randomEvents();
                     Intent intent4 = new Intent(MainGame.this, EventActivity.class);
                     intent4.putExtra("passEvent", event);
+                    intent4.putExtra("Inventory object", inv);
                     startActivity(intent4);
                 }
 
