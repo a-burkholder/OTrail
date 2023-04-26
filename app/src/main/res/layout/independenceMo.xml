@@ -5,43 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Independence, Missouri"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="32dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://oregontrailcenter.org/starting-point"
-        tools:layout_editor_absoluteX="356dp"
-        tools:layout_editor_absoluteY="122dp" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#c65C16"
+        android:text="Talk To A Local"
+        tools:layout_editor_absoluteX="643dp"
+        tools:layout_editor_absoluteY="347dp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Talk to a local"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="91dp" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue on the Trail"
-        tools:layout_editor_absoluteX="457dp"
-        tools:layout_editor_absoluteY="315dp" />
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        tools:layout_editor_absoluteX="632dp"
+        tools:layout_editor_absoluteY="280dp" />
 
     <ImageView
         android:id="@+id/imageView33"
+        android:layout_width="1184dp"
+        android:layout_height="693dp"
+        app:srcCompat="@drawable/img_15"
+        tools:layout_editor_absoluteX="-130dp"
+        tools:layout_editor_absoluteY="-141dp" />
+
+    <TextView
+        android:id="@+id/textView110"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/img_15"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="166dp" />
+        android:text="Welcome to Independence, Missouri"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="240dp"
+        android:layout_height="266dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="178dp"
+        android:layout_height="216dp"
+        android:text=" Independence, Missouri was founded in 1827 to serve as the westernmost port of the fur trade on the Missouri River. It is currently being served as a jumping-off point for travelers like yourself. Good luck on your journey!"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="144dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
