@@ -115,4 +115,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="827dp"
+        android:layout_height="516dp"
+        android:elevation="-60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gameplay_background_3_mountain" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
