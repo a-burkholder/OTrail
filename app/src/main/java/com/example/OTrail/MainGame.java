@@ -42,8 +42,7 @@ public class MainGame extends AppCompatActivity {
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
 
-        if(savedInstanceState != null)
-        {
+        if(savedInstanceState != null) {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
             map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
@@ -52,8 +51,7 @@ public class MainGame extends AppCompatActivity {
             System.out.println("is not null");
 
         }
-        else
-        {
+        else {
 
             startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
             names = intent.getStringArrayExtra(OpenDate.NAMES2);
@@ -107,19 +105,12 @@ public class MainGame extends AppCompatActivity {
             }
         });
         final Button moveBut = findViewById(R.id.continueAction);
-        moveBut.setOnClickListener(new View.OnClickListener()
-        {
+        moveBut.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 System.out.println(Arrays.toString(party.getNames()));
-                dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
-                weatherDisplay.setText(date.getWeather());
-                temperatureDisplay.setText(String.valueOf(date.getTemp()));
-                speedDisplay.setText("10");
-                rationsDisplay.setText(String.valueOf(inv.getFoodCount())); // change this
-                healthDisplay.setText(""); // update this
-                foodDisplay.setText(String.valueOf(inv.getFoodCount()));
+
 
                 inv.isWagonUsable();
 
@@ -130,7 +121,7 @@ public class MainGame extends AppCompatActivity {
                         System.out.println("Increments the position");
                         map.setPosition(10);
                     }
-                    distanceDisplay.setText(String.valueOf(map.getPosition()));
+
 
                     // Prints the progress percentage.
                     map.progressBar();
@@ -139,8 +130,7 @@ public class MainGame extends AppCompatActivity {
                     date.setDate(1);
 
 
-                    if(map.isRiver())
-                    {
+                    if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
                         intent4.putExtra(GAME_INV, inv);
@@ -162,12 +152,24 @@ public class MainGame extends AppCompatActivity {
                     // Increment distance to next location.
                     map.getDistToLM();
 
+                    // updates the screen
+                    dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
+                    weatherDisplay.setText(date.getWeather());
+                    temperatureDisplay.setText(" " + date.getTemp());
+                    speedDisplay.setText("10");
+                    rationsDisplay.setText(String.valueOf(inv.getFoodCount())); // change this
+                    healthDisplay.setText(""); // update this
+                    foodDisplay.setText(" " + inv.getFoodCount());
+                    distanceDisplay.setText(" " + map.getPosition());
+
                     // Could generate a random number depending on the random number generated.
-                    event.randomEvents();
-                    Intent intent4 = new Intent(MainGame.this, EventActivity.class);
-                    intent4.putExtra("passEvent", event);
-                    intent4.putExtra("Inventory object", inv);
-                    startActivity(intent4);
+                    //event.randomEvents();
+                    //Intent intent4 = new Intent(MainGame.this, EventActivity.class);
+                    //intent4.putExtra("passEvent", event);
+                    //intent4.putExtra("Inventory object", inv);
+                    //startActivity(intent4);
+
+
                 }
 
             }
@@ -176,11 +178,9 @@ public class MainGame extends AppCompatActivity {
 
         final Button healthBut = findViewById(R.id.healthBut);
 
-        healthBut.setOnClickListener(new View.OnClickListener()
-        {
+        healthBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 System.out.println(Arrays.toString(party.getNames()));
                 Intent intent4 = new Intent(MainGame.this, PartyActivity.class);
                 intent4.putExtra(PARTY_TO_HEALTH, party);
@@ -202,12 +202,9 @@ public class MainGame extends AppCompatActivity {
                     intent1.putExtra("Inventory object", inv);
                     intent1.putExtra("passParty", party);
                     startActivityForResult(intent1, SHOP_RESULT);
-
-
                 }
             });
         }
-
 
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
@@ -223,8 +220,7 @@ public class MainGame extends AppCompatActivity {
         }
     }
 
-    protected void onSaveInstanceState(Bundle outState)
-    {
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable(DATE_KEY, date);
         outState.putSerializable(PARTY_KEY, party);
