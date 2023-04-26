@@ -23,6 +23,8 @@ public class MainGame extends AppCompatActivity {
     private static final String MAP_KEY = "com.example.OTrail.MAP";
     private static final String EVENT_KEY = "com.example.OTrail.EVENT";
 
+    private static final int SHOP_RESULT = 1;
+
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
 
@@ -199,7 +201,7 @@ public class MainGame extends AppCompatActivity {
 
                     intent1.putExtra("Inventory object", inv);
                     intent1.putExtra("passParty", party);
-                    startActivity(intent1);
+                    startActivityForResult(intent1, SHOP_RESULT);
 
 
                 }
