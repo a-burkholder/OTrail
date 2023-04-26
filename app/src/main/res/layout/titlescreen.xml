@@ -13,6 +13,7 @@
         android:layout_marginTop="36dp"
         android:text="Hattie's Oregon Trail"
         android:textSize="70sp"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="By Busy People"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -33,6 +35,7 @@
         android:layout_height="86dp"
         android:layout_marginBottom="60dp"
         android:text="Start Your Journey"
+        android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
