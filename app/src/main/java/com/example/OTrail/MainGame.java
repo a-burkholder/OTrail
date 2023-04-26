@@ -216,10 +216,9 @@ public class MainGame extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
+        if (requestCode == SHOP_RESULT){
             if (resultCode == RESULT_OK){
-                Inventory result = (Inventory )data.getSerializableExtra(Shop.POST_SHOP);
-                inv = result;
+                inv = (Inventory) data.getSerializableExtra(Shop.POST_SHOP);
             }
         }
     }
