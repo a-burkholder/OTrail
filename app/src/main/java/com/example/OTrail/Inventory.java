@@ -179,11 +179,11 @@ public class Inventory implements Serializable {
     /**
      * Sets the player's number of bullets.
      *
-     * @param bulletsCount The player's updated number of bullets.
+     * @param basketCount The player's updated number of baskets.
      */
-    public void setBasketCount(int bulletsCount)
+    public void setBasketCount(int basketCount)
     {
-        this.basketCount = this.basketCount + bulletsCount;
+        this.basketCount = this.basketCount + basketCount;
     }
 
     /**
