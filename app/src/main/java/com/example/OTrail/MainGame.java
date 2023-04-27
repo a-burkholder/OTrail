@@ -81,7 +81,7 @@ public class MainGame extends AppCompatActivity {
         final TextView temperatureDisplay = findViewById(R.id.temperatureDisplay);
         final TextView speedDisplay = findViewById(R.id.speedDisplay);
         final TextView rationsDisplay = findViewById(R.id.distanceDisplay);
-        final TextView healthDisplay = findViewById(R.id.healthDisplay);
+
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
         final TextView distanceDisplay = findViewById(R.id.distanceDisplay);
 
@@ -90,7 +90,6 @@ public class MainGame extends AppCompatActivity {
         date.setTemp(map.getClimate());
         temperatureDisplay.setText(" "+date.getTemp());
         speedDisplay.setText("10");
-        healthDisplay.setText(" H ");
         foodDisplay.setText(" "+ inv.getFoodCount());
         distanceDisplay.setText(" "+map.getPosition());
 
@@ -165,7 +164,6 @@ public class MainGame extends AppCompatActivity {
                     temperatureDisplay.setText(" " + date.getTemp());
                     speedDisplay.setText("10");
                     rationsDisplay.setText(String.valueOf(inv.getFoodCount())); // change this
-                    healthDisplay.setText(""); // update this
                     foodDisplay.setText(" " + inv.getFoodCount());
                     distanceDisplay.setText(" " + map.getPosition());
 
