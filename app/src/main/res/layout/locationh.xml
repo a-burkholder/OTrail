@@ -6,55 +6,64 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="200dp"
-        android:layout_height="58dp"
-        android:backgroundTint="#c65C16"
-        android:text="Talk To A Local"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="337dp" />
-
-    <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="492dp"
+        android:layout_marginTop="344dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView38"
         android:layout_width="1180dp"
         android:layout_height="540dp"
         app:srcCompat="@drawable/img_16"
-        tools:layout_editor_absoluteX="-125dp"
+        tools:layout_editor_absoluteX="-120dp"
         tools:layout_editor_absoluteY="-104dp" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="431dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_6" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="420dp"
         android:layout_height="100dp"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="60dp"
         android:text="Welcome to South Pass"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="373dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView39"
         android:layout_width="299dp"
         android:layout_height="248dp"
-        app:srcCompat="@drawable/img_4"
-        tools:layout_editor_absoluteX="-18dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_4" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="157dp"
         android:layout_height="209dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="40dp"
         android:text="South Pass, a 20-mile wide, gently sloping gap in the Rocky Mountains, was perhaps the most important landform along the emigrant trails. It opened the West to settlement by providing a route over the Continental Divide that wagons could negotiate."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
