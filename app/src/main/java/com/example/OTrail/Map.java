@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Map implements Serializable
 {
     //--------Variables
-    private String[] landmarks = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};
+    public static String[] LANDMARKS = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};
     private int[] distLMsToOrigin = {0, 102, 200, 250, 490, 830, 950, 1055, 1170, 1240, 1320, 1420, 1700, 1880, 1930, 2000}; // distance from starting location in miles
     private boolean[] isRiverAtLandmark = {false, true, true, false, false, false, false, false, false, false, true, false, false, true, false, false, false};
     private boolean[] isShopAtLandmark = {true, false, false, true, false, true, false, false, true, false, false, true, false, false, false, false};
@@ -96,7 +96,7 @@ public class Map implements Serializable
      * @return A string with the name of the last landmark
      * */
     public String getLastLandmark(){
-        return landmarks[lastLandmark];
+        return LANDMARKS[lastLandmark];
     }
 
     /**getNextLandmark()
@@ -104,7 +104,7 @@ public class Map implements Serializable
      * @return A string with the name of the next landmark
      * */
     public String getNextLandmark(){
-        return landmarks[lastLandmark + 1];
+        return LANDMARKS[lastLandmark + 1];
     }
 
     /**setClimateZone()
@@ -169,6 +169,17 @@ public class Map implements Serializable
      * */
     public boolean isShop() {
         if (getDistToLM()==0 && isShopAtLandmark[lastLandmark]){
+            return true;
+        }
+        else return false;
+    }
+
+    /**isLandmark()
+     * Tells if you're at a land mark or not
+     * @return true if at a landmark
+     * */
+    public boolean isLandmark() {
+        if (getDistToLM()==0){
             return true;
         }
         else return false;
