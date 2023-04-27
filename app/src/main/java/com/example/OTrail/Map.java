@@ -15,8 +15,8 @@ public class Map implements Serializable
 {
     //--------Variables
     public static String[] LANDMARKS = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};
-    private int[] distLMsToOrigin = {0, 102, 200, 250, 490, 830, 950, 1055, 1170, 1240, 1320, 1420, 1700, 1880, 1930, 2000}; // distance from starting location in miles
-    private boolean[] isRiverAtLandmark = {false, true, true, false, false, false, false, false, false, false, true, false, false, true, false, false, false};
+    private int[] distLMsToOrigin = {0, 102, 200, 250, 490, 830, 950, 1055, 1170, 1240, 1320, 1420, 1700, 1880, 1930, 2000, -1}; // distance from starting location in miles
+    private boolean[] isRiverAtLandmark = {false, true, true, false, false, false, false, false, false, true, false, false, true, false, false, false, false};
     private boolean[] isShopAtLandmark = {true, false, false, true, false, true, false, false, true, false, false, true, false, false, false, false};
     private int[] climates = {0, 0, 0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 5, 5, 5, 5};
     private int lastLandmark; // most recent index for gathering data from the arrays
