@@ -122,7 +122,8 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:checked="false"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:textColor="#FFFFFF" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -131,7 +132,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -140,7 +142,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyOxen"
@@ -148,7 +151,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonWheel"
@@ -156,7 +160,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonAxle"
@@ -164,7 +169,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonTongue"
@@ -172,7 +178,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyMedicalSupply"
@@ -180,7 +187,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -222,6 +230,7 @@
             android:padding="4dp"
             android:text="Buy 100    "
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy50"
             app:layout_constraintEnd_toEndOf="parent"
@@ -240,6 +249,7 @@
             android:padding="4dp"
             android:text="Buy 50"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy25"
             app:layout_constraintEnd_toEndOf="parent"
@@ -255,6 +265,7 @@
             android:padding="4dp"
             android:text="Buy 25"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy10"
             app:layout_constraintEnd_toEndOf="parent"
@@ -270,6 +281,7 @@
             android:padding="4dp"
             android:text="Buy 10"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -285,6 +297,7 @@
             android:padding="4dp"
             android:text="Buy 2"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -300,6 +313,7 @@
             android:padding="4dp"
             android:text="Buy 1"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
             app:layout_constraintEnd_toEndOf="parent"
