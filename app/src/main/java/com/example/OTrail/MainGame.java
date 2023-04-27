@@ -118,6 +118,8 @@ public class MainGame extends AppCompatActivity {
 
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive()))
                 {
+                    moveBut.setEnabled(false);
+
                     alertDialog.setTitle("YOU WIN!");
                     alertDialog.setMessage("Congratulations, you have made it to Oregon City!!!");
                     alertDialog.show();
