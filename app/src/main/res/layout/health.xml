@@ -10,8 +10,8 @@
         android:id="@+id/petDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="436dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="148dp"
         android:elevation="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/member4Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="320dp"
         android:layout_marginTop="252dp"
         android:elevation="43dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +32,8 @@
         android:id="@+id/member3Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="556dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="100dp"
         android:elevation="42dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,52 +43,12 @@
         android:id="@+id/member2Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="252dp"
         android:elevation="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/xmark" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="240dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="428dp"
-        android:layout_marginTop="240dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="552dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="88dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/continueAlongTheTrail"
@@ -101,52 +61,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView94"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Player Health"
-        android:textColor="#3F51B5"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/hattieHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="108dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        tools:layout_editor_absoluteY="197dp" />
 
     <TextView
         android:id="@+id/member2Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="96dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        tools:layout_editor_absoluteY="356dp" />
 
     <TextView
         android:id="@+id/member3Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="552dp"
+        android:layout_marginStart="396dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        tools:layout_editor_absoluteY="197dp" />
 
     <TextView
         android:id="@+id/member3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="588dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="92dp"
         android:text="Member 3"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,17 +102,17 @@
         android:id="@+id/member4Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
+        android:layout_marginStart="388dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        tools:layout_editor_absoluteY="356dp" />
 
     <TextView
         android:id="@+id/pet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="484dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginStart="608dp"
+        android:layout_marginTop="108dp"
         android:text="Pet"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -176,7 +122,7 @@
         android:id="@+id/member4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
+        android:layout_marginStart="344dp"
         android:layout_marginTop="216dp"
         android:text="Member 4"
         android:textStyle="bold"
@@ -187,17 +133,17 @@
         android:id="@+id/petHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="428dp"
+        android:layout_marginStart="576dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        tools:layout_editor_absoluteY="283dp" />
 
     <TextView
         android:id="@+id/member2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="332dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="224dp"
         android:text="Member 2"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -207,30 +153,31 @@
         android:id="@+id/textView107"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
         android:text="Hattie"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
         android:id="@+id/hattieDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="92dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/xmark" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="909dp"
+        android:layout_height="643dp"
+        android:elevation="-100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/health" />
 </androidx.constraintlayout.widget.ConstraintLayout>
