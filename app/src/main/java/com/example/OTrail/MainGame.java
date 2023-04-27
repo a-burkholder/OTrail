@@ -207,10 +207,11 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
+        final Button shopBut = findViewById(R.id.Shop);
 
 //        final Button talkBut = findViewById(R.id.viewLocation);
         if(map.isShop() || map.getPosition() == 0) { // THIS IS NOT WORKING AND NEEDS FIXED.
-            final Button shopBut = findViewById(R.id.Shop);
+            shopBut.setEnabled(true);
 
             shopBut.setOnClickListener(new View.OnClickListener() {
 
@@ -223,6 +224,11 @@ public class MainGame extends AppCompatActivity {
                     startActivityForResult(intent1, SHOP_RESULT);
                 }
             });
+        }
+        else
+        {
+            shopBut.setEnabled(false);
+
         }
 
         final Button tradeBut = findViewById(R.id.Trade);
