@@ -135,7 +135,7 @@ public class MainGame extends AppCompatActivity {
                 //________________________________________________________________________________________
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
-                    System.out.println(" can Continue");
+
 
                     // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
@@ -143,17 +143,17 @@ public class MainGame extends AppCompatActivity {
                         map.setPosition(10);
                     }
 
-                    // Prints the progress percentage.
-                    map.progressBar();
-
-                    // Increments the date for each loop.
-                    date.setDate(1);
-
                     if(map.isLandmark()){
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
                     }
+
+                    // Prints the progress percentage.
+                    map.progressBar();
+
+                    // Increments the date for each loop.
+                    date.setDate(1);
 
                     if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
