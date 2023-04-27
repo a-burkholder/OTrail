@@ -133,10 +133,10 @@
         android:id="@+id/petHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="576dp"
+        android:layout_marginStart="584dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteY="265dp" />
 
     <TextView
         android:id="@+id/member2"
@@ -180,4 +180,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/health" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="294dp"
+        android:layout_height="312dp"
+        app:srcCompat="@drawable/alexdog"
+        tools:layout_editor_absoluteX="388dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="169dp"
+        android:layout_height="142dp"
+        app:srcCompat="@drawable/alexpet"
+        tools:layout_editor_absoluteX="526dp"
+        tools:layout_editor_absoluteY="134dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
