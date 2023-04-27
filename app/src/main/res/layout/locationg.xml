@@ -1,30 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue on the Trail"
-        tools:layout_editor_absoluteX="486dp"
-        tools:layout_editor_absoluteY="317dp" />
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#c65C16"
+        android:text="Talk To A Local"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="337dp" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Talk to a Local"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="67dp" />
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="1037dp"
+        android:layout_height="610dp"
+        app:srcCompat="@drawable/img_12"
+        tools:layout_editor_absoluteX="-49dp"
+        tools:layout_editor_absoluteY="-154dp" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView42"
+        android:layout_width="313dp"
+        android:layout_height="77dp"
         android:text="Welcome to Independence Rock"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="534dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="362dp"
+        android:layout_height="238dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="-48dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView94"
+        android:layout_width="158dp"
+        android:layout_height="208dp"
+        android:text="Independence rock derived its name from a party of fur trappers who camped and celebrated Independence Day near the rock on July 4, 1830."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="39dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

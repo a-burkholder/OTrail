@@ -1,30 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue on the Trail"
-        tools:layout_editor_absoluteX="486dp"
-        tools:layout_editor_absoluteY="317dp" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1143dp"
+        android:layout_height="620dp"
+        android:background="#000000"
+        app:srcCompat="@drawable/FortLaramie"
+        tools:layout_editor_absoluteX="-126dp"
+        tools:layout_editor_absoluteY="-31dp" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Talk to a Local"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="67dp" />
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="438dp"
+        android:layout_height="299dp"
+        app:srcCompat="@drawable/img_4"
+        tools:layout_editor_absoluteX="526dp"
+        tools:layout_editor_absoluteY="7dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView10"
+        android:layout_width="192dp"
+        android:layout_height="322dp"
+        android:text="Fort Laramie was established in 1834 originally as a private fur trading fort. However, it is currently growing very rapidly into one of the largest and best-known military forts across the Northern Plains. Prices for goods here are known to be very reasonable, so take a look at the shop! "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="650dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="298dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/img_6"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="283dp"
+        android:layout_height="162dp"
+        android:text="Welcome to Fort Laramie!"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/Continue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Fort Laramie"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        tools:layout_editor_absoluteX="650dp"
+        tools:layout_editor_absoluteY="333dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
