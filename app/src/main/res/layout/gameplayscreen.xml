@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< Updated upstream
-=======
+
     <Button
         android:id="@+id/healthBut"
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
         android:text="Health"
+        app:layout_constraintBottom_toTopOf="@+id/Inventory"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dateDisplay" />
 
     <Button
         android:id="@+id/timeline"
@@ -34,8 +33,8 @@
         android:layout_height="73dp"
         android:layout_marginEnd="16dp"
         android:text="View Location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continueAction" />
+        app:layout_constraintBottom_toTopOf="@+id/Shop"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/Trade"
@@ -44,17 +43,16 @@
         android:layout_marginEnd="16dp"
         android:text="@string/trade"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Shop" />
+        tools:layout_editor_absoluteY="273dp" />
 
     <Button
         android:id="@+id/Shop"
         android:layout_width="130dp"
         android:layout_height="73dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="16dp"
         android:text="@string/shop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewLocation" />
+        tools:layout_editor_absoluteY="200dp" />
 
     <Button
         android:id="@+id/Inventory"
@@ -63,7 +61,7 @@
         android:layout_marginStart="16dp"
         android:text="@string/inventory"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/healthBut" />
+        tools:layout_editor_absoluteY="125dp" />
 
     <Button
         android:id="@+id/continueAction"
@@ -89,74 +87,67 @@
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:text="@string/datetodisplay"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="64dp" />
 
     <TextView
         android:id="@+id/announcementdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="@string/announcement"
-        app:layout_constraintBottom_toTopOf="@+id/timeline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="312dp" />
 
     <TextView
         android:id="@+id/weatherdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
         android:layout_marginTop="16dp"
         android:text="@string/weather"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="181dp" />
 
     <TextView
         android:id="@+id/temperatureDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
         android:layout_marginTop="16dp"
         android:text="@string/temperature"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="261dp" />
 
     <TextView
         android:id="@+id/speedDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="368dp"
         android:layout_marginTop="16dp"
         android:text="@string/speed"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="384dp" />
 
     <TextView
         android:id="@+id/distanceDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="476dp"
         android:layout_marginTop="16dp"
         android:text="Distance"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="493dp" />
 
 
     <TextView
         android:id="@+id/foodremainingdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="644dp"
         android:layout_marginTop="16dp"
         android:text="@string/lbsOfFood"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="661dp" />
 
->>>>>>> Stashed changes
+
     <ImageView
         android:id="@+id/gameplaybackground"
         android:layout_width="1000dp"
@@ -171,19 +162,11 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404"
         app:srcCompat="@drawable/gameplay_background_1_plaines" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="699dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trailinfo" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -196,164 +179,5 @@
         app:layout_constraintVertical_bias="0.572"
         app:srcCompat="@drawable/wagon" />
 
-    <Button
-        android:id="@+id/healthBut"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:text="Health"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/timeline"
-        android:layout_width="631dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="12dp"
-        android:text="@string/timeline"
-        android:typeface="serif"
-        android:textSize="12sp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/viewLocation"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginEnd="16dp"
-        android:text="View Location"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continueAction" />
-
-    <Button
-        android:id="@+id/Trade"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/trade"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Shop" />
-
-    <Button
-        android:id="@+id/Shop"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/shop"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewLocation" />
-
-    <Button
-        android:id="@+id/Inventory"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/inventory"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/healthBut" />
-
-    <Button
-        android:id="@+id/continueAction"
-        android:layout_width="130dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/continue_trail"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/dateDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/datetodisplay"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/announcementdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:background="#02040A"
-        android:elevation="50dp"
-        android:includeFontPadding="false"
-        android:text="@string/announcement"
-        android:textColor="#FFFFFF"
-        android:textSize="24dp"
-        android:visibility="invisible"
-        android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/timeline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/weatherdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/weather"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/temperatureDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/temperature"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/speedDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="368dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/speed"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/distanceDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="476dp"
-        android:layout_marginTop="16dp"
-        android:text="Distance"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/foodremainingdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="644dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/lbsOfFood"
-        android:typeface="serif"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
