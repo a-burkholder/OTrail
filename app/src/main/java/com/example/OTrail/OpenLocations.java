@@ -22,69 +22,70 @@ public class OpenLocations extends AppCompatActivity {
         switch (thisMap.getLastLandmark()){
             case "Independence, Missouri":{
                 setContentView(R.layout.locationa);
-
+                break;
             }
             case "Kansas River Crossing":{
                 setContentView(R.layout.locationb);
-
+                break;
             }
             case "Big Blue River Crossing":{
                 setContentView(R.layout.locationc);
-
+                break;
             }
             case "Fort Kearny":{
                 setContentView(R.layout.locationd);
-
+                break;
             }
             case "Chimney Rock":{
                 setContentView(R.layout.locatione);
-
+                break;
             }
             case "Fort Laramie":{
                 setContentView(R.layout.locationf);
-
+                break;
             }
             case "Independence Rock":{
                 setContentView(R.layout.locationg);
-
+                break;
             }
             case "South Pass":{
                 setContentView(R.layout.locationh);
-
+                break;
             }
             case "Fort Bridger":{
                 setContentView(R.layout.locationi);
-
+                break;
             }
             case "Green River":{
                 setContentView(R.layout.locationj);
-
+                break;
             }
             case "Soda Springs":{
                 setContentView(R.layout.locationk);
-
+                break;
             }
             case "Fort Hall":{
                 setContentView(R.layout.locationl);
-
+                break;
             }
             case "Snake River":{
                 setContentView(R.layout.locationm);
-
+                break;
             }
             case "Blue Mountains":{
                 setContentView(R.layout.locationn);
-
+                break;
             }
             case "The Dalles":{
                 setContentView(R.layout.locationo);
-
+                break;
             }
             case "Oregon City":{
                 setContentView(R.layout.locationp);
-
+                break;
             }
-            default:break;
+            default:setContentView(R.layout.locationa);
+                break;
         }
     }
 }
