@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 public class MainGame extends AppCompatActivity {
+    public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     //public static final String
@@ -129,7 +130,12 @@ public class MainGame extends AppCompatActivity {
                     // Increments the date for each loop.
                     date.setDate(1);
 
+                    if(map.isLandmark()){
 
+                        Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
+                        locationIntent.putExtra(GAME_MAP, map);
+                        startActivity(locationIntent);
+                    }
                     if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
@@ -168,7 +174,6 @@ public class MainGame extends AppCompatActivity {
                     //intent4.putExtra("passEvent", event);
                     //intent4.putExtra("Inventory object", inv);
                     //startActivity(intent4);
-
 
                 }
 
