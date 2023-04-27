@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
                 final Button toTrail = findViewById(R.id.title1);
                 final Button toOTrailInfo = findViewById(R.id.title2);
                 final Button toHattieInfo = findViewById(R.id.title3);
-                final Button graves = findViewById(R.id.title5);
                 final Button options = findViewById(R.id.title6);
                 toTrail.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -48,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(MainActivity.this, OpenHattieInfo.class);
-                        startActivity(intent);
-                    }
-                });
-                graves.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(MainActivity.this, OpenGrave.class);
                         startActivity(intent);
                     }
                 });

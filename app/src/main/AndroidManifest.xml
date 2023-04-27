@@ -33,9 +33,6 @@
             android:name=".RiverActivity"
             android:exported="false" />
         <activity
-            android:name=".OpenGrave"
-            android:exported="false" />
-        <activity
             android:name=".PartyActivity"
             android:exported="false" />
         <activity
