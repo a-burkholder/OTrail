@@ -204,7 +204,7 @@ public class Event implements Serializable
     /**River Crossing menu
      * Determines river height and depth, then outputs menu for choices.
      */
-    public String riverCrossing(int input)
+    public String riverCrossing(Inventory Ninv, int input)
     {
         int value = input;
         Random rand = new Random();
@@ -220,10 +220,10 @@ public class Event implements Serializable
                             "\nto lose items in the heavy current.";
                 }
                 case 2 -> {
-                    riverCrossing(2, rand_int1, rand_int2);
+                    riverCrossing(Ninv, 2, rand_int1, rand_int2);
                 }
                 case 3 -> {
-                    riverCrossing(3, rand_int1, rand_int2);
+                    riverCrossing(Ninv, 3, rand_int1, rand_int2);
                 }
                 default -> {
                     System.out.println("Invalid input");
@@ -237,31 +237,31 @@ public class Event implements Serializable
      * Contains the functionality of options to cross the river
      * @param option The index for finding which option was selected
      * */
-    public void riverCrossing(int option, int rand1, int rand2){
+    public void riverCrossing(Inventory Ninv, int option, int rand1, int rand2){
         if (option == 2){
-            inv.setPlayerMoneyCount(-100);
+            Ninv.setPlayerMoneyCount(-100);
             System.out.println("You have paid $50 to successfully cross the river!");
         }
         else if (option == 3){
             Random rand = new Random();
-            if(rand.nextInt(10) > rand1 || rand.nextInt(50 )> rand2){
+            if(rand.nextInt(100) > 98){
                 System.out.println("You have successfully crossed the river!");
             }
 
             else {
                 System.out.println("You have successfully crossed the river, but you lost: ");
 
-                if(inv.getClothingCount() > 0){
+                if(Ninv.getClothingCount() > 0){
                     int numClothesL = inv.getClothingCount() / 3;
-                    inv.setClothingCount(-numClothesL);
+                    Ninv.setClothingCount(-numClothesL);
                     System.out.println(numClothesL + " clothes");
                 }
-                if(inv.getWagonWheelCount()>1){
-                    inv.setWagonWheelCount(-1);
+                if(Ninv.getWagonWheelCount()>1){
+                    Ninv.setWagonWheelCount(-1);
                     System.out.println("1 wheel");
                 }
-                if(inv.getWagonAxleCount()>1){
-                    inv.setWagonAxleCount(-1);
+                if(Ninv.getWagonAxleCount()>1){
+                    Ninv.setWagonAxleCount(-1);
                     System.out.println("1 axel");
                 }
             }
