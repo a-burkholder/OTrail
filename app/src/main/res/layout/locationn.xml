@@ -6,58 +6,58 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="222dp"
-        android:layout_height="58dp"
-        android:backgroundTint="#c65C16"
-        android:text="Talk To A Local"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="327dp" />
-
-    <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="492dp"
+        android:layout_marginTop="344dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="264dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="998dp"
-        android:layout_height="610dp"
-        app:srcCompat="@drawable/img_9"
-        tools:layout_editor_absoluteX="-54dp"
-        tools:layout_editor_absoluteY="-152dp" />
+        android:layout_width="825dp"
+        android:layout_height="509dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_9" />
 
     <TextView
         android:id="@+id/textView103"
         android:layout_width="460dp"
         android:layout_height="127dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="16dp"
         android:text="Welcome To The Blue Mountains"
         android:textColor="#000000"
         android:textColorHint="#FF5722"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView25"
-        android:layout_width="538dp"
-        android:layout_height="226dp"
-        app:srcCompat="@drawable/img_4"
-        tools:layout_editor_absoluteX="-152dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="188dp"
+        android:layout_height="228dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_4" />
 
     <TextView
         android:id="@+id/textView105"
         android:layout_width="163dp"
         android:layout_height="192dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
         android:text="The Blue Mountains is best known for its soaring sandstone ridges blanketed in native bushland."
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
