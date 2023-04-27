@@ -89,6 +89,20 @@ public class Party implements Serializable
         return gameOver;
     }
 
+    public boolean getAtLeastSomeoneAlive()
+    {
+        if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4])
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+
     /**
      * Sets the games current difficulty level.
      *

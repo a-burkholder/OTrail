@@ -15,6 +15,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="140dp"
         android:text="Baskets"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +26,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="100dp"
         android:text="Sets of Clothing"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +37,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="100dp"
         android:text="$10"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,6 +48,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="140dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,6 +59,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="344dp"
         android:text="Medical Supply"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,6 +70,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="344dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,6 +81,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="344dp"
         android:text="8"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,6 +93,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="344dp"
         android:text="$2"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -106,14 +114,16 @@
             android:id="@+id/textView46"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose an item to buy" />
+            android:text="Choose an item to buy"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyFood"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:checked="false"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:textColor="#FFFFFF" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -122,7 +132,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <!--adding a radio button -->
         <RadioButton
@@ -131,7 +142,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyOxen"
@@ -139,7 +151,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonWheel"
@@ -147,7 +160,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonAxle"
@@ -155,7 +169,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyWagonTongue"
@@ -163,7 +178,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/buyMedicalSupply"
@@ -171,7 +187,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:checked="false"
-            android:padding="4dp" />
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -182,6 +199,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="60dp"
         android:text="Pounds of Food"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -212,6 +230,7 @@
             android:padding="4dp"
             android:text="Buy 100    "
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy50"
             app:layout_constraintEnd_toEndOf="parent"
@@ -230,6 +249,7 @@
             android:padding="4dp"
             android:text="Buy 50"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy25"
             app:layout_constraintEnd_toEndOf="parent"
@@ -245,6 +265,7 @@
             android:padding="4dp"
             android:text="Buy 25"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy10"
             app:layout_constraintEnd_toEndOf="parent"
@@ -260,6 +281,7 @@
             android:padding="4dp"
             android:text="Buy 10"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -275,6 +297,7 @@
             android:padding="4dp"
             android:text="Buy 2"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -290,6 +313,7 @@
             android:padding="4dp"
             android:text="Buy 1"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -304,6 +328,7 @@
         android:layout_marginStart="108dp"
         android:layout_marginTop="16dp"
         android:text="Item"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -314,6 +339,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="300dp"
         android:text="Wagon Tongue"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,6 +350,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="300dp"
         android:text="$10"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -334,6 +361,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="300dp"
         android:text="7"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -344,6 +372,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="300dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -354,6 +383,7 @@
         android:layout_marginStart="296dp"
         android:layout_marginTop="16dp"
         android:text="In Inventory"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -364,6 +394,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="16dp"
         android:text="Price"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -374,6 +405,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="220dp"
         android:text="Wagon Wheel"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -384,6 +416,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="220dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -394,6 +427,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="220dp"
         android:text="$10"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -404,6 +438,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="220dp"
         android:text="5"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -414,6 +449,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="100dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -424,6 +460,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="184dp"
         android:text="$20"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -434,6 +471,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="184dp"
         android:text="4"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -444,6 +482,7 @@
         android:layout_marginStart="104dp"
         android:layout_marginTop="184dp"
         android:text="Oxen"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -454,6 +493,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="184dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -464,6 +504,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="264dp"
         android:text="Wagon Axle"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -474,6 +515,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="264dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -484,6 +526,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="264dp"
         android:text="$10"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -494,6 +537,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="264dp"
         android:text="6"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -504,6 +548,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="60dp"
         android:text="$1 for 2 pounds"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -514,6 +559,7 @@
         android:layout_marginStart="328dp"
         android:layout_marginTop="60dp"
         android:text="#"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -524,6 +570,7 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="140dp"
         android:text="$5"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -534,6 +581,7 @@
         android:layout_marginStart="580dp"
         android:layout_marginTop="12dp"
         android:text="Welcome to the Shop"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -554,6 +602,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Item #"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -564,6 +613,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="60dp"
         android:text="1"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -574,6 +624,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="140dp"
         android:text="3"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -584,6 +635,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="100dp"
         android:text="2"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -594,6 +646,7 @@
         android:layout_marginStart="540dp"
         android:layout_marginTop="60dp"
         android:text="Number of that item to buy"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -614,7 +667,8 @@
         android:layout_marginStart="136dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/moneyAmount"
@@ -627,5 +681,16 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="972dp"
+        android:layout_height="573dp"
+        android:elevation="-50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shopimage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
