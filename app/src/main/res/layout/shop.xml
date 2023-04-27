@@ -231,6 +231,7 @@
             android:text="Buy 100    "
             android:textAlignment="center"
             android:textColor="#FFFFFF"
+            android:textColorLink="#4CAF50"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy50"
             app:layout_constraintEnd_toEndOf="parent"
@@ -591,6 +592,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="512dp"
         android:layout_marginTop="352dp"
+        android:backgroundTint="#4CAF50"
         android:text="Continue on the Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -657,6 +659,7 @@
         android:layout_marginStart="580dp"
         android:layout_marginTop="300dp"
         android:text="Buy"
+        android:backgroundTint=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -674,8 +677,8 @@
         android:id="@+id/moneyAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="364dp"
         android:text="Money: $"
         android:textColor="#4CAF50"
         android:textSize="16sp"
