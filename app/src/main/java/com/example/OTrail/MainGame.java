@@ -143,12 +143,6 @@ public class MainGame extends AppCompatActivity {
                         map.setPosition(10);
                     }
 
-                    if(map.isLandmark()){
-                        Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
-                        locationIntent.putExtra(GAME_MAP, map);
-                        startActivity(locationIntent);
-                    }
-
                     // Prints the progress percentage.
                     map.progressBar();
 
@@ -160,6 +154,12 @@ public class MainGame extends AppCompatActivity {
                         intent4.putExtra("passEvent", event);
                         intent4.putExtra(GAME_INV, inv);
                         startActivityForResult(intent4, RIVER_RESULT);
+                    }
+
+                    if(map.isLandmark()){
+                        Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
+                        locationIntent.putExtra(GAME_MAP, map);
+                        startActivity(locationIntent);
                     }
 
                     // Increment weather / terrian if needed.
