@@ -33,8 +33,7 @@ public class RiverActivity extends AppCompatActivity
         final TextView textView92 = findViewById(R.id.textView92);
 
        Button learn = (Button) findViewById(R.id.learn);
-       learn.setOnClickListener(new View.OnClickListener()
-       {
+       learn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view)
            {
@@ -49,27 +48,19 @@ public class RiverActivity extends AppCompatActivity
                    event.riverCrossing(inv, 2);
                    Intent resultIntent = new Intent();
                    resultIntent.putExtra(POST_RIVER_INV, inv);
-
                    setResult(RESULT_OK, resultIntent);
                    finish();
                }
            });
-
        Button cross = (Button) findViewById(R.id.cross);
-       cross.setOnClickListener(new View.OnClickListener()
-       {
+       cross.setOnClickListener(new View.OnClickListener() {
            @Override
-           public void onClick(View view)
-           {
+           public void onClick(View view) {
                event.riverCrossing(inv,3);
-
                Intent resultIntent = new Intent();
                resultIntent.putExtra(POST_RIVER_INV, inv);
-
                setResult(RESULT_OK, resultIntent);
                finish();
-
-
            }
        });
     }

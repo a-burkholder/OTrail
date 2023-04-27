@@ -129,7 +129,7 @@ public class Party implements Serializable
         this.isAlive = isAlive;
     }
 
-    public void dailyFoodUsed()
+    public void dailyFoodUsed(Inventory thisInv)
     {
         int counter = 0;
 
@@ -142,11 +142,11 @@ public class Party implements Serializable
         }
 
         // negative because the people will use food each day and each individual eats 3 pounds a day
-        if (inv.getFoodCount() > 0)
+        if (thisInv.getFoodCount() > 0)
         {
-            inv.setFoodCount(-1*counter*3);
+            thisInv.setFoodCount(-1*counter*3);
         }
-        else if (inv.getFoodCount() == 0)
+        else if (thisInv.getFoodCount() == 0)
         {
             Random rand = new Random();
 
@@ -168,7 +168,7 @@ public class Party implements Serializable
         }
         else
         {
-            inv.setFoodCount(0);
+            thisInv.setFoodCount(0);
         }
 
     }

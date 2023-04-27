@@ -113,31 +113,33 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 System.out.println(map.getLastLandmark());
 
-
-                inv.isWagonUsable();
+                if(party.getGameOverStatus()){
+                    //end game
+                    Intent intent = new Intent(MainGame.this, MainActivity.class);
+                    startActivity(intent);
+                }
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
-                    System.out.println("start of stuff" + inv.isWagonUsable() + !party.getGameOverStatus());
+                    System.out.println(" can Continue");
+
                     // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
                         System.out.println("Increments the position");
                         map.setPosition(10);
                     }
 
-
                     // Prints the progress percentage.
                     map.progressBar();
 
                     // Increments the date for each loop.
                     date.setDate(1);
-                    System.out.println(" "+map.isLandmark());
+
                     if(map.isLandmark()){
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
                     }
-                    System.out.println(map.getLastLandmark());
-                    System.out.println(" "+map.isRiver());
+
                     if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
@@ -151,11 +153,8 @@ public class MainGame extends AppCompatActivity {
                     date.setTemp(map.getClimate());
                     date.setGrass(map.getClimate());
 
-                    // Calculates the players food use.
-                    party.dailyFoodUsed();
-
-
-                    // Lists the daily choices for the player.
+                    // Calculates and updates the players food use.
+                    party.dailyFoodUsed(inv);
 
                     // Increment distance to next location.
                     map.getDistToLM();
@@ -184,7 +183,6 @@ public class MainGame extends AppCompatActivity {
 
 
         final Button healthBut = findViewById(R.id.healthBut);
-
         healthBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
