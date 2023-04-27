@@ -181,8 +181,9 @@ public class Map implements Serializable
     public boolean isLandmark() {
         if (getDistToLM()==0){
             return true;
-        }
-        else return false;
+        } else if (getDistFromLM()==0) {
+            return true;
+        } else return false;
     }
 
     /**isRiver()
@@ -190,11 +191,9 @@ public class Map implements Serializable
      * @return true if is a river
      * */
     public boolean isRiver() {
-        if (getDistFromLM() == 0){
-            lastLandmark++;
-            setPosition(1);
-
-            return isRiverAtLandmark[lastLandmark--];
+        if (isLandmark()){
+            boolean val = isRiverAtLandmark[lastLandmark];
+            return val;
         }
         else return false;
     }
