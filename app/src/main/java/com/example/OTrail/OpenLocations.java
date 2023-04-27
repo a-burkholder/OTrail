@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class OpenLocations extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class OpenLocations extends AppCompatActivity {
 
         Intent intent = getIntent();
         Map thisMap = (Map) intent.getSerializableExtra(MainGame.GAME_MAP);
-
+        System.out.println("Locations working");
         switch (thisMap.getLastLandmark()){
             case "Independence, Missouri":{
                 setContentView(R.layout.locationa);
@@ -26,6 +28,13 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Kansas River Crossing":{
                 setContentView(R.layout.locationb);
+                Button button = findViewById(R.id.button9);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
                 break;
             }
             case "Big Blue River Crossing":{

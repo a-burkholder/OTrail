@@ -25,6 +25,7 @@ public class MainGame extends AppCompatActivity {
     private static final String EVENT_KEY = "com.example.OTrail.EVENT";
 
     private static final int SHOP_RESULT = 1;
+    private static final int RIVER_RESULT = 2;
 
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
@@ -141,7 +142,7 @@ public class MainGame extends AppCompatActivity {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
                         intent4.putExtra(GAME_INV, inv);
-                        startActivity(intent4);
+                        startActivityForResult(intent4, RIVER_RESULT);
                     }
 
                     // Increment weather / terrian if needed.
@@ -222,6 +223,11 @@ public class MainGame extends AppCompatActivity {
         if (requestCode == SHOP_RESULT){
             if (resultCode == RESULT_OK){
                 inv = (Inventory) data.getSerializableExtra(Shop.POST_SHOP);
+            }
+        }
+        if (requestCode == RIVER_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(RiverActivity.POST_RIVER_INV);
             }
         }
     }

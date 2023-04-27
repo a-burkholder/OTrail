@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RiverActivity extends AppCompatActivity
 {
+    public static final String POST_RIVER_INV = "com.example.OTrail.POST_RIVER_INV";
+    public static final String POST_RIVER_EVENT = "com.example.OTrail.POST_RIVER_EVENT";
     private Event event;
     private Inventory inv;
 
@@ -25,8 +27,8 @@ public class RiverActivity extends AppCompatActivity
         setContentView(R.layout.rivercrossing);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        event = (Event) getIntent().getSerializableExtra("passEvent");
-        inv = (Inventory) getIntent().getSerializableExtra("passInventory");
+        Event event = (Event) getIntent().getSerializableExtra("passEvent");
+        inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
         final TextView textView92 = findViewById(R.id.textView92);
 
@@ -36,7 +38,7 @@ public class RiverActivity extends AppCompatActivity
            @Override
            public void onClick(View view)
            {
-               textView92.setText(event.riverCrossing(1));
+               textView92.setText(event.riverCrossing(inv, 1));
            }
        });
 
@@ -44,11 +46,12 @@ public class RiverActivity extends AppCompatActivity
            buy.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   event.riverCrossing(2);
-                   Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
-                   intent3.putExtra("passEvent", event);
-                   intent3.putExtra("passInventory", inv);
-                   startActivity(intent3);
+                   event.riverCrossing(inv, 2);
+                   Intent resultIntent = new Intent();
+                   resultIntent.putExtra(POST_RIVER_INV, inv);
+
+                   setResult(RESULT_OK, resultIntent);
+                   finish();
                }
            });
 
@@ -58,11 +61,15 @@ public class RiverActivity extends AppCompatActivity
            @Override
            public void onClick(View view)
            {
-               event.riverCrossing(3);
-               Intent intent3 = new Intent(RiverActivity.this, MainGame.class);
-               intent3.putExtra("passEvent", event);
-               intent3.putExtra("passInventory", inv);
-               startActivity(intent3);
+               event.riverCrossing(inv,3);
+
+               Intent resultIntent = new Intent();
+               resultIntent.putExtra(POST_RIVER_INV, inv);
+
+               setResult(RESULT_OK, resultIntent);
+               finish();
+
+
            }
        });
     }
