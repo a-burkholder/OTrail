@@ -24,7 +24,7 @@ public class OpenLocations extends AppCompatActivity {
         switch (thisMap.getLastLandmark()){
             case "Independence, Missouri":{
                 setContentView(R.layout.locationa);
-                Button button = findViewById();
+                Button button = findViewById(buttonA);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -35,7 +35,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Kansas River Crossing":{
                 setContentView(R.layout.locationb);
-                Button button = findViewById();
+                Button button = findViewById(buttonB);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -46,7 +46,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Big Blue River Crossing":{
                 setContentView(R.layout.locationc);
-                Button button = findViewById();
+                Button button = findViewById(buttonC);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -57,7 +57,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Fort Kearny":{
                 setContentView(R.layout.locationd);
-                Button button = findViewById();
+                Button button = findViewById(buttonD);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -68,7 +68,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Chimney Rock":{
                 setContentView(R.layout.locatione);
-                Button button = findViewById();
+                Button button = findViewById(buttonE);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -79,7 +79,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Fort Laramie":{
                 setContentView(R.layout.locationf);
-                Button button = findViewById();
+                Button button = findViewById(buttonF);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -90,7 +90,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Independence Rock":{
                 setContentView(R.layout.locationg);
-                Button button = findViewById();
+                Button button = findViewById(buttonG);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -101,7 +101,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "South Pass":{
                 setContentView(R.layout.locationh);
-                Button button = findViewById();
+                Button button = findViewById(buttonH);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -112,7 +112,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Fort Bridger":{
                 setContentView(R.layout.locationi);
-                Button button = findViewById();
+                Button button = findViewById(buttonI);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -123,7 +123,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Green River":{
                 setContentView(R.layout.locationj);
-                Button button = findViewById();
+                Button button = findViewById(buttonJ);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -134,7 +134,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Soda Springs":{
                 setContentView(R.layout.locationk);
-                Button button = findViewById();
+                Button button = findViewById(buttonK);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -145,7 +145,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Fort Hall":{
                 setContentView(R.layout.locationl);
-                Button button = findViewById();
+                Button button = findViewById(buttonL);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -156,7 +156,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Snake River":{
                 setContentView(R.layout.locationm);
-                Button button = findViewById();
+                Button button = findViewById(buttonM);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -167,7 +167,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Blue Mountains":{
                 setContentView(R.layout.locationn);
-                Button button = findViewById();
+                Button button = findViewById(buttonN);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -178,7 +178,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "The Dalles":{
                 setContentView(R.layout.locationo);
-                Button button = findViewById();
+                Button button = findViewById(buttonO);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -189,7 +189,7 @@ public class OpenLocations extends AppCompatActivity {
             }
             case "Oregon City":{
                 setContentView(R.layout.locationp);
-                Button button = findViewById();
+                Button button = findViewById(buttonP);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
