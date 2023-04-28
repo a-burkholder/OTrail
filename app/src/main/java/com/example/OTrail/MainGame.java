@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -92,7 +94,6 @@ public class MainGame extends AppCompatActivity {
         final Button shopBut = findViewById(R.id.Shop);
         final Button healthBut = findViewById(R.id.healthBut);
         final Button tradeBut = findViewById(R.id.Trade);
-        final Button timelineBut = findViewById(R.id.timeline);
 
         ImageView progressWagon = findViewById(R.id.progressWagon);
 
@@ -127,6 +128,7 @@ public class MainGame extends AppCompatActivity {
                 //______________________________________________________________________________________
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
+
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive()))
                 {
                     moveBut.setEnabled(false);
@@ -151,20 +153,32 @@ public class MainGame extends AppCompatActivity {
                         map.setPosition(10);
                     }
 
-                    //________________ image stuff
+                    int marginTopDp = 335;
+                    int marginLeftDp = 0;
                     int temp = map.getPosition();
                     int number;
                     for (number = 0; temp >= 0; number++) {
                         temp -= 100;
                     }
 
-                    if (map.getPosition() > 100) {
-                        progressWagon.setLeft(number * 39);
+                    System.out.println(number + "\n\n\n\n");
+
+                    if (number > 1) {
+                        marginLeftDp = 12 + number*39;
                     } else
                     {
-                        progressWagon.setLeft(12);
+                        marginLeftDp = 12;
                     }
-                    //___________
+
+                    // converts from DP to Pixels
+                    int marginTopPx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginTopDp, getResources().getDisplayMetrics());
+                    int marginLeftPx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginLeftDp, getResources().getDisplayMetrics());
+
+                    ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) progressWagon.getLayoutParams();
+
+                    layoutParams.setMargins(marginLeftPx, marginTopPx, 0, 0);
+                    progressWagon.setLayoutParams(layoutParams);
+
 
                     // Prints the progress percentage.
                     map.progressBar();

@@ -16,20 +16,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/timeline"
-        android:layout_width="674dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="24dp"
-        android:alpha="1"
-        android:elevation="100dp"
-        android:text="@string/timeline"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="invisible" />
-
-    <Button
         android:id="@+id/Trade"
         android:layout_width="130dp"
         android:layout_height="73dp"
