@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select a Starting Date"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
@@ -132,13 +133,29 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="850dp"
-        android:layout_height="552dp"
-        android:elevation="-60dp"
+        android:layout_width="902dp"
+        android:layout_height="674dp"
+        android:elevation="-5dp"
+        android:foregroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gameplay_background_2_desert" />
+        app:layout_constraintVertical_bias="0.601"
+        app:srcCompat="@drawable/otrailmainmenu2" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="351dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="36dp"
+        android:elevation="-1dp"
+        android:scaleX="1.75"
+        app:layout_constraintEnd_toEndOf="@+id/textView100"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/textView100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/textbackgrounddarkgray" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
