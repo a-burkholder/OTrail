@@ -163,25 +163,9 @@ public class MainGame extends AppCompatActivity {
 
                     System.out.println(number + "\n\n\n\n");
 
-                    if (number > 1) {
-                        marginLeftDp = 12 + number*39;
-                    } else
-                    {
-                        marginLeftDp = 12;
-                    }
 
-                    // converts from DP to Pixels
-                    int marginTopPx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginTopDp, getResources().getDisplayMetrics());
-                    int marginLeftPx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginLeftDp, getResources().getDisplayMetrics());
 
-                    ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) progressWagon.getLayoutParams();
 
-                    System.out.println(marginLeftPx);
-                    System.out.println(marginTopPx);
-                    System.out.println("__________________________________");
-
-                    layoutParams.setMargins(marginLeftPx, marginTopPx, 0, 0);
-                    progressWagon.setLayoutParams(layoutParams);
 
 
                     // Prints the progress percentage.
