@@ -11,14 +11,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class EventActivity extends AppCompatActivity
 {
-    Event event;
-    Inventory inv;
+    public static final String POST_EVENT_INV = "com.example.OTrail.POST_EVENT_INV";
+    public static final String POST_EVENT_DATE = "com.example.OTrail.POST_EVENT_DATE";
+    public static final String POST_EVENT_PARTY = "com.example.OTrail.POST_EVENT_PARTY";
+
+    private static final int BERRY_RESULT = 1;
+
     private String eventMessage;
+    Inventory inv;
+    Party party;
+    Date date;
 
     public EventActivity()
-    {
-
-    }
+    {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +32,13 @@ public class EventActivity extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        inv = (Inventory) getIntent().getSerializableExtra("Inventory object");
-        event = (Event) getIntent().getSerializableExtra("passEvent");
+
+        inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
+        party = (Party) getIntent().getSerializableExtra(MainGame.GAME_PARTY);
+        date = (Date) getIntent().getSerializableExtra(MainGame.GAME_DATE);
+
+        Event event = new Event(inv, party, date);
+        event.randomEvents(inv, party, date);
         eventMessage = event.getEventMessage();
 
         final TextView eventInformation = findViewById(R.id.eventInformation);
@@ -39,15 +49,30 @@ public class EventActivity extends AppCompatActivity
         buttonForContinuing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(eventMessage == "You found a berry bush.");
-                {
-                    Intent intent3 = new Intent(EventActivity.this, BerryActivity.class);
-                    intent3.putExtra("passParty", event);
-                    intent3.putExtra("Inventory object", inv);
-                    startActivity(intent3);
+                if(eventMessage == "You found a berry bush."){
+                    Intent startBerries = new Intent(EventActivity.this, BerryActivity.class);
+                    startBerries.putExtra("passParty", event);
+                    startBerries.putExtra("Inventory object", inv);
+                    startActivityForResult(startBerries, BERRY_RESULT);
                 }
+
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(POST_EVENT_INV, inv);
+                resultIntent.putExtra(POST_EVENT_DATE, date);
+                resultIntent.putExtra(POST_EVENT_PARTY, party);
+                setResult(RESULT_OK, resultIntent);
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == BERRY_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(BerryActivity.POST_GAME_INV);
+            }
+        }
     }
 }

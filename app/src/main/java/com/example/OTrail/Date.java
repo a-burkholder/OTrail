@@ -194,7 +194,7 @@ public class Date implements Serializable {
         int newWeather = rand.nextInt(100);
         if (newWeather>49){
             int chance = rand.nextInt(100);
-            if (newWeather>85 && chance < rainChance[climateZone][date[1]]){
+            if (newWeather>90 && chance < rainChance[climateZone][date[1]]){
                 currentWeather = "Heavy rain";
             }
             else if (chance < rainChance[climateZone][date[1]]) {
