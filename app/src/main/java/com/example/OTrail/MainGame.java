@@ -86,6 +86,13 @@ public class MainGame extends AppCompatActivity {
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
         final TextView distanceDisplay = findViewById(R.id.distanceDisplay);
 
+        final Button invBut = findViewById(R.id.Inventory);
+        final Button moveBut = findViewById(R.id.continueAction);
+        final Button shopBut = findViewById(R.id.Shop);
+        final Button healthBut = findViewById(R.id.healthBut);
+        final Button tradeBut = findViewById(R.id.Trade);
+        final Button timelineBut = findViewById(R.id.timeline);
+
         dateDisplay.setText(date.toString());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
@@ -97,7 +104,7 @@ public class MainGame extends AppCompatActivity {
 
 
 
-        final Button invBut = findViewById(R.id.Inventory);
+        //Inventory button stuff
         invBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,15 +113,16 @@ public class MainGame extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        final Button moveBut = findViewById(R.id.continueAction);
+
+        //Move button stuff
         moveBut.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 System.out.println(map.getLastLandmark());
+                shopBut.setEnabled(false);
                 //______________________________________________________________________________________
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
-
 
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive()))
                 {
@@ -127,7 +135,6 @@ public class MainGame extends AppCompatActivity {
                 if(party.getAtLeastSomeoneAlive() == false)
                 {
                     moveBut.setEnabled(false);
-
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");
                     alertDialog.show();
@@ -135,8 +142,6 @@ public class MainGame extends AppCompatActivity {
                 //________________________________________________________________________________________
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
-
-
                     // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
                         System.out.println("Increments the position");
@@ -160,6 +165,10 @@ public class MainGame extends AppCompatActivity {
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
+
+                        if(map.isRiver()) {
+                            shopBut.setEnabled(true);
+                        }
                     }
 
                     // Increment weather / terrian if needed.
@@ -189,14 +198,11 @@ public class MainGame extends AppCompatActivity {
                     //intent4.putExtra("passEvent", event);
                     //intent4.putExtra("Inventory object", inv);
                     //startActivity(intent4);
-
                 }
-
             }
         });
 
-
-        final Button healthBut = findViewById(R.id.healthBut);
+        //Heath tab stuff
         healthBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -207,32 +213,18 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
-        final Button shopBut = findViewById(R.id.Shop);
-
-//        final Button talkBut = findViewById(R.id.viewLocation);
-        if(map.isShop() || map.getPosition() == 0) { // THIS IS NOT WORKING AND NEEDS FIXED.
-            shopBut.setEnabled(true);
-
-            shopBut.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    Intent intent1 = new Intent(MainGame.this, Shop.class);
-
-                    intent1.putExtra("Inventory object", inv);
-                    intent1.putExtra("passParty", party);
-                    startActivityForResult(intent1, SHOP_RESULT);
-                }
-            });
-        }
-        else
-        {
-            shopBut.setEnabled(false);
-
-        }
-
-        final Button tradeBut = findViewById(R.id.Trade);
-        final Button timelineBut = findViewById(R.id.timeline);
+        //Shop tab stuff
+        if(map.isShop() || map.getPosition()==0) { shopBut.setEnabled(true);}
+        else {shopBut.setEnabled(false);}
+        shopBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(MainGame.this, Shop.class);
+                intent1.putExtra("Inventory object", inv);
+                intent1.putExtra("passParty", party);
+                startActivityForResult(intent1, SHOP_RESULT);
+            }
+        });
     }
 
     @Override
@@ -257,5 +249,4 @@ public class MainGame extends AppCompatActivity {
         outState.putSerializable(MAP_KEY, map);
         outState.putSerializable(EVENT_KEY, event);
     }
-
 }
