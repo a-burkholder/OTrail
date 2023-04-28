@@ -17,14 +17,17 @@
 
     <Button
         android:id="@+id/timeline"
-        android:layout_width="631dp"
+        android:layout_width="673dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="1"
+        android:elevation="100dp"
         android:text="@string/timeline"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/Trade"
@@ -174,10 +177,21 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="699dp"
-        android:layout_height="373dp"
-        app:srcCompat="@drawable/progressbar"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="151dp" />
+        android:layout_width="732dp"
+        android:layout_height="375dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/progressbar" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="344dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wagon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
