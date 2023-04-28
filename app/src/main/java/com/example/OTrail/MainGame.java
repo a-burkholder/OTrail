@@ -115,6 +115,28 @@ public class MainGame extends AppCompatActivity {
         ImageView wagon20 = findViewById(R.id.wagon20);
         ImageView wagon21 = findViewById(R.id.wagon21);
 
+        wagon1.setVisibility(View.INVISIBLE);
+        wagon2.setVisibility(View.INVISIBLE);
+        wagon3.setVisibility(View.INVISIBLE);
+        wagon4.setVisibility(View.INVISIBLE);
+        wagon5.setVisibility(View.INVISIBLE);
+        wagon6.setVisibility(View.INVISIBLE);
+        wagon7.setVisibility(View.INVISIBLE);
+        wagon8.setVisibility(View.INVISIBLE);
+        wagon9.setVisibility(View.INVISIBLE);
+        wagon10.setVisibility(View.INVISIBLE);
+        wagon11.setVisibility(View.INVISIBLE);
+        wagon12.setVisibility(View.INVISIBLE);
+        wagon13.setVisibility(View.INVISIBLE);
+        wagon14.setVisibility(View.INVISIBLE);
+        wagon15.setVisibility(View.INVISIBLE);
+        wagon16.setVisibility(View.INVISIBLE);
+        wagon17.setVisibility(View.INVISIBLE);
+        wagon18.setVisibility(View.INVISIBLE);
+        wagon19.setVisibility(View.INVISIBLE);
+        wagon20.setVisibility(View.INVISIBLE);
+        wagon21.setVisibility(View.INVISIBLE);
+
 
 
         dateDisplay.setText(date.toString());
@@ -195,12 +217,9 @@ public class MainGame extends AppCompatActivity {
                     wagon20.setVisibility(View.INVISIBLE);
                     wagon21.setVisibility(View.INVISIBLE);
 
-
-                    int marginTopDp = 335;
-                    int marginLeftDp = 0;
                     int temp = map.getPosition();
                     int number;
-                    for (number = 0; temp >= 0; number++) {
+                    for (number = 0; temp > 0; number++) {
                         temp -= 100;
                     }
 
