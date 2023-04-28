@@ -199,7 +199,7 @@ public class Shop extends AppCompatActivity {
                     }
                     break;
                     case R.id.buyBaskets: {
-                        switch (view.getId()) {
+                        switch (radioGroup2.getCheckedRadioButtonId()) {
                             case R.id.buy100: {
                                 basketPurchased = 100;
                             }
@@ -232,6 +232,8 @@ public class Shop extends AppCompatActivity {
                             default:
                         }
                         moneyUsed = moneyUsed + basketPurchased * BASKETPRICE;
+                        System.out.println(moneyUsed);
+                        System.out.println(basketPurchased);
                     }
                     break;
                     case R.id.buyOxen: {
@@ -268,7 +270,6 @@ public class Shop extends AppCompatActivity {
                             default:
                         }
                         moneyUsed = moneyUsed + oxenPurchased * OXENPRICE;
-                        System.out.println(moneyUsed);
 
                     }
                     break;
