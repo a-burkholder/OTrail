@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -93,6 +94,8 @@ public class MainGame extends AppCompatActivity {
         final Button tradeBut = findViewById(R.id.Trade);
         final Button timelineBut = findViewById(R.id.timeline);
 
+        ImageView progressWagon = findViewById(R.id.progressWagon);
+
         dateDisplay.setText(date.toString());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
@@ -147,6 +150,21 @@ public class MainGame extends AppCompatActivity {
                         System.out.println("Increments the position");
                         map.setPosition(10);
                     }
+
+                    //________________ image stuff
+                    int temp = map.getPosition();
+                    int number;
+                    for (number = 0; temp >= 0; number++) {
+                        temp -= 100;
+                    }
+
+                    if (map.getPosition() > 100) {
+                        progressWagon.setLeft(number * 39);
+                    } else
+                    {
+                        progressWagon.setLeft(12);
+                    }
+                    //___________
 
                     // Prints the progress percentage.
                     map.progressBar();

@@ -17,8 +17,8 @@
 
     <Button
         android:id="@+id/timeline"
-        android:layout_width="673dp"
-        android:layout_height="53dp"
+        android:layout_width="674dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="24dp"
         android:alpha="1"
         android:elevation="100dp"
@@ -177,19 +177,20 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="732dp"
-        android:layout_height="375dp"
-        android:layout_marginTop="180dp"
+        android:layout_width="690dp"
+        android:layout_height="318dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="196dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/progressbar" />
 
     <ImageView
-        android:id="@+id/imageView43"
+        android:id="@+id/progressWagon"
         android:layout_width="46dp"
         android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="335dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
