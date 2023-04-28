@@ -182,7 +182,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon"
+        android:id="@+id/wagon20"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="640dp"
@@ -192,7 +192,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon2"
+        android:id="@+id/wagon18"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="582dp"
@@ -202,7 +202,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon3"
+        android:id="@+id/wagon16"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="519dp"
@@ -212,7 +212,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon4"
+        android:id="@+id/wagon14"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="453dp"
@@ -222,7 +222,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon5"
+        android:id="@+id/wagon12"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="385dp"
@@ -232,7 +232,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon6"
+        android:id="@+id/wagon10"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="317dp"
@@ -242,7 +242,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon7"
+        android:id="@+id/wagon8"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="249dp"
@@ -282,7 +282,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon11"
+        android:id="@+id/wagon21"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="670dp"
@@ -292,7 +292,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon12"
+        android:id="@+id/wagon19"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="610dp"
@@ -302,7 +302,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon13"
+        android:id="@+id/wagon17"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="552dp"
@@ -312,7 +312,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon14"
+        android:id="@+id/wagon15"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="487dp"
@@ -322,7 +322,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon15"
+        android:id="@+id/wagon13"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="419dp"
@@ -332,7 +332,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon16"
+        android:id="@+id/wagon11"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="351dp"
@@ -342,7 +342,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon17"
+        android:id="@+id/wagon9"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="283dp"
@@ -352,7 +352,7 @@
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
-        android:id="@+id/progressWagon18"
+        android:id="@+id/wagon7"
         android:layout_width="46dp"
         android:layout_height="36dp"
         android:layout_marginStart="215dp"

@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -95,7 +93,7 @@ public class MainGame extends AppCompatActivity {
         final Button healthBut = findViewById(R.id.healthBut);
         final Button tradeBut = findViewById(R.id.Trade);
 
-        ImageView progressWagon = findViewById(R.id.progressWagon);
+        ImageView progressWagon = findViewById(R.id.wagon20);
 
         dateDisplay.setText(date.toString());
         weatherDisplay.setText(date.getWeather());
