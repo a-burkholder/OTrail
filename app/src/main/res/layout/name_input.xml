@@ -117,13 +117,16 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="827dp"
-        android:layout_height="516dp"
-        android:elevation="-60dp"
+        android:layout_width="902dp"
+        android:layout_height="674dp"
+        android:elevation="-5dp"
+        android:foregroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gameplay_background_3_mountain" />
+        app:layout_constraintVertical_bias="0.601"
+        app:srcCompat="@drawable/otrailmainmenu2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

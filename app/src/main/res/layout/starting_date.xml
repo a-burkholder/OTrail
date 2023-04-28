@@ -9,28 +9,30 @@
         android:id="@+id/textView90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="Select a Starting Date"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/radioGroup3" />
 
     <TextView
         android:id="@+id/textView100"
-        android:layout_width="321dp"
-        android:layout_height="163dp"
+        android:layout_width="286dp"
+        android:layout_height="116dp"
         android:text="Remember, if you leave too early, there will not be enough grass for your oxen to eat. Leaving too late will result in your party traveling through the treacherous winter."
         android:textColor="#FFFFFF"
         android:textSize="14dp"
         android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/toTrail"
         app:layout_constraintEnd_toEndOf="@+id/textView90"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="@+id/textView90"
         app:layout_constraintTop_toBottomOf="@+id/textView90"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.138" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
@@ -54,6 +56,7 @@
             android:checked="false"
             android:padding="2dp"
             android:text="March"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <RadioButton
@@ -63,6 +66,7 @@
             android:checked="false"
             android:padding="2dp"
             android:text="April"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <!--adding a radio button -->
@@ -74,6 +78,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="May"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <!--adding a radio button -->
@@ -85,6 +90,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="June"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <RadioButton
@@ -95,6 +101,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="July"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <RadioButton
@@ -105,6 +112,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="August"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
         <RadioButton
@@ -115,6 +123,7 @@
             android:checked="false"
             android:padding="4dp"
             android:text="September"
+            android:textColor="#FFFFFF"
             android:typeface="serif" />
 
     </RadioGroup>
@@ -123,11 +132,12 @@
         android:id="@+id/toTrail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="152dp"
         android:text="Start on the Trail"
         android:textSize="24dp"
         android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView90" />
 
@@ -147,15 +157,26 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="351dp"
-        android:layout_height="206dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="326dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="80dp"
         android:elevation="-1dp"
-        android:scaleX="1.75"
+        android:scaleX="1.7"
         app:layout_constraintEnd_toEndOf="@+id/textView100"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/textView100"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/textbackgrounddarkgray" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="143dp"
+        android:layout_height="284dp"
+        android:elevation="-1dp"
+        android:scaleX="1"
+
+        android:scaleY="2.0"
+        app:srcCompat="@drawable/textbackgrounddarkgray"
+        tools:layout_editor_absoluteX="545dp"
+        tools:layout_editor_absoluteY="55dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
