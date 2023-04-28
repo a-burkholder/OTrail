@@ -53,6 +53,7 @@ public class Map implements Serializable
      * @return The current climate zon the player is in
      * */
     public int getClimate(){
+        setClimateZone();
         return currentClimateZone;
     }
 

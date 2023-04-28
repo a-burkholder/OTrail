@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class BerryPickingMinigame extends AppCompatActivity {
+    public static final String RESULT = "com.example.OTrail.RESULT";
     int miniGame;
     private ImageButton button;
     private TextView textView;
@@ -186,10 +187,10 @@ public class BerryPickingMinigame extends AppCompatActivity {
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(BerryPickingMinigame.this, MainGame.class);
-                intent3.putExtra("passInventory", inv);
-                intent3.putExtra("passParty", event);
-                startActivity(intent3);
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(RESULT, inv);
+                setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
     }
