@@ -231,6 +231,7 @@
             android:text="Buy 100    "
             android:textAlignment="center"
             android:textColor="#FFFFFF"
+            android:textColorHighlight="#4CAF50"
             android:textColorLink="#4CAF50"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/buy50"
@@ -659,7 +660,7 @@
         android:layout_marginStart="580dp"
         android:layout_marginTop="300dp"
         android:text="Buy"
-        android:backgroundTint=""
+        android:backgroundTint="#4CAF50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

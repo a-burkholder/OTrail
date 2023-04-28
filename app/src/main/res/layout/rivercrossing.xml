@@ -84,12 +84,15 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="806dp"
-        android:layout_height="450dp"
+        android:layout_width="803dp"
+        android:layout_height="457dp"
         android:elevation="-40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/river"
-        tools:layout_editor_absoluteX="-38dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/river" />
 
     <ImageView
         android:id="@+id/imageView4"
