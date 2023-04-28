@@ -17,14 +17,17 @@
 
     <Button
         android:id="@+id/timeline"
-        android:layout_width="631dp"
+        android:layout_width="673dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="1"
+        android:elevation="100dp"
         android:text="@string/timeline"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/Trade"
@@ -82,21 +85,6 @@
         android:text="@string/datetodisplay"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/announcementdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="31dp"
-        android:layout_marginBottom="32dp"
-        android:background="#2C2C3B"
-        android:elevation="40dp"
-        android:text="@string/announcement"
-        android:textColor="#FEFEFE"
-        android:textSize="20dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/timeline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/weatherdisplay"
@@ -158,7 +146,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
-<ImageView
+    <ImageView
         android:id="@+id/gameplaybackground"
         android:layout_width="1000dp"
         android:layout_height="500dp"
@@ -185,6 +173,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.572"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="732dp"
+        android:layout_height="375dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/progressbar" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="344dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
