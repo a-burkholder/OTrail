@@ -176,6 +176,10 @@ public class MainGame extends AppCompatActivity {
 
                     ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) progressWagon.getLayoutParams();
 
+                    System.out.println(marginLeftPx);
+                    System.out.println(marginTopPx);
+                    System.out.println("__________________________________");
+
                     layoutParams.setMargins(marginLeftPx, marginTopPx, 0, 0);
                     progressWagon.setLayoutParams(layoutParams);
 
