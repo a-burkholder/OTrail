@@ -41,8 +41,10 @@ public class BerryActivity extends AppCompatActivity {
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra(POST_GAME_INV, inv);
                 setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
