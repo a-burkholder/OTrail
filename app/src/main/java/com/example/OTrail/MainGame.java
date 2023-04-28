@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -91,7 +92,52 @@ public class MainGame extends AppCompatActivity {
         final Button shopBut = findViewById(R.id.Shop);
         final Button healthBut = findViewById(R.id.healthBut);
         final Button tradeBut = findViewById(R.id.Trade);
-        final Button timelineBut = findViewById(R.id.timeline);
+
+        ImageView wagon1 = findViewById(R.id.wagon1);
+        ImageView wagon2 = findViewById(R.id.wagon2);
+        ImageView wagon3 = findViewById(R.id.wagon3);
+        ImageView wagon4 = findViewById(R.id.wagon4);
+        ImageView wagon5 = findViewById(R.id.wagon5);
+        ImageView wagon6 = findViewById(R.id.wagon6);
+        ImageView wagon7 = findViewById(R.id.wagon7);
+        ImageView wagon8 = findViewById(R.id.wagon8);
+        ImageView wagon9 = findViewById(R.id.wagon9);
+        ImageView wagon10 = findViewById(R.id.wagon10);
+        ImageView wagon11 = findViewById(R.id.wagon11);
+        ImageView wagon12 = findViewById(R.id.wagon12);
+        ImageView wagon13 = findViewById(R.id.wagon13);
+        ImageView wagon14 = findViewById(R.id.wagon14);
+        ImageView wagon15 = findViewById(R.id.wagon15);
+        ImageView wagon16 = findViewById(R.id.wagon16);
+        ImageView wagon17 = findViewById(R.id.wagon17);
+        ImageView wagon18 = findViewById(R.id.wagon18);
+        ImageView wagon19 = findViewById(R.id.wagon19);
+        ImageView wagon20 = findViewById(R.id.wagon20);
+        ImageView wagon21 = findViewById(R.id.wagon21);
+
+        wagon1.setVisibility(View.INVISIBLE);
+        wagon2.setVisibility(View.INVISIBLE);
+        wagon3.setVisibility(View.INVISIBLE);
+        wagon4.setVisibility(View.INVISIBLE);
+        wagon5.setVisibility(View.INVISIBLE);
+        wagon6.setVisibility(View.INVISIBLE);
+        wagon7.setVisibility(View.INVISIBLE);
+        wagon8.setVisibility(View.INVISIBLE);
+        wagon9.setVisibility(View.INVISIBLE);
+        wagon10.setVisibility(View.INVISIBLE);
+        wagon11.setVisibility(View.INVISIBLE);
+        wagon12.setVisibility(View.INVISIBLE);
+        wagon13.setVisibility(View.INVISIBLE);
+        wagon14.setVisibility(View.INVISIBLE);
+        wagon15.setVisibility(View.INVISIBLE);
+        wagon16.setVisibility(View.INVISIBLE);
+        wagon17.setVisibility(View.INVISIBLE);
+        wagon18.setVisibility(View.INVISIBLE);
+        wagon19.setVisibility(View.INVISIBLE);
+        wagon20.setVisibility(View.INVISIBLE);
+        wagon21.setVisibility(View.INVISIBLE);
+
+
 
         dateDisplay.setText(date.toString());
         weatherDisplay.setText(date.getWeather());
@@ -124,6 +170,7 @@ public class MainGame extends AppCompatActivity {
                 //______________________________________________________________________________________
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
+
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive()))
                 {
                     moveBut.setEnabled(false);
@@ -147,6 +194,167 @@ public class MainGame extends AppCompatActivity {
                         System.out.println("Increments the position");
                         map.setPosition(10);
                     }
+
+                    wagon1.setVisibility(View.INVISIBLE);
+                    wagon2.setVisibility(View.INVISIBLE);
+                    wagon3.setVisibility(View.INVISIBLE);
+                    wagon4.setVisibility(View.INVISIBLE);
+                    wagon5.setVisibility(View.INVISIBLE);
+                    wagon6.setVisibility(View.INVISIBLE);
+                    wagon7.setVisibility(View.INVISIBLE);
+                    wagon8.setVisibility(View.INVISIBLE);
+                    wagon9.setVisibility(View.INVISIBLE);
+                    wagon10.setVisibility(View.INVISIBLE);
+                    wagon11.setVisibility(View.INVISIBLE);
+                    wagon12.setVisibility(View.INVISIBLE);
+                    wagon13.setVisibility(View.INVISIBLE);
+                    wagon14.setVisibility(View.INVISIBLE);
+                    wagon15.setVisibility(View.INVISIBLE);
+                    wagon16.setVisibility(View.INVISIBLE);
+                    wagon17.setVisibility(View.INVISIBLE);
+                    wagon18.setVisibility(View.INVISIBLE);
+                    wagon19.setVisibility(View.INVISIBLE);
+                    wagon20.setVisibility(View.INVISIBLE);
+                    wagon21.setVisibility(View.INVISIBLE);
+
+                    int temp = map.getPosition();
+                    int number;
+                    for (number = 0; temp > 0; number++) {
+                        temp -= 100;
+                    }
+
+                    switch(number)
+                    {
+                        case 0:
+                        {
+                            wagon1.setVisibility(View.VISIBLE);
+                        }
+                        break;
+                        case 1:
+                        {
+                            wagon2.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 2:
+                        {
+                            wagon3.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 3:
+                        {
+                            wagon4.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 4:
+                        {
+                            wagon5.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 5:
+                        {
+                            wagon6.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 6:
+                        {
+                            wagon7.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 7:
+                        {
+                            wagon8.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 8:
+                        {
+                            wagon9.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 9:
+                        {
+                            wagon10.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 10:
+                        {
+                            wagon11.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 11:
+                        {
+                            wagon12.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 12:
+                        {
+                            wagon13.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 13:
+                        {
+                            wagon14.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 14:
+                        {
+                            wagon15.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 15:
+                        {
+                            wagon16.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 16:
+                        {
+                            wagon17.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 17:
+                        {
+                            wagon18.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 18:
+                        {
+                            wagon19.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 19:
+                        {
+                            wagon20.setVisibility(View.VISIBLE);
+
+                        }
+                        break;
+                        case 20:
+                        {
+                            wagon21.setVisibility(View.VISIBLE);
+                        }
+                        break;
+                        default:
+                    }
+
+
+
+
 
                     // Prints the progress percentage.
                     map.progressBar();
