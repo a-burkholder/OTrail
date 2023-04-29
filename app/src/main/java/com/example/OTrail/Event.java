@@ -50,63 +50,52 @@ public class Event implements Serializable
         return eventMessage;
     }
 
+    public int eventNum(){
+        Random chance = new Random();
+        int event = chance.nextInt(200);
+        return event;
+    }
     /**
      * This method generates random events and will then update the player's inventory/health depending on the event.
      */
-    public void randomEvents()
-    {
-        // create a random integer generator from 0 to 99
-        Random rand = new Random();
+    public void randomEvents(Inventory inv, Party party, Date date) {
         System.out.println("IN EVENT START!!!!!!!!!!!!!!!!!!!!!!!");
+        Random rand = new Random();
 
-
-        int rand_int1 = rand.nextInt(100);
-
-
-        // Print random integers
-        //System.out.println("Random Integer: "+rand_int1);
+        int rand_int1 = rand.nextInt(35);
 
         //berrybush
-        if (rand_int1 ==  0 || rand_int1 == 1){
+        if (rand_int1 == 0 || rand_int1 == 1 || rand_int1 < 25) {
             eventMessage = "You found a berry bush.";
         }
 
         //raiderAttacck
-        if (rand_int1 ==  2 || rand_int1 == 3){
+        if (rand_int1 == 2 || rand_int1 == 3) {
             eventMessage = "You have been attacked by raiders.\n" + "Minus 50 bullets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Bullets Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
             inv.setBasketCount(-50);
-            if(inv.getBasketCount() < 0)
-            {
-                inv.setBasketCount(-1*inv.getBasketCount());
+            if (inv.getBasketCount() < 0) {
+                inv.setBasketCount(-1 * inv.getBasketCount());
             }
             inv.setPlayerMoneyCount(-100);
-            if(inv.getPlayerMoneyCount() < 0)
-            {
-                inv.setPlayerMoneyCount(-1*inv.getPlayerMoneyCount());
+            if (inv.getPlayerMoneyCount() < 0) {
+                inv.setPlayerMoneyCount(-1 * inv.getPlayerMoneyCount());
             }
             inv.setClothingCount(-2);
-            if(inv.getClothingCount() < 0)
-            {
-                inv.setClothingCount(-1*inv.getClothingCount());
-            }
-
+            if (inv.getClothingCount() < 0) {
+                inv.setClothingCount(-1 * inv.getClothingCount());}
             System.out.println("IN EVENT___________________________________");
         }
 
-
         //Animal Attack
-        if (rand_int1 ==  4){
-            int player[] = new int [5];
+        if (rand_int1 == 4) {
+            int player[] = new int[5];
             int playerTemp = 0;
             playerTemp = rand.nextInt(5);
 
             eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
-            if(inv.getMedicalSupplyCount() > 2)
-            {
+            if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
-            }
-            else
-            {
+            } else {
                 player = party.getHealth();
                 player[playerTemp] = player[playerTemp] - 10;
                 party.setHealth(player);
@@ -114,17 +103,14 @@ public class Event implements Serializable
         }
 
         //Member Sickness
-        if (rand_int1 ==  5 || rand_int1 == 6){
-            int player1[] = new int [5];
+        if (rand_int1 == 5 || rand_int1 == 6) {
+            int player1[] = new int[5];
             int playerTemp1 = 0;
             playerTemp1 = rand.nextInt(5);
             eventMessage = "A member of your group has the flu. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
-            if(inv.getMedicalSupplyCount() > 2)
-            {
+            if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
-            }
-            else
-            {
+            } else {
                 player1 = party.getHealth();
                 player1[playerTemp1] = player1[playerTemp1] - 10;
                 party.setHealth(player1);
@@ -132,73 +118,63 @@ public class Event implements Serializable
         }
 
         //Dead Ox
-        if (rand_int1 ==  11){
+        if (rand_int1 == 11) {
             eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
             inv.setOxenCount(-1);
         }
 
 
         //Snake Bite
-        if (rand_int1 == 15){
-            int player2[] = new int [5];
+        if (rand_int1 == 15) {
+            int player2[] = new int[5];
             int playerTemp2 = 0;
             playerTemp2 = rand.nextInt(5);
 
             eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health" + "Medical Supplies: " + inv.getMedicalSupplyCount();
-            if(inv.getMedicalSupplyCount() > 2)
-            {
+            if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
-            }
-            else
-            {
+            } else {
                 player2 = party.getHealth();
                 player2[playerTemp2] = player2[playerTemp2] - 10;
                 party.setHealth(player2);
             }
         }
 
-
         //Wrong Trail; lose 4 days
-        if (rand_int1 == 16){
+        if (rand_int1 == 16) {
             eventMessage = "You went down the wrong trail. Lose 4 days.";
             date.setDate(4);
         }
 
-
         //Rough trail; lose a day
-        if (rand_int1 == 17 || rand_int1 == 18){
+        if (rand_int1 == 17 || rand_int1 == 18) {
             eventMessage = "Rough Trail. Lose a day.";
             date.setDate(1);
         }
 
-
         //Impassible trail; lose a day
-        if (rand_int1 == 19 || rand_int1 == 20){
+        if (rand_int1 == 19 || rand_int1 == 20) {
             eventMessage = "Impassible trail. Lose 3 days.";
             date.setDate(3);
         }
 
-
         //Broken Wheel
-        if (rand_int1 ==  21 || rand_int1 == 22){
+        if (rand_int1 == 21 || rand_int1 == 22) {
             eventMessage = "You have a broken wheel. Minus 1 wheels." + "Wheel Count: " + inv.getWagonWheelCount();
             inv.setWagonWheelCount(-1);
         }
 
-
         //Broken Axle
-        if (rand_int1 ==  23 || rand_int1 == 24){
+        if (rand_int1 == 23 || rand_int1 == 24) {
             eventMessage = "You have a broken Axle. Minus 1 axle." + " Axle Count: " + inv.getWagonAxleCount();
             inv.setWagonAxleCount(-1);
         }
 
-
         //Broken Tongue
-        if (rand_int1 ==  25){
+        if (rand_int1 == 25) {
             eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
             inv.setWagonTongueCount(-1);
         }
-
     }
 
     /**River Crossing menu

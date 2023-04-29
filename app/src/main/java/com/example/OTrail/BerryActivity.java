@@ -11,8 +11,13 @@ import android.widget.Button;
 
 public class BerryActivity extends AppCompatActivity {
 
+    public static final String POST_GAME_INV = "com.example.OTrail.POST_GAME_INV";
+
+    private static final int GAME_RESULT = 1;
+
     private Event event;
     private Inventory inv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +36,23 @@ public class BerryActivity extends AppCompatActivity {
                 Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
                 intent.putExtra("passEvent", event);
                 intent.putExtra("Inventory object", inv);
-                startActivity(intent);
+                startActivityForResult(intent, GAME_RESULT);
+
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(POST_GAME_INV, inv);
+                setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == GAME_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(BerryPickingMinigame.RESULT);
+            }
+        }
     }
 }

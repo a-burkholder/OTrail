@@ -18,6 +18,9 @@ import java.util.Arrays;
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
+    public static final String GAME_PARTY = "com.example.OTrail.GAME_PARTY";
+    public static final String GAME_DATE = "com.example.OTrail.GAME_DATE";
+    public static final String EVENT_NUMBER = "com.example.OTrail.EVENT_NUMBER";
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     //public static final String
 
@@ -28,6 +31,7 @@ public class MainGame extends AppCompatActivity {
 
     private static final int SHOP_RESULT = 1;
     private static final int RIVER_RESULT = 2;
+    private static final int EVENT_RESULT = 3;
 
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
@@ -139,7 +143,9 @@ public class MainGame extends AppCompatActivity {
 
 
 
-        dateDisplay.setText(date.toString());
+
+
+        dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
         temperatureDisplay.setText(" "+date.getTemp());
@@ -353,9 +359,6 @@ public class MainGame extends AppCompatActivity {
                     }
 
 
-
-
-
                     // Prints the progress percentage.
                     map.progressBar();
 
@@ -377,6 +380,18 @@ public class MainGame extends AppCompatActivity {
                         if(map.isRiver()) {
                             shopBut.setEnabled(true);
                         }
+                    }
+                    // Could generate a random number depending on the random number generated.
+                    System.out.println("generate event");
+                    int eventNum = event.eventNum();
+                    System.out.println(" " + eventNum);
+                    if (eventNum <= 200){
+                        Intent intent = new Intent(MainGame.this, EventActivity.class);
+                        intent.putExtra(GAME_PARTY, party);
+                        intent.putExtra(GAME_DATE, date);
+                        intent.putExtra(GAME_INV, inv);
+                        intent.putExtra(EVENT_NUMBER, eventNum);
+                        startActivityForResult(intent, EVENT_RESULT);
                     }
 
                     // Increment weather / terrian if needed.
@@ -400,12 +415,8 @@ public class MainGame extends AppCompatActivity {
                     foodDisplay.setText(" " + inv.getFoodCount());
                     distanceDisplay.setText(" " + map.getPosition());
 
-                    // Could generate a random number depending on the random number generated.
-                    //event.randomEvents();
-                    //Intent intent4 = new Intent(MainGame.this, EventActivity.class);
-                    //intent4.putExtra("passEvent", event);
-                    //intent4.putExtra("Inventory object", inv);
-                    //startActivity(intent4);
+
+
                 }
             }
         });
@@ -446,6 +457,15 @@ public class MainGame extends AppCompatActivity {
         if (requestCode == RIVER_RESULT){
             if (resultCode == RESULT_OK){
                 inv = (Inventory) data.getSerializableExtra(RiverActivity.POST_RIVER_INV);
+            }
+        }
+        if (requestCode == EVENT_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(EventActivity.POST_EVENT_INV);
+                date = (Date) data.getSerializableExtra(EventActivity.POST_EVENT_DATE);
+                party = (Party) data.getSerializableExtra(EventActivity.POST_EVENT_PARTY);
+                System.out.println(inv.getFoodCount());
+
             }
         }
     }

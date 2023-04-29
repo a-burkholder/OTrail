@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class BerryPickingMinigame extends AppCompatActivity {
+    public static final String RESULT = "com.example.OTrail.RESULT";
     int miniGame;
     private ImageButton button;
     private TextView textView;
@@ -24,7 +25,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
     private Inventory inv;
     int numOfBerryPicked = 0;
     int BERRY_TIMER = 3;
-    int GAMETIME = 10; // how long the game runs for
+    int GAMETIME = 8; // how long the game runs for
     int GAMETIMEMS = GAMETIME * 1000;
     public double BERRY_DELAY = 0.6;  //seconds until berry re-appears.
     int i = 0;
@@ -45,14 +46,13 @@ public class BerryPickingMinigame extends AppCompatActivity {
 
         System.out.println("The basket count is " + inv.getBasketCount() + "\n\n\n\n\n");
 
-        if(inv.getBasketCount() == 0)
+        /*if(inv.getBasketCount() == 0)
         {
             Intent intent = new Intent(BerryPickingMinigame.this, MainGame.class);
-            intent.putExtra("Inventory object", inv);
-            intent.putExtra("passEvent", event);
+            intent.putExtra(RESULT, inv);
             startActivity(intent);
         }
-
+*/
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
@@ -167,7 +167,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
                                         makeInvisible(berry5);
                                         counter1.setElevation(Float.parseFloat("40"));
                                         counter1.setVisibility(View.VISIBLE);
-                                        counter1.setText("Finished!");
+                                        counter1.setText("Finished!" + "\nTotal Collected Berries: " + numOfBerryPicked*5);
                                         miniGameRunning = false;
                                     }
                                 }.start();
@@ -179,17 +179,30 @@ public class BerryPickingMinigame extends AppCompatActivity {
         }.start();
         //food = food + 5 * berries picked.;
 
-        inv.setBasketCount(-1);
-        inv.setFoodCount(numOfBerryPicked);
+
 
         Button returnButton = (Button) findViewById(R.id.returnButton);
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(BerryPickingMinigame.this, MainGame.class);
-                intent3.putExtra("passInventory", inv);
-                intent3.putExtra("passParty", event);
-                startActivity(intent3);
+                System.out.println("num berries picked = " + numOfBerryPicked);
+
+                if (inv.getBasketCount() > 0) {
+                    inv.setBasketCount(-1);
+                }
+                else {
+                    if (numOfBerryPicked > 10) {
+                        numOfBerryPicked = 10;
+                    }
+                }
+                inv.setFoodCount(numOfBerryPicked * 5);
+
+                System.out.println("Food count = " + inv.getFoodCount());
+
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(RESULT, inv);
+                setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
     }
