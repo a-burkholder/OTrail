@@ -13,6 +13,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="#CC2F140F"
         android:text="Health"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,6 +24,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#CC2F140F"
         android:text="@string/trade"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Shop" />
 
@@ -34,6 +36,7 @@
         android:backgroundTint="#CC2F140F"
         android:text="@string/shop"
         app:layout_constraintEnd_toEndOf="parent"
+        android:typeface="serif"
         app:layout_constraintTop_toBottomOf="@+id/continueAction" />
 
     <Button
@@ -43,6 +46,7 @@
         android:layout_marginStart="16dp"
         android:backgroundTint="#CC2F140F"
         android:text="@string/inventory"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/healthBut" />
 
@@ -54,6 +58,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#CC2F140F"
         android:text="@string/continue_trail"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,20 +74,26 @@
 
     <TextView
         android:id="@+id/dateDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
+        android:layout_width="61dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="6dp"
         android:text="@string/datetodisplay"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/weatherdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="21dp"
         android:layout_marginStart="190dp"
         android:text="@string/weather"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/dateDisplay" />
 
@@ -92,24 +103,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="310dp"
         android:text="@string/temperature"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/weatherdisplay" />
 
     <TextView
         android:id="@+id/speedDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="488dp"
+        android:layout_width="65dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="480dp"
         android:text="@string/speed"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/temperatureDisplay" />
 
     <TextView
         android:id="@+id/foodremainingdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="655dp"
+        android:layout_width="59dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="640dp"
         android:text="@string/lbsOfFood"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/speedDisplay" />
 
