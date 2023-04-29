@@ -6,57 +6,59 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/buttonE"
+        android:id="@+id/buttonP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginStart="644dp"
+        android:layout_marginTop="324dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="1102dp"
-        android:layout_height="713dp"
+        android:id="@+id/imageView31"
+        android:layout_width="922dp"
+        android:layout_height="541dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_10" />
+        app:srcCompat="@drawable/img_13" />
 
     <TextView
-        android:id="@+id/textView104"
-        android:layout_width="294dp"
+        android:id="@+id/textView17"
+        android:layout_width="262dp"
         android:layout_height="44dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="372dp"
         android:layout_marginTop="16dp"
-        android:background="#C65C16"
-        android:text="Welcome To Chimney Rock"
-        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:text="Welcome to Oregon City"
+        android:textColor="#DFB841"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="434dp"
-        android:layout_height="249dp"
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="48dp"
+        android:id="@+id/imageView35"
+        android:layout_width="275dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
-        android:id="@+id/textView106"
-        android:layout_width="166dp"
-        android:layout_height="216dp"
-        android:layout_marginStart="464dp"
-        android:layout_marginTop="68dp"
-        android:text="This unique rock formation called Chimney Rock came to symbolize the greatest voluntary migration in US history. "
-        android:textSize="20sp"
+        android:id="@+id/textView109"
+        android:layout_width="184dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="104dp"
+        android:text="This is the end of the Oregon trail. Congratulations, and good luck with the start of your new life! "
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
