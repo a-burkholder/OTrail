@@ -6,58 +6,58 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/buttonK"
+        android:id="@+id/buttonE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="636dp"
+        android:layout_marginTop="332dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView32"
-        android:layout_width="902dp"
-        android:layout_height="513dp"
+        android:id="@+id/imageView27"
+        android:layout_width="1102dp"
+        android:layout_height="713dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_14" />
+        app:srcCompat="@drawable/img_10" />
 
     <TextView
-        android:id="@+id/textView112"
-        android:layout_width="118dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="84dp"
+        android:id="@+id/textView104"
+        android:layout_width="294dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="#F1C02C"
-        android:text="Welcome to Soda Springs"
-        android:textColor="#000000"
-        android:textSize="19sp"
+        android:background="#C65C16"
+        android:text="Welcome To Chimney Rock"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView37"
-        android:layout_width="279dp"
-        android:layout_height="279dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:id="@+id/imageView28"
+        android:layout_width="434dp"
+        android:layout_height="249dp"
+        android:layout_marginStart="528dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
-        android:id="@+id/textView111"
-        android:layout_width="188dp"
-        android:layout_height="238dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="104dp"
-        android:text="Emigrants used the pools of water for medicinal and bathing purposes. Many pioneers and their animals became sick when they drank too much of the alkali water from the springs."
+        android:id="@+id/textView106"
+        android:layout_width="166dp"
+        android:layout_height="216dp"
+        android:layout_marginStart="664dp"
+        android:layout_marginTop="60dp"
+        android:text="This unique rock formation called Chimney Rock came to symbolize the greatest voluntary migration in US history. "
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

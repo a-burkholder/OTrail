@@ -6,58 +6,60 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/buttonN"
+        android:id="@+id/buttonK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="825dp"
-        android:layout_height="509dp"
+        android:id="@+id/imageView32"
+        android:layout_width="1064dp"
+        android:layout_height="602dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_9" />
+        app:layout_constraintVertical_bias="0.424"
+        app:srcCompat="@drawable/img_14" />
 
     <TextView
-        android:id="@+id/textView103"
-        android:layout_width="460dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="244dp"
+        android:id="@+id/textView112"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="16dp"
-        android:text="Welcome To The Blue Mountains"
-        android:textColor="#000000"
-        android:textColorHint="#FF5722"
-        android:textSize="30sp"
+        android:background="#C65C16"
+        android:text="Welcome to Soda Springs"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="188dp"
-        android:layout_height="228dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/imageView37"
+        android:layout_width="279dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
-        android:id="@+id/textView105"
-        android:layout_width="163dp"
-        android:layout_height="192dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="36dp"
-        android:text="The Blue Mountains is best known for its soaring sandstone ridges blanketed in native bushland."
-        android:textSize="20sp"
+        android:id="@+id/textView111"
+        android:layout_width="188dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="104dp"
+        android:text="Emigrants used the pools of water for medicinal and bathing purposes. Many pioneers and their animals became sick when they drank too much of the alkali water from the springs."
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

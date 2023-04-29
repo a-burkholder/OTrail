@@ -6,55 +6,57 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/buttonO"
+        android:id="@+id/buttonN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginStart="604dp"
+        android:layout_marginTop="344dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="792dp"
-        android:layout_height="473dp"
+        android:id="@+id/imageView24"
+        android:layout_width="1176dp"
+        android:layout_height="611dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_11" />
+        app:srcCompat="@drawable/img_9" />
 
     <TextView
-        android:id="@+id/textView107"
-        android:layout_width="246dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="240dp"
+        android:id="@+id/textView103"
+        android:layout_width="460dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="244dp"
         android:layout_marginTop="16dp"
-        android:background="#C65C16"
-        android:text="Welcome to The Dalles"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:text="Welcome To The Blue Mountains"
+        android:textColor="#000000"
+        android:textColorHint="#FF5722"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="330dp"
-        android:layout_height="263dp"
-        android:layout_marginTop="96dp"
+        android:id="@+id/imageView25"
+        android:layout_width="188dp"
+        android:layout_height="228dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="164dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
-        android:id="@+id/textView108"
-        android:layout_width="157dp"
-        android:layout_height="291dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="128dp"
-        android:text="The Dalles is widely considered the end of the Overland Oregon Trail."
+        android:id="@+id/textView105"
+        android:layout_width="163dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="184dp"
+        android:text="The Blue Mountains is best known for its soaring sandstone ridges blanketed in native bushland."
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -9,8 +9,8 @@
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="476dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginStart="636dp"
+        android:layout_marginTop="328dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         android:layout_width="1184dp"
         android:layout_height="693dp"
         app:srcCompat="@drawable/img_15"
-        tools:layout_editor_absoluteX="-129dp"
+        tools:layout_editor_absoluteX="-147dp"
         tools:layout_editor_absoluteY="-141dp" />
 
     <TextView
