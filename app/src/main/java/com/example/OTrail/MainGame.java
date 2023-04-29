@@ -381,6 +381,18 @@ public class MainGame extends AppCompatActivity {
                             shopBut.setEnabled(true);
                         }
                     }
+                    // Could generate a random number depending on the random number generated.
+                    System.out.println("generate event");
+                    int eventNum = event.eventNum();
+                    System.out.println(" " + eventNum);
+                    if (eventNum <= 200){
+                        Intent intent = new Intent(MainGame.this, EventActivity.class);
+                        intent.putExtra(GAME_PARTY, party);
+                        intent.putExtra(GAME_DATE, date);
+                        intent.putExtra(GAME_INV, inv);
+                        intent.putExtra(EVENT_NUMBER, eventNum);
+                        startActivityForResult(intent, EVENT_RESULT);
+                    }
 
                     // Increment weather / terrian if needed.
                     map.setClimateZone();
@@ -403,18 +415,7 @@ public class MainGame extends AppCompatActivity {
                     foodDisplay.setText(" " + inv.getFoodCount());
                     distanceDisplay.setText(" " + map.getPosition());
 
-                    // Could generate a random number depending on the random number generated.
-                    System.out.println("generate event");
-                    int eventNum = event.eventNum();
-                    System.out.println(" " + eventNum);
-                    if (eventNum <= 200){
-                        Intent intent = new Intent(MainGame.this, EventActivity.class);
-                        intent.putExtra(GAME_PARTY, party);
-                        intent.putExtra(GAME_DATE, date);
-                        intent.putExtra(GAME_INV, inv);
-                        intent.putExtra(EVENT_NUMBER, eventNum);
-                        startActivityForResult(intent, EVENT_RESULT);
-                    }
+
 
                 }
             }
@@ -463,6 +464,8 @@ public class MainGame extends AppCompatActivity {
                 inv = (Inventory) data.getSerializableExtra(EventActivity.POST_EVENT_INV);
                 date = (Date) data.getSerializableExtra(EventActivity.POST_EVENT_DATE);
                 party = (Party) data.getSerializableExtra(EventActivity.POST_EVENT_PARTY);
+                System.out.println(inv.getFoodCount());
+
             }
         }
     }

@@ -62,10 +62,10 @@ public class Event implements Serializable
         System.out.println("IN EVENT START!!!!!!!!!!!!!!!!!!!!!!!");
         Random rand = new Random();
 
-        int rand_int1 = rand.nextInt(25);
+        int rand_int1 = rand.nextInt(35);
 
         //berrybush
-        if (rand_int1 == 0 || rand_int1 == 1) {
+        if (rand_int1 == 0 || rand_int1 == 1 || rand_int1 < 25) {
             eventMessage = "You found a berry bush.";
         }
 
