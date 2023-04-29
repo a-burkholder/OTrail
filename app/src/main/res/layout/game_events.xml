@@ -11,19 +11,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:elevation="10dp"
+        android:fontFamily="cursive"
         android:text="Oregon Trail Event!"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="943dp"
-        android:layout_height="523dp"
-        app:srcCompat="@drawable/gameplay_background_4_springtime"
-        tools:layout_editor_absoluteX="-108dp"
-        tools:layout_editor_absoluteY="-59dp" />
+        android:layout_width="828dp"
+        android:layout_height="487dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gameplay_background_4_springtime" />
 
     <Button
         android:id="@+id/buttonForContinuing"
@@ -39,6 +42,7 @@
         android:id="@+id/eventInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="                                                "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
