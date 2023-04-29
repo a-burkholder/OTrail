@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
+        android:background="#800C111F"
+        android:text="By: Busy People"
+        android:textColor="#D79300"
+        android:textSize="20dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView46"
+        app:layout_constraintEnd_toEndOf="@+id/imageView46"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/title2"
+        app:layout_constraintVertical_bias="0.564" />
+
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="902dp"
@@ -25,13 +42,14 @@
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_marginTop="84dp"
-        android:background="#CC000000"
         android:text="Learn about Hattie Campbell"
+        android:backgroundTint="#99443524"
         android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/title1"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
 
     <Button
+
         android:id="@+id/title6"
         android:layout_width="257dp"
         android:layout_height="62dp"
@@ -40,7 +58,7 @@
         android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/title3"
         app:layout_constraintTop_toBottomOf="@+id/title3"
-        tools:background="#CC000000" />
+    android:backgroundTint="#99443524" />
 
     <Button
         android:id="@+id/title1"
@@ -49,14 +67,14 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:autoText="false"
+        android:backgroundTint="#99443524"
         android:capitalize="words"
         android:text="Travel The Trail"
         android:textSize="24sp"
         android:typeface="serif"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="#CC000000" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/title2"
@@ -67,6 +85,15 @@
         app:layout_constraintBottom_toTopOf="@+id/title3"
         app:layout_constraintStart_toStartOf="@+id/title1"
         app:layout_constraintTop_toBottomOf="@+id/title1"
-        tools:background="#CC000000" />
+        android:backgroundTint="#99443524" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="515dp"
+        android:layout_height="220dp"
+        app:layout_constraintEnd_toStartOf="@+id/title1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title1"
+        app:srcCompat="@drawable/oregon_trail_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

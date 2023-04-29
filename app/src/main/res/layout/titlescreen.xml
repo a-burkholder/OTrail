@@ -6,32 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:text="By Busy People"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/titleStart"
-        android:layout_width="268dp"
-        android:layout_height="86dp"
-        android:background="#FF9800"
+        android:layout_width="332dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#121716"
         android:elevation="60dp"
-        android:text="Start Your Journey"
+        android:text="Start Your Adventure"
+        android:textSize="20dp"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.731" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -96,9 +86,11 @@
 
     <ImageView
         android:id="@+id/imageView43"
-        android:layout_width="375dp"
-        android:layout_height="131dp"
+        android:layout_width="530dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oregon_trail_title" />
