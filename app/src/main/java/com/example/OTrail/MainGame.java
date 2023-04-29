@@ -85,7 +85,7 @@ public class MainGame extends AppCompatActivity {
             startActivityForResult(intent1, SHOP_RESULT);
         }
 
-        
+
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
