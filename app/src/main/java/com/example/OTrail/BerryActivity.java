@@ -12,6 +12,7 @@ import android.widget.Button;
 public class BerryActivity extends AppCompatActivity {
 
     public static final String POST_GAME_INV = "com.example.OTrail.POST_GAME_INV";
+    public static final String BERRY_TITLE_TO_GAME = "com.example.OTrail.BERRY_TITLE_TO_GAME";
 
     private static final int GAME_RESULT = 4;
 
@@ -28,8 +29,8 @@ public class BerryActivity extends AppCompatActivity {
         setContentView(R.layout.berry_picking_title);
         Button startGame = (Button)findViewById(R.id.startGame);
 
-        event = (Event) getIntent().getSerializableExtra("passEvent");
-        inv = (Inventory) getIntent().getSerializableExtra("Inventory object");
+
+        inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
 
 
@@ -40,8 +41,7 @@ public class BerryActivity extends AppCompatActivity {
                 if(i == 1) {
                     startGame.setText("To trail");
                     Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
-                    intent.putExtra("passEvent", event);
-                    intent.putExtra("Inventory object", inv);
+                    intent.putExtra(BERRY_TITLE_TO_GAME, inv);
                     startActivityForResult(intent, GAME_RESULT);
                 }
                 else {

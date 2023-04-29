@@ -34,17 +34,17 @@ public class BerryPickingMinigame extends AppCompatActivity {
     private Boolean miniGameRunning = false;
     Random rand = new Random();
 
-    private Event event;
+
 
     public BerryPickingMinigame()
     {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
-        inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
-        event = (Event) getIntent().getSerializableExtra("passEvent");
+        inv = (Inventory)getIntent().getSerializableExtra(BerryActivity.BERRY_TITLE_TO_GAME);
 
-        System.out.println("The basket count is " + inv.getBasketCount() + "\n\n\n\n\n");
+
+
 
         /*if(inv.getBasketCount() == 0)
         {

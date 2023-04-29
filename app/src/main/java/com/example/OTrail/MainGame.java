@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -31,7 +32,7 @@ public class MainGame extends AppCompatActivity {
 
     private static final int SHOP_RESULT = 1;
     private static final int RIVER_RESULT = 2;
-    private static final int EVENT_RESULT = 3;
+    private static final int BERRY_RESULT = 3;
 
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
@@ -97,6 +98,7 @@ public class MainGame extends AppCompatActivity {
         final TextView weatherDisplay = findViewById(R.id.weatherdisplay);
         final TextView temperatureDisplay = findViewById(R.id.temperatureDisplay);
         final TextView speedDisplay = findViewById(R.id.speedDisplay);
+        TextView announcement = findViewById(R.id.announcementstextbox);
 
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
 
@@ -394,13 +396,37 @@ public class MainGame extends AppCompatActivity {
                         System.out.println("generate event");
                         int eventNum = event.eventNum();
                         System.out.println(" " + eventNum);
+
+                        //if event start
                         if (eventNum <= 200) {
-                            Intent intent = new Intent(MainGame.this, EventActivity.class);
+                            if (event.getEventMessage() == "You found a berry bush."){
+                                Intent intent = new Intent(MainGame.this, BerryActivity.class);
+                                intent.putExtra(GAME_INV, inv);
+                                startActivityForResult(intent, BERRY_RESULT);
+                            }
+
+                            event.randomEvents(inv, party, date);
+                            announcement.setElevation(Float.parseFloat("40"));
+                            announcement.setVisibility(View.VISIBLE);
+                            announcement.setText(event.getEventMessage());
+                            new CountDownTimer( 3000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                // Timer Finishes
+                                @SuppressLint("SetTextI18n")
+                                public void onFinish() {
+                                    announcement.setVisibility(View.INVISIBLE);
+                                    announcement.setElevation(Float.parseFloat("-40"));
+                                }
+                            }.start();
+
+                            /*Intent intent = new Intent(MainGame.this, EventActivity.class);
                             intent.putExtra(GAME_PARTY, party);
                             intent.putExtra(GAME_DATE, date);
                             intent.putExtra(GAME_INV, inv);
                             intent.putExtra(EVENT_NUMBER, eventNum);
                             startActivityForResult(intent, EVENT_RESULT);
+                            */
                         }
                     }
 
@@ -467,13 +493,10 @@ public class MainGame extends AppCompatActivity {
                 inv = (Inventory) data.getSerializableExtra(RiverActivity.POST_RIVER_INV);
             }
         }
-        if (requestCode == EVENT_RESULT){
+        if (requestCode == BERRY_RESULT){
             if (resultCode == RESULT_OK){
-                inv = (Inventory) data.getSerializableExtra(EventActivity.POST_EVENT_INV);
-                date = (Date) data.getSerializableExtra(EventActivity.POST_EVENT_DATE);
-                party = (Party) data.getSerializableExtra(EventActivity.POST_EVENT_PARTY);
+                inv = (Inventory) data.getSerializableExtra(BerryActivity.POST_GAME_INV);
                 System.out.println("final berry update = " + inv.getFoodCount());
-
             }
         }
     }

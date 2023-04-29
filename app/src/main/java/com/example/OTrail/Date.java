@@ -142,7 +142,7 @@ public class Date implements Serializable {
         if (this.date[1] == 0){
             this.date[1] = 1;
         }
-        if (this.date[1] == 12){
+        if (this.date[1] == 13){
             this.date[2]++;
             this.date[1] = 1;
         }

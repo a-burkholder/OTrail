@@ -63,9 +63,8 @@ public class Event implements Serializable
 
         int rand_int1 = rand.nextInt(35);
 
-        //berrybush
-        if (rand_int1 == 0 || rand_int1 == 1 || rand_int1 < 25) {
-            eventMessage = "You found a berry bush.";
+        if (date.getDay() == 25 && date.getMonth() == 12){
+            eventMessage = "Santa";
         }
 
         //raiderAttacck
@@ -86,7 +85,7 @@ public class Event implements Serializable
         }
 
         //Animal Attack
-        if (rand_int1 == 4) {
+        else if (rand_int1 == 4) {
             int player[] = new int[5];
             int playerTemp = 0;
             playerTemp = rand.nextInt(5);
@@ -102,7 +101,7 @@ public class Event implements Serializable
         }
 
         //Member Sickness
-        if (rand_int1 == 5 || rand_int1 == 6) {
+        else if (rand_int1 == 5 || rand_int1 == 6) {
             int player1[] = new int[5];
             int playerTemp1 = 0;
             playerTemp1 = rand.nextInt(5);
@@ -117,14 +116,14 @@ public class Event implements Serializable
         }
 
         //Dead Ox
-        if (rand_int1 == 11) {
+        else if (rand_int1 == 11) {
             eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
             inv.setOxenCount(-1);
         }
 
 
         //Snake Bite
-        if (rand_int1 == 15) {
+        else if (rand_int1 == 15) {
             int player2[] = new int[5];
             int playerTemp2 = 0;
             playerTemp2 = rand.nextInt(5);
@@ -140,39 +139,43 @@ public class Event implements Serializable
         }
 
         //Wrong Trail; lose 4 days
-        if (rand_int1 == 16) {
+        else if (rand_int1 == 16) {
             eventMessage = "You went down the wrong trail. Lose 4 days.";
             date.setDate(4);
         }
 
         //Rough trail; lose a day
-        if (rand_int1 == 17 || rand_int1 == 18) {
+        else if (rand_int1 == 17 || rand_int1 == 18) {
             eventMessage = "Rough Trail. Lose a day.";
             date.setDate(1);
         }
 
         //Impassible trail; lose a day
-        if (rand_int1 == 19 || rand_int1 == 20) {
+        else if (rand_int1 == 19 || rand_int1 == 20) {
             eventMessage = "Impassible trail. Lose 3 days.";
             date.setDate(3);
         }
 
         //Broken Wheel
-        if (rand_int1 == 21 || rand_int1 == 22) {
+        else if (rand_int1 == 21 || rand_int1 == 22) {
             eventMessage = "You have a broken wheel. Minus 1 wheels." + "Wheel Count: " + inv.getWagonWheelCount();
             inv.setWagonWheelCount(-1);
         }
 
         //Broken Axle
-        if (rand_int1 == 23 || rand_int1 == 24) {
+        else if (rand_int1 == 23 || rand_int1 == 24) {
             eventMessage = "You have a broken Axle. Minus 1 axle." + " Axle Count: " + inv.getWagonAxleCount();
             inv.setWagonAxleCount(-1);
         }
 
         //Broken Tongue
-        if (rand_int1 == 25) {
+        else if (rand_int1 == 25) {
             eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
             inv.setWagonTongueCount(-1);
+        }
+        //berrybush
+        else  {
+            eventMessage = "You found a berry bush.";
         }
     }
 
