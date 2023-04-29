@@ -55,6 +55,7 @@
         android:layout_width="166dp"
         android:layout_height="216dp"
         android:text="This unique rock formation called Chimney Rock came to symbolize the greatest voluntary migration in US history. "
+        android:textColor="#000000"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="650dp"
         tools:layout_editor_absoluteY="36dp" />

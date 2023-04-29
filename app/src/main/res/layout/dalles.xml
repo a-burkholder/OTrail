@@ -55,6 +55,7 @@
         android:layout_width="138dp"
         android:layout_height="274dp"
         android:text="The Dalles is widely considered the end of the Overland Oregon Trail."
+        android:textColor="#000000"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="205dp" />

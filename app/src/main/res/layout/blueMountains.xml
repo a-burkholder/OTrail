@@ -56,6 +56,7 @@
         android:layout_width="163dp"
         android:layout_height="192dp"
         android:text="The Blue Mountains is best known for its soaring sandstone ridges blanketed in native bushland."
+        android:textColor="#000000"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="33dp" />
