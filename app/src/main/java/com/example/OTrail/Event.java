@@ -59,7 +59,6 @@ public class Event implements Serializable
      * This method generates random events and will then update the player's inventory/health depending on the event.
      */
     public void randomEvents(Inventory inv, Party party, Date date) {
-        System.out.println("IN EVENT START!!!!!!!!!!!!!!!!!!!!!!!");
         Random rand = new Random();
 
         int rand_int1 = rand.nextInt(35);
@@ -71,8 +70,8 @@ public class Event implements Serializable
 
         //raiderAttacck
         if (rand_int1 == 2 || rand_int1 == 3) {
-            eventMessage = "You have been attacked by raiders.\n" + "Minus 50 bullets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Bullets Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
-            inv.setBasketCount(-50);
+            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Basket Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
+            inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
                 inv.setBasketCount(-1 * inv.getBasketCount());
             }
@@ -107,12 +106,12 @@ public class Event implements Serializable
             int player1[] = new int[5];
             int playerTemp1 = 0;
             playerTemp1 = rand.nextInt(5);
-            eventMessage = "A member of your group has the flu. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
-            if (inv.getMedicalSupplyCount() > 2) {
-                inv.setMedicalSupplyCount(-2);
+            eventMessage = "A member of your group has Dysentery. Minus 5 medical supplies and if you do not have medical supplies -30 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
+            if (inv.getMedicalSupplyCount() > 5) {
+                inv.setMedicalSupplyCount(-5);
             } else {
                 player1 = party.getHealth();
-                player1[playerTemp1] = player1[playerTemp1] - 10;
+                player1[playerTemp1] = player1[playerTemp1] - 30;
                 party.setHealth(player1);
             }
         }
