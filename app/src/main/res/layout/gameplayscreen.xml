@@ -66,7 +66,7 @@
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="53dp"
         android:layout_marginTop="16dp"
         android:text="@string/datetodisplay"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -76,7 +76,7 @@
         android:id="@+id/weatherdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="190dp"
         android:layout_marginTop="16dp"
         android:text="@string/weather"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -86,7 +86,7 @@
         android:id="@+id/temperatureDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
+        android:layout_marginStart="310dp"
         android:layout_marginTop="16dp"
         android:text="@string/temperature"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -96,29 +96,9 @@
         android:id="@+id/speedDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="368dp"
+        android:layout_marginStart="500dp"
         android:layout_marginTop="16dp"
         android:text="@string/speed"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/distanceDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="476dp"
-        android:layout_marginTop="16dp"
-        android:text="Distance"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/healthDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="568dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/health"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,7 +106,7 @@
         android:id="@+id/foodremainingdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="644dp"
+        android:layout_marginStart="655dp"
         android:layout_marginTop="16dp"
         android:text="@string/lbsOfFood"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -380,5 +360,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="297dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alexpet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
