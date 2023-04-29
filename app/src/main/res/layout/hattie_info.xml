@@ -7,9 +7,9 @@
 
     <TextView
         android:id="@+id/textView86"
-        android:layout_width="677dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="395dp"
+        android:layout_height="323dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:text="Hattie Campbell is a 13 year old pioneer, eldest child to Charles and Augusta Campbell, spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving from Independence, Missouri in 1847, Hattie and her family are joining the Great Migration to Oregon. Their simple farm life had been uprooted by overcrowding, high taxes, and annual rounds of the deadly swamp fever. Over the past few months, Hattie's father, Charles Campbell, shares his passion for traveling the Oregon Trail, buying booklets about the journey and speaking of partaking in a part of America's Manifest Destiny. However, Hattie's mother continues to share her fears of the trail, warning of the death toll and tearing up when thinking about how she will never see her sisters again.  In March, Hattie's father sold the house, chickens, three horses, and a cow to a neighbor for $65, which when added to their original savings and a riverboat passage to Independence, Missouri, should be enough to get them to Oregon."
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,10 +19,22 @@
         android:id="@+id/textView87"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="About Hattie"
+        android:textAlignment="center"
         android:textColor="#E91E63"
-        android:textSize="24sp"
+        android:textSize="34sp"
         tools:layout_editor_absoluteX="298dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hattie_picutre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
