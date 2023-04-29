@@ -11,6 +11,7 @@
         android:layout_height="73dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
+        android:backgroundTint="#CC2F140F"
         android:text="Health"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +21,7 @@
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#CC2F140F"
         android:text="@string/trade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Shop" />
@@ -29,6 +31,7 @@
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#CC2F140F"
         android:text="@string/shop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/continueAction" />
@@ -38,6 +41,7 @@
         android:layout_width="130dp"
         android:layout_height="73dp"
         android:layout_marginStart="16dp"
+        android:backgroundTint="#CC2F140F"
         android:text="@string/inventory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/healthBut" />
@@ -48,6 +52,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#CC2F140F"
         android:text="@string/continue_trail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

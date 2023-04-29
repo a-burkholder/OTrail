@@ -76,6 +76,17 @@ public class MainGame extends AppCompatActivity {
         Shop shop = new Shop();
         Menu menu = new Menu(inv, party, map, shop);
 
+        // enter shop stuff here
+        if(map.getPosition()==0)
+        {
+            Intent intent1 = new Intent(MainGame.this, Shop.class);
+            intent1.putExtra("Inventory object", inv);
+            intent1.putExtra("passParty", party);
+            startActivityForResult(intent1, SHOP_RESULT);
+        }
+
+        
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
