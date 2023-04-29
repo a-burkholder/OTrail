@@ -60,57 +60,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trailinfo" />
+        app:srcCompat="@drawable/trailinfo_sunny" />
 
     <TextView
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="6dp"
         android:text="@string/datetodisplay"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/weatherdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="16dp"
         android:text="@string/weather"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/dateDisplay" />
 
     <TextView
         android:id="@+id/temperatureDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="310dp"
-        android:layout_marginTop="16dp"
         android:text="@string/temperature"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/weatherdisplay" />
 
     <TextView
         android:id="@+id/speedDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="488dp"
         android:text="@string/speed"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/temperatureDisplay" />
 
     <TextView
         android:id="@+id/foodremainingdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="655dp"
-        android:layout_marginTop="16dp"
         android:text="@string/lbsOfFood"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/speedDisplay" />
 
     <ImageView
         android:id="@+id/gameplaybackground"
