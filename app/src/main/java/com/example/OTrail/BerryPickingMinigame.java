@@ -168,7 +168,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
                                         makeInvisible(berry5);
                                         counter1.setElevation(Float.parseFloat("40"));
                                         counter1.setVisibility(View.VISIBLE);
-                                        counter1.setText("Finished!");
+                                        counter1.setText("Finished!" + "\nTotal Collected Berries: " + numOfBerryPicked*5);
                                         miniGameRunning = false;
                                     }
                                 }.start();
