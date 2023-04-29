@@ -70,4 +70,14 @@
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[5]"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="372dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
