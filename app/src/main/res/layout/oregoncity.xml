@@ -9,8 +9,8 @@
         android:id="@+id/buttonP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginStart="644dp"
+        android:layout_marginTop="324dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,10 +18,11 @@
 
     <ImageView
         android:id="@+id/imageView31"
-        android:layout_width="858dp"
-        android:layout_height="519dp"
+        android:layout_width="922dp"
+        android:layout_height="541dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_13" />
@@ -30,7 +31,7 @@
         android:id="@+id/textView17"
         android:layout_width="262dp"
         android:layout_height="44dp"
-        android:layout_marginStart="232dp"
+        android:layout_marginStart="372dp"
         android:layout_marginTop="16dp"
         android:background="#000000"
         android:text="Welcome to Oregon City"

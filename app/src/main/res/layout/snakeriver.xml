@@ -9,7 +9,7 @@
         android:id="@+id/buttonM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
+        android:layout_marginStart="628dp"
         android:layout_marginTop="344dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
@@ -18,20 +18,22 @@
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="858dp"
-        android:layout_height="509dp"
+        android:layout_width="1058dp"
+        android:layout_height="606dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502"
         app:srcCompat="@drawable/img_8" />
 
     <TextView
         android:id="@+id/textView101"
         android:layout_width="212dp"
         android:layout_height="55dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="372dp"
+        android:layout_marginTop="28dp"
         android:background="#C65C16"
         android:text="Welcome To The Snake River Crossing"
         android:textColor="#FFFFFF"
@@ -53,9 +55,10 @@
         android:id="@+id/textView102"
         android:layout_width="189dp"
         android:layout_height="203dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="124dp"
         android:text="The Snake River is named for the Snake Indians, through whose country the greater part of the river flows."
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -9,8 +9,8 @@
         android:id="@+id/buttonK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="492dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,12 +18,14 @@
 
     <ImageView
         android:id="@+id/imageView32"
-        android:layout_width="902dp"
-        android:layout_height="513dp"
+        android:layout_width="1064dp"
+        android:layout_height="602dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424"
         app:srcCompat="@drawable/img_14" />
 
     <TextView
