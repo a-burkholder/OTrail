@@ -22,6 +22,8 @@ public class EventActivity extends AppCompatActivity
     Party party;
     Date date;
 
+    int i = 0;
+
     public EventActivity()
     {}
 
@@ -49,19 +51,29 @@ public class EventActivity extends AppCompatActivity
         buttonForContinuing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(eventMessage == "You found a berry bush."){
-                    Intent startBerries = new Intent(EventActivity.this, BerryActivity.class);
-                    startBerries.putExtra("passParty", event);
-                    startBerries.putExtra("Inventory object", inv);
-                    startActivityForResult(startBerries, BERRY_RESULT);
+                i++;
+
+
+
+                if (i==1) {
+                    if (eventMessage == "You found a berry bush.") {
+
+                        buttonForContinuing.setText("To trail");
+                        Intent startBerries = new Intent(EventActivity.this, BerryActivity.class);
+                        startBerries.putExtra("passParty", event);
+                        startBerries.putExtra("Inventory object", inv);
+                        startActivityForResult(startBerries, BERRY_RESULT);
+                    }
                 }
 
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra(POST_EVENT_INV, inv);
-                resultIntent.putExtra(POST_EVENT_DATE, date);
-                resultIntent.putExtra(POST_EVENT_PARTY, party);
-                setResult(RESULT_OK, resultIntent);
-                finish();
+                else {
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra(POST_EVENT_INV, inv);
+                    resultIntent.putExtra(POST_EVENT_DATE, date);
+                    resultIntent.putExtra(POST_EVENT_PARTY, party);
+                    setResult(RESULT_OK, resultIntent);
+                    finish();
+                }
             }
         });
     }
@@ -71,6 +83,7 @@ public class EventActivity extends AppCompatActivity
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == BERRY_RESULT){
             if (resultCode == RESULT_OK){
+                System.out.println("Eventactivity food 2= " + inv.getFoodCount());
                 inv = (Inventory) data.getSerializableExtra(BerryActivity.POST_GAME_INV);
             }
         }
