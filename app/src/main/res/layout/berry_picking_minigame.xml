@@ -93,7 +93,7 @@
         android:layout_marginEnd="188dp"
         android:layout_marginBottom="132dp"
         android:elevation="10dp"
-        android:text="10"
+        android:text="8"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/centerTimer"
         app:layout_constraintEnd_toEndOf="@+id/centerTimer" />
