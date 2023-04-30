@@ -218,7 +218,7 @@ public class Event implements Serializable
     public void riverCrossing(Inventory Ninv, int option, int rand1, int rand2){
         if (option == 2){
             Ninv.setPlayerMoneyCount(-100);
-            System.out.println("You have paid $50 to successfully cross the river!");
+            System.out.println("You have paid $100 to successfully cross the river!");
         }
         else if (option == 3){
             Random rand = new Random();
