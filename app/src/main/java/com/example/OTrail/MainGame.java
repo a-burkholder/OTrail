@@ -387,7 +387,7 @@ public class MainGame extends AppCompatActivity {
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
 
-                        if(map.isRiver()) {
+                        if(map.isShop()) {
                             shopBut.setEnabled(true);
                         }
                     }
@@ -399,13 +399,8 @@ public class MainGame extends AppCompatActivity {
 
                         //if event start
                         if (eventNum <= 200) {
-                            if (event.getEventMessage() == "You found a berry bush."){
-                                Intent intent = new Intent(MainGame.this, BerryActivity.class);
-                                intent.putExtra(GAME_INV, inv);
-                                startActivityForResult(intent, BERRY_RESULT);
-                            }
-
                             event.randomEvents(inv, party, date);
+
                             announcement.setElevation(Float.parseFloat("40"));
                             announcement.setVisibility(View.VISIBLE);
                             announcement.setText(event.getEventMessage());
@@ -420,6 +415,11 @@ public class MainGame extends AppCompatActivity {
                                 }
                             }.start();
 
+                            if (event.getEventMessage() == "You found a berry bush."){
+                                Intent intent = new Intent(MainGame.this, BerryActivity.class);
+                                intent.putExtra(GAME_INV, inv);
+                                startActivityForResult(intent, BERRY_RESULT);
+                            }
                             /*Intent intent = new Intent(MainGame.this, EventActivity.class);
                             intent.putExtra(GAME_PARTY, party);
                             intent.putExtra(GAME_DATE, date);
