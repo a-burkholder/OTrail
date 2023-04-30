@@ -116,4 +116,103 @@
         android:text="15 miles a day"
         app:layout_constraintTop_toBottomOf="@+id/textView128"
         tools:layout_editor_absoluteX="104dp" />
+
+<RadioGroup
+        android:id="@+id/speedRadioGroup"
+        android:layout_width="104dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="348dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627">
+
+        <!--adding a radio button -->
+
+    <RadioButton
+        android:id="@+id/speedEasy"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:checked="false"
+        android:padding="2dp"
+        android:textColor="#FFFFFF" />
+
+    <!--adding a radio button -->
+    <RadioButton
+        android:id="@+id/speedMedium"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <!--adding a radio button -->
+    <RadioButton
+        android:id="@+id/speedExtreme"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/buyOxen"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/buyWagonWheel"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/buyWagonAxle"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/buyWagonTongue"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/buyMedicalSupply"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:padding="4dp"
+        android:textColor="#FFFFFF" />
+
+</RadioGroup>
+
+
+
+
+
+
+
+
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>
