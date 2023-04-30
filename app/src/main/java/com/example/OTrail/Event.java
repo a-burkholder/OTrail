@@ -69,7 +69,6 @@ public class Event implements Serializable
 
         //raiderAttacck
         if (rand_int1 == 2 || rand_int1 == 3) {
-            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Basket Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
             inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
                 inv.setBasketCount(-1 * inv.getBasketCount());
@@ -81,7 +80,7 @@ public class Event implements Serializable
             inv.setClothingCount(-2);
             if (inv.getClothingCount() < 0) {
                 inv.setClothingCount(-1 * inv.getClothingCount());}
-            System.out.println("IN EVENT___________________________________");
+            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Basket Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
         }
 
         //Animal Attack
@@ -90,7 +89,6 @@ public class Event implements Serializable
             int playerTemp = 0;
             playerTemp = rand.nextInt(5);
 
-            eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
             if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
             } else {
@@ -98,6 +96,7 @@ public class Event implements Serializable
                 player[playerTemp] = player[playerTemp] - 10;
                 party.setHealth(player);
             }
+            eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
         }
 
         //Member Sickness
@@ -105,7 +104,6 @@ public class Event implements Serializable
             int player1[] = new int[5];
             int playerTemp1 = 0;
             playerTemp1 = rand.nextInt(5);
-            eventMessage = "A member of your group has Dysentery. Minus 5 medical supplies and if you do not have medical supplies -30 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
             } else {
@@ -113,12 +111,13 @@ public class Event implements Serializable
                 player1[playerTemp1] = player1[playerTemp1] - 30;
                 party.setHealth(player1);
             }
+            eventMessage = "A member of your group has Dysentery. Minus 5 medical supplies and if you do not have medical supplies -30 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
         }
 
         //Dead Ox
         else if (rand_int1 == 11) {
-            eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
             inv.setOxenCount(-1);
+            eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
         }
 
 
@@ -128,7 +127,6 @@ public class Event implements Serializable
             int playerTemp2 = 0;
             playerTemp2 = rand.nextInt(5);
 
-            eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health" + "Medical Supplies: " + inv.getMedicalSupplyCount();
             if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
             } else {
@@ -136,42 +134,43 @@ public class Event implements Serializable
                 player2[playerTemp2] = player2[playerTemp2] - 10;
                 party.setHealth(player2);
             }
+            eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health" + "Medical Supplies: " + inv.getMedicalSupplyCount();
         }
 
         //Wrong Trail; lose 4 days
         else if (rand_int1 == 16) {
-            eventMessage = "You went down the wrong trail. Lose 4 days.";
             date.setDate(4);
+            eventMessage = "You went down the wrong trail. Lose 4 days.";
         }
 
         //Rough trail; lose a day
         else if (rand_int1 == 17 || rand_int1 == 18) {
-            eventMessage = "Rough Trail. Lose a day.";
             date.setDate(1);
+            eventMessage = "Rough Trail. Lose a day.";
         }
 
         //Impassible trail; lose a day
         else if (rand_int1 == 19 || rand_int1 == 20) {
-            eventMessage = "Impassible trail. Lose 3 days.";
             date.setDate(3);
+            eventMessage = "Impassible trail. Lose 3 days.";
         }
 
         //Broken Wheel
         else if (rand_int1 == 21 || rand_int1 == 22) {
-            eventMessage = "You have a broken wheel. Minus 1 wheels." + "Wheel Count: " + inv.getWagonWheelCount();
             inv.setWagonWheelCount(-1);
+            eventMessage = "You have a broken wheel. Minus 1 wheels." + "Wheel Count: " + inv.getWagonWheelCount();
         }
 
         //Broken Axle
         else if (rand_int1 == 23 || rand_int1 == 24) {
-            eventMessage = "You have a broken Axle. Minus 1 axle." + " Axle Count: " + inv.getWagonAxleCount();
             inv.setWagonAxleCount(-1);
+            eventMessage = "You have a broken Axle. Minus 1 axle." + " Axle Count: " + inv.getWagonAxleCount();
         }
 
         //Broken Tongue
         else if (rand_int1 == 25) {
-            eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
             inv.setWagonTongueCount(-1);
+            eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
         }
         //berrybush
         else  {
@@ -188,11 +187,10 @@ public class Event implements Serializable
         Random rand = new Random();
         int rand_int1 = rand.nextInt(10);
         int rand_int2 = rand.nextInt(50);
-        String output = "";
 
             switch (value) {
                 case 1 -> {
-                    output = "The river is " + rand_int1 + " feet deep and " + rand_int2 + " feet across." +
+                    eventMessage = "The river is " + rand_int1 + " feet deep and " + rand_int2 + " feet across." +
                             "\nYou could pay $100 to safely travel the river via ferry." +
                             "\nHowever, if you wish to cross by foot, there is a chance" +
                             "\nto lose items in the heavy current.";
@@ -208,7 +206,7 @@ public class Event implements Serializable
                 }
             }
 
-        return output;
+        return eventMessage;
     }
 
     /**public void riverCrossing(int option)
@@ -218,30 +216,31 @@ public class Event implements Serializable
     public void riverCrossing(Inventory Ninv, int option, int rand1, int rand2){
         if (option == 2){
             Ninv.setPlayerMoneyCount(-100);
-            System.out.println("You have paid $100 to successfully cross the river!");
+            eventMessage = "You have paid $100 and have successfully crossed the river!";
         }
         else if (option == 3){
             Random rand = new Random();
             if(rand.nextInt(100) > 98){
-                System.out.println("You have successfully crossed the river!");
+                eventMessage = "You have successfully crossed the river!";
             }
 
             else {
-                System.out.println("You have successfully crossed the river, but you lost: ");
+                eventMessage = "You have successfully crossed the river, but you lost: ";
 
                 if(Ninv.getClothingCount() > 0){
                     int numClothesL = inv.getClothingCount() / 3;
                     Ninv.setClothingCount(-numClothesL);
-                    System.out.println(numClothesL + " clothes");
+                    eventMessage = "You have successfully crossed the river, but you lost: " + numClothesL + " clothes";
                 }
                 if(Ninv.getWagonWheelCount()>1){
                     Ninv.setWagonWheelCount(-1);
-                    System.out.println("1 wheel");
+                    eventMessage = "You have successfully crossed the river, but you lost one wagon wheel";
                 }
                 if(Ninv.getWagonAxleCount()>1){
                     Ninv.setWagonAxleCount(-1);
-                    System.out.println("1 axel");
+                    eventMessage = "You have successfully crossed the river, but you lost one wagon axle";
                 }
+
             }
         }
     }
