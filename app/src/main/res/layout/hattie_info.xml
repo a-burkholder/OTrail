@@ -16,6 +16,8 @@
         android:fontFamily="sans-serif-medium"
         android:text="Hattie Campbell is a 13-year-old pioneer who likes spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving Independence, Missouri, in 1847, Hattie and her family joined the Great Migration to Oregon. Overcrowding, high taxes, and annual rounds of the deadly swamp fever had uprooted their simple farm life.  "
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView47"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
