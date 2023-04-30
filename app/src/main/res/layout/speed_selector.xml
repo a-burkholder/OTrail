@@ -160,51 +160,6 @@
         android:padding="4dp"
         android:textColor="#FFFFFF" />
 
-    <RadioButton
-        android:id="@+id/buyOxen"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
-
-    <RadioButton
-        android:id="@+id/buyWagonWheel"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
-
-    <RadioButton
-        android:id="@+id/buyWagonAxle"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
-
-    <RadioButton
-        android:id="@+id/buyWagonTongue"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
-
-    <RadioButton
-        android:id="@+id/buyMedicalSupply"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
-
 </RadioGroup>
 
 
