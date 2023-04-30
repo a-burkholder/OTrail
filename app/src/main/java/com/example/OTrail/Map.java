@@ -169,8 +169,9 @@ public class Map implements Serializable
      * @return true if at a landmark and there is a shop
      * */
     public boolean isShop() {
-        if (getDistToLM()==0 && isShopAtLandmark[lastLandmark]){
-            return true;
+        if (isLandmark()){
+            boolean val = isShopAtLandmark[lastLandmark];
+            return val;
         }
         else return false;
     }
