@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
@@ -115,6 +116,9 @@ public class MainGame extends AppCompatActivity {
         final Button tradeBut = findViewById(R.id.Trade);
         final Button speedBut = findViewById(R.id.speed);
 
+        //define weather icons
+        final ImageView weather = findViewById(R.id.imageView);
+
         //defines wagon images
         ImageView wagon1 = findViewById(R.id.wagon1);
         ImageView wagon2 = findViewById(R.id.wagon2);
@@ -185,9 +189,21 @@ public class MainGame extends AppCompatActivity {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
+                //update food
+                if(inv.getFoodCount() >= 0) {
+                    inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
 
-                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
-
+                }
+                else {
+                    inv.setFoodCount(-inv.getFoodCount());
+                }
+                int tempHealth[] = party.getHealth();
+                Random rand = new Random();
+                int locationTemp = rand.nextInt(5);
+                if(inv.getFoodCount() <= 0) {
+                    tempHealth[locationTemp] = tempHealth[locationTemp] + -5;
+                }
+                party.setHealth(tempHealth);
 
                 //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
@@ -473,7 +489,24 @@ public class MainGame extends AppCompatActivity {
                     foodDisplay.setText(" " + inv.getFoodCount());
 
                     //updates the screen icons
-
+                    switch (date.getWeather()){
+                        case ("Clear"):{
+                            weather.setImageResource(R.drawable.trailinfo_sunny);
+                        }
+                        case ("Rain"):{
+                            weather.setImageResource(R.drawable.trailinforain);
+                        }
+                        case ("Heavy rain"):{
+                            weather.setImageResource(R.drawable.trailinfo_rain_h);
+                        }
+                        case ("snow"):{
+                            weather.setImageResource(R.drawable.trailinfo_snow);
+                        }
+                        case ("Heavy snow"):{
+                            weather.setImageResource(R.drawable.trailinfo_snow_h);
+                        }
+                        default: weather.setImageResource(R.drawable.trailinfo_sunny);
+                    }
                 }
             }
         });
@@ -525,7 +558,9 @@ public class MainGame extends AppCompatActivity {
     protected void onResume (){
         super.onResume();
         TextView speedDisplay = findViewById(R.id.speedDisplay);
+        TextView foodDisp = findViewById(R.id.foodremainingdisplay);
         speedDisplay.setText(""+party.getSpeed());
+        foodDisp.setText(""+inv.getFoodCount());
 
     }
     //allows for proper pulling of data back from other activities
