@@ -3,8 +3,10 @@ package com.example.OTrail;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class OpenTrailInfo extends AppCompatActivity {
 
@@ -15,5 +17,13 @@ public class OpenTrailInfo extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trail_info);
+
+        Button backToTitleButton = (Button) findViewById(R.id.backToTitleButton);
+        backToTitleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

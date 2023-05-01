@@ -3,8 +3,11 @@ package com.example.OTrail;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class OpenHattieInfo extends AppCompatActivity {
 
@@ -15,5 +18,14 @@ public class OpenHattieInfo extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hattie_info);
+
+
+        Button backToTitle = (Button) findViewById(R.id.backToTitle);
+        backToTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
