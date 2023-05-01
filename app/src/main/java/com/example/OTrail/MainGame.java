@@ -503,16 +503,14 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
-        speedBut.setOnClickListener(new View.OnClickListener()
-        {
+        speedBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
                 intent1.putExtra(PARTY_TO_HEALTH, party);
+                speedDisplay.setText(""+party.getSpeed());
                 startActivityForResult(intent1, SPEED_RESULT);
 
-                speedDisplay.setText(""+party.getSpeed());
             }
         });
     }
