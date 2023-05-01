@@ -17,7 +17,7 @@ public class OpenOptions extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.options);
+        setContentView(R.layout.credits1);
 
         Button backToTheTitle = (Button) findViewById(R.id.backToTheTitle);
         backToTheTitle.setOnClickListener(new View.OnClickListener() {
