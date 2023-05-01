@@ -10,103 +10,127 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.legendsofamerica.com/wy-fortlaramie/ "
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="361dp" />
-
-    <TextView
-        android:id="@+id/textView137"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <TextView
-        android:id="@+id/textView133"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Options2"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="24dp" />
-
-    <TextView
-        android:id="@+id/textView132"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="50dp" />
-
-    <TextView
-        android:id="@+id/textView134"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://www.wyohistory.org/encyclopedia/fort-bridger "
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="78dp" />
-
-    <TextView
-        android:id="@+id/textView136"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://www.legendsofamerica.com/wy-fortbridger "
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="104dp" />
-
-    <TextView
-        android:id="@+id/textView139"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="http://www.historyglobe.com/ot/fthall.htm "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView159" />
 
     <TextView
         android:id="@+id/textView154"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="http://npshistory.com/brochures/scbl/forts-on-the-oregon-trail.pdf "
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="190dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView139" />
 
     <TextView
-        android:id="@+id/textView155"
+        android:id="@+id/textView137"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="219dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView136" />
+
+    <TextView
+        android:id="@+id/textView133"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Options2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+    <TextView
+        android:id="@+id/textView134"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="https://www.wyohistory.org/encyclopedia/fort-bridger "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView132" />
+
+    <TextView
+        android:id="@+id/textView136"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="https://www.legendsofamerica.com/wy-fortbridger "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView134" />
+
+    <TextView
+        android:id="@+id/textView139"
+        android:layout_width="258dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="http://www.historyglobe.com/ot/fthall.htm "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView137" />
 
     <TextView
         android:id="@+id/textView156"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="https://nebraskastudies.org/en/1800-1849/forts-built/fort-kearny/ "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <TextView
-        android:id="@+id/textView157"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://www.legendsofamerica.com/ne-fortkearny/ "
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <TextView
-        android:id="@+id/textView158"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="8"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="306dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView155" />
 
     <TextView
         android:id="@+id/textView159"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="https://www.legendsofamerica.com/wy-fortlaramie/ "
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView158" />
+
+    <TextView
+        android:id="@+id/textView157"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="https://www.legendsofamerica.com/ne-fortkearny/ "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView156" />
+
+    <TextView
+        android:id="@+id/textView158"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView157" />
+
+    <TextView
+        android:id="@+id/textView155"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView154" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
