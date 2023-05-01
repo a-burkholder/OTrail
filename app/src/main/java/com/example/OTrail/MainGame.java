@@ -81,6 +81,7 @@ public class MainGame extends AppCompatActivity {
 
         Shop shop = new Shop();
         Menu menu = new Menu(inv, party, map, shop);
+        party.setSpeed(10);
 
         //enter shop stuff here
         if(map.getPosition()==0)
