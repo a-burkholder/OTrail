@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Health:"
-        app:layout_constraintStart_toEndOf="@+id/member3Dead"
+        app:layout_constraintStart_toStartOf="@+id/member3"
         app:layout_constraintTop_toTopOf="@+id/hattieHealth" />
 
     <TextView
