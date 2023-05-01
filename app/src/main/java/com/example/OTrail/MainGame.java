@@ -181,8 +181,9 @@ public class MainGame extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                System.out.println(map.getLastLandmark());
-                shopBut.setEnabled(false);
+                System.out.println("1" +map.getLastLandmark());
+                System.out.println("1" +map.getPosition());
+                System.out.println("1" + map.isShop());
                 //______________________________________________________________________________________
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
@@ -375,6 +376,10 @@ public class MainGame extends AppCompatActivity {
                     // Increments the date for each loop.
                     date.setDate(1);
 
+                    System.out.println("2" +map.getLastLandmark());
+                    System.out.println("2" +map.getPosition());
+                    System.out.println("2" + map.isShop());
+
                     if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
@@ -382,14 +387,21 @@ public class MainGame extends AppCompatActivity {
                         startActivityForResult(intent4, RIVER_RESULT);
                     }
 
+                    if(map.isShop()) {
+                        System.out.println("yay");
+                        shopBut.setEnabled(true);
+                    }
+                    else {
+                        System.out.println("boo");
+                        shopBut.setEnabled(false);
+                    }
+
                     if(map.isLandmark()){
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
 
-                        if(map.isShop()) {
-                            shopBut.setEnabled(true);
-                        }
+
                     }
                     else {
                         // Could generate a random number depending on the random number generated.
@@ -398,7 +410,7 @@ public class MainGame extends AppCompatActivity {
                         System.out.println(" " + eventNum);
 
                         //if event start
-                        if (eventNum <= 200) {
+                        if (eventNum <= 50) {
                             event.randomEvents(inv, party, date);
 
                             announcement.setElevation(Float.parseFloat("40"));
