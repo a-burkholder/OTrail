@@ -81,6 +81,7 @@ public class MainGame extends AppCompatActivity {
 
         Shop shop = new Shop();
         Menu menu = new Menu(inv, party, map, shop);
+        party.setSpeed(10);
 
         //enter shop stuff here
         if(map.getPosition()==0)
@@ -185,9 +186,7 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
 
-
-
-
+                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
 
 
                 //if win
