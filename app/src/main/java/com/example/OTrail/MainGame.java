@@ -26,7 +26,7 @@ public class MainGame extends AppCompatActivity {
     public static final String EVENT_NUMBER = "com.example.OTrail.EVENT_NUMBER";
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     public static final String PARTY_SPEED = "com.example.OTrail.PARTY_SPEED";
-    //public static final String
+
 
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
@@ -82,7 +82,7 @@ public class MainGame extends AppCompatActivity {
         Shop shop = new Shop();
         Menu menu = new Menu(inv, party, map, shop);
 
-        // enter shop stuff here
+        //enter shop stuff here
         if(map.getPosition()==0)
         {
             Intent intent1 = new Intent(MainGame.this, Shop.class);
@@ -91,22 +91,22 @@ public class MainGame extends AppCompatActivity {
             startActivityForResult(intent1, SHOP_RESULT);
         }
 
-
-
+        //gets rid of title bar and sets layout
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameplayscreen);
 
+        //defines text boxes
         final TextView dateDisplay = findViewById(R.id.dateDisplay);
         final TextView weatherDisplay = findViewById(R.id.weatherdisplay);
         final TextView temperatureDisplay = findViewById(R.id.temperatureDisplay);
         final TextView speedDisplay = findViewById(R.id.speedDisplay);
-        TextView announcement = findViewById(R.id.announcementstextbox);
-
+        final TextView announcement = findViewById(R.id.announcementstextbox);
         final TextView foodDisplay = findViewById(R.id.foodremainingdisplay);
 
+        //defines buttons
         final Button invBut = findViewById(R.id.Inventory);
         final Button moveBut = findViewById(R.id.continueAction);
         final Button shopBut = findViewById(R.id.Shop);
@@ -114,6 +114,7 @@ public class MainGame extends AppCompatActivity {
         final Button tradeBut = findViewById(R.id.Trade);
         final Button speedBut = findViewById(R.id.speed);
 
+        //defines wagon images
         ImageView wagon1 = findViewById(R.id.wagon1);
         ImageView wagon2 = findViewById(R.id.wagon2);
         ImageView wagon3 = findViewById(R.id.wagon3);
@@ -158,6 +159,7 @@ public class MainGame extends AppCompatActivity {
         wagon20.setVisibility(View.INVISIBLE);
         wagon21.setVisibility(View.INVISIBLE);
 
+        //initial text values filled in
         dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
@@ -180,13 +182,10 @@ public class MainGame extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                System.out.println("1" +map.getLastLandmark());
-                System.out.println("1" +map.getPosition());
-                System.out.println("1" + map.isShop());
-                //______________________________________________________________________________________
+                //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
-
+                //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
                     moveBut.setEnabled(false);
 
@@ -201,6 +200,8 @@ public class MainGame extends AppCompatActivity {
                         }
                     });
                 }
+
+                //if loose
                 if(party.getAtLeastSomeoneAlive() == false) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
@@ -214,10 +215,11 @@ public class MainGame extends AppCompatActivity {
                         }
                     });
                 }
-                //________________________________________________________________________________________
 
+                //if game goes on
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
-                    // 10, 12, or 15 miles travelled per day only if the wagon is usable and the game is not yet over.
+
+                    // if cart works, increment position
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
                         System.out.println("Increments the position");
                         map.setPosition(party.getSpeed()); // default of 10 speed, but could be changed to 12 or 15
@@ -245,12 +247,12 @@ public class MainGame extends AppCompatActivity {
                     wagon20.setVisibility(View.INVISIBLE);
                     wagon21.setVisibility(View.INVISIBLE);
 
+                    //for setting progress bar visibility
                     int temp = map.getPosition();
                     int number;
                     for (number = 0; temp > 0; number++) {
                         temp -= 100;
                     }
-
                     switch(number)
                     {
                         case 0:
@@ -380,17 +382,13 @@ public class MainGame extends AppCompatActivity {
                         default:
                     }
 
-
-                    // Prints the progress percentage.
+                    //prints the progress percentage for troubleshooting
                     map.progressBar();
 
-                    // Increments the date for each loop.
+                    //increments the date
                     date.setDate(1);
 
-                    System.out.println("2" +map.getLastLandmark());
-                    System.out.println("2" +map.getPosition());
-                    System.out.println("2" + map.isShop());
-
+                    //river check
                     if(map.isRiver()) {
                         Intent intent4 = new Intent(MainGame.this, RiverActivity.class);
                         intent4.putExtra("passEvent", event);
@@ -398,6 +396,7 @@ public class MainGame extends AppCompatActivity {
                         startActivityForResult(intent4, RIVER_RESULT);
                     }
 
+                    //shop check
                     if(map.isShop()) {
                         System.out.println("yay");
                         shopBut.setEnabled(true);
@@ -407,22 +406,26 @@ public class MainGame extends AppCompatActivity {
                         shopBut.setEnabled(false);
                     }
 
+                    //landmark check
                     if(map.isLandmark()){
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
 
                     }
-                    else {
-                        // Could generate a random number depending on the random number generated.
-                        System.out.println("generate event");
-                        int eventNum = event.eventNum();
-                        System.out.println(" " + eventNum);
 
-                        //if event start
+                    //if no landmark, event stuff
+                    else {
+                        // generates rand number
+                        int eventNum = event.eventNum();
+
+                        //if rand is in range
                         if (eventNum <= 50) {
+
+                            //generate the event
                             event.randomEvents(inv, party, date);
 
+                            //creates the announcement on a timer
                             announcement.setElevation(Float.parseFloat("40"));
                             announcement.setVisibility(View.VISIBLE);
                             announcement.setText(event.getEventMessage());
@@ -437,41 +440,35 @@ public class MainGame extends AppCompatActivity {
                                 }
                             }.start();
 
+                            //starts the game if it is a berry event
                             if (event.getEventMessage() == "You found a berry bush."){
                                 Intent intent = new Intent(MainGame.this, BerryActivity.class);
                                 intent.putExtra(GAME_INV, inv);
                                 startActivityForResult(intent, BERRY_RESULT);
                             }
-                            /*Intent intent = new Intent(MainGame.this, EventActivity.class);
-                            intent.putExtra(GAME_PARTY, party);
-                            intent.putExtra(GAME_DATE, date);
-                            intent.putExtra(GAME_INV, inv);
-                            intent.putExtra(EVENT_NUMBER, eventNum);
-                            startActivityForResult(intent, EVENT_RESULT);
-                            */
                         }
                     }
 
-                    // Increment weather / terrian if needed.
+                    //increment weather / terrian if needed.
                     map.setClimateZone();
                     date.setWeather(map.getClimate());
                     date.setTemp(map.getClimate());
                     date.setGrass(map.getClimate());
 
-                    // Calculates and updates the players food use.
+                    //Calculates and updates the players food use.
                     party.dailyFoodUsed(inv);
 
-                    // Increment distance to next location.
+                    //Increment distance to next location.
                     map.getDistToLM();
 
-                    // updates the screen
+                    //updates the screen text
                     dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                     weatherDisplay.setText(date.getWeather());
                     temperatureDisplay.setText(" " + date.getTemp());
                     speedDisplay.setText("10");
                     foodDisplay.setText(" " + inv.getFoodCount());
 
-
+                    //updates the screen icons
 
                 }
             }
@@ -514,6 +511,7 @@ public class MainGame extends AppCompatActivity {
         });
     }
 
+    //allows for proper pulling of data back from other activities
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
@@ -533,10 +531,8 @@ public class MainGame extends AppCompatActivity {
                 System.out.println("final berry update = " + inv.getFoodCount());
             }
         }
-        if(requestCode == SPEED_RESULT)
-        {
-            if(resultCode == RESULT_OK)
-            {
+        if(requestCode == SPEED_RESULT) {
+            if(resultCode == RESULT_OK) {
                 party = (Party) data.getSerializableExtra(SpeedActivity.POST_GAME_SPEED);
             }
         }
