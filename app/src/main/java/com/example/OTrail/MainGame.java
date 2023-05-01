@@ -186,9 +186,7 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
 
-
-
-
+                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
 
 
                 //if win

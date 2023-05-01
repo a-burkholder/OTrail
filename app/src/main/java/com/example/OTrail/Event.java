@@ -140,18 +140,21 @@ public class Event implements Serializable
         //Wrong Trail; lose 4 days
         else if (rand_int1 == 16) {
             date.setDate(4);
+            inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*party.getSpeed());
             eventMessage = "You went down the wrong trail. Lose 4 days.";
         }
 
         //Rough trail; lose a day
         else if (rand_int1 == 17 || rand_int1 == 18) {
             date.setDate(1);
+            inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
             eventMessage = "Rough Trail. Lose a day.";
         }
 
         //Impassible trail; lose a day
         else if (rand_int1 == 19 || rand_int1 == 20) {
             date.setDate(3);
+            inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*party.getSpeed());
             eventMessage = "Impassible trail. Lose 3 days.";
         }
 
