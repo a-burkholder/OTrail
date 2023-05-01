@@ -72,10 +72,10 @@
         android:elevation="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/member4Dead"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/member4Dead"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79"
         app:srcCompat="@drawable/xmark" />
 
     <Button
@@ -83,10 +83,13 @@
         android:layout_width="246dp"
         android:layout_height="75dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
         android:text="Continue On The Trail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/member4Health"
-        app:layout_constraintTop_toBottomOf="@+id/pet" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858" />
 
     <TextView
         android:id="@+id/hattieHealth"
@@ -120,11 +123,14 @@
         android:id="@+id/member3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Member 3"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/member3Dead"
-        app:layout_constraintTop_toTopOf="@+id/member3Dead" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
 
     <TextView
         android:id="@+id/member4Health"
@@ -140,11 +146,13 @@
         android:id="@+id/pet"
         android:layout_width="61dp"
         android:layout_height="22dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
         android:text="Pet"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/petDead"
-        app:layout_constraintTop_toBottomOf="@+id/petDead" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/member4"
@@ -159,7 +167,7 @@
         android:id="@+id/petHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="76dp"
         android:text="Health:"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/pet" />
@@ -168,23 +176,26 @@
         android:id="@+id/member2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="12dp"
         android:text="Member 2"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/member2Dead"
-        app:layout_constraintTop_toTopOf="@+id/member2Dead" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639" />
 
     <TextView
         android:id="@+id/textView107"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
         android:text="Hattie"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/hattieDead"
-        app:layout_constraintTop_toTopOf="@+id/hattieDead" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
 
     <ImageView
         android:id="@+id/hattieDead"
