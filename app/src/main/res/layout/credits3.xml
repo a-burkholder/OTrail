@@ -9,7 +9,7 @@
         android:id="@+id/textView133"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Options 3"
+        android:text="Image Credits 3/4"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="24dp" />
 
@@ -49,16 +49,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="147dp" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="140dp" />
 
     <TextView
         android:id="@+id/textView161"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://civilwaronthewesternborder.org/map/independence-missouri#:~:text=Independence%2C%20Missouri%20was%20founded%20in,here%20in%20the%20Civil%20War."
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="170dp" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="159dp" />
 
     <TextView
         android:id="@+id/textView162"
@@ -73,24 +73,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="11"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="249dp" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <TextView
         android:id="@+id/textView164"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.nps.gov/places/000/independence-rock-state-historic-site.htm#:~:text=The%20rock%20derived%20its%20name,850%20feet%20wide%20granite%20outcrop."
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="272dp" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="250dp" />
 
     <TextView
         android:id="@+id/textView165"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.wyohistory.org/encyclopedia/independence-rock "
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="310dp" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <TextView
         android:id="@+id/textView166"
@@ -98,15 +98,15 @@
         android:layout_height="wrap_content"
         android:text="12"
         tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="334dp" />
+        tools:layout_editor_absoluteY="305dp" />
 
     <TextView
         android:id="@+id/textView167"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.americanrivers.org/river/kansas-river/#:~:text=Did%20You%20know%3F,river%20system%20in%20the%20U.S."
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="357dp" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="324dp" />
 
     <TextView
         android:id="@+id/textView168"
@@ -114,6 +114,6 @@
         android:layout_height="wrap_content"
         android:text="https://www.format.com/magazine/features/design/you-have-died-of-dysentery-oregon-trail-design "
         tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="380dp" />
+        tools:layout_editor_absoluteY="343dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
