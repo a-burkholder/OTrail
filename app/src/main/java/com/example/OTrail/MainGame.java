@@ -505,8 +505,9 @@ public class MainGame extends AppCompatActivity {
             {
                 Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
                 intent1.putExtra(PARTY_TO_HEALTH, party);
-                startActivity(intent1);
                 startActivityForResult(intent1, SPEED_RESULT);
+
+                speedDisplay.setText(""+party.getSpeed());
             }
         });
     }
