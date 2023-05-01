@@ -28,34 +28,37 @@ public class SpeedActivity extends AppCompatActivity
         Intent intent = getIntent();
         party = (Party) intent.getSerializableExtra(MainGame.PARTY_TO_HEALTH);
 
-        switch(speedRadioGroup.getCheckedRadioButtonId())
-        {
-            case R.id.speedEasy:
-            {
-                party.setSpeed(10);
-            }
-            break;
-            case R.id.speedMedium:
-            {
-                party.setSpeed(12);
-            }
-            break;
-            case R.id.speedExtreme:
-            {
-                party.setSpeed(15);
-            }
-            break;
-            default:
-            {
-               party.setSpeed(10);
-            }
-        }
 
         Button continueAlongTrail = (Button) findViewById(R.id.continueTheGame);
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
+                switch(speedRadioGroup.getCheckedRadioButtonId())
+                {
+                    case R.id.speedEasy:
+                    {
+                        party.setSpeed(10);
+                        System.out.println("HERE");
+                    }
+                    break;
+                    case R.id.speedMedium:
+                    {
+                        party.setSpeed(12);
+                    }
+                    break;
+                    case R.id.speedExtreme:
+                    {
+                        party.setSpeed(15);
+                        System.out.println("IN EXTREME SPEED");
+                    }
+                    break;
+                    default:
+                    {
+                        party.setSpeed(10);
+                    }
+                }
+
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra(POST_GAME_SPEED, party);
 

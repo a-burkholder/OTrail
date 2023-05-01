@@ -185,6 +185,12 @@ public class MainGame extends AppCompatActivity {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
+
+                System.out.println(party.getSpeed() + "\n\n\n");
+
+
+
+
                 //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
                     moveBut.setEnabled(false);
