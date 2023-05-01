@@ -40,6 +40,7 @@ public class OpenNames extends AppCompatActivity {
                 Intent intent = new Intent(OpenNames.this, OpenDate.class);
                 intent.putExtra(PARTY_NAMES, names);
                 startActivity(intent);
+                finish();
             }
         });
     }
