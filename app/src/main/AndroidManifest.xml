@@ -24,6 +24,9 @@
             android:name=".OpenTrailInfo"
             android:exported="false" />
         <activity
+            android:name=".SpeedActivity"
+            android:exported="false" />
+        <activity
             android:name=".EventActivity"
             android:exported="false" />
         <activity
