@@ -507,7 +507,6 @@ public class MainGame extends AppCompatActivity {
                         }
                         default: weather.setImageResource(R.drawable.trailinfo_sunny);
                     }
-
                 }
             }
         });
@@ -559,7 +558,9 @@ public class MainGame extends AppCompatActivity {
     protected void onResume (){
         super.onResume();
         TextView speedDisplay = findViewById(R.id.speedDisplay);
+        TextView foodDisp = findViewById(R.id.foodremainingdisplay);
         speedDisplay.setText(""+party.getSpeed());
+        foodDisp.setText(""+inv.getFoodCount());
 
     }
     //allows for proper pulling of data back from other activities
