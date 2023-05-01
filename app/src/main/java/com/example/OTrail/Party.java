@@ -19,6 +19,7 @@ public class Party implements Serializable
     private String names[] = new String[5]; // five people and the pet
     private int health[] = {100, 100, 100, 100, 100};
     private static Party instance = null;
+    private int speed = 10;
 
     private boolean isAlive[] = {true, true, true, true, true};
     private boolean gameOver = false;
@@ -69,6 +70,11 @@ public class Party implements Serializable
     public boolean[] getIsAliveStatus()
     {
         return isAlive;
+    }
+
+    public int getSpeed()
+    {
+        return speed;
     }
 
     /**
@@ -141,6 +147,11 @@ public class Party implements Serializable
     public void setIsAliveStatus(boolean isAlive[])
     {
         this.isAlive = isAlive;
+    }
+
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
     }
 
     public void dailyFoodUsed(Inventory thisInv)

@@ -35,9 +35,20 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#CC2F140F"
         android:text="@string/shop"
-        app:layout_constraintEnd_toEndOf="parent"
         android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/continueAction" />
+
+    <Button
+        android:id="@+id/speed"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#CC2F140F"
+        android:text="@string/speed"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Inventory" />
 
     <Button
         android:id="@+id/Inventory"

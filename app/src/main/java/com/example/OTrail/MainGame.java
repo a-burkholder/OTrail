@@ -23,6 +23,7 @@ public class MainGame extends AppCompatActivity {
     public static final String GAME_DATE = "com.example.OTrail.GAME_DATE";
     public static final String EVENT_NUMBER = "com.example.OTrail.EVENT_NUMBER";
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
+    public static final String PARTY_SPEED = "com.example.OTrail.PARTY_SPEED";
     //public static final String
 
     private static final String DATE_KEY = "com.example.OTrail.DATE";
@@ -33,6 +34,8 @@ public class MainGame extends AppCompatActivity {
     private static final int SHOP_RESULT = 1;
     private static final int RIVER_RESULT = 2;
     private static final int BERRY_RESULT = 3;
+    private static final int SPEED_RESULT = 4;
+
 
     private int[] startDate = {1, 3, 1847};
     private String[] names = {"", "", "", "", ""};
@@ -107,6 +110,7 @@ public class MainGame extends AppCompatActivity {
         final Button shopBut = findViewById(R.id.Shop);
         final Button healthBut = findViewById(R.id.healthBut);
         final Button tradeBut = findViewById(R.id.Trade);
+        final Button speedBut = findViewById(R.id.speed);
 
         ImageView wagon1 = findViewById(R.id.wagon1);
         ImageView wagon2 = findViewById(R.id.wagon2);
@@ -206,10 +210,10 @@ public class MainGame extends AppCompatActivity {
                 //________________________________________________________________________________________
 
                 if (map.getPosition() < 2000 && !party.getGameOverStatus()) {
-                    // 10 miles travelled per day only if the wagon is usable and the game is not yet over.
+                    // 10, 12, or 15 miles travelled per day only if the wagon is usable and the game is not yet over.
                     if (inv.isWagonUsable() && !party.getGameOverStatus()) {
                         System.out.println("Increments the position");
-                        map.setPosition(10);
+                        map.setPosition(party.getSpeed()); // default of 10 speed, but could be changed to 12 or 15
                     }
 
                     wagon1.setVisibility(View.INVISIBLE);
@@ -490,6 +494,18 @@ public class MainGame extends AppCompatActivity {
                 startActivityForResult(intent1, SHOP_RESULT);
             }
         });
+
+        speedBut.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
+                intent1.putExtra(PARTY_TO_HEALTH, party);
+                startActivity(intent1);
+                startActivityForResult(intent1, SPEED_RESULT);
+            }
+        });
     }
 
     @Override
@@ -509,6 +525,13 @@ public class MainGame extends AppCompatActivity {
             if (resultCode == RESULT_OK){
                 inv = (Inventory) data.getSerializableExtra(BerryActivity.POST_GAME_INV);
                 System.out.println("final berry update = " + inv.getFoodCount());
+            }
+        }
+        if(requestCode == SPEED_RESULT)
+        {
+            if(resultCode == RESULT_OK)
+            {
+                party = (Party) data.getSerializableExtra(SpeedActivity.POST_GAME_SPEED);
             }
         }
     }
