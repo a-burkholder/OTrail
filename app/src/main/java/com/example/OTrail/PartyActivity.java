@@ -76,11 +76,11 @@ public class PartyActivity extends AppCompatActivity
         member3.setText(names[2]);
         member4.setText(names[3]);
         pet.setText(names[4]);
-        hattieHealth.setText("Health:" + String.valueOf(health[0]));
-        member2Health.setText("Health:" + String.valueOf(health[1]));
-        member3Health.setText("Health:" + String.valueOf(health[2]));
-        member4Health.setText("Health:" + String.valueOf(health[3]));
-        petHealth.setText("Health:" + String.valueOf(health[4]));
+        hattieHealth.setText("Health: " + String.valueOf(health[0]) + " / 100");
+        member2Health.setText("Health: " + String.valueOf(health[1]) + " / 100");
+        member3Health.setText("Health: " + String.valueOf(health[2]) + " / 100");
+        member4Health.setText("Health: " + String.valueOf(health[3]) + " / 100");
+        petHealth.setText("Health: " + String.valueOf(health[4]) + " / 100");
 
 
         Button continueAlongTrail = (Button) findViewById(R.id.continueAlongTheTrail);
