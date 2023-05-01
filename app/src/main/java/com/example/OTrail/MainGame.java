@@ -186,7 +186,7 @@ public class MainGame extends AppCompatActivity {
 
 
 
-                speedDisplay.setText(party.getSpeed());
+
 
 
 
@@ -470,7 +470,7 @@ public class MainGame extends AppCompatActivity {
                     dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                     weatherDisplay.setText(date.getWeather());
                     temperatureDisplay.setText(" " + date.getTemp());
-                    speedDisplay.setText("10");
+                    speedDisplay.setText(""+party.getSpeed());
                     foodDisplay.setText(" " + inv.getFoodCount());
 
                     //updates the screen icons
@@ -506,15 +506,29 @@ public class MainGame extends AppCompatActivity {
         speedBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
-                intent1.putExtra(PARTY_TO_HEALTH, party);
-                speedDisplay.setText(""+party.getSpeed());
-                startActivityForResult(intent1, SPEED_RESULT);
+                int temp = 0;
+                if (temp == 0){
+                    temp ++;
+                    Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
+                    intent1.putExtra(PARTY_TO_HEALTH, party);
 
+                    startActivityForResult(intent1, SPEED_RESULT);
+
+                }
+                else if (temp == 1) {
+                    System.out.println("" + party.getSpeed());
+                    speedDisplay.setText("" + party.getSpeed());
+                }
             }
         });
     }
+    @Override
+    protected void onResume (){
+        super.onResume();
+        TextView speedDisplay = findViewById(R.id.speedDisplay);
+        speedDisplay.setText(""+party.getSpeed());
 
+    }
     //allows for proper pulling of data back from other activities
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
