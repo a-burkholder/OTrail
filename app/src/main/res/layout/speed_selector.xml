@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Choose Your Speed"
+        android:textColor="#FFEB3B"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,147 +21,193 @@
         android:id="@+id/textView123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="-24dp"
         android:text="Slow Speed"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView122"
-        tools:layout_editor_absoluteX="95dp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="362dp"
-        tools:layout_editor_absoluteY="115dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView124"
+        app:layout_constraintTop_toBottomOf="@+id/textView122" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
         android:text="Continue on the trail"
-        tools:layout_editor_absoluteX="469dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/textView131"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
 
     <TextView
         android:id="@+id/textView124"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:text="Medium Speed"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView123"
-        tools:layout_editor_absoluteX="95dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView125"
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
     <TextView
         android:id="@+id/textView125"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="120dp"
         android:text="Extreme Speed"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView124"
-        tools:layout_editor_absoluteX="95dp" />
+        app:layout_constraintEnd_toStartOf="@+id/speedRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView124" />
 
     <TextView
         android:id="@+id/textView126"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:text="3 food per person a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView123"
-        tools:layout_editor_absoluteX="104dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView129"
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
     <TextView
         android:id="@+id/textView127"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:text="5 food per person a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView124"
-        tools:layout_editor_absoluteX="104dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView130"
+        app:layout_constraintTop_toBottomOf="@+id/textView124" />
 
     <TextView
         android:id="@+id/textView128"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:text="10 food per person a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView125"
-        tools:layout_editor_absoluteX="104dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView131"
+        app:layout_constraintTop_toBottomOf="@+id/textView125" />
 
     <TextView
         android:id="@+id/textView129"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:text="10 miles a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView126"
-        tools:layout_editor_absoluteX="104dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView126" />
 
     <TextView
         android:id="@+id/textView130"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="2dp"
         android:text="12 miles a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView127"
-        tools:layout_editor_absoluteX="104dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView128"
+        app:layout_constraintTop_toBottomOf="@+id/textView127" />
 
     <TextView
         android:id="@+id/textView131"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="2dp"
         android:text="15 miles a day"
-        app:layout_constraintTop_toBottomOf="@+id/textView128"
-        tools:layout_editor_absoluteX="104dp" />
-
-<RadioGroup
-        android:id="@+id/speedRadioGroup"
-        android:layout_width="104dp"
-        android:layout_height="350dp"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="348dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView128"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/speedRadioGroup"
+        android:layout_width="82dp"
+        android:layout_height="282dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="68dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627">
+        app:layout_constraintVertical_bias="1.0">
 
         <!--adding a radio button -->
 
-    <RadioButton
-        android:id="@+id/speedEasy"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:checked="false"
-        android:padding="2dp"
-        android:textColor="#FFFFFF" />
+        <!--adding a radio button -->
 
-    <!--adding a radio button -->
-    <RadioButton
-        android:id="@+id/speedMedium"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
+        <RadioButton
+            android:id="@+id/speedEasy"
+            android:layout_width="38dp"
+            android:layout_height="138dp"
+            android:checked="false"
+            android:padding="2dp"
+            android:textColor="#FFFFFF" />
 
-    <!--adding a radio button -->
-    <RadioButton
-        android:id="@+id/speedExtreme"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_gravity="center"
-        android:checked="false"
-        android:padding="4dp"
-        android:textColor="#FFFFFF" />
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/speedMedium"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
 
-</RadioGroup>
+        <RadioButton
+            android:id="@+id/speedExtreme"
+            android:layout_width="38dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:padding="4dp"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="851dp"
+        android:layout_height="525dp"
+        android:elevation="-50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/game_speed" />
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="90dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="576dp"
+        android:layout_marginTop="280dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="91dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="91dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="568dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wagon" /><![CDATA[
 
 
 
@@ -169,5 +216,24 @@
 
 
 
--->
+
+
+
+
+
+
+
+
+
+
+    -->
+
+
+
+
+
+
+
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
