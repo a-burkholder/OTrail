@@ -86,20 +86,20 @@
         android:text="Continue On The Trail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/member4Health"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <TextView
         android:id="@+id/hattieHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
         android:text="Health:"
-        app:layout_constraintStart_toEndOf="@+id/hattieDead"
-        app:layout_constraintTop_toBottomOf="@+id/textView107" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView107"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379" />
 
     <TextView
         android:id="@+id/member2Health"
@@ -114,10 +114,9 @@
         android:id="@+id/member3Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="Health:"
         app:layout_constraintStart_toEndOf="@+id/member3Dead"
-        app:layout_constraintTop_toBottomOf="@+id/member3" />
+        app:layout_constraintTop_toTopOf="@+id/hattieHealth" />
 
     <TextView
         android:id="@+id/member3"
@@ -125,22 +124,18 @@
         android:layout_height="wrap_content"
         android:text="Member 3"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintTop_toTopOf="@+id/textView107" />
 
     <TextView
         android:id="@+id/member4Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
         android:text="Health:"
-        app:layout_constraintStart_toStartOf="@+id/member3Health"
-        app:layout_constraintTop_toBottomOf="@+id/member4" />
+        app:layout_constraintStart_toStartOf="@+id/member4"
+        app:layout_constraintTop_toTopOf="@+id/member2Health" />
 
     <TextView
         android:id="@+id/pet"
@@ -169,7 +164,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:text="Health:"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/pet" />
 
     <TextView
@@ -179,11 +176,9 @@
         android:text="Member 2"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView107"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <TextView
         android:id="@+id/textView107"
