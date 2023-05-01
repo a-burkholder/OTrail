@@ -164,7 +164,6 @@ public class MainGame extends AppCompatActivity {
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
         temperatureDisplay.setText(" "+date.getTemp());
-        speedDisplay.setText("10");
         foodDisplay.setText(" "+ inv.getFoodCount());
 
         //Inventory button stuff
@@ -186,8 +185,8 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
 
-                System.out.println(party.getSpeed() + "\n\n\n");
 
+                speedDisplay.setText(party.getSpeed());
 
 
 
