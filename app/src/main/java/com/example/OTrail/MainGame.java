@@ -4,6 +4,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Application;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -152,19 +154,12 @@ public class MainGame extends AppCompatActivity {
         wagon20.setVisibility(View.INVISIBLE);
         wagon21.setVisibility(View.INVISIBLE);
 
-
-
-
-
         dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
         temperatureDisplay.setText(" "+date.getTemp());
         speedDisplay.setText("10");
         foodDisplay.setText(" "+ inv.getFoodCount());
-
-
-
 
         //Inventory button stuff
         invBut.setOnClickListener(new View.OnClickListener() {
@@ -188,20 +183,32 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
 
-                if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive()))
-                {
+                if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
                     moveBut.setEnabled(false);
 
                     alertDialog.setTitle("YOU WIN!");
                     alertDialog.setMessage("Congratulations, you have made it to Oregon City!!!");
                     alertDialog.show();
+                    alertDialog.setCancelable(true);
+                    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            android.os.Process.killProcess(android.os.Process.myPid());
+                        }
+                    });
                 }
-                if(party.getAtLeastSomeoneAlive() == false)
-                {
+                if(party.getAtLeastSomeoneAlive() == false) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");
                     alertDialog.show();
+                    alertDialog.setCancelable(true);
+                    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            android.os.Process.killProcess(android.os.Process.myPid());
+                        }
+                    });
                 }
                 //________________________________________________________________________________________
 
@@ -400,7 +407,6 @@ public class MainGame extends AppCompatActivity {
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
-
 
                     }
                     else {
