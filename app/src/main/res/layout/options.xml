@@ -101,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="https://www.google.com/search?q=the+dalles&rlz=1C1CHBD_enUS891US891&oq=the+dalles+&aqs=chrome..69i57j46i433i512j0i131i433i650j0i131i433i512j0i512l4j46i175i199i512.2502j0j4&sourceid=chrome&ie=UTF-8"
+        android:text="https://tinyurl.com/58fydp5b"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView145" />
 
