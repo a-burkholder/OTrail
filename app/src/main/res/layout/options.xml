@@ -6,107 +6,121 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView146"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://kids.kiddle.co/Big_Blue_River_(Kansas)#:~:text=The%20river%20is%20about%20359,mouth%20from%201780%20to%201830."
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="179dp" />
-
-    <TextView
         android:id="@+id/textView133"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Options"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="24dp" />
-
-    <TextView
-        android:id="@+id/textView140"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="63dp" />
-
-    <TextView
-        android:id="@+id/textView142"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="230dp" />
-
-    <TextView
-        android:id="@+id/textView144"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="160dp" />
-
-    <TextView
-        android:id="@+id/textView145"
-        android:layout_width="7dp"
-        android:layout_height="23dp"
-        android:text="4"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="317dp" />
-
-    <TextView
-        android:id="@+id/textView147"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://www.australia.com/en-us/places/sydney-and-surrounds/guide-to-the-blue-mountains.html#:~:text=The%20Blue%20Mountains%20is%20best,tourist%20attraction%20of%20Scenic%20World."
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="82dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView148"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="https://www.legendsofamerica.com/landmarks-oregon-trail/ "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="126dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView147" />
 
     <TextView
-        android:id="@+id/textView149"
+        android:id="@+id/textView146"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="https://www.format.com/magazine/features/design/you-have-died-of-dysentery-oregon-trail-design "
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="203dp" />
+        android:layout_marginStart="16dp"
+        android:text="https://kids.kiddle.co/Big_Blue_River_(Kansas)#:~:text=The%20river%20is%20about%20359,mouth%20from%201780%20to%201830."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView144" />
+
+    <TextView
+        android:id="@+id/textView140"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+    <TextView
+        android:id="@+id/textView142"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView149" />
+
+    <TextView
+        android:id="@+id/textView144"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView148" />
+
+    <TextView
+        android:id="@+id/textView145"
+        android:layout_width="7dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView151" />
+
+    <TextView
+        android:id="@+id/textView147"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="https://www.australia.com/en-us/places/sydney-and-surrounds/guide-to-the-blue-mountains.html#:~:text=The%20Blue%20Mountains%20is%20best,tourist%20attraction%20of%20Scenic%20World."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView140" />
 
     <TextView
         android:id="@+id/textView150"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="https://www.studysmarter.us/explanations/human-geography/population-geography/voluntary-migration/#:~:text=Types%20of%20voluntary%20migration%20include,and%20rural%20to%20urban%20migration."
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView142" />
 
     <TextView
         android:id="@+id/textView151"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="https://www.etsy.com/listing/636757891/chimney-rock-nebraska-painting-oregon "
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="290dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView150" />
 
     <TextView
         android:id="@+id/textView152"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="https://www.google.com/search?q=the+dalles&rlz=1C1CHBD_enUS891US891&oq=the+dalles+&aqs=chrome..69i57j46i433i512j0i131i433i650j0i131i433i512j0i512l4j46i175i199i512.2502j0j4&sourceid=chrome&ie=UTF-8"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="340dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView145" />
 
     <TextView
         android:id="@+id/textView153"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="https://sos.oregon.gov/archives/exhibits/columbia-river-highway/Pages/history-before.aspx "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="376dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView152" />
+
+    <TextView
+        android:id="@+id/textView149"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="https://www.format.com/magazine/features/design/you-have-died-of-dysentery-oregon-trail-design "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView146" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
