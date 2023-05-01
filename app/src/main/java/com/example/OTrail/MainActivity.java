@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent = new Intent(MainActivity.this, OpenNames.class);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 toOTrailInfo.setOnClickListener(new View.OnClickListener() {

@@ -19,17 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/continueAlongTrail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="260dp"
-        android:backgroundTint="#592F2F"
-        android:text="Continue on the Trail"
-        app:layout_constraintStart_toEndOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
     <ImageView
         android:id="@+id/imageView48"
         android:layout_width="839dp"
@@ -40,6 +29,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/inside_wagon" />
+
+    <Button
+        android:id="@+id/continueAlongTrail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="#592F2F"
+        android:text="Continue on the Trail"
+        app:layout_constraintStart_toEndOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView21"
@@ -246,7 +246,8 @@
         android:text="#"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView39"
-        app:layout_constraintVertical_bias="0.085"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintVertical_bias="0.085" />
 </androidx.constraintlayout.widget.ConstraintLayout>

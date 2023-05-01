@@ -84,6 +84,7 @@ public class OpenDate extends AppCompatActivity
                 intent.putExtra(NAMES2, names);
 
                 startActivity(intent);
+                finish();
             }
         });
     }

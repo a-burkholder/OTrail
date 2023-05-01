@@ -19,6 +19,7 @@ public class Party implements Serializable
     private String names[] = new String[5]; // five people and the pet
     private int health[] = {100, 100, 100, 100, 100};
     private static Party instance = null;
+    private int speed = 10;
 
     private boolean isAlive[] = {true, true, true, true, true};
     private boolean gameOver = false;
@@ -61,6 +62,19 @@ public class Party implements Serializable
         return health;
     }
 
+    public int getNumberOfPeopleAlive()
+    {
+        int playersAlive = 0;
+        for(int i = 0;  i < 5; i++)
+        {
+            if(health[i] > 0)
+            {
+                playersAlive++;
+            }
+        }
+        return playersAlive;
+    }
+
     /**
      * Gets Hattie's current living status, her family members current living status, and the current living status of their pet, which is the last index in the names array.
      *
@@ -69,6 +83,11 @@ public class Party implements Serializable
     public boolean[] getIsAliveStatus()
     {
         return isAlive;
+    }
+
+    public int getSpeed()
+    {
+        return speed;
     }
 
     /**
@@ -141,6 +160,15 @@ public class Party implements Serializable
     public void setIsAliveStatus(boolean isAlive[])
     {
         this.isAlive = isAlive;
+    }
+
+    /**
+     *
+     * @param speed
+     */
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
     }
 
     public void dailyFoodUsed(Inventory thisInv)
