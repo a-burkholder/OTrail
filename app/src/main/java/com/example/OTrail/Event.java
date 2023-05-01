@@ -140,21 +140,48 @@ public class Event implements Serializable
         //Wrong Trail; lose 4 days
         else if (rand_int1 == 16) {
             date.setDate(4);
-            inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*party.getSpeed());
+            if(inv.getFoodCount() >= 0)
+            {
+                inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*party.getSpeed());
+
+            }
+            else
+            {
+                noFood();
+                inv.setFoodCount(-inv.getFoodCount());
+            }
             eventMessage = "You went down the wrong trail. Lose 4 days.";
         }
 
         //Rough trail; lose a day
         else if (rand_int1 == 17 || rand_int1 == 18) {
             date.setDate(1);
-            inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
+            if(inv.getFoodCount() >= 0)
+            {
+                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
+
+            }
+            else
+            {
+                noFood();
+                inv.setFoodCount(-inv.getFoodCount());
+            }
             eventMessage = "Rough Trail. Lose a day.";
         }
 
         //Impassible trail; lose a day
         else if (rand_int1 == 19 || rand_int1 == 20) {
             date.setDate(3);
-            inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*party.getSpeed());
+            if(inv.getFoodCount() >= 0)
+            {
+                inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*party.getSpeed());
+
+            }
+            else
+            {
+                noFood();
+                inv.setFoodCount(-inv.getFoodCount());
+            }
             eventMessage = "Impassible trail. Lose 3 days.";
         }
 
@@ -246,5 +273,17 @@ public class Event implements Serializable
 
             }
         }
+    }
+
+    public void noFood()
+    {
+        int temphealth[] = party.getHealth();
+        Random rand = new Random();
+        int locationTemp = rand.nextInt(5);
+        if(inv.getFoodCount() <= 0)
+        {
+            temphealth[locationTemp] = temphealth[locationTemp] + -5;
+        }
+        party.setHealth(temphealth);
     }
 }

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
@@ -185,9 +186,23 @@ public class MainGame extends AppCompatActivity {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
+                if(inv.getFoodCount() >= 0)
+                {
+                    inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
 
-                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
-
+                }
+                else
+                {
+                    inv.setFoodCount(-inv.getFoodCount());
+                }
+                int tempHealth[] = party.getHealth();
+                Random rand = new Random();
+                int locationTemp = rand.nextInt(5);
+                if(inv.getFoodCount() <= 0)
+                {
+                    tempHealth[locationTemp] = tempHealth[locationTemp] + -5;
+                }
+                party.setHealth(tempHealth);
 
                 //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
