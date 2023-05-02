@@ -190,13 +190,24 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
 
                 //update food
-                if(inv.getFoodCount() >= 0) {
-                    inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
-
+                if(inv.getFoodCount() > 0) {
+                    //inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
+                    switch(party.getSpeed()){
+                        case 10:
+                            inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                            break;
+                        case 12:inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                            break;
+                        case 15:inv.setFoodCount(-party.getNumberOfPeopleAlive()*10);
+                            break;
+                        default:inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                            break;
+                    }
                 }
-                else {
+                if (inv.getFoodCount() < 0){
                     inv.setFoodCount(-inv.getFoodCount());
                 }
+
                 int tempHealth[] = party.getHealth();
                 Random rand = new Random();
                 int locationTemp = rand.nextInt(5);
