@@ -25,6 +25,8 @@ public class Party implements Serializable
     private boolean gameOver = false;
     private static Inventory inv;
 
+    private Random rand;
+
     /**
      * Default constructor for the Inventory class.
      */
@@ -142,14 +144,20 @@ public class Party implements Serializable
         this.names = names;
     }
 
-    /**
-     * Sets Hattie's family members health and the health of the pet.
-     *
-     * @param health Is a health array containing Hattie at the first element, then her family, and finally her pet at the final element.
-     */
-    public void setHealth(int health[])
+
+    public void setHealth(int healthAway)
     {
-        this.health = health;
+        int tempHealth;
+
+        do {
+            tempHealth = rand.nextInt(5);
+
+            if(health[tempHealth] > 0)
+            {
+                health[tempHealth]+= healthAway;
+            }
+
+        }while(health[tempHealth] > 0 && isAlive[tempHealth]);
     }
 
     /**

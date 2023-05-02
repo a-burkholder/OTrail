@@ -192,16 +192,15 @@ public class MainGame extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
                 //update food
                 if(inv.getFoodCount() > 0) {
-                    //inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
                     switch(party.getSpeed()){
                         case 10:
-                            inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                            inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;
-                        case 12:inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                        case 12:inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
                             break;
-                        case 15:inv.setFoodCount(-party.getNumberOfPeopleAlive()*10);
+                        case 15:inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
                             break;
-                        default:inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                        default:inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;
                     }
                 }
@@ -209,13 +208,13 @@ public class MainGame extends AppCompatActivity {
                     inv.setFoodCount(-inv.getFoodCount());
                 }
 
-                int tempHealth[] = party.getHealth();
-                Random rand = new Random();
-                int locationTemp = rand.nextInt(5);
-                if(inv.getFoodCount() <= 0) {
-                    tempHealth[locationTemp] = tempHealth[locationTemp] + -5;
+                if(inv.getFoodCount() == 0) {
+                    party.setHealth(-5);
                 }
-                party.setHealth(tempHealth);
+                else
+                {
+                    party.setHealth(2);
+                }
 
                 //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {

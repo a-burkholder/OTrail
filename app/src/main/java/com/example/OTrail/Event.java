@@ -85,31 +85,20 @@ public class Event implements Serializable
 
         //Animal Attack
         else if (rand_int1 == 4) {
-            int player[] = new int[5];
-            int playerTemp = 0;
-            playerTemp = rand.nextInt(5);
-
             if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
             } else {
-                player = party.getHealth();
-                player[playerTemp] = player[playerTemp] - 10;
-                party.setHealth(player);
+                party.setHealth(-10);
             }
             eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health.";
         }
 
         //Member Sickness
         else if (rand_int1 == 5 || rand_int1 == 6) {
-            int player1[] = new int[5];
-            int playerTemp1 = 0;
-            playerTemp1 = rand.nextInt(5);
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
             } else {
-                player1 = party.getHealth();
-                player1[playerTemp1] = player1[playerTemp1] - 30;
-                party.setHealth(player1);
+                party.setHealth(-30);
             }
             eventMessage = "A member of your group has Dysentery.\n Minus 5 medical supplies and if you do not have medical supplies -30 player health.";
         }
@@ -123,16 +112,9 @@ public class Event implements Serializable
 
         //Snake Bite
         else if (rand_int1 == 15) {
-            int player2[] = new int[5];
-            int playerTemp2 = 0;
-            playerTemp2 = rand.nextInt(5);
-
-            if (inv.getMedicalSupplyCount() > 2) {
-                inv.setMedicalSupplyCount(-2);
-            } else {
-                player2 = party.getHealth();
-                player2[playerTemp2] = player2[playerTemp2] - 10;
-                party.setHealth(player2);
+            if (inv.getMedicalSupplyCount() >= 2)
+            {
+                party.setHealth(-10);
             }
             eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health";
         }
@@ -277,13 +259,6 @@ public class Event implements Serializable
 
     public void noFood()
     {
-        int temphealth[] = party.getHealth();
-        Random rand = new Random();
-        int locationTemp = rand.nextInt(5);
-        if(inv.getFoodCount() <= 0)
-        {
-            temphealth[locationTemp] = temphealth[locationTemp] + -5;
-        }
-        party.setHealth(temphealth);
+        party.setHealth(-5);
     }
 }

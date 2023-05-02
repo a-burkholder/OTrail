@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="3 food per person a day"
+        android:text="2 food per person a day"
         app:layout_constraintStart_toStartOf="@+id/textView129"
         app:layout_constraintTop_toBottomOf="@+id/textView123" />
 
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="5 food per person a day"
+        android:text="3 food per person a day"
         app:layout_constraintStart_toStartOf="@+id/textView130"
         app:layout_constraintTop_toBottomOf="@+id/textView124" />
 
@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="10 food per person a day"
+        android:text="5 food per person a day"
         app:layout_constraintStart_toStartOf="@+id/textView131"
         app:layout_constraintTop_toBottomOf="@+id/textView125" />
 
