@@ -16,16 +16,16 @@ public class Inventory implements Serializable {
     private int medicalSupplyCount = 0;
     private boolean wagonUsable = false;
     private String tradeList[] = {
-            "-5 clothes, + wheel",
-            "-5 clothes, + Axle",
-            "-5 clothes, + Tongue",
-            "-1 oxen, +5 clothes",
-            "-20 food, +2 clothes",
-            "-wheel, + Tongue",
-            "-wheel, + axle",
-            "-axle, + wheel",
-            "-axle, + tongue",
-            "-tongue, + wheel"};
+            "5 of your clothes for 1 of my wheels.",
+            "5 of your clothes for 1 of my axles.",
+            "5 sets of your clothes for 1 of my tongues.",
+            "1 of your oxen for 2 sets of clothes.",
+            "20 of your food for 2 sets of clothes.",
+            "1 of your wheels for 1 of my tongues.",
+            "your 1 wheel for 1 of my axles.",
+            "1 of your axles for 1 of my wheels.",
+            "1 of your axles for 1 of my tongues.",
+            "1 of your tongues for 100lbs of my food."};
 
     /**
      * Checks to make sure the wagon is usable.
@@ -315,7 +315,7 @@ public class Inventory implements Serializable {
                 break;
             case 9: if (this.wagonTongueCount > 1){
                 this.wagonTongueCount--;
-                this.wagonWheelCount++;
+                this.foodCount += 100;
             }
                 break;
             default:break;
