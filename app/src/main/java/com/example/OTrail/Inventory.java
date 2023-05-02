@@ -242,7 +242,7 @@ public class Inventory implements Serializable {
      * @param map The current map object, used for doing location checks
      * @return -1 if no trade, the trade number if there is one availible
      */
-    public int getTrade(Map map){
+    public int canTrade(Map map){
         Random rand =  new Random();
         int chance = rand.nextInt(100);
         if (map.getDistFromLM() == 0 || map.getDistToLM() == 0){
@@ -272,52 +272,52 @@ public class Inventory implements Serializable {
                 this.clothingCount -= 5;
                 this.wagonWheelCount++;
             }
-            else break;
+                break;
             case 1: if (this.clothingCount >= 5){
                 this.clothingCount -= 5;
                 this.wagonAxleCount++;
             }
-            else break;
+            break;
             case 2: if (this.clothingCount >= 5){
                 this.clothingCount -= 5;
                 this.wagonTongueCount++;
             }
-            else break;
+            break;
             case 3: if (this.oxenCount > 1){
                 this.oxenCount--;
                 this.clothingCount += 5;
             }
-            else break;
+            break;
             case 4: if (this.foodCount > 20){
                 this.foodCount -= 20;
                 this.clothingCount += 2;
             }
-            else break;
+                break;
             case 5: if (this.wagonWheelCount > 4){
                 this.wagonWheelCount--;
                 this.wagonTongueCount++;
             }
-            else break;
+                break;
             case 6: if (this.wagonWheelCount > 4){
                 this.wagonWheelCount--;
                 this.wagonAxleCount++;
             }
-            else break;
+                break;
             case 7: if (this.wagonAxleCount > 2){
                 this.wagonAxleCount--;
                 this.wagonWheelCount++;
             }
-            else break;
+                break;
             case 8: if (this.wagonAxleCount > 2){
                 this.wagonAxleCount--;
                 this.wagonTongueCount++;
             }
-            else break;
+                break;
             case 9: if (this.wagonTongueCount > 1){
                 this.wagonTongueCount--;
                 this.wagonWheelCount++;
             }
-            else break;
+                break;
             default:break;
         }
     }

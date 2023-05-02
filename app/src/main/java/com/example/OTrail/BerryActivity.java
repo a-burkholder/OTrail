@@ -2,7 +2,9 @@ package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.content.Intent;
 import android.view.Window;
@@ -39,9 +41,17 @@ public class BerryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 i++;
                 if(i == 1) {
-                    startGame.setText("To trail");
                     Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
                     intent.putExtra(BERRY_TITLE_TO_GAME, inv);
+                    new CountDownTimer(3000, 3000) { // Timer added to fix bug about text box changing too early.
+                        public void onTick(long millisUntilFinished) {
+                        }
+                        @SuppressLint("SetTextI18n")
+                        public void onFinish() {
+                            startGame.setText("Return to Trail");
+                        }
+                    }.start();
+
                     startActivityForResult(intent, GAME_RESULT);
                 }
                 else {

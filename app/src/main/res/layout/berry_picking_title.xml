@@ -9,6 +9,8 @@
         android:id="@+id/imageView7"
         android:layout_width="889dp"
         android:layout_height="768dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,10 +89,12 @@
 
     <Button
         android:id="@+id/startGame"
-        android:layout_width="205dp"
-        android:layout_height="93dp"
+        android:layout_width="212dp"
+        android:layout_height="73dp"
         android:backgroundTint="#030303"
         android:text="Play The Berry Picking Minigame"
+        android:textColor="#D4EEC4"
+        android:textSize="16dp"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
