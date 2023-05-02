@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="917dp"
-        android:layout_height="449dp"
+        android:layout_width="868dp"
+        android:layout_height="569dp"
         android:elevation="-100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,133 +21,109 @@
         android:id="@+id/imageView6"
         android:layout_width="169dp"
         android:layout_height="142dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39"
-        app:srcCompat="@drawable/alexpet" />
+        app:srcCompat="@drawable/alexpet"
+        tools:layout_editor_absoluteX="467dp"
+        tools:layout_editor_absoluteY="105dp" />
 
     <ImageView
         android:id="@+id/petDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:elevation="44dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@drawable/xmark" />
+        app:srcCompat="@drawable/xmark"
+        tools:layout_editor_absoluteX="491dp"
+        tools:layout_editor_absoluteY="113dp" />
 
     <ImageView
         android:id="@+id/member4Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:elevation="43dp"
-        app:layout_constraintStart_toStartOf="@+id/member3Dead"
-        app:layout_constraintTop_toBottomOf="@+id/member3Dead"
-        app:srcCompat="@drawable/xmark" />
+        app:srcCompat="@drawable/xmark"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <ImageView
         android:id="@+id/member3Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="42dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
-        app:srcCompat="@drawable/xmark" />
+        app:srcCompat="@drawable/xmark"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="98dp" />
 
     <ImageView
         android:id="@+id/member2Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
         android:elevation="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/member4Dead"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79"
-        app:srcCompat="@drawable/xmark" />
+        app:srcCompat="@drawable/xmark"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <Button
         android:id="@+id/continueAlongTheTrail"
         android:layout_width="246dp"
         android:layout_height="75dp"
-        android:layout_marginStart="52dp"
         android:text="Continue On The Trail"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        tools:layout_editor_absoluteX="427dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <TextView
         android:id="@+id/hattieHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="168dp"
         android:text="Health:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView107"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintEnd_toStartOf="@+id/member3Health"
+        tools:layout_editor_absoluteY="196dp" />
 
     <TextView
         android:id="@+id/member2Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="Health:"
-        app:layout_constraintStart_toStartOf="@+id/member2"
-        app:layout_constraintTop_toBottomOf="@+id/member2" />
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="342dp" />
 
     <TextView
         android:id="@+id/member3Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="184dp"
         android:text="Health:"
-        app:layout_constraintStart_toStartOf="@+id/member3"
-        app:layout_constraintTop_toTopOf="@+id/hattieHealth" />
+        app:layout_constraintEnd_toStartOf="@+id/petHealth"
+        tools:layout_editor_absoluteY="198dp" />
 
     <TextView
         android:id="@+id/member3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="96dp"
         android:text="Member 3"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView107" />
+        app:layout_constraintBottom_toTopOf="@+id/member3Health"
+        app:layout_constraintEnd_toStartOf="@+id/pet" />
 
     <TextView
         android:id="@+id/member4Health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Health:"
-        app:layout_constraintStart_toStartOf="@+id/member4"
-        app:layout_constraintTop_toTopOf="@+id/member2Health" />
+        tools:layout_editor_absoluteX="343dp"
+        tools:layout_editor_absoluteY="342dp" />
 
     <TextView
         android:id="@+id/pet"
         android:layout_width="61dp"
         android:layout_height="22dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="116dp"
         android:text="Pet"
+        android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintBottom_toTopOf="@+id/petHealth"
+        tools:layout_editor_absoluteX="522dp" />
 
     <TextView
         android:id="@+id/member4"
@@ -155,19 +131,16 @@
         android:layout_height="wrap_content"
         android:text="Member 4"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/member3"
-        app:layout_constraintTop_toTopOf="@+id/member2" />
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="235dp" />
 
     <TextView
         android:id="@+id/petHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
         android:text="Health:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pet" />
+        tools:layout_editor_absoluteX="573dp"
+        tools:layout_editor_absoluteY="224dp" />
 
     <TextView
         android:id="@+id/member2"
@@ -175,33 +148,26 @@
         android:layout_height="wrap_content"
         android:text="Member 2"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView107"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="224dp" />
 
     <TextView
         android:id="@+id/textView107"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="116dp"
         android:text="Hattie"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/hattieDead"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintBottom_toTopOf="@+id/hattieHealth"
+        app:layout_constraintEnd_toStartOf="@+id/member3" />
 
     <ImageView
         android:id="@+id/hattieDead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/member2Dead"
-        app:layout_constraintEnd_toStartOf="@+id/member3Dead"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593"
-        app:srcCompat="@drawable/xmark" />
+        app:srcCompat="@drawable/xmark"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="98dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

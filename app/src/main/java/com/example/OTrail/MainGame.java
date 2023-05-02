@@ -191,7 +191,7 @@ public class MainGame extends AppCompatActivity {
 
                 //update food
                 if(inv.getFoodCount() >= 0) {
-                    inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
+                    inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
 
                 }
                 else {
@@ -474,9 +474,6 @@ public class MainGame extends AppCompatActivity {
                     date.setWeather(map.getClimate());
                     date.setTemp(map.getClimate());
                     date.setGrass(map.getClimate());
-
-                    //Calculates and updates the players food use.
-                    party.dailyFoodUsed(inv);
 
                     //Increment distance to next location.
                     map.getDistToLM();
