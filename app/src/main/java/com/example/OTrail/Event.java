@@ -80,7 +80,7 @@ public class Event implements Serializable
             inv.setClothingCount(-2);
             if (inv.getClothingCount() < 0) {
                 inv.setClothingCount(-1 * inv.getClothingCount());}
-            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing." + " Basket Count: " + inv.getBasketCount() + " Your money: " + inv.getPlayerMoneyCount() + " Clothing Count: " + inv.getClothingCount();
+            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing.";
         }
 
         //Animal Attack
@@ -96,7 +96,7 @@ public class Event implements Serializable
                 player[playerTemp] = player[playerTemp] - 10;
                 party.setHealth(player);
             }
-            eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
+            eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health.";
         }
 
         //Member Sickness
@@ -111,7 +111,7 @@ public class Event implements Serializable
                 player1[playerTemp1] = player1[playerTemp1] - 30;
                 party.setHealth(player1);
             }
-            eventMessage = "A member of your group has Dysentery. Minus 5 medical supplies and if you do not have medical supplies -30 player health." + " Medical Supplies = " + inv.getMedicalSupplyCount();
+            eventMessage = "A member of your group has Dysentery.\n Minus 5 medical supplies and if you do not have medical supplies -30 player health.";
         }
 
         //Dead Ox
@@ -134,7 +134,7 @@ public class Event implements Serializable
                 player2[playerTemp2] = player2[playerTemp2] - 10;
                 party.setHealth(player2);
             }
-            eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health" + "Medical Supplies: " + inv.getMedicalSupplyCount();
+            eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health";
         }
 
         //Wrong Trail; lose 4 days
