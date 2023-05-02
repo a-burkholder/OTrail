@@ -25,7 +25,7 @@ public class Party implements Serializable
     private boolean gameOver = false;
     private static Inventory inv;
 
-    private Random rand = new Random();
+    private Random rand;
 
     /**
      * Default constructor for the Inventory class.
@@ -34,6 +34,7 @@ public class Party implements Serializable
     {
         this.inv = inv;
         this.names = names;
+        rand = new Random();
     }
 
     /**
