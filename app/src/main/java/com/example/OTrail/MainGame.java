@@ -27,6 +27,7 @@ public class MainGame extends AppCompatActivity {
     public static final String EVENT_NUMBER = "com.example.OTrail.EVENT_NUMBER";
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     public static final String PARTY_SPEED = "com.example.OTrail.PARTY_SPEED";
+    public static final String TRADE_NUMBER = "com.example.OTrail.TRADE_NUMBER";
 
 
     private static final String DATE_KEY = "com.example.OTrail.DATE";
@@ -38,6 +39,7 @@ public class MainGame extends AppCompatActivity {
     private static final int RIVER_RESULT = 2;
     private static final int BERRY_RESULT = 3;
     private static final int SPEED_RESULT = 4;
+    private static final int TRADE_RESULT = 5;
 
 
     private int[] startDate = {1, 3, 1847};
@@ -188,7 +190,6 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
-                foodDisplay.setText(inv.getFoodCount());
                 //update food
                 if(inv.getFoodCount() > 0) {
                     //inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
@@ -543,6 +544,7 @@ public class MainGame extends AppCompatActivity {
             }
         });
 
+        //Speed tab stuff
         speedBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -558,6 +560,38 @@ public class MainGame extends AppCompatActivity {
                 else if (temp == 1) {
                     System.out.println("" + party.getSpeed());
                     speedDisplay.setText("" + party.getSpeed());
+                }
+            }
+        });
+
+        //Trade tab stuff
+        tradeBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int tradeNum = inv.canTrade(map);
+                if (tradeNum == -1){
+                    String noTrade = "No trades available today";
+                    System.out.println(noTrade);
+                    //creates the announcement on a timer
+                    announcement.setElevation(Float.parseFloat("40"));
+                    announcement.setVisibility(View.VISIBLE);
+                    announcement.setText(noTrade);
+                    new CountDownTimer( 3000, 1000) {
+                        public void onTick(long millisUntilFinished) {
+                        }
+                        // Timer Finishes
+                        @SuppressLint("SetTextI18n")
+                        public void onFinish() {
+                            announcement.setVisibility(View.INVISIBLE);
+                            announcement.setElevation(Float.parseFloat("-40"));
+                        }
+                    }.start();
+                }
+                else {
+                    Intent intent = new Intent(MainGame.this, OpenTrades.class);
+                    intent.putExtra(GAME_INV, inv);
+                    intent.putExtra(TRADE_NUMBER, tradeNum);
+                    startActivityForResult(intent, TRADE_RESULT);
                 }
             }
         });
@@ -594,6 +628,11 @@ public class MainGame extends AppCompatActivity {
         if(requestCode == SPEED_RESULT) {
             if(resultCode == RESULT_OK) {
                 party = (Party) data.getSerializableExtra(SpeedActivity.POST_GAME_SPEED);
+            }
+        }
+        if (requestCode == TRADE_RESULT){
+            if (resultCode == RESULT_OK){
+                inv = (Inventory) data.getSerializableExtra(OpenTrades.POST_TRADE_INV);
             }
         }
     }
