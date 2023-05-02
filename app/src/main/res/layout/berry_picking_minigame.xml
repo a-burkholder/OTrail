@@ -104,7 +104,9 @@
         android:layout_height="60dp"
         android:elevation="40dp"
         android:text="Center Box"
+        android:typeface="serif"
         android:textAlignment="center"
+        android:textColor="#D4EEC4"
         android:textSize="34sp"
         android:visibility="visible"
         app:autoSizeTextType="uniform"
@@ -128,12 +130,15 @@
 
     <Button
         android:id="@+id/returnButton"
-        android:layout_width="147dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="552dp"
-        android:layout_marginTop="308dp"
-        android:text="Return to the Trail"
-        android:background="#5C4040"
+        android:layout_width="163dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="628dp"
+        android:layout_marginTop="292dp"
+        android:backgroundTint="#004000"
+        android:text="Continue"
+        android:typeface="serif"
+        android:textColor="#D5EFC5"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

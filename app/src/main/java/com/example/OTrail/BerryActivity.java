@@ -39,9 +39,9 @@ public class BerryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 i++;
                 if(i == 1) {
-                    startGame.setText("To trail");
                     Intent intent = new Intent(BerryActivity.this, BerryPickingMinigame.class);
                     intent.putExtra(BERRY_TITLE_TO_GAME, inv);
+                    startGame.setText("To trail");
                     startActivityForResult(intent, GAME_RESULT);
                 }
                 else {
