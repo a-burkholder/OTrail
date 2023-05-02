@@ -25,7 +25,7 @@ public class Party implements Serializable
     private boolean gameOver = false;
     private static Inventory inv;
 
-    private Random rand;
+    private Random rand = new Random();
 
     /**
      * Default constructor for the Inventory class.
@@ -152,12 +152,22 @@ public class Party implements Serializable
         do {
             tempHealth = rand.nextInt(5);
 
-            if(health[tempHealth] > 0)
+            if(health[tempHealth] > 0 && health[tempHealth] < 100)
             {
                 health[tempHealth]+= healthAway;
             }
 
         }while(health[tempHealth] > 0 && isAlive[tempHealth]);
+
+        if(health[tempHealth] < 0)
+        {
+            health[tempHealth] = 0;
+        }
+
+        if(health[tempHealth] > 100)
+        {
+            health[tempHealth] = 100;
+        }
     }
 
     /**
