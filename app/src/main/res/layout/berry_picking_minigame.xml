@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="901dp"
+        android:layout_height="621dp"
+        android:elevation="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/berrybackground" />
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="55dp"
@@ -36,8 +49,8 @@
         android:id="@+id/imageButton4"
         android:layout_width="43dp"
         android:layout_height="45dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="88dp"
         android:background="#004000"
         android:elevation="1dp"
         android:scaleX="1.2"
@@ -50,8 +63,8 @@
         android:id="@+id/imageButton3"
         android:layout_width="43dp"
         android:layout_height="45dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="380dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="396dp"
         android:background="#004000"
         android:elevation="1dp"
         android:scaleX="1.2"
@@ -78,8 +91,8 @@
         android:id="@+id/berryscore"
         android:layout_width="60dp"
         android:layout_height="33dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginBottom="124dp"
         android:elevation="10dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -90,8 +103,8 @@
         android:id="@+id/textView3"
         android:layout_width="40dp"
         android:layout_height="37dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="120dp"
         android:elevation="10dp"
         android:text="8"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -104,10 +117,10 @@
         android:layout_height="60dp"
         android:elevation="40dp"
         android:text="Center Box"
-        android:typeface="serif"
         android:textAlignment="center"
         android:textColor="#D4EEC4"
         android:textSize="34sp"
+        android:typeface="serif"
         android:visibility="visible"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,29 +130,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.529" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="901dp"
-        android:layout_height="621dp"
-        android:elevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/berrybackground" />
-
     <Button
         android:id="@+id/returnButton"
         android:layout_width="163dp"
         android:layout_height="85dp"
-        android:layout_marginStart="628dp"
-        android:layout_marginTop="292dp"
         android:backgroundTint="#004000"
         android:text="Continue"
-        android:typeface="serif"
         android:textColor="#D5EFC5"
         android:textSize="20dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
