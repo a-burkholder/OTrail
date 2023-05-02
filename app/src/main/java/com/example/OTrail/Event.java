@@ -197,8 +197,8 @@ public class Event implements Serializable
     {
         int value = input;
         Random rand = new Random();
-        int rand_int1 = rand.nextInt(10);
-        int rand_int2 = rand.nextInt(50);
+        int rand_int1 = rand.nextInt(10+1);
+        int rand_int2 = rand.nextInt(50+1);
 
             switch (value) {
                 case 1 -> {

@@ -52,13 +52,13 @@
 
     <Button
         android:id="@+id/continueAlongTheTrail"
-        android:layout_width="236dp"
+        android:layout_width="174dp"
         android:layout_height="67dp"
         android:text="Continue On The Trail"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pet"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="@+id/pet"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.868" />
 
@@ -66,11 +66,12 @@
         android:id="@+id/hattieHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:text="Health:"
         app:layout_constraintBottom_toTopOf="@+id/member2Health"
         app:layout_constraintStart_toStartOf="@+id/textView107"
         app:layout_constraintTop_toBottomOf="@+id/textView107"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.213" />
 
     <TextView
         android:id="@+id/member2Health"
@@ -80,7 +81,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/hattieHealth"
         app:layout_constraintTop_toBottomOf="@+id/textView107"
-        app:layout_constraintVertical_bias="0.775" />
+        app:layout_constraintVertical_bias="0.725" />
 
     <TextView
         android:id="@+id/member3Health"
@@ -94,8 +95,7 @@
         android:id="@+id/member3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="400dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="408dp"
         android:text="Member 3"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,12 +122,13 @@
         android:id="@+id/member2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:text="Member 2"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView107"
         app:layout_constraintTop_toBottomOf="@+id/hattieHealth"
-        app:layout_constraintVertical_bias="0.245" />
+        app:layout_constraintVertical_bias="0.383" />
 
     <TextView
         android:id="@+id/textView107"
@@ -137,10 +138,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.267" />
 
     <ImageView
         android:id="@+id/hattieDead"
@@ -165,7 +166,7 @@
         app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pet"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/xmark" />
 
     <TextView
@@ -173,9 +174,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Health:"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/pet"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/pet"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622" />
 
     <ImageView
         android:id="@+id/imageView6"
