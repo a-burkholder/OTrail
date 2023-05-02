@@ -188,7 +188,7 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
-
+                foodDisplay.setText(inv.getFoodCount());
                 //update food
                 if(inv.getFoodCount() > 0) {
                     //inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed()/5);
