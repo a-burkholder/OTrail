@@ -148,27 +148,31 @@ public class Party implements Serializable
 
     public void setHealth(int healthAway)
     {
-        int tempHealth;
-
-        do {
-            tempHealth = rand.nextInt(5);
-
-            if(health[tempHealth] > 0 && health[tempHealth] < 100)
-            {
-                health[tempHealth]+= healthAway;
-            }
-
-        }while(health[tempHealth] > 0 && isAlive[tempHealth]);
-
-        if(health[tempHealth] < 0)
-        {
-            health[tempHealth] = 0;
-        }
-
-        if(health[tempHealth] > 100)
-        {
-            health[tempHealth] = 100;
-        }
+//        int tempHealth = 0;
+//
+//
+//
+//        do {
+//            tempHealth = rand.nextInt(5);
+//
+//            if(health[tempHealth] > 0 && health[tempHealth] < 100)
+//            {
+//                health[tempHealth]+= healthAway;
+//            }
+//
+//            System.out.println("here");
+//
+//        }while(health[tempHealth] < 0 && isAlive[tempHealth] == false);
+//
+//        if(health[tempHealth] < 0)
+//        {
+//            health[tempHealth] = 0;
+//        }
+//
+//        if(health[tempHealth] > 100)
+//        {
+//            health[tempHealth] = 100;
+//        }
     }
 
     /**
