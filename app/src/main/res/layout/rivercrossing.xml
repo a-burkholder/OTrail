@@ -5,11 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="805dp"
+        android:layout_height="457dp"
+        android:elevation="-40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703"
+        app:srcCompat="@drawable/river" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="75dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wagon" />
+
     <Button
         android:id="@+id/buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
+        android:layout_marginStart="272dp"
         android:layout_marginBottom="24dp"
         android:elevation="5dp"
         android:text="BUY"
@@ -20,7 +44,7 @@
         android:id="@+id/cross"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="504dp"
+        android:layout_marginStart="536dp"
         android:layout_marginBottom="24dp"
         android:elevation="5dp"
         android:text="CROSS"
@@ -29,12 +53,17 @@
 
     <TextView
         android:id="@+id/textView75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="384dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="219dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:background="#000000"
+        android:backgroundTint="#000000"
         android:elevation="5dp"
-        android:text="River Crossing"
+        android:text="River Crossing Event"
+        android:textColor="#FEFEFE"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,10 +71,12 @@
         android:id="@+id/textView91"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
+        android:layout_marginStart="272dp"
         android:layout_marginBottom="88dp"
+        android:background="#80000000"
         android:elevation="5dp"
-        android:text="Hire a ferry ($100)"
+        android:text="Hire a ferry ($75)"
+        android:textColor="#FEFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,6 +86,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="88dp"
+        android:background="#80000000"
+        android:textColor="#FEFEFE"
         android:elevation="5dp"
         android:text="Learn about the river:"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,10 +97,12 @@
         android:id="@+id/textView93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="504dp"
+        android:layout_marginStart="536dp"
         android:layout_marginBottom="88dp"
+        android:background="#80000000"
         android:elevation="5dp"
         android:text="Cross without a ferry"
+        android:textColor="#FEFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -81,28 +116,6 @@
         android:text="LEARN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="803dp"
-        android:layout_height="457dp"
-        android:elevation="-40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/river" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="75dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="356dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/wagon" />
 
     <TextView
         android:id="@+id/information"

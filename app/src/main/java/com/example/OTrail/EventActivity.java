@@ -56,7 +56,7 @@ public class EventActivity extends AppCompatActivity
 
 
                 if (i==1) {
-                    if (eventMessage == "You found a berry bush.") {
+                    if (eventMessage == "You found a berry bush!") {
 
                         buttonForContinuing.setText("To trail");
                         Intent startBerries = new Intent(EventActivity.this, BerryActivity.class);
