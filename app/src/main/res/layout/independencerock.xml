@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="636dp"
-        android:layout_marginTop="328dp"
-        android:backgroundTint="#C65C16"
-        android:text="Continue On The Trail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView30"
         android:layout_width="978dp"
@@ -26,28 +15,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_12" />
 
+    <Button
+        android:id="@+id/buttonG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="431dp"
         android:layout_height="123dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059"
         app:srcCompat="@drawable/img_6" />
 
     <TextView
         android:id="@+id/textView42"
         android:layout_width="313dp"
         android:layout_height="77dp"
-        android:layout_marginStart="508dp"
-        android:layout_marginTop="60dp"
         android:text="Welcome to Independence Rock"
         android:textColor="#000000"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
 
     <ImageView
         android:id="@+id/imageView34"
@@ -65,13 +70,15 @@
         android:id="@+id/textView94"
         android:layout_width="158dp"
         android:layout_height="208dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="40dp"
         android:text="Independence rock derived its name from a party of fur trappers who camped and celebrated Independence Day near the rock on July 4, 1830."
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/textView117"
