@@ -146,33 +146,64 @@ public class Party implements Serializable
     }
 
 
-    public void setHealth(int healthAway)
-    {
-//        int tempHealth = 0;
-//
-//
-//
-//        do {
-//            tempHealth = rand.nextInt(5);
-//
-//            if(health[tempHealth] > 0 && health[tempHealth] < 100)
-//            {
-//                health[tempHealth]+= healthAway;
-//            }
-//
-//            System.out.println("here");
-//
-//        }while(health[tempHealth] < 0 && isAlive[tempHealth] == false);
-//
-//        if(health[tempHealth] < 0)
-//        {
-//            health[tempHealth] = 0;
-//        }
-//
-//        if(health[tempHealth] > 100)
-//        {
-//            health[tempHealth] = 100;
-//        }
+    public void setHealth(int healthAway) {
+        boolean runLoop = true;
+        int randomValue = 0;
+        int numberDead = 0;
+        int numberAt100 = 0;
+
+        while (runLoop && healthAway < 0)
+        {
+            randomValue = rand.nextInt(5);
+
+            if(health[randomValue] > 0)
+            {
+                health[randomValue] = health[randomValue] + healthAway;
+
+                if(health[randomValue] < 0)
+                {
+                    health[randomValue] = 0;
+                }
+                runLoop = false;
+            }
+            else
+            {
+                numberDead++;
+            }
+
+            if(numberDead == 5)
+            {
+                gameOver = true;
+                runLoop = false;
+
+            }
+        }
+
+        while (runLoop && healthAway < 100 && healthAway > 0)
+        {
+            randomValue = rand.nextInt(5);
+
+            if(health[randomValue] < 100)
+            {
+                health[randomValue] = health[randomValue] + healthAway;
+
+                if(health[randomValue] > 100)
+                {
+                    health[randomValue] = 100;
+                }
+                runLoop = false;
+            }
+            else
+            {
+                numberAt100++;
+            }
+
+            if(numberAt100 == 5)
+            {
+                runLoop = false;
+
+            }
+        }
     }
 
     /**

@@ -209,7 +209,7 @@ public class MainGame extends AppCompatActivity {
                 }
 
                 if(inv.getFoodCount() == 0) {
-                    party.setHealth(-5);
+                    party.setHealth(-10);
                 }
                 else
                 {
@@ -233,7 +233,7 @@ public class MainGame extends AppCompatActivity {
                 }
 
                 //if loose
-                if(party.getAtLeastSomeoneAlive() == false) {
+                if(party.getGameOverStatus()) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");
