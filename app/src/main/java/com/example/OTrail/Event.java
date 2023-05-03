@@ -21,7 +21,8 @@ public class Event implements Serializable
     private Date date;
     private static Event instance = null;
     private String eventMessage = "";
-
+    private int riverWidth;
+    private int riverDepth;
 
 
     /**
@@ -64,7 +65,12 @@ public class Event implements Serializable
         int rand_int1 = rand.nextInt(35);
 
         if (date.getDay() == 25 && date.getMonth() == 12){
-            eventMessage = "Santa";
+            eventMessage = "Santa Has delivered you presents!";
+            inv.setBasketCount(+2);
+            inv.setFoodCount(+500);
+            inv.setPlayerMoneyCount(+300);
+            inv.setMedicalSupplyCount(+10);
+            inv.setClothingCount(+4);
         }
 
         //raiderAttacck
@@ -186,7 +192,7 @@ public class Event implements Serializable
         }
         //berrybush
         else  {
-            eventMessage = "You found a berry bush.";
+            eventMessage = "You found a berry bush!";
         }
     }
 
@@ -197,21 +203,21 @@ public class Event implements Serializable
     {
         int value = input;
         Random rand = new Random();
-        int rand_int1 = rand.nextInt(10+1);
-        int rand_int2 = rand.nextInt(50+1);
+        riverDepth = rand.nextInt(10+1);
+        riverWidth = rand.nextInt(50+1);
 
             switch (value) {
                 case 1 -> {
-                    eventMessage = "The river is " + rand_int1 + " feet deep and " + rand_int2 + " feet across." +
+                    eventMessage = "The river is " + riverDepth + " feet deep and " + riverWidth + " feet across." +
                             "\nYou could pay $100 to safely travel the river via ferry." +
                             "\nHowever, if you wish to cross by foot, there is a chance" +
                             "\nto lose items in the heavy current.";
                 }
                 case 2 -> {
-                    riverCrossing(Ninv, 2, rand_int1, rand_int2);
+                    riverCrossing(Ninv, 2, riverDepth, riverWidth);
                 }
                 case 3 -> {
-                    riverCrossing(Ninv, 3, rand_int1, rand_int2);
+                    riverCrossing(Ninv, 3, riverDepth, riverWidth);
                 }
                 default -> {
                     System.out.println("Invalid input");
@@ -225,14 +231,14 @@ public class Event implements Serializable
      * Contains the functionality of options to cross the river
      * @param option The index for finding which option was selected
      * */
-    public void riverCrossing(Inventory Ninv, int option, int rand1, int rand2){
+    public void riverCrossing(Inventory Ninv, int option, int rivD, int rivW){
         if (option == 2){
-            Ninv.setPlayerMoneyCount(-100);
-            eventMessage = "You have paid $100 and have successfully crossed the river!";
+            Ninv.setPlayerMoneyCount(-75);
+            eventMessage = "You have paid $75 and have successfully crossed the river!";
         }
         else if (option == 3){
             Random rand = new Random();
-            if(rand.nextInt(100) > 98){
+            if(rand.nextInt(100) > (0.8*rivW)+(6*rivD)){
                 eventMessage = "You have successfully crossed the river!";
             }
 
@@ -242,23 +248,31 @@ public class Event implements Serializable
                 if(Ninv.getClothingCount() > 0){
                     int numClothesL = inv.getClothingCount() / 3;
                     Ninv.setClothingCount(-numClothesL);
-                    eventMessage = "You have successfully crossed the river, but you lost: " + numClothesL + " clothes";
+                    eventMessage = eventMessage + numClothesL + " clothes, ";
                 }
-                if(Ninv.getWagonWheelCount()>1){
+                if((Ninv.getWagonWheelCount()>2) && (rivW>40)) {
+                    Ninv.setWagonWheelCount(-2);
+                    eventMessage = eventMessage + "two wagon wheels, ";
+                }
+                else if(Ninv.getWagonWheelCount()>1){
                     Ninv.setWagonWheelCount(-1);
-                    eventMessage = "You have successfully crossed the river, but you lost one wagon wheel";
-                }
-                if(Ninv.getWagonAxleCount()>1){
-                    Ninv.setWagonAxleCount(-1);
-                    eventMessage = "You have successfully crossed the river, but you lost one wagon axle";
+                    eventMessage = eventMessage + "two wagon wheels, ";
                 }
 
+                if(Ninv.getWagonAxleCount()>1){
+                    if(rivD >= 7) {
+                        Ninv.setWagonAxleCount(-1);
+                        Ninv.setWagonTongueCount(-1);
+                        eventMessage = eventMessage + "one wagon axle, and one tongue";
+                    }
+                }
+                eventMessage = eventMessage + ".";
             }
         }
     }
 
     public void noFood()
     {
-        party.setHealth(-5);
+        party.setHealth(-10);
     }
 }
