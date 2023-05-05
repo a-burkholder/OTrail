@@ -533,7 +533,7 @@
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$0.50/lbs"
+        android:text="$1 / 2 lbs"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/textView63"
         app:layout_constraintTop_toTopOf="@+id/textView77" />
