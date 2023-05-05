@@ -27,7 +27,7 @@ import android.widget.TextView;
 public class Shop extends AppCompatActivity {
     public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
 
-    private int playerMoneyCount = 0;
+    private double playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
     private int basketPurchased = 0;
@@ -36,7 +36,7 @@ public class Shop extends AppCompatActivity {
     private int wagonAxlePurchased = 0;
     private int wagonTonguePurchased = 0;
     private int medicalSupplyPurchased = 0;
-    private int moneyUsed = 0;
+    private double moneyUsed = 0;
     private Inventory inv;
     private Party party;
 
@@ -44,7 +44,7 @@ public class Shop extends AppCompatActivity {
     private int amount = 0;
 
 
-    final int FOODPRICE = 1;
+    final double FOODPRICE = .5;
     final int CLOTHINGPRICE = 10;
     final int BASKETPRICE = 2;
     final int OXENPRICE = 20;
@@ -159,7 +159,7 @@ public class Shop extends AppCompatActivity {
                             break;
                             default:
                         }
-                        moneyUsed = moneyUsed + foodPurchased * FOODPRICE;
+                        moneyUsed = moneyUsed + (foodPurchased * FOODPRICE);
                     }
                     break;
                     case R.id.buyClothing: {
@@ -454,8 +454,8 @@ public class Shop extends AppCompatActivity {
     {
         System.out.println(oxenPurchased);
         if (inv.getPlayerMoneyCount() >= moneyUsed) {
-            inv.setPlayerMoneyCount(-moneyUsed);
-            inv.setFoodCount(foodPurchased * 2);
+            inv.setPlayerMoneyCount((int) -moneyUsed);
+            inv.setFoodCount(foodPurchased);
             inv.setClothingCount(clothingPurchased);
             inv.setBasketCount(basketPurchased);
             inv.setOxenCount(oxenPurchased);
@@ -474,7 +474,7 @@ public class Shop extends AppCompatActivity {
             medicalSupplyPurchased = 0;
             moneyUsed = 0;
         } else {
-            inv.setPlayerMoneyCount(playerMoneyCount);
+            inv.setPlayerMoneyCount((int)playerMoneyCount);
         }
     }
 }

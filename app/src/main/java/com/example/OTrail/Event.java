@@ -130,7 +130,15 @@ public class Event implements Serializable
             date.setDate(4);
             if(inv.getFoodCount() >= 0)
             {
-                inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*party.getSpeed());
+                switch (party.getSpeed()){
+                    case 10:
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);
+                    case 12:
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);
+                    case 15:
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);
+                    default:inv.setFoodCount(-15);
+                }
 
             }
             else
@@ -146,8 +154,15 @@ public class Event implements Serializable
             date.setDate(1);
             if(inv.getFoodCount() >= 0)
             {
-                inv.setFoodCount(-party.getNumberOfPeopleAlive()*party.getSpeed());
-
+                switch (party.getSpeed()){
+                    case 10:
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
+                    case 12:
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                    case 15:
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                    default:inv.setFoodCount(-15);
+                }
             }
             else
             {
@@ -157,12 +172,21 @@ public class Event implements Serializable
             eventMessage = "Rough Trail. Lose a day.";
         }
 
-        //Impassible trail; lose a day
+        //Impassible trail; lose 3 day s
         else if (rand_int1 == 19 || rand_int1 == 20) {
             date.setDate(3);
             if(inv.getFoodCount() >= 0)
             {
-                inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*party.getSpeed());
+                switch (party.getSpeed()){
+                    case 10:
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);
+                    case 12:
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);
+                    case 15:
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);
+                    default:inv.setFoodCount(-15);
+                }
+
 
             }
             else
