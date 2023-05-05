@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="1184dp"
+        android:layout_height="693dp"
+        app:srcCompat="@drawable/img_15"
+        tools:layout_editor_absoluteX="-147dp"
+        tools:layout_editor_absoluteY="-141dp" />
+
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
@@ -17,14 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.907" />
-
-    <ImageView
-        android:id="@+id/imageView33"
-        android:layout_width="1184dp"
-        android:layout_height="693dp"
-        app:srcCompat="@drawable/img_15"
-        tools:layout_editor_absoluteX="-147dp"
-        tools:layout_editor_absoluteY="-141dp" />
 
     <TextView
         android:id="@+id/textView110"
@@ -43,7 +43,7 @@
         android:layout_width="240dp"
         android:layout_height="266dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_4" />
@@ -53,10 +53,10 @@
         android:layout_width="178dp"
         android:layout_height="216dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="112dp"
         android:text=" Independence, Missouri was founded in 1827 to serve as the westernmost port of the fur trade on the Missouri River. It is currently being served as a jumping-off point for travelers like yourself. Good luck on your journey!"
         android:textColor="#000000"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,6 +67,10 @@
         android:text="[11]"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="806dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
 </androidx.constraintlayout.widget.ConstraintLayout>

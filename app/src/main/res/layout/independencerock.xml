@@ -63,14 +63,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092"
+        app:layout_constraintVertical_bias="0.587"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
         android:id="@+id/textView94"
         android:layout_width="158dp"
         android:layout_height="208dp"
-        android:text="Independence rock derived its name from a party of fur trappers who camped and celebrated Independence Day near the rock on July 4, 1830."
+        android:text="Independence Rock derived its name from a party of fur trappers who camped and celebrated Independence Day near the rock on July 4, 1830."
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <TextView
         android:id="@+id/textView117"
@@ -87,7 +87,11 @@
         android:text="[12]"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="352dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
