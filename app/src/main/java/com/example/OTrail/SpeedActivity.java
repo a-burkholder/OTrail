@@ -39,7 +39,6 @@ public class SpeedActivity extends AppCompatActivity
                     case R.id.speedEasy:
                     {
                         party.setSpeed(10);
-                        System.out.println("HERE");
                     }
                     break;
                     case R.id.speedMedium:
@@ -50,7 +49,6 @@ public class SpeedActivity extends AppCompatActivity
                     case R.id.speedExtreme:
                     {
                         party.setSpeed(15);
-                        System.out.println("IN EXTREME SPEED");
                     }
                     break;
                     default:
