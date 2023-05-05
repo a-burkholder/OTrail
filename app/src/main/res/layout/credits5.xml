@@ -112,7 +112,7 @@
         android:id="@+id/textView189"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Oregon Trail Persona - Hattie Campbell by Dr. Stephany"
+        android:text="Oregon Trail Persona - Hattie Campbell by Dr. Stephany and Dr. Estell"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="320dp" />
 
@@ -120,7 +120,7 @@
         android:id="@+id/textView190"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hattie Campbell - Diary Excerpts by Dr. Stephany"
+        android:text="Hattie Campbell - Diary Excerpts by Dr. Estell"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="347dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
