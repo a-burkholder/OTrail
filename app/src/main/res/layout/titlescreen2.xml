@@ -89,11 +89,23 @@
 
     <ImageView
         android:id="@+id/imageView46"
-        android:layout_width="515dp"
-        android:layout_height="220dp"
+        android:layout_width="451dp"
+        android:layout_height="183dp"
         app:layout_constraintEnd_toStartOf="@+id/title1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/title1"
         app:srcCompat="@drawable/oregon_trail_title" />
+
+    <TextView
+        android:id="@+id/textView175"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="[18]"
+        android:textColor="#FBF9F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
