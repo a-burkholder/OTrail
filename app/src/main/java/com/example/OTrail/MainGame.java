@@ -231,9 +231,11 @@ public class MainGame extends AppCompatActivity {
                         }
                     });
                 }
-
-                //if loose
-                if(party.getGameOverStatus()) {
+                int zeros[] = {0, 0, 0, 0, 0};
+                System.out.println(Arrays.toString(party.getHealth()));
+                //if lose
+                if(Arrays.equals(party.getHealth(), zeros)) {
+                    System.out.println("hereeee");
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");

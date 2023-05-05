@@ -12,7 +12,7 @@
         android:layout_height="162dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:text="The Oregon Trail was a legendary 2170-mile stretch of land from Independence, Missouri, to Oregon City, Oregon. In the early 1800s, the trail was utilized by fur traders, only traveling the tail on horseback. By 1836, wagon trains from Independence, Missouri, began clearing the trail to Oregon. As the years went on, roads, bridges, and ferries were built to speed up the journey. In the 1840s, the Organic Laws of Oregon promised free land to any settlers who chose to move to Oregon.  "
+        android:text="The Oregon Trail was a legendary 2170-mile stretch of land from Independence, Missouri, to Oregon City, Oregon. In the early 1800s, the trail was utilized by fur traders, only traveling the tail on horseback. By 1836, wagon trains from Independence, Missouri, began clearing the trail to Oregon. As the years went on, roads, bridges, and ferries were built to speed up the journey. In the 1840s, the Organic Laws of Oregon promised free land to any settlers who chose to move to Oregon. [20] "
         app:layout_constraintStart_toEndOf="@+id/imageView49"
         app:layout_constraintTop_toBottomOf="@+id/textView65" />
 
@@ -34,7 +34,7 @@
         android:layout_height="137dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="-5dp"
-        android:text="The term Manifest Destiny was coined to describe the thousands of families who traveled the trails, inspired by that very promise. Many other families were inspired by the California Gold Rush in 1848, inspired by the promise of riches. By the 1860s, many were traveling on ferries, with rivers and canals created to aid the pioneers. Finally, in 1869, the transcontinental railroad was completed, leading many to choose it over the trail."
+        android:text="The term Manifest Destiny was coined to describe the thousands of families who traveled the trails, inspired by that very promise. Many other families were inspired by the California Gold Rush in 1848, inspired by the promise of riches. By the 1860s, many were traveling on ferries, with rivers and canals created to aid the pioneers. Finally, in 1869, the transcontinental railroad was completed, leading many to choose it over the trail. [20]"
         app:layout_constraintStart_toEndOf="@+id/imageView49"
         app:layout_constraintTop_toBottomOf="@+id/textView64" />
 
@@ -59,4 +59,14 @@
         android:text="Back to Title"
         app:layout_constraintStart_toEndOf="@+id/imageView49"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView179"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="8dp"
+        android:text="[19]"
+        app:layout_constraintBottom_toTopOf="@+id/imageView49"
+        app:layout_constraintEnd_toStartOf="@+id/textView65" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -183,13 +183,18 @@ public class Party implements Serializable
         {
             randomValue = rand.nextInt(5);
 
-            if(health[randomValue] < 100)
+            if(health[randomValue] < 100 && health[randomValue] > 0)
             {
                 health[randomValue] = health[randomValue] + healthAway;
 
                 if(health[randomValue] > 100)
                 {
                     health[randomValue] = 100;
+                }
+
+                if(health[randomValue] < 0)
+                {
+                    health[randomValue] = 0;
                 }
                 runLoop = false;
             }
