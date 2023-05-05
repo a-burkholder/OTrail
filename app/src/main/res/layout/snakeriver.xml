@@ -5,50 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="628dp"
-        android:layout_marginTop="344dp"
-        android:backgroundTint="#C65C16"
-        android:text="Continue On The Trail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="1058dp"
-        android:layout_height="606dp"
+        android:layout_width="948dp"
+        android:layout_height="614dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502"
+        app:layout_constraintVertical_bias="0.384"
         app:srcCompat="@drawable/img_8" />
+
+    <Button
+        android:id="@+id/buttonM"
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#C65C16"
+        android:text="Continue On The Trail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
 
     <TextView
         android:id="@+id/textView101"
-        android:layout_width="212dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="372dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="460dp"
+        android:layout_height="38dp"
         android:background="#C65C16"
         android:text="Welcome To The Snake River Crossing"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="278dp"
         android:layout_height="259dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634"
         app:srcCompat="@drawable/img_4" />
 
     <TextView
@@ -56,12 +61,13 @@
         android:layout_width="189dp"
         android:layout_height="203dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="124dp"
-        android:text="The Snake River is named for the Snake Indians, through whose country the greater part of the river flows."
+        android:text="The Snake River is named for the Snake Indians for they had inhabited the land where the river flows."
         android:textColor="#000000"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/textView119"
@@ -70,6 +76,10 @@
         android:text="[14]"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
 </androidx.constraintlayout.widget.ConstraintLayout>
