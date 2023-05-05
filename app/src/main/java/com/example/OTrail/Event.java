@@ -209,7 +209,7 @@ public class Event implements Serializable
             switch (value) {
                 case 1 -> {
                     eventMessage = "The river is " + riverDepth + " feet deep and " + riverWidth + " feet across." +
-                            "\nYou could pay $100 to safely travel the river via ferry." +
+                            "\nYou could pay $75 to safely travel the river via ferry." +
                             "\nHowever, if you wish to cross by foot, there is a chance" +
                             "\nto lose items in the heavy current.";
                 }
