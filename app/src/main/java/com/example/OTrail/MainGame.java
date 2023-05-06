@@ -475,7 +475,7 @@ public class MainGame extends AppCompatActivity {
                             }.start();
 
                             //starts the game if it is a berry event
-                            if (event.getEventMessage() == "You found a berry bush."){
+                            if (event.getEventMessage() == "You found a berry bush!"){
                                 Intent intent = new Intent(MainGame.this, BerryActivity.class);
                                 intent.putExtra(GAME_INV, inv);
                                 startActivityForResult(intent, BERRY_RESULT);
