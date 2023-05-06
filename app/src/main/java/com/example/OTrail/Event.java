@@ -65,12 +65,13 @@ public class Event implements Serializable
         int rand_int1 = rand.nextInt(35);
 
         if (date.getDay() == 25 && date.getMonth() == 12){
-            eventMessage = "Santa Has delivered you presents!";
-            inv.setBasketCount(+2);
-            inv.setFoodCount(+500);
-            inv.setPlayerMoneyCount(+300);
-            inv.setMedicalSupplyCount(+10);
-            inv.setClothingCount(+4);
+            eventMessage = "Santa has delivered you presents!";
+            inv.setBasketCount(2);
+            inv.setFoodCount(500);
+            inv.setPlayerMoneyCount(300);
+            inv.setMedicalSupplyCount(10);
+            inv.setClothingCount(4);
+            inv.setBasketCount(100);
         }
 
         //raiderAttacck
@@ -138,7 +139,7 @@ public class Event implements Serializable
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
-            eventMessage = "You went down the wrong trail. Lose 4 days.";
+            eventMessage = "Hattie went down the wrong trail. Lose 4 days.";
         }
 
         //Rough trail; lose a day

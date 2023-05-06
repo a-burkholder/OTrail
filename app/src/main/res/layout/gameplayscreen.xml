@@ -85,10 +85,11 @@
 
     <TextView
         android:id="@+id/dateDisplay"
-        android:layout_width="61dp"
+        android:layout_width="80dp"
         android:layout_height="22dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="6dp"
+        android:elevation="100dp"
         android:text="@string/datetodisplay"
         android:textColor="#000000"
         android:textSize="16dp"

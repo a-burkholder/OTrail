@@ -167,6 +167,7 @@ public class MainGame extends AppCompatActivity {
         wagon21.setVisibility(View.INVISIBLE);
 
         //initial text values filled in
+        System.out.println(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         weatherDisplay.setText(date.getWeather());
         date.setTemp(map.getClimate());
