@@ -176,14 +176,12 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="698dp"
-        android:layout_height="39dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        android:layout_width="690dp"
+        android:layout_height="318dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="196dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
         app:srcCompat="@drawable/progressbar" />
 
     <ImageView
