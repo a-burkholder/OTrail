@@ -31,10 +31,10 @@
         android:foregroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/otrailmainmenu" />
 
     <Button
@@ -42,8 +42,8 @@
         android:layout_width="260dp"
         android:layout_height="70dp"
         android:layout_marginTop="84dp"
-        android:text="Learn about Hattie Campbell"
         android:backgroundTint="#99443524"
+        android:text="Learn about Hattie Campbell"
         android:typeface="serif"
         app:layout_constraintStart_toStartOf="@+id/title1"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
@@ -80,12 +80,12 @@
         android:id="@+id/title2"
         android:layout_width="260dp"
         android:layout_height="60dp"
+        android:backgroundTint="#99443524"
         android:text="Learn about the trail"
         android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/title3"
         app:layout_constraintStart_toStartOf="@+id/title1"
-        app:layout_constraintTop_toBottomOf="@+id/title1"
-        android:backgroundTint="#99443524" />
+        app:layout_constraintTop_toBottomOf="@+id/title1" />
 
     <ImageView
         android:id="@+id/imageView46"
