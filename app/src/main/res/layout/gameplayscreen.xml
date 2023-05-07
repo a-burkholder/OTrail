@@ -178,11 +178,10 @@
         android:id="@+id/imageView42"
         android:layout_width="690dp"
         android:layout_height="318dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="196dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/progressbar" />
+        app:srcCompat="@drawable/progressbar"
+        tools:layout_editor_absoluteY="196dp" />
 
     <ImageView
         android:id="@+id/wagon1"
