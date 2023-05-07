@@ -186,6 +186,8 @@ public class MainGame extends AppCompatActivity {
 
         //Move button stuff
         moveBut.setOnClickListener(new View.OnClickListener() {
+
+
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
@@ -463,8 +465,13 @@ public class MainGame extends AppCompatActivity {
                             announcement.setElevation(Float.parseFloat("40"));
                             announcement.setVisibility(View.VISIBLE);
                             announcement.setText(event.getEventMessage());
-                            new CountDownTimer( 3000, 1000) {
+
+                            new CountDownTimer( 3000, 500) {
+                                int i = 70;
                                 public void onTick(long millisUntilFinished) {
+                                    i = i-10;
+                                    String i1 = String.valueOf(i);
+                                    announcement.setElevation(Float.parseFloat(i1));
                                 }
                                 // Timer Finishes
                                 @SuppressLint("SetTextI18n")
@@ -483,7 +490,7 @@ public class MainGame extends AppCompatActivity {
                         }
                     }
 
-                    //increment weather / terrian if needed.
+                    //increment weather / terrain if needed.
                     map.setClimateZone();
                     date.setWeather(map.getClimate());
                     date.setTemp(map.getClimate());

@@ -176,222 +176,265 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="690dp"
-        android:layout_height="318dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="196dp"
+        android:layout_width="707dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957"
         app:srcCompat="@drawable/progressbar" />
 
     <ImageView
         android:id="@+id/wagon1"
         android:layout_width="46dp"
         android:layout_height="36dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon20"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="640dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon18"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="582dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon16"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="519dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon14"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="453dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon12"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="385dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon10"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="317dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon8"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="249dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon6"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon3"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon4"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon21"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="670dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon19"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="610dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon17"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="552dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon15"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="487dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon13"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="419dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon11"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="351dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon9"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="283dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/wagon7"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="215dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
         android:id="@+id/wagon2"
         android:layout_width="46dp"
         android:layout_height="36dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon3"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon4"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
         android:id="@+id/wagon5"
         android:layout_width="46dp"
         android:layout_height="36dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="335dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon6"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon7"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon8"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon9"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon10"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon11"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon12"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon13"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon14"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon15"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon16"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon17"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon18"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon19"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon20"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/wagon21"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toTopOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/wagon" />
 
     <TextView
