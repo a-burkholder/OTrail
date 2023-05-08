@@ -23,7 +23,6 @@ import java.util.Random;
 public class InventoryActivity extends AppCompatActivity {
     private Inventory inv;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -66,12 +65,5 @@ public class InventoryActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-
-    /**
-     * Default constructor for the InventoryActivity class.
-     */
-    public InventoryActivity() {
     }
 }

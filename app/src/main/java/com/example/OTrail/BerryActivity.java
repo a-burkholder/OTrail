@@ -25,14 +25,14 @@ public class BerryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //sets layout
+        //Sets the BerryActivity layout.
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.berry_picking_title);
 
-        //grabs inv data
+        //Grabs inv data.
         inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
 
