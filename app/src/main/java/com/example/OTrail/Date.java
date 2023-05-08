@@ -44,7 +44,7 @@ public class Date implements Serializable {
     //-----------------constructors
 
     /**Date
-     * default class constructor - Creates an instance of the Date class to be used in the game
+     * <br>default class constructor - Creates an instance of the Date class to be used in the game
      * */
     public Date(){
         int[] a = {0,0,0};
@@ -54,7 +54,7 @@ public class Date implements Serializable {
         lastRain = b;
 }
     /**Date
-     * Class constructor - Creates an instance of the Date class to be used in the game
+     * <br>Class constructor - Creates an instance of the Date class to be used in the game
      * @param startDate An array of length 3 with the form: day, month, year
      * */
     public Date(int[] startDate){
@@ -75,7 +75,7 @@ public class Date implements Serializable {
     //-------------functionality
 
     /**getDate()
-     * The easy way to get the date out as you put it in
+     * <br>The easy way to get the date out as you put it in
      * @return The date as an array of length 3 with the form: day, month, year
      * */
     public int[] getDate() {
@@ -83,34 +83,33 @@ public class Date implements Serializable {
     }
 
     /**getDay()
-     * The easy way to get the day
+     * <br>The easy way to get the day
      * @return The day as an int
      * */
     public int getDay() {return date[0];}
 
     /**getMonth()
-     *The easy way to get the month
+     *<br>The easy way to get the month
      * @return The month as an int
      * */
     public int getMonth() {return date[1];}
 
     /**getYear()
-     *The easy way to get the year
+     *<br>The easy way to get the year
      * @return The year as an int
      * */
     public int getYear() {return date[2];}
 
     /**String getWeather()
-     * The easy way to get the current weather
+     * <br>The easy way to get the current weather
      * @return The sky's condition for the day
      * */
     public String getWeather() {
-
         return this.currentWeather;
     }
 
     /**getTemp()
-     * The easy way to get the temperature
+     * <br>The easy way to get the temperature
      * @return The temperature, as an integer, in Fahrenheit
      * */
     public int getTemp() {
@@ -118,7 +117,7 @@ public class Date implements Serializable {
     }
 
     /**getGrass()
-     *The easy way to get the grass conditions
+     *<br>The easy way to get the grass conditions
      * @return The grass condition as a string
      * */
     public String getGrass() {
@@ -126,7 +125,7 @@ public class Date implements Serializable {
     }
 
     /**getLastRain()
-     *The easy way to get the date of last rain
+     *<br>The easy way to get the date of last rain
      * @return An integer array in the form: day, month, year
      * */
     public int[] getLastRain() {
@@ -134,11 +133,10 @@ public class Date implements Serializable {
     }
 
     /**setDate(int numDays)
-     * Easily increment the date by a given number of days
+     * <br>Easily increment the date by a given number of days
      * @param numDays The number of days passed
      * */
-    public void setDate(int numDays)
-    {
+    public void setDate(int numDays) {
         if (this.date[1] == 0){
             this.date[1] = 1;
         }
@@ -187,7 +185,7 @@ public class Date implements Serializable {
     }
 
     /**setWeather(int climateZone)
-     *Sets the weather conditions based on the climate at the location and time of year
+     *<br>Sets the weather conditions based on the climate at the location and time of year
      * @param climateZone The current climate the weather could be like. Provides a general range and likelihood of rain. Start at 0
      * */
     public void setWeather(int climateZone){
@@ -217,7 +215,7 @@ public class Date implements Serializable {
     }
 
     /**setTemp(int climateZone)
-     *Sets the temperature based on the climate at the location and time of year
+     *<br>Sets the temperature based on the climate at the location and time of year
      * @param climateZone The current temperatures it could be like. Provides a general range of temperatures. Start at Zone 0
      * */
     public void setTemp(int climateZone) {
@@ -230,7 +228,8 @@ public class Date implements Serializable {
     }
 
     /**setGrass(int climateZone)
-     * Sets the grass conditions based on recent rain and climate values
+     * <br>Currently non-functional.
+     * <br>Would set the grass conditions based on recent rain and climate values
      * @param climateZone The current zone the grass should be calculated for. Start at Zone 0
      * */
     public void setGrass(int climateZone) {
@@ -238,18 +237,17 @@ public class Date implements Serializable {
     }
 
     /**toString()
-     *Converts the class to a string for easy testing
+     *<br>Converts the class to a string for easy testing
      * @return The date as a string in the form Day/Month/Year
      * */
     public String toString(){
         return Integer.toString(date[0]) + "/" + Integer.toString(date[1]) + "/" + Integer.toString(date[2]);
     }
 
-    /**
-     * Prints the date with the current month, day, and year.
+    /**printDate()
+     * <br>Prints the date with the current month, day, and year.
      */
-    public void printDate()
-    {
+    public void printDate() {
         System.out.println("The current data is " + date[1] + "/" + date[0] + "/" + date[2] + ".");
     }
 }

@@ -14,21 +14,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //no title bar and set layout
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.titlescreen);
-        final Button start = findViewById(R.id.titleStart);
 
+        //button for continueing
+        final Button start = findViewById(R.id.titleStart);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //set layout
                 setContentView(R.layout.titlescreen2);
+
+                //play game button
                 final Button toTrail = findViewById(R.id.title1);
-                final Button toOTrailInfo = findViewById(R.id.title2);
-                final Button toHattieInfo = findViewById(R.id.title3);
-                final Button options = findViewById(R.id.title6);
                 toTrail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
                 });
+
+                //info button
+                final Button toOTrailInfo = findViewById(R.id.title2);
                 toOTrailInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -44,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
+                //hattie story button
+                final Button toHattieInfo = findViewById(R.id.title3);
                 toHattieInfo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -51,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
+                //credits
+                final Button options = findViewById(R.id.title6);
                 options.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

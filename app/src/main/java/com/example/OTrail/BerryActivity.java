@@ -24,18 +24,20 @@ public class BerryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //sets layout
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.berry_picking_title);
-        Button startGame = (Button)findViewById(R.id.startGame);
 
-
+        //grabs inv data
         inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
 
-
+        //cont button
+        Button startGame = (Button)findViewById(R.id.startGame);
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +53,6 @@ public class BerryActivity extends AppCompatActivity {
                             startGame.setText("Return to Trail");
                         }
                     }.start();
-
                     startActivityForResult(intent, GAME_RESULT);
                 }
                 else {
@@ -63,8 +64,9 @@ public class BerryActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
+
+    //grabs data from game after finished
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
