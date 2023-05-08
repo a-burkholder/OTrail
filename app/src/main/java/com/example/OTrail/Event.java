@@ -75,8 +75,8 @@ public class Event implements Serializable
         //christmas event
         if (date.getDay() == 25 && date.getMonth() == 12){
             eventMessage = "Santa has delivered you presents!";
-            inv.setBasketCount(2);
-            inv.setFoodCount(500);
+            inv.setBasketCount(10);
+            inv.setFoodCount(800);
             inv.setPlayerMoneyCount(300);
             inv.setMedicalSupplyCount(10);
             inv.setClothingCount(4);
