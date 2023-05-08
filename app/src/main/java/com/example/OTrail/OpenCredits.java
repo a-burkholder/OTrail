@@ -24,8 +24,7 @@ public class OpenCredits extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent1 = new Intent(OpenCredits.this, OpenCredits2.class);
-                startActivity(intent1);
+                finish();
             }
         });
     }
