@@ -99,7 +99,7 @@
         android:layout_marginStart="8dp"
         android:text="https://tinyurl.com/58fydp5b"
         app:layout_constraintStart_toEndOf="@+id/textView145"
-        tools:layout_editor_absoluteY="316dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView145" />
 
     <TextView
         android:id="@+id/textView153"
@@ -130,11 +130,12 @@
         tools:layout_editor_absoluteY="52dp" />
 
     <Button
-        android:id="@+id/backToTheTitle"
+        android:id="@+id/mc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="28dp"
-        android:text="Back to Title"
+        android:text="More Credits"
         app:layout_constraintStart_toEndOf="@+id/textView153"
         app:layout_constraintTop_toBottomOf="@+id/textView151" />
 
