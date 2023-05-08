@@ -32,14 +32,11 @@ public class Inventory implements Serializable {
      *
      * @return true if the wagon is usable
      */
-    public boolean isWagonUsable()
-    {
-        if (wagonWheelCount >= 4 && wagonAxleCount >= 2 && wagonTongueCount >= 1 && oxenCount >= 1)
-        {
+    public boolean isWagonUsable() {
+        if (wagonWheelCount >= 4 && wagonAxleCount >= 2 && wagonTongueCount >= 1 && oxenCount >= 1) {
             wagonUsable = true;
         }
-        else
-        {
+        else {
             wagonUsable = false;
         }
 
@@ -151,8 +148,7 @@ public class Inventory implements Serializable {
      *
      * @param playerMoneyCount The player's updated amount of money.
      */
-    public void setPlayerMoneyCount(int playerMoneyCount)
-    {
+    public void setPlayerMoneyCount(int playerMoneyCount) {
         this.playerMoneyCount = this.playerMoneyCount + playerMoneyCount;
     }
 
@@ -171,8 +167,7 @@ public class Inventory implements Serializable {
      *
      * @param clothingCount The player's updated number of clothing sets.
      */
-    public void setClothingCount(int clothingCount)
-    {
+    public void setClothingCount(int clothingCount) {
         this.clothingCount = this.clothingCount + clothingCount;
     }
 
@@ -181,8 +176,7 @@ public class Inventory implements Serializable {
      *
      * @param basketCount The player's updated number of baskets.
      */
-    public void setBasketCount(int basketCount)
-    {
+    public void setBasketCount(int basketCount) {
         this.basketCount = this.basketCount + basketCount;
     }
 
@@ -201,8 +195,7 @@ public class Inventory implements Serializable {
      *
      * @param wagonWheelCount The player's updated number of wagon wheels.
      */
-    public void setWagonWheelCount(int wagonWheelCount)
-    {
+    public void setWagonWheelCount(int wagonWheelCount) {
         this.wagonWheelCount = this.wagonWheelCount + wagonWheelCount;
     }
 
@@ -211,8 +204,7 @@ public class Inventory implements Serializable {
      *
      * @param wagonAxleCount The player's updated number of wagon axles.
      */
-    public void setWagonAxleCount(int wagonAxleCount)
-    {
+    public void setWagonAxleCount(int wagonAxleCount) {
         this.wagonAxleCount = this.wagonAxleCount + wagonAxleCount;
     }
 
@@ -221,8 +213,7 @@ public class Inventory implements Serializable {
      *
      * @param wagonTongueCount The player's updated number of wagon tongues.
      */
-    public void setWagonTongueCount(int wagonTongueCount)
-    {
+    public void setWagonTongueCount(int wagonTongueCount) {
         this.wagonTongueCount = this.wagonTongueCount + wagonTongueCount;
     }
 
@@ -231,16 +222,14 @@ public class Inventory implements Serializable {
      *
      * @param medicalSupplyCount The player's updated amount of medical supplies.
      */
-    public void setMedicalSupplyCount(int medicalSupplyCount)
-    {
+    public void setMedicalSupplyCount(int medicalSupplyCount) {
         this.medicalSupplyCount = this.medicalSupplyCount + medicalSupplyCount;
     }
-
 
     /**canTrade(Map map)
      * tries to create a trade.
      * @param map The current map object, used for doing location checks
-     * @return -1 if no trade, the trade number if there is one availible
+     * @return -1 if no trade, the trade number if there is one available
      */
     public int canTrade(Map map){
         Random rand =  new Random();
@@ -265,6 +254,8 @@ public class Inventory implements Serializable {
 
     /**confirmTrade(boolean answer, int tradeNumber)
      * confirms the trade by taking in an input asking if the trade is ok
+     * @param answer the answer to the trade
+     * @param trade the index for the trade
      * */
     public void confirmTrade(boolean answer, int trade){
         switch (trade){
@@ -321,6 +312,4 @@ public class Inventory implements Serializable {
             default:break;
         }
     }
-
 }
-
