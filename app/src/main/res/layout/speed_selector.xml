@@ -170,17 +170,6 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView50"
-        android:layout_width="875dp"
-        android:layout_height="534dp"
-        android:elevation="-50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/game_speed" />
-
-    <ImageView
         android:id="@+id/imageView51"
         android:layout_width="90dp"
         android:layout_height="57dp"
@@ -208,7 +197,22 @@
         android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" /><![CDATA[
+        app:srcCompat="@drawable/wagon" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="729dp"
+        android:layout_height="930dp"
+        android:elevation="-50dp"
+        app:srcCompat="@drawable/game_speed"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-272dp" /><![CDATA[
+
+
+
+
+
+
 
 
 
@@ -228,6 +232,9 @@
 
 
     -->
+
+
+
 
 
 

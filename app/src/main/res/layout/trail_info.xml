@@ -32,10 +32,9 @@
         android:id="@+id/textView4"
         android:layout_width="380dp"
         android:layout_height="137dp"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="-5dp"
         android:text="The term Manifest Destiny was coined to describe the thousands of families who traveled the trails, inspired by that very promise. Many other families were inspired by the California Gold Rush in 1848, inspired by the promise of riches. By the 1860s, many were traveling on ferries, with rivers and canals created to aid the pioneers. Finally, in 1869, the transcontinental railroad was completed, leading many to choose it over the trail. [20]"
-        app:layout_constraintStart_toEndOf="@+id/imageView49"
+        app:layout_constraintStart_toStartOf="@+id/textView64"
         app:layout_constraintTop_toBottomOf="@+id/textView64" />
 
     <ImageView
@@ -54,10 +53,10 @@
         android:id="@+id/backToTitleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
+        android:layout_marginStart="228dp"
         android:layout_marginTop="-15dp"
         android:text="Back to Title"
-        app:layout_constraintStart_toEndOf="@+id/imageView49"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView

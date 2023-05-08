@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/textView86"
-        android:layout_width="453dp"
-        android:layout_height="99dp"
+        android:layout_width="452dp"
+        android:layout_height="105dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Hattie Campbell is a 13-year-old pioneer who likes spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving Independence, Missouri, in 1847, Hattie and her family joined the Great Migration to Oregon. Overcrowding, high taxes, and annual rounds of the deadly swamp fever had uprooted their simple farm life [21] [22].  "
+        android:text="Hattie Campbell is a 13-year-old pioneer who likes spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving Independence, Missouri, in 1847, Hattie and her family joined the Great Migration to Oregon. Overcrowding, high taxes, and annual rounds of the deadly swamp fever had uprooted their simple farm life [21, 22].  "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView47"
@@ -46,20 +46,20 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="452dp"
-        android:layout_height="165dp"
-        android:layout_marginStart="12dp"
+        android:layout_width="453dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-medium"
         android:text="Over the past few months, Hattie's father, Charles Campbell, has shared his passion for traveling the Oregon Trail, buying booklets about the journey, and speaking of partaking in a part of America's Manifest Destiny. However, Hattie's mother continues to share her fears of the trial, warning of the death toll and tearing up when thinking about how she will never see her sisters again. In March, Hattie's father sold the house, chickens, three horses, and a cow to a neighbor for $65, which, when added to their original savings and a riverboat passage to Independence, Missouri, should be enough to get them to Oregon [21] [22]. "
-        app:layout_constraintStart_toEndOf="@+id/imageView47"
+        app:layout_constraintStart_toStartOf="@+id/textView86"
         app:layout_constraintTop_toBottomOf="@+id/textView86" />
 
     <Button
         android:id="@+id/backToTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="564dp"
-        android:layout_marginTop="-12dp"
+        android:layout_marginStart="568dp"
+        android:layout_marginTop="-18dp"
         android:text="Back to Title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
