@@ -28,7 +28,6 @@ public class SpeedActivity extends AppCompatActivity
         Intent intent = getIntent();
         party = (Party) intent.getSerializableExtra(MainGame.PARTY_TO_HEALTH);
 
-
         Button continueAlongTrail = (Button) findViewById(R.id.continueTheGame);
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override

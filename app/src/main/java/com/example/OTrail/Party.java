@@ -229,8 +229,37 @@ public class Party implements Serializable
      */
     public void setSpeed(int speed)
     {
+        switch (inv.getOxenCount()) {
+            case 1: {
+                this.speed = speed / 4;
+            }
+            break;
+            case 2: {
+                this.speed = speed / 3;
+            }
+            break;
+            case 3: {
+                this.speed = speed / 2;
+            }
+            break;
+            case 4: {
+                this.speed = 2*speed / 3;
+            }
+            break;
+            case 5: {
+                this.speed = 4*speed / 5;
+            }
+            break;
+            case 6: {
+                this.speed = 9*speed / 10;
+            }
+            break;
+            default: {
+                this.speed = speed;
+            }
+            break;
+        }
 
-        this.speed = speed;
     }
 
     public void dailyFoodUsed(Inventory thisInv)
