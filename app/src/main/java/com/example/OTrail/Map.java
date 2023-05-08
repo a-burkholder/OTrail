@@ -37,7 +37,10 @@ public class Map implements Serializable
         currentClimateZone = climates[lastLandmark];
     }
 
-
+    /**
+     * Returns an instance of the Map class and will create a new instance if one has not been created.
+     * @return an instance of Map.
+     */
     public static Map getInstance()
     {
         if(instance == null)
