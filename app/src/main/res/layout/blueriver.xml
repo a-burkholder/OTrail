@@ -57,8 +57,8 @@
         android:id="@+id/buttonC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="636dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginStart="468dp"
+        android:layout_marginTop="316dp"
         android:backgroundTint="#C65C16"
         android:text="Continue On The Trail"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,9 +68,11 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="32dp"
         android:text="[2]"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="14dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView17"
+        app:layout_constraintEnd_toStartOf="@+id/textView96" />
 </androidx.constraintlayout.widget.ConstraintLayout>
