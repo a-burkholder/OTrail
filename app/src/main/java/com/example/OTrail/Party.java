@@ -90,6 +90,8 @@ public class Party implements Serializable
 
     public int getSpeed()
     {
+
+
         return speed;
     }
 
@@ -227,6 +229,7 @@ public class Party implements Serializable
      */
     public void setSpeed(int speed)
     {
+
         this.speed = speed;
     }
 

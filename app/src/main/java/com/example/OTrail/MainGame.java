@@ -193,6 +193,8 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
+                //Reset the Event
+                announcement.setText("");
                 //update food
                 if(inv.getFoodCount() > 0) {
                     switch(party.getSpeed()){
@@ -467,11 +469,7 @@ public class MainGame extends AppCompatActivity {
                             announcement.setText(event.getEventMessage());
 
                             new CountDownTimer( 3000, 500) {
-                                int i = 70;
                                 public void onTick(long millisUntilFinished) {
-                                    i = i-10;
-                                    String i1 = String.valueOf(i);
-                                    announcement.setElevation(Float.parseFloat(i1));
                                 }
                                 // Timer Finishes
                                 @SuppressLint("SetTextI18n")
