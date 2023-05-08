@@ -28,6 +28,8 @@ public class MainGame extends AppCompatActivity {
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     public static final String PARTY_SPEED = "com.example.OTrail.PARTY_SPEED";
     public static final String TRADE_NUMBER = "com.example.OTrail.TRADE_NUMBER";
+
+
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
     private static final String MAP_KEY = "com.example.OTrail.MAP";
@@ -51,40 +53,34 @@ public class MainGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //grab data from previous activities
         Intent intent = getIntent();
-
         if(getIntent().getSerializableExtra("passInventory") == null) inv = new Inventory();
         else inv = (Inventory)getIntent().getSerializableExtra("passInventory");
 
-
+        //dont re-initialize
         if(savedInstanceState != null) {
             date = (Date) savedInstanceState.getSerializable(DATE_KEY);
             map = (Map) savedInstanceState.getSerializable(MAP_KEY);
             party = (Party) savedInstanceState.getSerializable(PARTY_KEY);
             event = (Event) savedInstanceState.getSerializable(EVENT_KEY);
-
-            System.out.println("is not null");
-
         }
-        else {
 
+        //initialize everything
+        else {
             startDate = intent.getIntArrayExtra(OpenDate.START_DATE);
             names = intent.getStringArrayExtra(OpenDate.NAMES2);
-
             date = Date.getInstance(startDate);
             names = intent.getStringArrayExtra(OpenDate.NAMES2);
             map = Map.getInstance();
             party = Party.getInstance(inv, names);
             event = Event.getInstance(inv, party, date);
-
-            System.out.println("is null");
         }
 
-        Shop shop = new Shop();
-        Menu menu = new Menu(inv, party, map, shop);
+        //sets the speed to a default
         party.setSpeed(10);
 
-        //enter shop stuff here
+        //forces the shop to open
         if(map.getPosition()==0) {
             Intent intent1 = new Intent(MainGame.this, Shop.class);
             intent1.putExtra("Inventory object", inv);
@@ -115,7 +111,7 @@ public class MainGame extends AppCompatActivity {
         final Button tradeBut = findViewById(R.id.Trade);
         final Button speedBut = findViewById(R.id.speed);
 
-        //define weather icons
+        //define weather icon
         final ImageView weather = findViewById(R.id.imageView);
 
         //defines wagon images
@@ -183,15 +179,12 @@ public class MainGame extends AppCompatActivity {
 
         //Move button stuff
         moveBut.setOnClickListener(new View.OnClickListener() {
-
-
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
-                //Reset the Event
-                announcement.setText("");
+
                 //update food
                 if(inv.getFoodCount() > 0) {
                     switch(party.getSpeed()){
@@ -210,18 +203,17 @@ public class MainGame extends AppCompatActivity {
                     inv.setFoodCount(-inv.getFoodCount());
                 }
 
+                //updates health
                 if(inv.getFoodCount() == 0) {
                     party.setHealth(-10);
                 }
-                else
-                {
+                else {
                     party.setHealth(2);
                 }
 
                 //if win
                 if((map.getPosition() >= 2000) && (party.getAtLeastSomeoneAlive())) {
                     moveBut.setEnabled(false);
-
                     alertDialog.setTitle("YOU WIN!");
                     alertDialog.setMessage("Congratulations, you have made it to Oregon City!!!");
                     alertDialog.show();
@@ -233,11 +225,12 @@ public class MainGame extends AppCompatActivity {
                         }
                     });
                 }
+
                 int zeros[] = {0, 0, 0, 0, 0};
                 System.out.println(Arrays.toString(party.getHealth()));
+
                 //if lose
                 if(Arrays.equals(party.getHealth(), zeros)) {
-                    System.out.println("hereeee");
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");
@@ -288,131 +281,48 @@ public class MainGame extends AppCompatActivity {
                     for (number = 0; temp > 0; number++) {
                         temp -= 100;
                     }
-                    switch(number)
-                    {
-                        case 0:
-                        {
-                            wagon1.setVisibility(View.VISIBLE);
-                        }
+                    switch(number) {
+                        case 0: {wagon1.setVisibility(View.VISIBLE);}
                         break;
-                        case 1:
-                        {
-                            wagon2.setVisibility(View.VISIBLE);
-
-                        }
+                        case 1: {wagon2.setVisibility(View.VISIBLE);}
                         break;
-                        case 2:
-                        {
-                            wagon3.setVisibility(View.VISIBLE);
-
-                        }
+                        case 2: {wagon3.setVisibility(View.VISIBLE);}
                         break;
-                        case 3:
-                        {
-                            wagon4.setVisibility(View.VISIBLE);
-
-                        }
+                        case 3: {wagon4.setVisibility(View.VISIBLE);}
                         break;
-                        case 4:
-                        {
-                            wagon5.setVisibility(View.VISIBLE);
-
-                        }
+                        case 4: {wagon5.setVisibility(View.VISIBLE);}
                         break;
-                        case 5:
-                        {
-                            wagon6.setVisibility(View.VISIBLE);
-
-                        }
+                        case 5: {wagon6.setVisibility(View.VISIBLE);}
                         break;
-                        case 6:
-                        {
-                            wagon7.setVisibility(View.VISIBLE);
-
-                        }
+                        case 6: {wagon7.setVisibility(View.VISIBLE);}
                         break;
-                        case 7:
-                        {
-                            wagon8.setVisibility(View.VISIBLE);
-
-                        }
+                        case 7: {wagon8.setVisibility(View.VISIBLE);}
                         break;
-                        case 8:
-                        {
-                            wagon9.setVisibility(View.VISIBLE);
-
-                        }
+                        case 8: {wagon9.setVisibility(View.VISIBLE);}
                         break;
-                        case 9:
-                        {
-                            wagon10.setVisibility(View.VISIBLE);
-
-                        }
+                        case 9: {wagon10.setVisibility(View.VISIBLE);}
                         break;
-                        case 10:
-                        {
-                            wagon11.setVisibility(View.VISIBLE);
-
-                        }
+                        case 10: {wagon11.setVisibility(View.VISIBLE);}
                         break;
-                        case 11:
-                        {
-                            wagon12.setVisibility(View.VISIBLE);
-
-                        }
+                        case 11: {wagon12.setVisibility(View.VISIBLE);}
                         break;
-                        case 12:
-                        {
-                            wagon13.setVisibility(View.VISIBLE);
-
-                        }
+                        case 12: {wagon13.setVisibility(View.VISIBLE);}
                         break;
-                        case 13:
-                        {
-                            wagon14.setVisibility(View.VISIBLE);
-
-                        }
+                        case 13: {wagon14.setVisibility(View.VISIBLE);}
                         break;
-                        case 14:
-                        {
-                            wagon15.setVisibility(View.VISIBLE);
-
-                        }
+                        case 14: {wagon15.setVisibility(View.VISIBLE);}
                         break;
-                        case 15:
-                        {
-                            wagon16.setVisibility(View.VISIBLE);
-
-                        }
+                        case 15: {wagon16.setVisibility(View.VISIBLE);}
                         break;
-                        case 16:
-                        {
-                            wagon17.setVisibility(View.VISIBLE);
-
-                        }
+                        case 16: {wagon17.setVisibility(View.VISIBLE);}
                         break;
-                        case 17:
-                        {
-                            wagon18.setVisibility(View.VISIBLE);
-
-                        }
+                        case 17: {wagon18.setVisibility(View.VISIBLE);}
                         break;
-                        case 18:
-                        {
-                            wagon19.setVisibility(View.VISIBLE);
-
-                        }
+                        case 18: {wagon19.setVisibility(View.VISIBLE);}
                         break;
-                        case 19:
-                        {
-                            wagon20.setVisibility(View.VISIBLE);
-
-                        }
+                        case 19: {wagon20.setVisibility(View.VISIBLE);}
                         break;
-                        case 20:
-                        {
-                            wagon21.setVisibility(View.VISIBLE);
-                        }
+                        case 20: {wagon21.setVisibility(View.VISIBLE);}
                         break;
                         default:
                     }
@@ -446,7 +356,6 @@ public class MainGame extends AppCompatActivity {
                         Intent locationIntent = new Intent(MainGame.this, OpenLocations.class);
                         locationIntent.putExtra(GAME_MAP, map);
                         startActivity(locationIntent);
-
                     }
 
                     //if no landmark, event stuff
@@ -464,8 +373,7 @@ public class MainGame extends AppCompatActivity {
                             announcement.setElevation(Float.parseFloat("40"));
                             announcement.setVisibility(View.VISIBLE);
                             announcement.setText(event.getEventMessage());
-
-                            new CountDownTimer( 3000, 500) {
+                            new CountDownTimer( 3000, 1000) {
                                 public void onTick(long millisUntilFinished) {
                                 }
                                 // Timer Finishes
@@ -485,7 +393,7 @@ public class MainGame extends AppCompatActivity {
                         }
                     }
 
-                    //increment weather / terrain if needed.
+                    //increment weather / terrian if needed.
                     map.setClimateZone();
                     date.setWeather(map.getClimate());
                     date.setTemp(map.getClimate());
@@ -501,23 +409,13 @@ public class MainGame extends AppCompatActivity {
                     speedDisplay.setText(""+party.getSpeed());
                     foodDisplay.setText(" " + inv.getFoodCount());
 
-                    //updates the screen icons
+                    //updates the weather icons
                     switch (date.getWeather()){
-                        case ("Clear"):{
-                            weather.setImageResource(R.drawable.trailinfo_sunny);
-                        }
-                        case ("Rain"):{
-                            weather.setImageResource(R.drawable.trailinforain);
-                        }
-                        case ("Heavy rain"):{
-                            weather.setImageResource(R.drawable.trailinfo_rain_h);
-                        }
-                        case ("snow"):{
-                            weather.setImageResource(R.drawable.trailinfo_snow);
-                        }
-                        case ("Heavy snow"):{
-                            weather.setImageResource(R.drawable.trailinfo_snow_h);
-                        }
+                        case ("Clear"):{weather.setImageResource(R.drawable.trailinfo_sunny);}
+                        case ("Rain"):{weather.setImageResource(R.drawable.trailinforain);}
+                        case ("Heavy rain"):{weather.setImageResource(R.drawable.trailinfo_rain_h);}
+                        case ("snow"):{weather.setImageResource(R.drawable.trailinfo_snow);}
+                        case ("Heavy snow"):{weather.setImageResource(R.drawable.trailinfo_snow_h);}
                         default: weather.setImageResource(R.drawable.trailinfo_sunny);
                     }
                 }
@@ -557,9 +455,7 @@ public class MainGame extends AppCompatActivity {
                     temp ++;
                     Intent intent1 = new Intent(MainGame.this, SpeedActivity.class);
                     intent1.putExtra(PARTY_TO_HEALTH, party);
-
                     startActivityForResult(intent1, SPEED_RESULT);
-
                 }
                 else if (temp == 1) {
                     System.out.println("" + party.getSpeed());
@@ -600,6 +496,8 @@ public class MainGame extends AppCompatActivity {
             }
         });
     }
+
+    //proper updating of stuff when coming back from an activity
     @Override
     protected void onResume (){
         super.onResume();
