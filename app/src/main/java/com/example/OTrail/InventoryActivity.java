@@ -26,13 +26,17 @@ public class InventoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //sets layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inventory);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
+        //grabs current inventory
         inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
+        //defines test boxes
         final TextView textView32 = findViewById(R.id.textView32);
         final TextView textView33 = findViewById(R.id.textView33);
         final TextView textView34 = findViewById(R.id.textView34);
@@ -43,10 +47,8 @@ public class InventoryActivity extends AppCompatActivity {
         final TextView textView39 = findViewById(R.id.textView39);
         final TextView textView40 = findViewById(R.id.textView40);
 
-
-        System.out.println("Updated stuff");
+        //updates the text boxes
         textView32.setText(String.valueOf(inv.getPlayerMoneyCount()));
-        System.out.println(inv.getPlayerMoneyCount());
         textView33.setText(String.valueOf(inv.getFoodCount()));
         textView34.setText(String.valueOf(inv.getClothingCount()));
         textView35.setText(String.valueOf(inv.getBasketCount()));
@@ -56,7 +58,7 @@ public class InventoryActivity extends AppCompatActivity {
         textView39.setText(String.valueOf(inv.getWagonTongueCount()));
         textView40.setText(String.valueOf(inv.getMedicalSupplyCount()));
 
-
+        //continue button functionality
         Button continueAlongTrail = (Button) findViewById(R.id.continueAlongTrail);
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +70,8 @@ public class InventoryActivity extends AppCompatActivity {
 
 
     /**
-     * Default constructor for the Inventory class.
+     * Default constructor for the InventoryActivity class.
      */
     public InventoryActivity() {
-
     }
 }

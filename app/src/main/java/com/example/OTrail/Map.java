@@ -117,7 +117,7 @@ public class Map implements Serializable
 
     /**setPosition(int distanceTraveled)
      * Updates the current position by adding the distance traveled to the current position.
-     * Will stop progress
+     * @param distanceTraveled the amount of distance traveled
      * */
     public void setPosition(int distanceTraveled) {
         if ((position + distanceTraveled + 9 > distLMsToOrigin[lastLandmark + 1]) && ((position + distanceTraveled) < distLMsToOrigin[lastLandmark + 1]))
