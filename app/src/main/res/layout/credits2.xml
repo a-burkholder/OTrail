@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.legendsofamerica.com/wy-fortlaramie/ "
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView159"
         app:layout_constraintTop_toBottomOf="@+id/textView159" />
 
     <TextView
@@ -34,24 +34,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView136" />
 
     <TextView
-        android:id="@+id/textView133"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="Image Credits 2/5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView132"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         android:text="[5]"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+        tools:layout_editor_absoluteY="48dp" />
 
     <TextView
         android:id="@+id/textView134"
@@ -75,7 +64,7 @@
 
     <TextView
         android:id="@+id/textView139"
-        android:layout_width="258dp"
+        android:layout_width="432dp"
         android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"

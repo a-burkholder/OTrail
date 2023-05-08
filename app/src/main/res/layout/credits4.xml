@@ -22,18 +22,18 @@
 
     <TextView
         android:id="@+id/textView85"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="697dp"
+        android:layout_height="36dp"
         android:text="https://kids.kiddle.co/Oregon_City,_Oregon#:~:text=During%20the%201840s%20and%201850s,early%20supremacy%20in%20the%20area. "
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView138"
+        tools:layout_editor_absoluteY="72dp" />
 
     <TextView
         android:id="@+id/textView135"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.theresahuppauthor.com/blog/2013/08/07/a-modern-day-trek-to-oregon-city-two-museums-and-the-willamette-locks/ "
-        tools:layout_editor_absoluteX="21dp"
+        app:layout_constraintStart_toStartOf="@+id/textView85"
         tools:layout_editor_absoluteY="113dp" />
 
     <TextView
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="[14]"
-        tools:layout_editor_absoluteX="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView135"
         tools:layout_editor_absoluteY="147dp" />
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://history.idaho.gov/wp-content/uploads/2018/08/0038.pdf"
-        tools:layout_editor_absoluteX="14dp"
+        app:layout_constraintStart_toStartOf="@+id/textView143"
         tools:layout_editor_absoluteY="170dp" />
 
     <TextView
@@ -65,65 +65,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.format.com/magazine/features/design/you-have-died-of-dysentery-oregon-trail-design "
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="212dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView161"
+        tools:layout_editor_absoluteY="196dp" />
 
     <TextView
         android:id="@+id/textView163"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="[15]"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView162"
+        tools:layout_editor_absoluteY="215dp" />
 
     <TextView
         android:id="@+id/textView164"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://janettekaymak.github.io/lesson11/soda-springs.html "
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView163"
+        tools:layout_editor_absoluteY="234dp" />
 
     <TextView
         android:id="@+id/textView165"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.wyohistory.org/encyclopedia/independence-rock "
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView164"
+        tools:layout_editor_absoluteY="261dp" />
 
     <TextView
         android:id="@+id/textView166"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="[16]"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="310dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView165"
+        tools:layout_editor_absoluteY="280dp" />
 
     <TextView
         android:id="@+id/textView167"
-        android:layout_width="472dp"
-        android:layout_height="52dp"
+        android:layout_width="692dp"
+        android:layout_height="54dp"
         android:text="https://www.nps.gov/places/000/south-pass.htm#:~:text=South%20Pass%2C%20a%2020%20mile,Divide%20that%20wagons%20could%20negotiate."
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="329dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView166"
+        tools:layout_editor_absoluteY="305dp" />
 
     <TextView
         android:id="@+id/textView168"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://www.nps.gov/places/000/south-pass.htm "
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <Button
-        android:id="@+id/mc4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="512dp"
-        android:layout_marginTop="280dp"
-        android:text="More Credits"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textView167"
+        tools:layout_editor_absoluteY="348dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
