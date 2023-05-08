@@ -64,6 +64,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
         ImageButton berry3 = findViewById(R.id.imageButton3);
         ImageButton berry4 = findViewById(R.id.imageButton4);
         ImageButton berry5 = findViewById(R.id.imageButton5);
+        Button returnButton = findViewById(R.id.returnButton);
         TextView btime = findViewById(R.id.textView3);
         score = findViewById(R.id.berryscore);
         TextView counter1 = findViewById(R.id.centerTimer);
@@ -117,6 +118,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             public void onTick(long milisUntilFinished) {
                 counter1.setText("Berry Picking Minigame");
+                returnButton.setText("Skip Game");
             }
 
             public void onFinish() {
@@ -138,6 +140,8 @@ public class BerryPickingMinigame extends AppCompatActivity {
                             @SuppressLint("SetTextI18n")
                             public void onTick(long millisUntilFinished) {
                                 counter1.setText("Go!!");
+                                returnButton.setVisibility(View.INVISIBLE);
+                                returnButton.setClickable(false);
                             }
 
                             public void onFinish() {
@@ -168,6 +172,9 @@ public class BerryPickingMinigame extends AppCompatActivity {
                                         counter1.setElevation(Float.parseFloat("40"));
                                         counter1.setVisibility(View.VISIBLE);
                                         counter1.setText("Finished!" + "\nTotal Collected Berries: " + numOfBerryPicked*5);
+                                        returnButton.setText("Continue");
+                                        returnButton.setVisibility(View.VISIBLE);
+                                        returnButton.setClickable(true);
                                         miniGameRunning = false;
                                     }
                                 }.start();
@@ -181,7 +188,7 @@ public class BerryPickingMinigame extends AppCompatActivity {
 
 
 
-        Button returnButton = (Button) findViewById(R.id.returnButton);
+
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
