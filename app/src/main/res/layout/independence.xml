@@ -7,11 +7,13 @@
 
     <ImageView
         android:id="@+id/imageView33"
-        android:layout_width="1184dp"
-        android:layout_height="693dp"
-        app:srcCompat="@drawable/img_15"
-        tools:layout_editor_absoluteX="-147dp"
-        tools:layout_editor_absoluteY="-141dp" />
+        android:layout_width="1153dp"
+        android:layout_height="668dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_15" />
 
     <Button
         android:id="@+id/buttonA"
