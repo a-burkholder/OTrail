@@ -10,8 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
         android:text="Project Credits"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView133"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/firstCredit" />
+        app:srcCompat="@drawable/first_credit" />
 
     <ImageView
         android:id="@+id/creditsImage2"
@@ -91,7 +93,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView133"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/secondCredit" />
+        app:srcCompat="@drawable/second_credit" />
 
     <ImageView
         android:id="@+id/creditsImage3"
@@ -102,7 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.495"
-        app:srcCompat="@drawable/thirdCredit" />
+        app:srcCompat="@drawable/third_credit" />
 
     <ImageView
         android:id="@+id/creditsImage4"
@@ -112,10 +114,10 @@
         app:layout_constraintStart_toStartOf="@+id/textView133"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.496"
-        app:srcCompat="@drawable/fourthCredit" />
+        app:srcCompat="@drawable/fourth_credit" />
 
     <ImageView
-        android:id="@+id/imageView62"
+        android:id="@+id/creditsImage5"
         android:layout_width="674dp"
         android:layout_height="276dp"
         android:layout_marginStart="-40dp"
@@ -123,7 +125,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView133"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.512"
-        app:srcCompat="@drawable/fifthCredit" />
+        app:srcCompat="@drawable/fifth_credit" />
 
     <Button
         android:id="@+id/exitToGame"
