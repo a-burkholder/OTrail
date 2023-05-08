@@ -43,8 +43,7 @@ public class Shop extends AppCompatActivity {
     private int items = 0;
     private int amount = 0;
 
-
-    final double FOODPRICE = .5;
+    final double FOODPRICE = 1;
     final int CLOTHINGPRICE = 10;
     final int BASKETPRICE = 2;
     final int OXENPRICE = 20;
@@ -70,10 +69,8 @@ public class Shop extends AppCompatActivity {
     RadioButton buy2;
     RadioButton buy1;
 
-    public Shop()
-    {
-    }
-
+    // default constructor for the shop class
+    public Shop() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +80,7 @@ public class Shop extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
+        // passes in inventory and party objects
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
 

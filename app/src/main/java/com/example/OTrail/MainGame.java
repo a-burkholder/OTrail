@@ -28,8 +28,6 @@ public class MainGame extends AppCompatActivity {
     public static final String PARTY_TO_HEALTH = "com.example.OTrail.PARTY_TO_HEALTH";
     public static final String PARTY_SPEED = "com.example.OTrail.PARTY_SPEED";
     public static final String TRADE_NUMBER = "com.example.OTrail.TRADE_NUMBER";
-
-
     private static final String DATE_KEY = "com.example.OTrail.DATE";
     private static final String PARTY_KEY = "com.example.OTrail.PARTY";
     private static final String MAP_KEY = "com.example.OTrail.MAP";
@@ -87,8 +85,7 @@ public class MainGame extends AppCompatActivity {
         party.setSpeed(10);
 
         //enter shop stuff here
-        if(map.getPosition()==0)
-        {
+        if(map.getPosition()==0) {
             Intent intent1 = new Intent(MainGame.this, Shop.class);
             intent1.putExtra("Inventory object", inv);
             intent1.putExtra("passParty", party);

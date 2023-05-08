@@ -533,7 +533,7 @@
         android:id="@+id/textView59"
         android:layout_width="83dp"
         android:layout_height="35dp"
-        android:text="$1 (2 lb pack)"
+        android:text="$1 / lb"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/textView63"
         app:layout_constraintTop_toTopOf="@+id/textView77" />

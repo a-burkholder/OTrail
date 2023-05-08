@@ -9,7 +9,7 @@
         android:id="@+id/textView122"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Choose Your Speed"
         android:textColor="#FFEB3B"
         android:textSize="24sp"
@@ -21,7 +21,7 @@
         android:id="@+id/textView123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-40dp"
         android:text="Slow Speed"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -36,16 +36,16 @@
         android:text="Continue on the trail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView131"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928" />
+        app:layout_constraintVertical_bias="0.955" />
 
     <TextView
         android:id="@+id/textView124"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="105dp"
         android:text="Medium Speed"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -56,7 +56,7 @@
         android:id="@+id/textView125"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="115dp"
         android:layout_marginEnd="120dp"
         android:text="Extreme Speed"
         android:textSize="16sp"
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="5 food per person a day"
-        app:layout_constraintStart_toStartOf="@+id/textView131"
+        app:layout_constraintStart_toStartOf="@+id/textView125"
         app:layout_constraintTop_toBottomOf="@+id/textView125" />
 
     <TextView
@@ -113,11 +113,10 @@
         android:id="@+id/textView131"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="2dp"
         android:text="15 miles a day"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView128"
         app:layout_constraintTop_toBottomOf="@+id/textView128"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -143,7 +142,7 @@
         <RadioButton
             android:id="@+id/speedEasy"
             android:layout_width="38dp"
-            android:layout_height="138dp"
+            android:layout_height="112dp"
             android:checked="false"
             android:padding="2dp"
             android:textColor="#FFFFFF" />
@@ -152,7 +151,7 @@
         <RadioButton
             android:id="@+id/speedMedium"
             android:layout_width="38dp"
-            android:layout_height="wrap_content"
+            android:layout_height="127dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
@@ -173,8 +172,8 @@
         android:id="@+id/imageView51"
         android:layout_width="90dp"
         android:layout_height="57dp"
-        android:layout_marginStart="576dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginStart="648dp"
+        android:layout_marginTop="304dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
@@ -183,8 +182,8 @@
         android:id="@+id/imageView52"
         android:layout_width="91dp"
         android:layout_height="55dp"
-        android:layout_marginStart="540dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="636dp"
+        android:layout_marginTop="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
@@ -193,20 +192,26 @@
         android:id="@+id/imageView53"
         android:layout_width="91dp"
         android:layout_height="55dp"
-        android:layout_marginStart="564dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="624dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
         android:id="@+id/imageView50"
-        android:layout_width="729dp"
-        android:layout_height="930dp"
+        android:layout_width="1098dp"
+        android:layout_height="905dp"
         android:elevation="-50dp"
-        app:srcCompat="@drawable/game_speed"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-272dp" /><![CDATA[
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/game_speed" /><![CDATA[
+
+
+
+
 
 
 
@@ -232,6 +237,8 @@
 
 
     -->
+
+
 
 
 
