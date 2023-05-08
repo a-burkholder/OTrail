@@ -31,43 +31,52 @@ public class Event implements Serializable
      * @param inv The inventory object that stores the player's items.
      * @param party The party of Hattie and her family/pet.
      */
-    public Event(Inventory inv, Party party, Date date)
-    {
+    public Event(Inventory inv, Party party, Date date) {
         this.inv = inv;
         this.party = party;
         this.date = date;
     }
 
-    public static Event getInstance(Inventory inv, Party party, Date date)
-    {
-        if(instance == null)
-        {
+    public static Event getInstance(Inventory inv, Party party, Date date) {
+        if(instance == null) {
             instance = new Event(inv, party, date);
         }
         return instance;
     }
-    public String getEventMessage()
-    {
+
+    /**Grabs the current even message
+     * @return a string with an event message
+     * */
+    public String getEventMessage() {
         return eventMessage;
     }
 
+    /**Creates a number between 1-200
+     *
+     * @return an int from 1-200
+     */
     public int eventNum(){
         Random chance = new Random();
         int event = chance.nextInt(200);
         return event;
     }
+
     /**
      * This method generates random events and will then update the player's inventory/health depending on the event.
+     * @param date the date to make the event, so it can calculate skips
+     * @param inv the current inv, so it can update it
+     * @param party the current party stats, so it can update it
      */
     public void randomEvents(Inventory inv, Party party, Date date) {
         Random rand = new Random();
 
         int rand_int1 = rand.nextInt(35);
 
+        //christmas event
         if (date.getDay() == 25 && date.getMonth() == 12){
             eventMessage = "Santa has delivered you presents!";
-            inv.setBasketCount(2);
-            inv.setFoodCount(500);
+            inv.setBasketCount(10);
+            inv.setFoodCount(800);
             inv.setPlayerMoneyCount(300);
             inv.setMedicalSupplyCount(10);
             inv.setClothingCount(4);
@@ -129,8 +138,7 @@ public class Event implements Serializable
         //Wrong Trail; lose 4 days
         else if (rand_int1 == 16) {
             date.setDate(4);
-            if(inv.getFoodCount() >= 0)
-            {
+            if(inv.getFoodCount() >= 0) {
                 switch (party.getSpeed()){
                     case 10:
                         inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);
@@ -140,10 +148,8 @@ public class Event implements Serializable
                         inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);
                     default:inv.setFoodCount(-15);
                 }
-
             }
-            else
-            {
+            else {
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -153,8 +159,7 @@ public class Event implements Serializable
         //Rough trail; lose a day
         else if (rand_int1 == 17 || rand_int1 == 18) {
             date.setDate(1);
-            if(inv.getFoodCount() >= 0)
-            {
+            if(inv.getFoodCount() >= 0) {
                 switch (party.getSpeed()){
                     case 10:
                         inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
@@ -165,8 +170,7 @@ public class Event implements Serializable
                     default:inv.setFoodCount(-15);
                 }
             }
-            else
-            {
+            else {
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -176,8 +180,7 @@ public class Event implements Serializable
         //Impassible trail; lose 3 day s
         else if (rand_int1 == 19 || rand_int1 == 20) {
             date.setDate(3);
-            if(inv.getFoodCount() >= 0)
-            {
+            if(inv.getFoodCount() >= 0) {
                 switch (party.getSpeed()){
                     case 10:
                         inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);
@@ -187,11 +190,8 @@ public class Event implements Serializable
                         inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);
                     default:inv.setFoodCount(-15);
                 }
-
-
             }
-            else
-            {
+            else {
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -216,16 +216,18 @@ public class Event implements Serializable
             eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
         }
         //berrybush
-        else  {
+        else {
             eventMessage = "You found a berry bush!";
         }
     }
 
     /**River Crossing menu
      * Determines river height and depth, then outputs menu for choices.
+     * @param input the index for the option chosen
+     * @param Ninv the current inventory to update
+     * @return data as a string if index = 1 <br> paid crossing results if index = 2 <br> unpaid crossing results if index = 3
      */
-    public String riverCrossing(Inventory Ninv, int input)
-    {
+    public String riverCrossing(Inventory Ninv, int input) {
         int value = input;
         Random rand = new Random();
         riverDepth = rand.nextInt(10+1);
@@ -248,13 +250,15 @@ public class Event implements Serializable
                     System.out.println("Invalid input");
                 }
             }
-
         return eventMessage;
     }
 
     /**public void riverCrossing(int option)
      * Contains the functionality of options to cross the river
+     * @param Ninv The current inventory to be updated
      * @param option The index for finding which option was selected
+     * @param rivD The river depth
+     * @param rivW The river width
      * */
     public void riverCrossing(Inventory Ninv, int option, int rivD, int rivW){
         if (option == 2){
@@ -296,8 +300,9 @@ public class Event implements Serializable
         }
     }
 
-    public void noFood()
-    {
+    /**hurts the party if called
+     * */
+    public void noFood() {
         party.setHealth(-10);
     }
 }

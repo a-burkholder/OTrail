@@ -27,7 +27,7 @@ import android.widget.TextView;
 public class Shop extends AppCompatActivity {
     public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
 
-    private double playerMoneyCount = 0;
+    private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
     private int basketPurchased = 0;
@@ -36,7 +36,7 @@ public class Shop extends AppCompatActivity {
     private int wagonAxlePurchased = 0;
     private int wagonTonguePurchased = 0;
     private int medicalSupplyPurchased = 0;
-    private double moneyUsed = 0;
+    private int moneyUsed = 0;
     private Inventory inv;
     private Party party;
     private Map location;
@@ -44,12 +44,11 @@ public class Shop extends AppCompatActivity {
     private int items = 0;
     private int amount = 0;
     private int inflation = 1;
-     double FOODPRICE = 1 * inflation;
+     int FOODPRICE = 1 * inflation;
      int CLOTHINGPRICE = 10 * inflation;
      int BASKETPRICE = 2 * inflation;
      int OXENPRICE = 20 * inflation;
      int WAGONPARTPRICE = 10 * inflation;
-
     int MEDICALSUPPLYPRICE = 2 * inflation;
 
     RadioGroup radioGroup1;
@@ -88,9 +87,10 @@ public class Shop extends AppCompatActivity {
         location = (Map)getIntent().getSerializableExtra("map");
 
         //Set Inflation based on location
-
+        if (location != null) // if location exists
+        {
             inflation = 1 + (location.getPosition() / 500); //Every 500 miles, the inflation will increase by 100% of original
-
+        }
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
         final TextView textView69 = (TextView)findViewById(R.id.textView69);
@@ -430,7 +430,7 @@ public class Shop extends AppCompatActivity {
                 }
                 else
                 {
-                    textView89.setText("Get out of my shop!!!");
+                    textView89.setText("Get out of my shop!");
 
                 }
                 moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));
