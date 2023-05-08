@@ -40,7 +40,7 @@
         android:id="@+id/textView138"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="13"
+        android:text="[13]"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="53dp" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/textView143"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="14"
+        android:text="[14]"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="147dp" />
 
@@ -72,7 +72,7 @@
         android:id="@+id/textView163"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="15"
+        android:text="[15]"
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="249dp" />
 
@@ -96,14 +96,14 @@
         android:id="@+id/textView166"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="16"
+        android:text="[16]"
         tools:layout_editor_absoluteX="12dp"
         tools:layout_editor_absoluteY="310dp" />
 
     <TextView
         android:id="@+id/textView167"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="472dp"
+        android:layout_height="52dp"
         android:text="https://www.nps.gov/places/000/south-pass.htm#:~:text=South%20Pass%2C%20a%2020%20mile,Divide%20that%20wagons%20could%20negotiate."
         tools:layout_editor_absoluteX="11dp"
         tools:layout_editor_absoluteY="329dp" />
@@ -115,5 +115,15 @@
         android:text="https://www.nps.gov/places/000/south-pass.htm "
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="380dp" />
+
+    <Button
+        android:id="@+id/mc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="512dp"
+        android:layout_marginTop="280dp"
+        android:text="More Credits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

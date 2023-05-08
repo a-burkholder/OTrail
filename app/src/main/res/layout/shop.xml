@@ -206,13 +206,14 @@
         android:layout_height="187dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginStart="508dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/buyItem"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView43"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
         app:layout_constraintTop_toBottomOf="@+id/textView53"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <!--adding a radio button -->
 
@@ -690,14 +691,5 @@
         app:layout_constraintStart_toEndOf="@+id/textView84"
         app:layout_constraintTop_toBottomOf="@+id/textView56"
         app:layout_constraintVertical_bias="0.272" />
-
-    <ImageView
-        android:id="@+id/imageView57"
-        android:layout_width="66dp"
-        android:layout_height="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView59"
-        app:layout_constraintEnd_toEndOf="@+id/textView63"
-        app:layout_constraintStart_toEndOf="@+id/textView55"
-        app:srcCompat="@drawable/sale_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,16 +39,18 @@ public class Shop extends AppCompatActivity {
     private double moneyUsed = 0;
     private Inventory inv;
     private Party party;
+    private Map location;
 
     private int items = 0;
     private int amount = 0;
+    private int inflation = 1;
+     double FOODPRICE = 1 * inflation;
+     int CLOTHINGPRICE = 10 * inflation;
+     int BASKETPRICE = 2 * inflation;
+     int OXENPRICE = 20 * inflation;
+     int WAGONPARTPRICE = 10 * inflation;
 
-    final double FOODPRICE = 1;
-    final int CLOTHINGPRICE = 10;
-    final int BASKETPRICE = 2;
-    final int OXENPRICE = 20;
-    final int WAGONPARTPRICE = 10;
-    final int MEDICALSUPPLYPRICE = 2;
+    int MEDICALSUPPLYPRICE = 2 * inflation;
 
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
@@ -83,6 +85,11 @@ public class Shop extends AppCompatActivity {
         // passes in inventory and party objects
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
+        location = (Map)getIntent().getSerializableExtra("map");
+
+        //Set Inflation based on location
+
+            inflation = 1 + (location.getPosition() / 500); //Every 500 miles, the inflation will increase by 100% of original
 
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 options.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(MainActivity.this, OpenOptions.class);
+                        Intent intent = new Intent(MainActivity.this, OpenCredits.class);
                         startActivity(intent);
                     }
                 });
