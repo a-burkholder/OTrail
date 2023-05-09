@@ -229,7 +229,7 @@ public class MainGame extends AppCompatActivity {
                 System.out.println(Arrays.toString(party.getHealth()));
 
                 //if lose
-                if(Arrays.equals(party.getHealth(), zeros)) {
+                if(Arrays.equals(party.getHealth(), zeros) || (inv.getOxenCount() == 0 && !map.isShop())) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
                     alertDialog.setMessage("Your party died!");
