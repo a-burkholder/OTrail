@@ -137,6 +137,7 @@ public class MainGame extends AppCompatActivity {
         ImageView wagon20 = findViewById(R.id.wagon20);
         ImageView wagon21 = findViewById(R.id.wagon21);
 
+        // Wagon images to show game progress.
         wagon1.setVisibility(View.INVISIBLE);
         wagon2.setVisibility(View.INVISIBLE);
         wagon3.setVisibility(View.INVISIBLE);

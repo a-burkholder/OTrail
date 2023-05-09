@@ -19,6 +19,14 @@ public class Menu {
     private Map map;
     private Shop shop;
 
+    /**
+     * Default constructor for the Menu class.
+     */
+    public Menu()
+    {
+
+    }
+
     /** Constructor for the Menu class.
      *
      * @param inv The inventor object for the program.

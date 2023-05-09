@@ -24,6 +24,13 @@ public class Event implements Serializable
     private int riverWidth;
     private int riverDepth;
 
+    /**
+     * Default Event class constructor.
+     */
+    private Event()
+    {
+
+    }
 
     /**
      * Constructor for the Event class.

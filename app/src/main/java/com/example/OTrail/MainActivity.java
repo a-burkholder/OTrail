@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.titlescreen);
 
-        //button for continueing
+        //button for continuing
         final Button start = findViewById(R.id.titleStart);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
