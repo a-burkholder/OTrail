@@ -48,6 +48,7 @@ public class MainGame extends AppCompatActivity {
     private Inventory inv;
     private Map map;
     private Event event;
+    private int lastBerry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +209,7 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
+                event.setEventMessage("AAAAAAAA");
 
                 //update food
                 if(inv.getFoodCount() > 0) {
@@ -397,10 +399,33 @@ public class MainGame extends AppCompatActivity {
                         int eventNum = event.eventNum();
 
                         //if rand is in range
-                        if (eventNum <= 50) {
-
+                        if(lastBerry > 14){
+                            event.setEventMessage("You found a berry bush!");
+                            //creates the announcement on a timer
+                            announcement.setElevation(Float.parseFloat("40"));
+                            announcement.setVisibility(View.VISIBLE);
+                            announcement.setText(event.getEventMessage());
+                            new CountDownTimer( 3000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                // Timer Finishes
+                                @SuppressLint("SetTextI18n")
+                                public void onFinish() {
+                                    announcement.setVisibility(View.INVISIBLE);
+                                    announcement.setElevation(Float.parseFloat("-40"));
+                                }
+                            }.start();
+                            lastBerry = 0;
+                            Intent intent = new Intent(MainGame.this, BerryActivity.class);
+                            intent.putExtra(GAME_INV, inv);
+                            startActivityForResult(intent, BERRY_RESULT);
+                        }
+                        else if (eventNum <= 40) {
                             //generate the event
                             event.randomEvents(inv, party, date);
+                            if (event.getEventMessage() != "You found a berry bush!"){
+                                lastBerry ++;
+                            }
 
                             //creates the announcement on a timer
                             announcement.setElevation(Float.parseFloat("40"));
@@ -419,6 +444,7 @@ public class MainGame extends AppCompatActivity {
 
                             //starts the game if it is a berry event
                             if (event.getEventMessage() == "You found a berry bush!"){
+                                lastBerry = 0;
                                 Intent intent = new Intent(MainGame.this, BerryActivity.class);
                                 intent.putExtra(GAME_INV, inv);
                                 startActivityForResult(intent, BERRY_RESULT);
@@ -434,6 +460,10 @@ public class MainGame extends AppCompatActivity {
 
                     //Increment distance to next location.
                     map.getDistToLM();
+                    if (event.getEventMessage() != "You found a berry bush!"){
+                        lastBerry ++;
+                    }
+
 
                     //updates the screen text
                     dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
