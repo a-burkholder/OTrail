@@ -144,6 +144,7 @@
         android:id="@+id/imageView56"
         android:layout_width="992dp"
         android:layout_height="647dp"
+        android:background="#231E1B"
         android:elevation="-50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,5 +165,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.376" />
+
+    <Button
+        android:id="@+id/HintsButton"
+        android:layout_width="885dp"
+        android:layout_height="468dp"
+        android:backgroundTint="#1B0C02"
+        android:clickable="false"
+        android:text="@string/hints1"
+        android:textSize="15dp"
+        android:typeface="serif"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

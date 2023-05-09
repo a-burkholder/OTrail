@@ -27,7 +27,7 @@ import android.widget.TextView;
 public class Shop extends AppCompatActivity {
     public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
 
-    private double playerMoneyCount = 0;
+    private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
     private int basketPurchased = 0;
@@ -36,32 +36,23 @@ public class Shop extends AppCompatActivity {
     private int wagonAxlePurchased = 0;
     private int wagonTonguePurchased = 0;
     private int medicalSupplyPurchased = 0;
-    private double moneyUsed = 0;
+    private int moneyUsed = 0;
     private Inventory inv;
     private Party party;
     private Map location;
 
     private int items = 0;
     private int amount = 0;
-
-     double FOODPRICE = 1 * inflation;
-     int CLOTHINGPRICE = 10 * inflation;
-     int BASKETPRICE = 2 * inflation;
-     int OXENPRICE = 20 * inflation;
-     int WAGONPARTPRICE = 10 * inflation;
-     int MEDICALSUPPLYPRICE = 2 * inflation;
+    private int inflation = 1;
+    int FOODPRICE = 1 * inflation;
+    int CLOTHINGPRICE = 10 * inflation;
+    int BASKETPRICE = 2 * inflation;
+    int OXENPRICE = 20 * inflation;
+    int WAGONPARTPRICE = 10 * inflation;
+    int MEDICALSUPPLYPRICE = 2 * inflation;
 
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
-
-    RadioButton buyFood;
-    RadioButton buyClothing;
-    RadioButton buyBaskets;
-    RadioButton buyOxen;
-    RadioButton buyWagonWheel;
-    RadioButton buyWagonAxle;
-    RadioButton buyWagonTongue;
-    RadioButton buyMedicalSupply;
 
     RadioButton buy100;
     RadioButton buy50;
@@ -75,25 +66,24 @@ public class Shop extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
-        // passes in inventory and party objects
+        //grabs data from main loop
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
         location = (Map)getIntent().getSerializableExtra("map");
 
-        int inflation;
-        if(party.getAtLeastSomeoneAlive() == true)  //In case of errors where party and map are not generated, this keeps the shop class runnning.
-        {
+        //Set Inflation based on location
+        if (location != null) {
             inflation = 1 + (location.getPosition() / 500); //Every 500 miles, the inflation will increase by 100% of original
         }
-        else {
-             inflation = 1;
-        }
+
+       //initialize text views for layout
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
         final TextView textView69 = (TextView)findViewById(R.id.textView69);
@@ -128,11 +118,13 @@ public class Shop extends AppCompatActivity {
         buy2 = (RadioButton) findViewById(R.id.buy2);
         buy1 = (RadioButton) findViewById(R.id.buy1);
 
+
+        //Code that runs when the "BUY" Button is pressed.
         buyItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int id = view.getId();
-                // Updates the amount of money the player has along with their inventory of items.
+                // Update the amount of money the player has along with their inventory of items.
                 switch (radioGroup1.getCheckedRadioButtonId()) {
                     case R.id.buyFood: {
                         switch (radioGroup2.getCheckedRadioButtonId()) {
@@ -428,12 +420,13 @@ public class Shop extends AppCompatActivity {
                     default:
                 }
 
-                if (inv.getPlayerMoneyCount() > moneyUsed) {
+
+                if (inv.getPlayerMoneyCount() >= moneyUsed) {
                     resetItems();
                 }
                 else
                 {
-                    textView89.setText("Get out of my shop!!!");
+                    textView89.setText("Not Enough Money");
 
                 }
                 moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));

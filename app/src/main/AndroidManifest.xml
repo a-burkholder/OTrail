@@ -18,18 +18,6 @@
             android:name=".OpenCredits"
             android:exported="false" />
         <activity
-            android:name=".OpenCredits2"
-            android:exported="false" />
-        <activity
-            android:name=".OpenCredits3"
-            android:exported="false" />
-        <activity
-            android:name=".OpenCredits4"
-            android:exported="false" />
-        <activity
-            android:name=".OpenCredits5"
-            android:exported="false" />
-        <activity
             android:name=".OpenLocations"
             android:exported="false" />
         <activity

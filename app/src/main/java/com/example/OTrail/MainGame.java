@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
@@ -50,6 +48,7 @@ public class MainGame extends AppCompatActivity {
     private Inventory inv;
     private Map map;
     private Event event;
+    private int lastBerry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +111,7 @@ public class MainGame extends AppCompatActivity {
         final Button speedBut = findViewById(R.id.speed);
 
         //define weather icon
-        final ImageView weather = findViewById(R.id.imageView);
+        final ImageView weather = findViewById(R.id.weatherBar);
 
         //defines wagon images
         ImageView wagon1 = findViewById(R.id.wagon1);
@@ -137,27 +136,53 @@ public class MainGame extends AppCompatActivity {
         ImageView wagon20 = findViewById(R.id.wagon20);
         ImageView wagon21 = findViewById(R.id.wagon21);
 
-        wagon1.setVisibility(View.INVISIBLE);
-        wagon2.setVisibility(View.INVISIBLE);
-        wagon3.setVisibility(View.INVISIBLE);
-        wagon4.setVisibility(View.INVISIBLE);
-        wagon5.setVisibility(View.INVISIBLE);
-        wagon6.setVisibility(View.INVISIBLE);
-        wagon7.setVisibility(View.INVISIBLE);
-        wagon8.setVisibility(View.INVISIBLE);
-        wagon9.setVisibility(View.INVISIBLE);
-        wagon10.setVisibility(View.INVISIBLE);
-        wagon11.setVisibility(View.INVISIBLE);
-        wagon12.setVisibility(View.INVISIBLE);
-        wagon13.setVisibility(View.INVISIBLE);
-        wagon14.setVisibility(View.INVISIBLE);
-        wagon15.setVisibility(View.INVISIBLE);
-        wagon16.setVisibility(View.INVISIBLE);
-        wagon17.setVisibility(View.INVISIBLE);
-        wagon18.setVisibility(View.INVISIBLE);
-        wagon19.setVisibility(View.INVISIBLE);
-        wagon20.setVisibility(View.INVISIBLE);
-        wagon21.setVisibility(View.INVISIBLE);
+        // Wagon images to show game progress.
+        if(map.getPosition() == 0) {
+            wagon1.setVisibility(View.VISIBLE);
+            wagon2.setVisibility(View.INVISIBLE);
+            wagon3.setVisibility(View.INVISIBLE);
+            wagon4.setVisibility(View.INVISIBLE);
+            wagon5.setVisibility(View.INVISIBLE);
+            wagon6.setVisibility(View.INVISIBLE);
+            wagon7.setVisibility(View.INVISIBLE);
+            wagon8.setVisibility(View.INVISIBLE);
+            wagon9.setVisibility(View.INVISIBLE);
+            wagon10.setVisibility(View.INVISIBLE);
+            wagon11.setVisibility(View.INVISIBLE);
+            wagon12.setVisibility(View.INVISIBLE);
+            wagon13.setVisibility(View.INVISIBLE);
+            wagon14.setVisibility(View.INVISIBLE);
+            wagon15.setVisibility(View.INVISIBLE);
+            wagon16.setVisibility(View.INVISIBLE);
+            wagon17.setVisibility(View.INVISIBLE);
+            wagon18.setVisibility(View.INVISIBLE);
+            wagon19.setVisibility(View.INVISIBLE);
+            wagon20.setVisibility(View.INVISIBLE);
+            wagon21.setVisibility(View.INVISIBLE);
+        }
+        else {
+            wagon1.setVisibility(View.INVISIBLE);
+            wagon2.setVisibility(View.INVISIBLE);
+            wagon3.setVisibility(View.INVISIBLE);
+            wagon4.setVisibility(View.INVISIBLE);
+            wagon5.setVisibility(View.INVISIBLE);
+            wagon6.setVisibility(View.INVISIBLE);
+            wagon7.setVisibility(View.INVISIBLE);
+            wagon8.setVisibility(View.INVISIBLE);
+            wagon9.setVisibility(View.INVISIBLE);
+            wagon10.setVisibility(View.INVISIBLE);
+            wagon11.setVisibility(View.INVISIBLE);
+            wagon12.setVisibility(View.INVISIBLE);
+            wagon13.setVisibility(View.INVISIBLE);
+            wagon14.setVisibility(View.INVISIBLE);
+            wagon15.setVisibility(View.INVISIBLE);
+            wagon16.setVisibility(View.INVISIBLE);
+            wagon17.setVisibility(View.INVISIBLE);
+            wagon18.setVisibility(View.INVISIBLE);
+            wagon19.setVisibility(View.INVISIBLE);
+            wagon20.setVisibility(View.INVISIBLE);
+            wagon21.setVisibility(View.INVISIBLE);
+        }
 
         //initial text values filled in
         System.out.println(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
@@ -184,16 +209,17 @@ public class MainGame extends AppCompatActivity {
             public void onClick(View view) {
                 //dialog for if win or loose
                 AlertDialog alertDialog = new AlertDialog.Builder(MainGame.this).create();
+                event.setEventMessage("AAAAAAAA");
 
                 //update food
                 if(inv.getFoodCount() > 0) {
-                    switch(party.getSpeed()){
-                        case 10:
+                    switch(party.getPace()){
+                        case "Easy":
                             inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;
-                        case 12:inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                        case "Medium":inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
                             break;
-                        case 15:inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                        case "Extreme":inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
                             break;
                         default:inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;
@@ -230,10 +256,21 @@ public class MainGame extends AppCompatActivity {
                 System.out.println(Arrays.toString(party.getHealth()));
 
                 //if lose
-                if(Arrays.equals(party.getHealth(), zeros)) {
+                if(Arrays.equals(party.getHealth(), zeros) || (inv.getOxenCount() == 0 && !map.isShop()) || (!inv.getWagonUsableStatus() && !map.isShop())) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
-                    alertDialog.setMessage("Your party died!");
+                    if(Arrays.equals(party.getHealth(), zeros))
+                    {
+                        alertDialog.setMessage("Your party died!");
+                    }
+                    else if(inv.getOxenCount() == 0 && !map.isShop())
+                    {
+                        alertDialog.setMessage("Your oxen all died!");
+                    }
+                    else if(!inv.getWagonUsableStatus() && !map.isShop())
+                    {
+                        alertDialog.setMessage("Your wagon was broken beyond repair!");
+                    }
                     alertDialog.show();
                     alertDialog.setCancelable(true);
                     alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -343,11 +380,9 @@ public class MainGame extends AppCompatActivity {
 
                     //shop check
                     if(map.isShop()) {
-                        System.out.println("yay");
                         shopBut.setEnabled(true);
                     }
                     else {
-                        System.out.println("boo");
                         shopBut.setEnabled(false);
                     }
 
@@ -364,10 +399,33 @@ public class MainGame extends AppCompatActivity {
                         int eventNum = event.eventNum();
 
                         //if rand is in range
-                        if (eventNum <= 50) {
-
+                        if(lastBerry > 14){
+                            event.setEventMessage("You found a berry bush!");
+                            //creates the announcement on a timer
+                            announcement.setElevation(Float.parseFloat("40"));
+                            announcement.setVisibility(View.VISIBLE);
+                            announcement.setText(event.getEventMessage());
+                            new CountDownTimer( 3000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                // Timer Finishes
+                                @SuppressLint("SetTextI18n")
+                                public void onFinish() {
+                                    announcement.setVisibility(View.INVISIBLE);
+                                    announcement.setElevation(Float.parseFloat("-40"));
+                                }
+                            }.start();
+                            lastBerry = 0;
+                            Intent intent = new Intent(MainGame.this, BerryActivity.class);
+                            intent.putExtra(GAME_INV, inv);
+                            startActivityForResult(intent, BERRY_RESULT);
+                        }
+                        else if (eventNum <= 40) {
                             //generate the event
                             event.randomEvents(inv, party, date);
+                            if (event.getEventMessage() != "You found a berry bush!"){
+                                lastBerry ++;
+                            }
 
                             //creates the announcement on a timer
                             announcement.setElevation(Float.parseFloat("40"));
@@ -386,6 +444,7 @@ public class MainGame extends AppCompatActivity {
 
                             //starts the game if it is a berry event
                             if (event.getEventMessage() == "You found a berry bush!"){
+                                lastBerry = 0;
                                 Intent intent = new Intent(MainGame.this, BerryActivity.class);
                                 intent.putExtra(GAME_INV, inv);
                                 startActivityForResult(intent, BERRY_RESULT);
@@ -401,22 +460,32 @@ public class MainGame extends AppCompatActivity {
 
                     //Increment distance to next location.
                     map.getDistToLM();
+                    if (event.getEventMessage() != "You found a berry bush!"){
+                        lastBerry ++;
+                    }
+
 
                     //updates the screen text
                     dateDisplay.setText(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
                     weatherDisplay.setText(date.getWeather());
                     temperatureDisplay.setText(" " + date.getTemp());
                     speedDisplay.setText(""+party.getSpeed());
-                    foodDisplay.setText(" " + inv.getFoodCount());
+                    if(inv.getFoodCount() < 0) {
+                        foodDisplay.setText(" " + "0");
+                    }
+                    else {
+                        foodDisplay.setText(" " + inv.getFoodCount());
+                    }
+
 
                     //updates the weather icons
                     switch (date.getWeather()){
-                        case ("Clear"):{weather.setImageResource(R.drawable.trailinfo_sunny);}
-                        case ("Rain"):{weather.setImageResource(R.drawable.trailinforain);}
-                        case ("Heavy rain"):{weather.setImageResource(R.drawable.trailinfo_rain_h);}
-                        case ("snow"):{weather.setImageResource(R.drawable.trailinfo_snow);}
-                        case ("Heavy snow"):{weather.setImageResource(R.drawable.trailinfo_snow_h);}
-                        default: weather.setImageResource(R.drawable.trailinfo_sunny);
+                        case ("Clear"):{weather.setImageResource(R.drawable.trailinfo_sunny);} break;
+                        case ("Rain"):{weather.setImageResource(R.drawable.trailinforain);} break;
+                        case ("Heavy rain"):{weather.setImageResource(R.drawable.trailinfo_rain_h);} break;
+                        case ("snow"):{weather.setImageResource(R.drawable.trailinfo_snow);} break;
+                        case ("Heavy snow"):{weather.setImageResource(R.drawable.trailinfo_snow_h);} break;
+                        default: {weather.setImageResource(R.drawable.trailinfo_sunny);} break;
                     }
                 }
             }
@@ -498,6 +567,7 @@ public class MainGame extends AppCompatActivity {
     }
 
     //proper updating of stuff when coming back from an activity
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onResume (){
         super.onResume();

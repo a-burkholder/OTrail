@@ -9,6 +9,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+/*
+
+
+
+------------------------UNUSED/DEPRECIATED------------------------
+
+
+
+* */
 public class EventActivity extends AppCompatActivity
 {
     public static final String POST_EVENT_INV = "com.example.OTrail.POST_EVENT_INV";

@@ -42,7 +42,7 @@
         android:id="@+id/cross"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="536dp"
+        android:layout_marginStart="680dp"
         android:layout_marginBottom="24dp"
         android:elevation="5dp"
         android:text="CROSS"
@@ -82,27 +82,26 @@
         android:id="@+id/textView92"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginBottom="88dp"
         android:background="#80000000"
         android:elevation="5dp"
         android:text="Learn about the river:"
         android:textColor="#FEFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/textView91"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/learn" />
 
     <TextView
         android:id="@+id/textView93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="536dp"
-        android:layout_marginBottom="88dp"
         android:background="#80000000"
         android:elevation="5dp"
         android:text="Cross without a ferry"
         android:textColor="#FEFEFE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/cross"
+        app:layout_constraintTop_toTopOf="@+id/textView91" />
 
     <Button
         android:id="@+id/learn"

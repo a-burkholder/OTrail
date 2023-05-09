@@ -9,18 +9,18 @@
 package com.example.OTrail;
 
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Random;
 
 
-public class Party implements Serializable
-{
+public class Party implements Serializable {
     private String difficulty[] = {"Easy", "Medium", "Hard", "Hardcore"};
     private String currentDifficulty = "Easy";
     private String names[] = new String[5]; // five people and the pet
     private int health[] = {100, 100, 100, 100, 100};
     private static Party instance = null;
     private int speed = 10;
-
+    private String pace = "Easy";
     private boolean isAlive[] = {true, true, true, true, true};
     private boolean gameOver = false;
     private static Inventory inv;
@@ -30,8 +30,7 @@ public class Party implements Serializable
     /**
      * Default constructor for the Inventory class.
      */
-    public Party(Inventory inv, String names[])
-    {
+    public Party(Inventory inv, String names[]) {
         this.inv = inv;
         this.names = names;
         rand = new Random();
@@ -46,6 +45,7 @@ public class Party implements Serializable
     {
         return currentDifficulty;
     }
+
     /**
      * Gets Hattie's family members names and the name of their pet, which is the last index in the names array.
      *
@@ -55,6 +55,7 @@ public class Party implements Serializable
     {
         return names;
     }
+
     /**
      * Gets Hattie's health, her family members health, and the current health of their pet, which is the last index in the names array.
      *
@@ -65,8 +66,12 @@ public class Party implements Serializable
         return health;
     }
 
-    public int getNumberOfPeopleAlive()
-    {
+    /**
+     * gets the number of people with health above 0
+     *
+     * @return the number of people alive
+     * */
+    public int getNumberOfPeopleAlive() {
         int playersAlive = 0;
         for(int i = 0;  i < 5; i++)
         {
@@ -88,10 +93,12 @@ public class Party implements Serializable
         return isAlive;
     }
 
-    public int getSpeed()
-    {
-
-
+    /**
+     * gets the party's current speed
+     *
+     * @return the party's current speed
+     * */
+    public int getSpeed() {
         return speed;
     }
 
@@ -100,8 +107,7 @@ public class Party implements Serializable
      *
      * @return False if all the players are living and true if they are all dead.
      */
-    public boolean getGameOverStatus()
-    {
+    public boolean getGameOverStatus() {
         if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4])
         {
             gameOver = false;
@@ -113,8 +119,12 @@ public class Party implements Serializable
         return gameOver;
     }
 
-    public boolean getAtLeastSomeoneAlive()
-    {
+    /**
+     * checks for if someone is alive
+     *
+     * @return true if someone is alive
+     * */
+    public boolean getAtLeastSomeoneAlive() {
         if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4])
         {
             return true;
@@ -125,15 +135,12 @@ public class Party implements Serializable
         }
     }
 
-
-
     /**
      * Sets the games current difficulty level.
      *
      * @param currentDifficulty Can set the game to a Easy, Medium, Hard, or Hardcore difficulty level.
      */
-    public void setDifficulty(String currentDifficulty)
-    {
+    public void setDifficulty(String currentDifficulty) {
         this.currentDifficulty = currentDifficulty;
     }
 
@@ -147,7 +154,11 @@ public class Party implements Serializable
         this.names = names;
     }
 
-
+    /**
+     * changes the health by an input amount
+     *
+     * @param healthAway the amount of health to be changed
+     * */
     public void setHealth(int healthAway) {
         boolean runLoop = true;
         int randomValue = 0;
@@ -224,11 +235,43 @@ public class Party implements Serializable
     }
 
     /**
+     * gets the current pace of travel
      *
+     * @return the pace of travel
+     * */
+    public String getPace() {return pace;}
+
+    /**Set Pace
+     * Takes in the pace, then sets speed of cart based on selected pace
+     * Added to mitigate bugs wherein we judge events based on a switch statement of the speed (which doesn't work when modifying it like we are.
+     * @param pace0
+     */
+    public void setPace(String pace0) {
+        this.pace = pace0;
+
+        if (Objects.equals(pace0, "Easy"))
+        {
+            setSpeed(10);
+        }
+        else if (Objects.equals(pace0, "Medium"))
+        {
+            setSpeed(12);
+        }
+        else if (Objects.equals(pace0, "Extreme"))
+        {
+            setSpeed(15);
+        }
+        else
+        {
+            setSpeed(10);
+        }
+    }
+
+    /**Set Speed
+     * Sets speed, modified based on how many oxen are in inventory
      * @param speed
      */
-    public void setSpeed(int speed)
-    {
+    public void setSpeed(int speed) {
         switch (inv.getOxenCount()) {
             case 1: {
                 this.speed = speed / 4;
@@ -262,8 +305,12 @@ public class Party implements Serializable
 
     }
 
-    public void dailyFoodUsed(Inventory thisInv)
-    {
+    /**
+     * changes the food count based on the daily food usage and party stats
+     *
+     * @param thisInv the inventory to update
+     * */
+    public void dailyFoodUsed(Inventory thisInv) {
         int counter = 0;
 
         for(boolean needsFood : isAlive)
@@ -309,8 +356,7 @@ public class Party implements Serializable
     /**
      * Prints out the health of Hattie and her family members/pet.
      */
-    public void printAllPeoplesHealth()
-    {
+    public void printAllPeoplesHealth() {
         for(int i = 0; i < names.length; i++)
         {
             if(health[i] > 0)
@@ -321,8 +367,7 @@ public class Party implements Serializable
     }
 
 
-    public static Party getInstance(Inventory inv, String names[])
-    {
+    public static Party getInstance(Inventory inv, String names[]) {
         if(instance == null)
         {
             instance = new Party(inv, names);

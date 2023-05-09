@@ -184,10 +184,6 @@ public class BerryPickingMinigame extends AppCompatActivity {
                 }.start();
             }
         }.start();
-        //food = food + 5 * berries picked.;
-
-
-
 
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,9 +219,6 @@ public class BerryPickingMinigame extends AppCompatActivity {
 
     private void moveBerry(ImageButton img) {
         makeInvisible(img);
-        //img.setMarginTop(48 + rand.nextInt(208-48));
-        //img.setMarginEnd(52 + rand.nextInt(404-52));
-
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -236,18 +229,6 @@ public class BerryPickingMinigame extends AppCompatActivity {
                 }
             }
         }, (int) (BERRY_DELAY * 1000));
-        /*
-        final Timer t = new java.util.Timer();
-        t.schedule(
-                new java.util.TimerTask() {
-                    @Override
-                    public void run() {
-                        makeVisible(img);
-                        t.cancel();
-                    }
-                },
-                1000, 500
-        );*/
     }
 
     private void makeVisible(ImageButton img) {

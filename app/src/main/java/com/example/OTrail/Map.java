@@ -37,9 +37,11 @@ public class Map implements Serializable
         currentClimateZone = climates[lastLandmark];
     }
 
-
-    public static Map getInstance()
-    {
+    /**
+     * Returns an instance of the Map class and will create a new instance if one has not been created.
+     * @return an instance of Map.
+     */
+    public static Map getInstance() {
         if(instance == null)
         {
             instance = new Map();
@@ -117,11 +119,10 @@ public class Map implements Serializable
 
     /**setPosition(int distanceTraveled)
      * Updates the current position by adding the distance traveled to the current position.
-     * Will stop progress
+     * @param distanceTraveled the amount of distance traveled
      * */
     public void setPosition(int distanceTraveled) {
-        if ((position + distanceTraveled + 9 > distLMsToOrigin[lastLandmark + 1]) && ((position + distanceTraveled) < distLMsToOrigin[lastLandmark + 1]))
-        {
+        if ((position + distanceTraveled + 9 > distLMsToOrigin[lastLandmark + 1]) && ((position + distanceTraveled) < distLMsToOrigin[lastLandmark + 1])) {
             position = distLMsToOrigin[lastLandmark + 1];
             lastLandmark++;
         }
@@ -140,7 +141,6 @@ public class Map implements Serializable
      * @param lastRain The date of the last rain
      * */
     public void setRiver(int[] lastRain, int[] date){
-
         while (date[1] > lastRain[1]){
             date[1] = date[1]-1;
             if (date[1] == 2){
@@ -199,5 +199,4 @@ public class Map implements Serializable
         }
         else return false;
     }
-
 }

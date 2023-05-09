@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
-    android:backgroundTint="#673AB7">
+    android:background="#746A84"
+    android:backgroundTint="#C2F2AC">
 
     <TextView
         android:id="@+id/textView86"
         android:layout_width="452dp"
         android:layout_height="105dp"
-        android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="Hattie Campbell is a 13-year-old pioneer who likes spending her time helping on the farm and keeping an eye on her two younger brothers. Leaving Independence, Missouri, in 1847, Hattie and her family joined the Great Migration to Oregon. Overcrowding, high taxes, and annual rounds of the deadly swamp fever had uprooted their simple farm life [21, 22].  "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView47"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView87" />
 
     <TextView
         android:id="@+id/textView87"
@@ -36,10 +35,10 @@
 
     <ImageView
         android:id="@+id/imageView47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="272dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hattie_picutre" />
@@ -58,11 +57,13 @@
         android:id="@+id/backToTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="568dp"
+        android:layout_marginStart="580dp"
         android:layout_marginTop="-18dp"
         android:text="Back to Title"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.994" />
 
     <TextView
         android:id="@+id/textView184"

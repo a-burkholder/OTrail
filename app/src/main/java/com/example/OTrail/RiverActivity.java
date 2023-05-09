@@ -13,49 +13,69 @@ public class RiverActivity extends AppCompatActivity
 {
     public static final String POST_RIVER_INV = "com.example.OTrail.POST_RIVER_INV";
     public static final String POST_RIVER_EVENT = "com.example.OTrail.POST_RIVER_EVENT";
-    private Event event;
-    private Inventory inv;
 
-    public RiverActivity()
-    {
+
+
+    public RiverActivity() {
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout stuff
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rivercrossing);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        Event event = (Event) getIntent().getSerializableExtra("passEvent");
-        inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
+        //grabs data from main loop
+        Event event = (Event) getIntent().getSerializableExtra("passEvent");
+        Inventory inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
+
+        //defines the text display
         final TextView textView92 = findViewById(R.id.textView92);
 
-       Button learn = (Button) findViewById(R.id.learn);
-       learn.setEnabled(true);
+        //deals with learning about the river
+        Button learn = (Button) findViewById(R.id.learn);
+        final int[] temp1 = {0};
+
        learn.setOnClickListener(new View.OnClickListener() {
            @Override
-           public void onClick(View view)
-           {
-               textView92.setText(event.riverCrossing(inv, 1));
-               learn.setEnabled(false);
-           }
-       });
-
-       Button buy = (Button) findViewById(R.id.buy);
-           buy.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   event.riverCrossing(inv, 2);
-                   Intent resultIntent = new Intent();
-                   resultIntent.putExtra(POST_RIVER_INV, inv);
-                   setResult(RESULT_OK, resultIntent);
-                   finish();
+           public void onClick(View view) {
+               if(temp1[0] % 2 == 1) {
+                   textView92.setText("");
                }
-           });
-       Button cross = (Button) findViewById(R.id.cross);
-       cross.setOnClickListener(new View.OnClickListener() {
+               else {
+                   textView92.setText(event.riverCrossing(inv, 1));
+               }
+               temp1[0]++;
+           }
+        });
+
+        //deals with buy the way across
+        Button buy = (Button) findViewById(R.id.buy);
+
+        // If they do not have enough money ($75 to cross by ferry).
+        if(inv.getPlayerMoneyCount() < 75) {
+            buy.setEnabled(false);
+        }
+        else{
+            buy.setEnabled(true);
+        }
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                event.riverCrossing(inv, 2);
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra(POST_RIVER_INV, inv);
+                setResult(RESULT_OK, resultIntent);
+                finish();
+            }
+        });
+
+        //deals with crossing without a boat
+        Button cross = (Button) findViewById(R.id.cross);
+        cross.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                event.riverCrossing(inv,3);
@@ -64,6 +84,6 @@ public class RiverActivity extends AppCompatActivity
                setResult(RESULT_OK, resultIntent);
                finish();
            }
-       });
+        });
     }
 }

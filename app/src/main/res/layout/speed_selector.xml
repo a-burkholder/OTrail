@@ -5,28 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="937dp"
+        android:layout_height="559dp"
+        android:elevation="-50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/game_speed" />
+
     <TextView
         android:id="@+id/textView122"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="Choose Your Speed"
-        android:textColor="#FFEB3B"
+        android:textColor="#FF5722"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
 
     <TextView
         android:id="@+id/textView123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-40dp"
         android:text="Slow Speed"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView124"
-        app:layout_constraintTop_toBottomOf="@+id/textView122" />
+        app:layout_constraintTop_toTopOf="@+id/textView122"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/continueTheGame"
@@ -36,33 +50,39 @@
         android:text="Continue on the trail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toEndOf="@+id/textView131"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.953" />
 
     <TextView
         android:id="@+id/textView124"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="95dp"
         android:text="Medium Speed"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView125"
-        app:layout_constraintTop_toBottomOf="@+id/textView123" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
 
     <TextView
         android:id="@+id/textView125"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="120dp"
         android:text="Extreme Speed"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/speedRadioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/textView124" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView124"
+        app:layout_constraintVertical_bias="0.429" />
 
     <TextView
         android:id="@+id/textView126"
@@ -122,18 +142,16 @@
 
     <RadioGroup
         android:id="@+id/speedRadioGroup"
-        android:layout_width="82dp"
-        android:layout_height="282dp"
+        android:layout_width="64dp"
+        android:layout_height="391dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="60dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/continueTheGame"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--adding a radio button -->
 
@@ -151,7 +169,7 @@
         <RadioButton
             android:id="@+id/speedMedium"
             android:layout_width="38dp"
-            android:layout_height="127dp"
+            android:layout_height="108dp"
             android:layout_gravity="center"
             android:checked="false"
             android:padding="4dp"
@@ -172,42 +190,34 @@
         android:id="@+id/imageView51"
         android:layout_width="90dp"
         android:layout_height="57dp"
-        android:layout_marginStart="648dp"
-        android:layout_marginTop="304dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView52"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
         android:id="@+id/imageView52"
         android:layout_width="91dp"
         android:layout_height="55dp"
-        android:layout_marginStart="636dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="644dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452"
         app:srcCompat="@drawable/wagon" />
 
     <ImageView
         android:id="@+id/imageView53"
         android:layout_width="91dp"
         android:layout_height="55dp"
-        android:layout_marginStart="624dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wagon" />
-
-    <ImageView
-        android:id="@+id/imageView50"
-        android:layout_width="1098dp"
-        android:layout_height="905dp"
-        android:elevation="-50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView52"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/game_speed" /><![CDATA[
+        app:layout_constraintVertical_bias="0.109"
+        app:srcCompat="@drawable/wagon" /><![CDATA[
+
+
 
 
 
@@ -237,6 +247,7 @@
 
 
     -->
+
 
 
 
