@@ -156,13 +156,11 @@ public class Event implements Serializable
             date.setDate(4);
             if(inv.getFoodCount() >= 0) {
                 switch (party.getPace()){
-                    case "Easy":
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);
-                    case "Medium":
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);
-                    case "Extreme":
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);
-                    default:inv.setFoodCount(-15);
+                    case "Easy":{inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);}break;
+                    case "Medium": {inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);}break;
+                    case "Extreme": {inv.setFoodCount(-4 * party.getNumberOfPeopleAlive() * 5);}break;
+                    default:{inv.setFoodCount(-15);}break;
+
                 }
             }
             if(inv.getFoodCount() < 0 ){
@@ -177,13 +175,10 @@ public class Event implements Serializable
             date.setDate(1);
             if(inv.getFoodCount() >= 0) {
                 switch (party.getPace()){
-                    case "Easy":
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
-                    case "Medium":
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
-                    case "Extreme":
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
-                    default:inv.setFoodCount(-15);
+                    case "Easy":{inv.setFoodCount(party.getNumberOfPeopleAlive()*2);}break;
+                    case "Medium": {inv.setFoodCount(party.getNumberOfPeopleAlive()*3);}break;
+                    case "Extreme": {inv.setFoodCount(party.getNumberOfPeopleAlive() * 5);}break;
+                    default:{inv.setFoodCount(-15);}break;
                 }
             }
             if(inv.getFoodCount() < 0) {
@@ -197,14 +192,11 @@ public class Event implements Serializable
         else if (rand_int1 == 11 || rand_int1 == 12) {
             date.setDate(3);
             if(inv.getFoodCount() >= 0) {
-                switch (party.getSpeed()){
-                    case 10:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);
-                    case 12:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);
-                    case 15:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);
-                    default:inv.setFoodCount(-15);
+                switch (party.getPace()){
+                    case "Easy":{inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);}break;
+                    case "Medium": {inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);}break;
+                    case "Extreme": {inv.setFoodCount(-3 * party.getNumberOfPeopleAlive() * 5);}break;
+                    default:{inv.setFoodCount(-15);}break;
                 }
             }
             else {
