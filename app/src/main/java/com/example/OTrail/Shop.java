@@ -133,7 +133,7 @@ public class Shop extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int id = view.getId();
-                // Updates the amount of money the player has along with their inventory of items.
+                // Update the amount of money the player has along with their inventory of items.
                 switch (radioGroup1.getCheckedRadioButtonId()) {
                     case R.id.buyFood: {
                         switch (radioGroup2.getCheckedRadioButtonId()) {
