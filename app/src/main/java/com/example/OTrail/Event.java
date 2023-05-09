@@ -92,54 +92,63 @@ public class Event implements Serializable
 
         //raiderAttacck
         if (rand_int1 == 2 || rand_int1 == 3) {
+            eventMessage = "You have been attacked by raiders.";
             inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
                 inv.setBasketCount(-1 * inv.getBasketCount());
+                eventMessage = eventMessage + "\n-2 baskets.";
             }
             inv.setPlayerMoneyCount(-100);
             if (inv.getPlayerMoneyCount() < 0) {
                 inv.setPlayerMoneyCount(-1 * inv.getPlayerMoneyCount());
+                eventMessage = eventMessage + "\n-$100.";
             }
             inv.setClothingCount(-2);
             if (inv.getClothingCount() < 0) {
-                inv.setClothingCount(-1 * inv.getClothingCount());}
-            eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing.";
+                inv.setClothingCount(-1 * inv.getClothingCount());
+                eventMessage = eventMessage + "\n-2 clothing.";
+            }
+            party.setHealth(-20);
         }
 
         //Animal Attack
         else if (rand_int1 == 4) {
-            if (inv.getMedicalSupplyCount() > 2) {
-                inv.setMedicalSupplyCount(-2);
+            if (inv.getMedicalSupplyCount() >= 1) {
+                inv.setMedicalSupplyCount(-1);
+                eventMessage = "Animal Attack.\n-1 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
             } else {
-                party.setHealth(-10);
+                party.setHealth(-5);
+                eventMessage = "Animal Attack.\n-5 Health";
             }
-            eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health.";
         }
 
         //Member Sickness
         else if (rand_int1 == 5 || rand_int1 == 6) {
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
+                eventMessage = "A member of your group has Dysentery.\n-5 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
             } else {
                 party.setHealth(-30);
+                eventMessage = "A member of your group has Dysentery.\n-30 Health";
             }
-            eventMessage = "A member of your group has Dysentery.\n Minus 5 medical supplies and if you do not have medical supplies -30 player health.";
         }
 
         //Dead Ox
         else if (rand_int1 == 11) {
             inv.setOxenCount(-1);
-            eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
+            eventMessage = "One of you Ox has died." + "\nOxen count: " + inv.getOxenCount();
         }
 
 
         //Snake Bite
         else if (rand_int1 == 15) {
-            if (inv.getMedicalSupplyCount() >= 2)
-            {
-                party.setHealth(-10);
+            if (inv.getMedicalSupplyCount() >= 2) {
+                inv.setMedicalSupplyCount(-2);
+                eventMessage = "A member of your family got bit by a snake.\n-2 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
+            } else {
+                party.setHealth(-30);
+                eventMessage = "A member of your family got bit by a snake.\n-10 Health";
             }
-            eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health";
         }
 
         //Wrong Trail; lose 4 days
@@ -224,7 +233,7 @@ public class Event implements Serializable
         }
         //berrybush
         else {
-            eventMessage = "You found a berry bush!";
+            eventMessage = "";
         }
     }
 
@@ -310,6 +319,6 @@ public class Event implements Serializable
     /**hurts the party if called
      * */
     public void noFood() {
-        party.setHealth(-10);
+        party.setHealth(-15);
     }
 }
