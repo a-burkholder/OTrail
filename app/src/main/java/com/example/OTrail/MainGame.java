@@ -417,7 +417,13 @@ public class MainGame extends AppCompatActivity {
                     weatherDisplay.setText(date.getWeather());
                     temperatureDisplay.setText(" " + date.getTemp());
                     speedDisplay.setText(""+party.getSpeed());
-                    foodDisplay.setText(" " + inv.getFoodCount());
+                    if(inv.getFoodCount() < 0) {
+                        foodDisplay.setText(" " + "0");
+                    }
+                    else {
+                        foodDisplay.setText(" " + inv.getFoodCount());
+                    }
+
 
                     //updates the weather icons
                     switch (date.getWeather()){
