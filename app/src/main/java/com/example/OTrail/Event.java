@@ -62,7 +62,7 @@ public class Event implements Serializable
     public void randomEvents(Inventory inv, Party party, Date date) {
         Random rand = new Random();
 
-        int rand_int1 = rand.nextInt(25);
+        int rand_int1 = rand.nextInt(20);
 
         /**
          * Santa Claus Event
