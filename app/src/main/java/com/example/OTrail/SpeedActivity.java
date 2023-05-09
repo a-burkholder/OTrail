@@ -59,7 +59,7 @@ public class SpeedActivity extends AppCompatActivity
 
 
                 }
-                
+
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra(POST_GAME_SPEED, party);
                 setResult(RESULT_OK, resultIntent);

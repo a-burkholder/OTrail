@@ -13,14 +13,17 @@ public class OpenLocations extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout format
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
 
+        //grabs map data from main loop
         Intent intent = getIntent();
         Map thisMap = (Map) intent.getSerializableExtra(MainGame.GAME_MAP);
-        System.out.println("Locations working");
+
+        //switch statement to find the current landmark, then defines its continue button in each case
         switch (thisMap.getLastLandmark()){
             case "Independence, Missouri":{
                 setContentView(R.layout.independence);
