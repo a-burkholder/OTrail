@@ -168,8 +168,8 @@
 
     <Button
         android:id="@+id/HintsButton"
-        android:layout_width="885dp"
-        android:layout_height="468dp"
+        android:layout_width="733dp"
+        android:layout_height="435dp"
         android:backgroundTint="#1B0C02"
         android:clickable="false"
         android:text="@string/hints1"
