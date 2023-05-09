@@ -2,6 +2,7 @@ package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,7 @@ public class OpenNames extends AppCompatActivity {
 
         //continue button functionality
         final Button toGame = findViewById(R.id.toGame);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) final Button hintsButton = findViewById(R.id.HintsButton);
         toGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,5 +49,15 @@ public class OpenNames extends AppCompatActivity {
                 finish();
             }
         });
+        hintsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // get rid of hints button
+                hintsButton.setVisibility(View.INVISIBLE);
+                hintsButton.setEnabled(false);
+                hintsButton.setElevation(Float.parseFloat("40.0"));
+            }
+        });
+
     }
 }
