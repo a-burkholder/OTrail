@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
@@ -112,7 +110,7 @@ public class MainGame extends AppCompatActivity {
         final Button speedBut = findViewById(R.id.speed);
 
         //define weather icon
-        final ImageView weather = findViewById(R.id.imageView);
+        final ImageView weather = findViewById(R.id.weatherBar);
 
         //defines wagon images
         ImageView wagon1 = findViewById(R.id.wagon1);
@@ -412,12 +410,12 @@ public class MainGame extends AppCompatActivity {
 
                     //updates the weather icons
                     switch (date.getWeather()){
-                        case ("Clear"):{weather.setImageResource(R.drawable.trailinfo_sunny);}
-                        case ("Rain"):{weather.setImageResource(R.drawable.trailinforain);}
-                        case ("Heavy rain"):{weather.setImageResource(R.drawable.trailinfo_rain_h);}
-                        case ("snow"):{weather.setImageResource(R.drawable.trailinfo_snow);}
-                        case ("Heavy snow"):{weather.setImageResource(R.drawable.trailinfo_snow_h);}
-                        default: weather.setImageResource(R.drawable.trailinfo_sunny);
+                        case ("Clear"):{weather.setImageResource(R.drawable.trailinfo_sunny);} break;
+                        case ("Rain"):{weather.setImageResource(R.drawable.trailinforain);} break;
+                        case ("Heavy rain"):{weather.setImageResource(R.drawable.trailinfo_rain_h);} break;
+                        case ("snow"):{weather.setImageResource(R.drawable.trailinfo_snow);} break;
+                        case ("Heavy snow"):{weather.setImageResource(R.drawable.trailinfo_snow_h);} break;
+                        default: {weather.setImageResource(R.drawable.trailinfo_sunny);} break;
                     }
                 }
             }
@@ -499,6 +497,7 @@ public class MainGame extends AppCompatActivity {
     }
 
     //proper updating of stuff when coming back from an activity
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onResume (){
         super.onResume();
