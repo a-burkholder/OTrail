@@ -136,27 +136,52 @@ public class MainGame extends AppCompatActivity {
         ImageView wagon21 = findViewById(R.id.wagon21);
 
         // Wagon images to show game progress.
-        wagon1.setVisibility(View.INVISIBLE);
-        wagon2.setVisibility(View.INVISIBLE);
-        wagon3.setVisibility(View.INVISIBLE);
-        wagon4.setVisibility(View.INVISIBLE);
-        wagon5.setVisibility(View.INVISIBLE);
-        wagon6.setVisibility(View.INVISIBLE);
-        wagon7.setVisibility(View.INVISIBLE);
-        wagon8.setVisibility(View.INVISIBLE);
-        wagon9.setVisibility(View.INVISIBLE);
-        wagon10.setVisibility(View.INVISIBLE);
-        wagon11.setVisibility(View.INVISIBLE);
-        wagon12.setVisibility(View.INVISIBLE);
-        wagon13.setVisibility(View.INVISIBLE);
-        wagon14.setVisibility(View.INVISIBLE);
-        wagon15.setVisibility(View.INVISIBLE);
-        wagon16.setVisibility(View.INVISIBLE);
-        wagon17.setVisibility(View.INVISIBLE);
-        wagon18.setVisibility(View.INVISIBLE);
-        wagon19.setVisibility(View.INVISIBLE);
-        wagon20.setVisibility(View.INVISIBLE);
-        wagon21.setVisibility(View.INVISIBLE);
+        if(map.getPosition() == 0) {
+            wagon1.setVisibility(View.VISIBLE);
+            wagon2.setVisibility(View.INVISIBLE);
+            wagon3.setVisibility(View.INVISIBLE);
+            wagon4.setVisibility(View.INVISIBLE);
+            wagon5.setVisibility(View.INVISIBLE);
+            wagon6.setVisibility(View.INVISIBLE);
+            wagon7.setVisibility(View.INVISIBLE);
+            wagon8.setVisibility(View.INVISIBLE);
+            wagon9.setVisibility(View.INVISIBLE);
+            wagon10.setVisibility(View.INVISIBLE);
+            wagon11.setVisibility(View.INVISIBLE);
+            wagon12.setVisibility(View.INVISIBLE);
+            wagon13.setVisibility(View.INVISIBLE);
+            wagon14.setVisibility(View.INVISIBLE);
+            wagon15.setVisibility(View.INVISIBLE);
+            wagon16.setVisibility(View.INVISIBLE);
+            wagon17.setVisibility(View.INVISIBLE);
+            wagon18.setVisibility(View.INVISIBLE);
+            wagon19.setVisibility(View.INVISIBLE);
+            wagon20.setVisibility(View.INVISIBLE);
+            wagon21.setVisibility(View.INVISIBLE);
+        }
+        else {
+            wagon1.setVisibility(View.INVISIBLE);
+            wagon2.setVisibility(View.INVISIBLE);
+            wagon3.setVisibility(View.INVISIBLE);
+            wagon4.setVisibility(View.INVISIBLE);
+            wagon5.setVisibility(View.INVISIBLE);
+            wagon6.setVisibility(View.INVISIBLE);
+            wagon7.setVisibility(View.INVISIBLE);
+            wagon8.setVisibility(View.INVISIBLE);
+            wagon9.setVisibility(View.INVISIBLE);
+            wagon10.setVisibility(View.INVISIBLE);
+            wagon11.setVisibility(View.INVISIBLE);
+            wagon12.setVisibility(View.INVISIBLE);
+            wagon13.setVisibility(View.INVISIBLE);
+            wagon14.setVisibility(View.INVISIBLE);
+            wagon15.setVisibility(View.INVISIBLE);
+            wagon16.setVisibility(View.INVISIBLE);
+            wagon17.setVisibility(View.INVISIBLE);
+            wagon18.setVisibility(View.INVISIBLE);
+            wagon19.setVisibility(View.INVISIBLE);
+            wagon20.setVisibility(View.INVISIBLE);
+            wagon21.setVisibility(View.INVISIBLE);
+        }
 
         //initial text values filled in
         System.out.println(date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
@@ -242,7 +267,7 @@ public class MainGame extends AppCompatActivity {
                     }
                     else if(!inv.getWagonUsableStatus() && !map.isShop())
                     {
-                        alertDialog.setMessage("Your wagon is broken beyond repair!");
+                        alertDialog.setMessage("Your wagon was broken beyond repair!");
                     }
                     alertDialog.show();
                     alertDialog.setCancelable(true);
