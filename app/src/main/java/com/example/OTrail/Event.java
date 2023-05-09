@@ -268,12 +268,12 @@ public class Event implements Serializable
      * @param rivD The river depth
      * @param rivW The river width
      * */
-    public void riverCrossing(Inventory Ninv, int option, int rivD, int rivW){
-        if (option == 2){
+    public void riverCrossing(Inventory Ninv, int option, int rivD, int rivW) {
+        if (option == 2) {
             Ninv.setPlayerMoneyCount(-75);
             eventMessage = "You have paid $75 and have successfully crossed the river!";
         }
-        else if (option == 3){
+        else if (option == 3) {
             Random rand = new Random();
             if(rand.nextInt(100) > (0.8*rivW)+(6*rivD)){
                 eventMessage = "You have successfully crossed the river!";
