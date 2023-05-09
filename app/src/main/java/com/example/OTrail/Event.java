@@ -233,7 +233,7 @@ public class Event implements Serializable
         }
         //berrybush
         else {
-            eventMessage = "";
+            eventMessage = "You found a berry bush!";
         }
     }
 
