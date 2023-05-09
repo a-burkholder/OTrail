@@ -342,11 +342,9 @@ public class MainGame extends AppCompatActivity {
 
                     //shop check
                     if(map.isShop()) {
-                        System.out.println("yay");
                         shopBut.setEnabled(true);
                     }
                     else {
-                        System.out.println("boo");
                         shopBut.setEnabled(false);
                     }
 
