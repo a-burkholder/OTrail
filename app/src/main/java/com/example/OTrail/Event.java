@@ -77,7 +77,7 @@ public class Event implements Serializable
     public void randomEvents(Inventory inv, Party party, Date date) {
         Random rand = new Random();
 
-        int rand_int1 = rand.nextInt(35);
+        int rand_int1 = rand.nextInt(25);
 
         //christmas event
         if (date.getDay() == 25 && date.getMonth() == 12){
@@ -91,7 +91,7 @@ public class Event implements Serializable
         }
 
         //raiderAttacck
-        if (rand_int1 == 2 || rand_int1 == 3) {
+        if (rand_int1 == 1 || rand_int1 == 2) {
             eventMessage = "You have been attacked by raiders.";
             inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
@@ -112,7 +112,7 @@ public class Event implements Serializable
         }
 
         //Animal Attack
-        else if (rand_int1 == 4) {
+        else if (rand_int1 == 3) {
             if (inv.getMedicalSupplyCount() >= 1) {
                 inv.setMedicalSupplyCount(-1);
                 eventMessage = "Animal Attack.\n-1 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
@@ -123,7 +123,7 @@ public class Event implements Serializable
         }
 
         //Member Sickness
-        else if (rand_int1 == 5 || rand_int1 == 6) {
+        else if (rand_int1 == 4 || rand_int1 == 5) {
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
                 eventMessage = "A member of your group has Dysentery.\n-5 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
@@ -134,14 +134,14 @@ public class Event implements Serializable
         }
 
         //Dead Ox
-        else if (rand_int1 == 11) {
+        else if (rand_int1 == 6) {
             inv.setOxenCount(-1);
             eventMessage = "One of you Ox has died." + "\nOxen count: " + inv.getOxenCount();
         }
 
 
         //Snake Bite
-        else if (rand_int1 == 15) {
+        else if (rand_int1 == 7) {
             if (inv.getMedicalSupplyCount() >= 2) {
                 inv.setMedicalSupplyCount(-2);
                 eventMessage = "A member of your family got bit by a snake.\n-2 medical supplies" + "\nMedical Supplies: " + inv.getMedicalSupplyCount();
@@ -152,23 +152,20 @@ public class Event implements Serializable
         }
 
         //Wrong Trail; lose 4 days
-        else if (rand_int1 == 16) {
+        else if (rand_int1 == 8) {
             date.setDate(4);
             if(inv.getFoodCount() >= 0) {
-                switch (party.getSpeed()){
-                    case 10: {
-                        inv.setFoodCount(-4 * party.getNumberOfPeopleAlive() * 2);
-                    }break;
-                    case 12:{
+                switch (party.getPace()){
+                    case "Easy":
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);
+                    case "Medium":
                         inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);
-                    }break;
-                    case 15:{
+                    case "Extreme":
                         inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);
-                    }break;
                     default:inv.setFoodCount(-15);
                 }
             }
-            else {
+            if(inv.getFoodCount() < 0 ){
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -176,23 +173,20 @@ public class Event implements Serializable
         }
 
         //Rough trail; lose a day
-        else if (rand_int1 == 17 || rand_int1 == 18) {
+        else if (rand_int1 == 9 || rand_int1 == 10) {
             date.setDate(1);
             if(inv.getFoodCount() >= 0) {
-                switch (party.getSpeed()){
-                    case 10: {
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive() * 2);
-                    }break;
-                    case 12:{
+                switch (party.getPace()){
+                    case "Easy":
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
+                    case "Medium":
                         inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
-                    }
-                    case 15:{
+                    case "Extreme":
                         inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
-                    }break;
                     default:inv.setFoodCount(-15);
                 }
             }
-            else {
+            if(inv.getFoodCount() < 0) {
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -200,19 +194,16 @@ public class Event implements Serializable
         }
 
         //Impassible trail; lose 3 day s
-        else if (rand_int1 == 19 || rand_int1 == 20) {
+        else if (rand_int1 == 11 || rand_int1 == 12) {
             date.setDate(3);
             if(inv.getFoodCount() >= 0) {
                 switch (party.getSpeed()){
-                    case 10:{
+                    case 10:
                         inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);
-                    }break;
-                    case 12: {
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3)
-                    }break;
-                    case 15: {
+                    case 12:
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);
+                    case 15:
                         inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);
-                    }break;
                     default:inv.setFoodCount(-15);
                 }
             }
@@ -329,5 +320,13 @@ public class Event implements Serializable
      * */
     public void noFood() {
         party.setHealth(-15);
+    }
+
+    /**setEventMessage(String message)
+     * <br>Sets the event message
+     * @param message the message that event message will be set to
+     * */
+    public void setEventMessage(String message){
+        this.eventMessage = message;
     }
 }
