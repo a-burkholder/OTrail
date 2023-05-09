@@ -421,12 +421,12 @@ public class Shop extends AppCompatActivity {
                 }
 
 
-                if (inv.getPlayerMoneyCount() > moneyUsed) {
+                if (inv.getPlayerMoneyCount() >= moneyUsed) {
                     resetItems();
                 }
                 else
                 {
-                    textView89.setText("Get out of my shop!");
+                    textView89.setText("Not Enough Money");
 
                 }
                 moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));
