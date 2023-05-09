@@ -54,6 +54,14 @@ public class RiverActivity extends AppCompatActivity
 
         //deals with buy the way across
         Button buy = (Button) findViewById(R.id.buy);
+
+        // If they do not have enough money ($75 to cross by ferry).
+        if(inv.getPlayerMoneyCount() < 75) {
+            buy.setEnabled(false);
+        }
+        else{
+            buy.setEnabled(true);
+        }
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

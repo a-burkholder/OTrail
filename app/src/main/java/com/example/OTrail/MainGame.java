@@ -229,10 +229,21 @@ public class MainGame extends AppCompatActivity {
                 System.out.println(Arrays.toString(party.getHealth()));
 
                 //if lose
-                if(Arrays.equals(party.getHealth(), zeros)) {
+                if(Arrays.equals(party.getHealth(), zeros) || (inv.getOxenCount() == 0 && !map.isShop()) || (!inv.getWagonUsableStatus() && !map.isShop())) {
                     moveBut.setEnabled(false);
                     alertDialog.setTitle("YOU LOST.");
-                    alertDialog.setMessage("Your party died!");
+                    if(Arrays.equals(party.getHealth(), zeros))
+                    {
+                        alertDialog.setMessage("Your party died!");
+                    }
+                    else if(inv.getOxenCount() == 0 && !map.isShop())
+                    {
+                        alertDialog.setMessage("Your oxen all died!");
+                    }
+                    else if(!inv.getWagonUsableStatus() && !map.isShop())
+                    {
+                        alertDialog.setMessage("Your wagon is broken beyond repair!");
+                    }
                     alertDialog.show();
                     alertDialog.setCancelable(true);
                     alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -406,7 +417,13 @@ public class MainGame extends AppCompatActivity {
                     weatherDisplay.setText(date.getWeather());
                     temperatureDisplay.setText(" " + date.getTemp());
                     speedDisplay.setText(""+party.getSpeed());
-                    foodDisplay.setText(" " + inv.getFoodCount());
+                    if(inv.getFoodCount() < 0) {
+                        foodDisplay.setText(" " + "0");
+                    }
+                    else {
+                        foodDisplay.setText(" " + inv.getFoodCount());
+                    }
+
 
                     //updates the weather icons
                     switch (date.getWeather()){
