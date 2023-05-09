@@ -44,24 +44,15 @@ public class Shop extends AppCompatActivity {
     private int items = 0;
     private int amount = 0;
     private int inflation = 1;
-     int FOODPRICE = 1 * inflation;
-     int CLOTHINGPRICE = 10 * inflation;
-     int BASKETPRICE = 2 * inflation;
-     int OXENPRICE = 20 * inflation;
-     int WAGONPARTPRICE = 10 * inflation;
+    int FOODPRICE = 1 * inflation;
+    int CLOTHINGPRICE = 10 * inflation;
+    int BASKETPRICE = 2 * inflation;
+    int OXENPRICE = 20 * inflation;
+    int WAGONPARTPRICE = 10 * inflation;
     int MEDICALSUPPLYPRICE = 2 * inflation;
 
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
-
-    RadioButton buyFood;
-    RadioButton buyClothing;
-    RadioButton buyBaskets;
-    RadioButton buyOxen;
-    RadioButton buyWagonWheel;
-    RadioButton buyWagonAxle;
-    RadioButton buyWagonTongue;
-    RadioButton buyMedicalSupply;
 
     RadioButton buy100;
     RadioButton buy50;
@@ -75,20 +66,20 @@ public class Shop extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shop);
 
-        // passes in inventory and party objects
+        //grabs data from main loop
         inv = (Inventory)getIntent().getSerializableExtra("Inventory object");
         party = (Party)getIntent().getSerializableExtra("passParty");
         location = (Map)getIntent().getSerializableExtra("map");
 
         //Set Inflation based on location
-        if (location != null) // if location exists
-        {
+        if (location != null) {
             inflation = 1 + (location.getPosition() / 500); //Every 500 miles, the inflation will increase by 100% of original
         }
 

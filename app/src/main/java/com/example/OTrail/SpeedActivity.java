@@ -17,24 +17,25 @@ public class SpeedActivity extends AppCompatActivity
     Party party;
 
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speed_selector);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-
+        //initializes the buttons
         speedRadioGroup = (RadioGroup) findViewById(R.id.speedRadioGroup);
 
+        //grabs data from main loop
         Intent intent = getIntent();
         party = (Party) intent.getSerializableExtra(MainGame.PARTY_TO_HEALTH);
 
+        //deals with checking the radiogroup and sending the results back to main loop
         Button continueAlongTrail = (Button) findViewById(R.id.continueTheGame);
         continueAlongTrail.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                switch(speedRadioGroup.getCheckedRadioButtonId())
-                {
+            public void onClick(View view) {
+                switch(speedRadioGroup.getCheckedRadioButtonId()) {
                     case R.id.speedEasy:
                     {
                         party.setPace("Easy");
@@ -58,10 +59,9 @@ public class SpeedActivity extends AppCompatActivity
 
 
                 }
-
+                
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra(POST_GAME_SPEED, party);
-
                 setResult(RESULT_OK, resultIntent);
                 finish();
             }
