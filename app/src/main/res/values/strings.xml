@@ -24,14 +24,5 @@ time runs out.
 Good Luck!
 
 (Hint: Baskets help you to take home many more berries than by hand.)</string>
-    <string name="hints1">Welcome to the Oregon Trail!
-
-    On this 2000 mile adventure, you will be playing as the young girl
-    Hattie Campbell, traveling the trail to Oregon with your family.
-
-    First, you will choose the names of your family members.
-    After that, you'll travel to the General Store to buy supplies for the trail.
-
-    While are shops at each fort, on the trail you will be on your own.
-    Prepare well and be ready for whatever the trail might bring!</string>
+    <string name="hints1">Welcome to the Oregon Trail!</string>
 </resources>

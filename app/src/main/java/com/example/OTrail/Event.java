@@ -62,7 +62,7 @@ public class Event implements Serializable
     public void randomEvents(Inventory inv, Party party, Date date) {
         Random rand = new Random();
 
-        int rand_int1 = rand.nextInt(35);
+        int rand_int1 = rand.nextInt(25);
 
         /**
          * Santa Claus Event
@@ -86,7 +86,7 @@ public class Event implements Serializable
          * Minus 2 clothing
          * Message displayed assessing the situation
          */
-        if (rand_int1 == 2 || rand_int1 == 3) {
+        if (rand_int1 == 1 || rand_int1 == 2) {
             inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
                 inv.setBasketCount(-1 * inv.getBasketCount());
@@ -107,7 +107,7 @@ public class Event implements Serializable
          * If you do not have medical supplies minus 10 player health
          * Message displayed assessing the situation
          */
-        else if (rand_int1 == 4) {
+        else if (rand_int1 == 3) {
             if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
             } else {
@@ -122,7 +122,7 @@ public class Event implements Serializable
          * If you do not have medical supplies minus 30 player health
          * Message displayed assessing the situation
          */
-        else if (rand_int1 == 5 || rand_int1 == 6) {
+        else if (rand_int1 == 4 || rand_int1 == 5) {
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
             } else {
@@ -136,7 +136,7 @@ public class Event implements Serializable
          * Inventory loses 1 ox
          * Message is displayed about losing 1 Ox
          */
-        else if (rand_int1 == 11) {
+        else if (rand_int1 == 6) {
             inv.setOxenCount(-1);
             eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
         }
@@ -148,7 +148,7 @@ public class Event implements Serializable
          * If out of medical supplies -10 player health
          * Message is displayed assessing the situation
          */
-        else if (rand_int1 == 15) {
+        else if (rand_int1 == 7) {
             if (inv.getMedicalSupplyCount() >= 2)
             {
                 party.setHealth(-10);
@@ -161,17 +161,17 @@ public class Event implements Serializable
          * Depending on the consumption of food speed the amount of food lost will change
          * Displays a message about losing 4 days
          */
-        else if (rand_int1 == 16) {
+        else if (rand_int1 == 8) {
             date.setDate(4);
             if(inv.getFoodCount() >= 0)
             {
                 switch (party.getSpeed()){
                     case 10:
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*2);break;
                     case 12:
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*3);break;
                     case 15:
-                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);
+                        inv.setFoodCount(-4*party.getNumberOfPeopleAlive()*5);break;
                     default:inv.setFoodCount(-15);
                 }
 
@@ -189,17 +189,17 @@ public class Event implements Serializable
          * Depending on the consumption of food speed the amount of food lost will change
          * Displays a message about losing a day
          */
-        else if (rand_int1 == 17 || rand_int1 == 18) {
+        else if (rand_int1 == 9 || rand_int1 == 10) {
             date.setDate(1);
             if(inv.getFoodCount() >= 0)
             {
                 switch (party.getSpeed()){
                     case 10:
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);break;
                     case 12:
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);break;
                     case 15:
-                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                        inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);break;
                     default:inv.setFoodCount(-15);
                 }
             }
@@ -216,24 +216,21 @@ public class Event implements Serializable
          * Depending on the consumption of food speed the amount of food lost will change
          * Displays a message about losing 3 days
          */
-        else if (rand_int1 == 19 || rand_int1 == 20) {
+        else if (rand_int1 == 11 || rand_int1 == 12) {
             date.setDate(3);
             if(inv.getFoodCount() >= 0)
             {
                 switch (party.getSpeed()){
                     case 10:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*2);break;
                     case 12:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*3);break;
                     case 15:
-                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);
+                        inv.setFoodCount(-3*party.getNumberOfPeopleAlive()*5);break;
                     default:inv.setFoodCount(-15);
                 }
-
-
             }
-            else
-            {
+            else {
                 noFood();
                 inv.setFoodCount(-inv.getFoodCount());
             }
@@ -359,5 +356,15 @@ public class Event implements Serializable
     public void noFood()
     {
         party.setHealth(-10);
+    }
+
+    /**
+     * setEventMessage(String message)
+     * <br>Sets the event message to a string
+     *
+     * @param message the string to set eventMessage to
+     * */
+    public void setEventMessage(String message){
+        this.eventMessage = message;
     }
 }
