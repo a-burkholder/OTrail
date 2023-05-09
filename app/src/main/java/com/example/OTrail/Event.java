@@ -64,6 +64,11 @@ public class Event implements Serializable
 
         int rand_int1 = rand.nextInt(35);
 
+        /**
+         * Santa Claus Event
+         * If still on the trail during Christmas Santa will bring you presents
+         * Most of the inventory will get a boost
+         */
         if (date.getDay() == 25 && date.getMonth() == 12){
             eventMessage = "Santa has delivered you presents!";
             inv.setBasketCount(2);
@@ -74,7 +79,13 @@ public class Event implements Serializable
             inv.setBasketCount(100);
         }
 
-        //raiderAttacck
+        /**
+         * Raider Attack
+         * Minus 2 baskets
+         * Minus $100
+         * Minus 2 clothing
+         * Message displayed assessing the situation
+         */
         if (rand_int1 == 2 || rand_int1 == 3) {
             inv.setBasketCount(-2);
             if (inv.getBasketCount() < 0) {
@@ -90,7 +101,12 @@ public class Event implements Serializable
             eventMessage = "You have been attacked by raiders.\n" + "Minus 2 baskets.\n" + "Minus $100.\n" + "Minus 2 clothing.";
         }
 
-        //Animal Attack
+        /**
+         * Animal Attack
+         * Minus 2 medical supplies
+         * If you do not have medical supplies minus 10 player health
+         * Message displayed assessing the situation
+         */
         else if (rand_int1 == 4) {
             if (inv.getMedicalSupplyCount() > 2) {
                 inv.setMedicalSupplyCount(-2);
@@ -100,7 +116,12 @@ public class Event implements Serializable
             eventMessage = "Animal attack. Minus 2 medical supplies and if you do not have medical supplies -10 player health.";
         }
 
-        //Member Sickness
+        /**
+         * Dysentery
+         * Minus 5 medical supplies
+         * If you do not have medical supplies minus 30 player health
+         * Message displayed assessing the situation
+         */
         else if (rand_int1 == 5 || rand_int1 == 6) {
             if (inv.getMedicalSupplyCount() > 5) {
                 inv.setMedicalSupplyCount(-5);
@@ -110,14 +131,23 @@ public class Event implements Serializable
             eventMessage = "A member of your group has Dysentery.\n Minus 5 medical supplies and if you do not have medical supplies -30 player health.";
         }
 
-        //Dead Ox
+        /**
+         * Ox death
+         * Inventory loses 1 ox
+         * Message is displayed about losing 1 Ox
+         */
         else if (rand_int1 == 11) {
             inv.setOxenCount(-1);
             eventMessage = "One of you Ox has died." + " Oxen count: " + inv.getOxenCount();
         }
 
 
-        //Snake Bite
+        /**
+         * Snake bite
+         * Minus 2 medical supplies
+         * If out of medical supplies -10 player health
+         * Message is displayed assessing the situation
+         */
         else if (rand_int1 == 15) {
             if (inv.getMedicalSupplyCount() >= 2)
             {
@@ -126,7 +156,11 @@ public class Event implements Serializable
             eventMessage = "A member of your family got bit by a snake. Minus 2 Medical Supplies and if you do not have medical supplies -10 player health";
         }
 
-        //Wrong Trail; lose 4 days
+        /**
+         * Wrong trail
+         * Depending on the consumption of food speed the amount of food lost will change
+         * Displays a message about losing 4 days
+         */
         else if (rand_int1 == 16) {
             date.setDate(4);
             if(inv.getFoodCount() >= 0)
@@ -150,7 +184,11 @@ public class Event implements Serializable
             eventMessage = "Hattie went down the wrong trail. Lose 4 days.";
         }
 
-        //Rough trail; lose a day
+        /**
+         * Rough trail
+         * Depending on the consumption of food speed the amount of food lost will change
+         * Displays a message about losing a day
+         */
         else if (rand_int1 == 17 || rand_int1 == 18) {
             date.setDate(1);
             if(inv.getFoodCount() >= 0)
@@ -173,7 +211,11 @@ public class Event implements Serializable
             eventMessage = "Rough Trail. Lose a day.";
         }
 
-        //Impassible trail; lose 3 day s
+        /**
+         * Impassible trail
+         * Depending on the consumption of food speed the amount of food lost will change
+         * Displays a message about losing 3 days
+         */
         else if (rand_int1 == 19 || rand_int1 == 20) {
             date.setDate(3);
             if(inv.getFoodCount() >= 0)
@@ -198,24 +240,39 @@ public class Event implements Serializable
             eventMessage = "Impassible trail. Lose 3 days.";
         }
 
-        //Broken Wheel
+        /**
+         * Broken Wheel
+         * Inventory loses a wheel
+         * Displays a message with new inventory wheel count
+         */
         else if (rand_int1 == 21 || rand_int1 == 22) {
             inv.setWagonWheelCount(-1);
             eventMessage = "You have a broken wheel. Minus 1 wheels." + "Wheel Count: " + inv.getWagonWheelCount();
         }
 
-        //Broken Axle
+        /**
+         * Broken Axle
+         * Inventory loses an axle
+         * Displays a message with new inventory axle count
+         */
         else if (rand_int1 == 23 || rand_int1 == 24) {
             inv.setWagonAxleCount(-1);
             eventMessage = "You have a broken Axle. Minus 1 axle." + " Axle Count: " + inv.getWagonAxleCount();
         }
 
-        //Broken Tongue
+        /**
+         * Broken Tongue
+         * Inventory loses a tongue
+         * Displays a message with new inventory tongue count
+         */
         else if (rand_int1 == 25) {
             inv.setWagonTongueCount(-1);
             eventMessage = "You have a broken tongue. Minus 1 tongue." + "Tongue Count: " + inv.getWagonTongueCount();
         }
-        //berrybush
+        /**
+         * Berry Bush
+         * Displays You found a berry bush
+         */
         else  {
             eventMessage = "You found a berry bush!";
         }
@@ -296,6 +353,9 @@ public class Event implements Serializable
         }
     }
 
+    /**
+     * When group is out of food health begins to drop
+     */
     public void noFood()
     {
         party.setHealth(-10);
