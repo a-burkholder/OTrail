@@ -24,5 +24,11 @@ time runs out.
 Good Luck!
 
 (Hint: Baskets help you to take home many more berries than by hand.)</string>
-    <string name="hints1">Welcome to the Oregon Trail!</string>
+    <string name="hints1">Welcome to the Oregon Trail!
+
+In this game you will play as the young Hattie Campbell, traveling the trail with her family.
+To start, you will choose the names of your family members.
+
+Next, you will be taken to the General Store where you can buy supplies for the trail.
+Be sure to save some money for river ferries and fort shops.</string>
 </resources>
