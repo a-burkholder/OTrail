@@ -91,6 +91,8 @@ public class Shop extends AppCompatActivity {
         {
             inflation = 1 + (location.getPosition() / 500); //Every 500 miles, the inflation will increase by 100% of original
         }
+
+       //initialize text views for layout
         final TextView textView67 = (TextView)findViewById(R.id.textView67);
         final TextView textView68 = (TextView)findViewById(R.id.textView68);
         final TextView textView69 = (TextView)findViewById(R.id.textView69);
@@ -125,6 +127,8 @@ public class Shop extends AppCompatActivity {
         buy2 = (RadioButton) findViewById(R.id.buy2);
         buy1 = (RadioButton) findViewById(R.id.buy1);
 
+
+        //Code that runs when the "BUY" Button is pressed.
         buyItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -424,6 +428,7 @@ public class Shop extends AppCompatActivity {
                     break;
                     default:
                 }
+
 
                 if (inv.getPlayerMoneyCount() > moneyUsed) {
                     resetItems();

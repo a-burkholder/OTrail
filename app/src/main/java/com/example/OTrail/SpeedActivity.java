@@ -37,23 +37,26 @@ public class SpeedActivity extends AppCompatActivity
                 {
                     case R.id.speedEasy:
                     {
-                        party.setSpeed(10);
+                        party.setPace("Easy");
                     }
                     break;
                     case R.id.speedMedium:
                     {
-                        party.setSpeed(12);
+                        party.setPace("Medium");
                     }
                     break;
                     case R.id.speedExtreme:
                     {
-                        party.setSpeed(15);
+                        party.setPace("Extreme");
                     }
                     break;
                     default:
                     {
-                        party.setSpeed(10);
+                        party.setPace("Easy");
                     }
+
+
+
                 }
 
                 Intent resultIntent = new Intent();

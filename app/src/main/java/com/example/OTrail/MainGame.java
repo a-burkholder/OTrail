@@ -188,13 +188,13 @@ public class MainGame extends AppCompatActivity {
 
                 //update food
                 if(inv.getFoodCount() > 0) {
-                    switch(party.getSpeed()){
-                        case 10:
+                    switch(party.getPace()){
+                        case "Easy":
                             inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;
-                        case 12:inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
+                        case "Medium":inv.setFoodCount(-party.getNumberOfPeopleAlive()*3);
                             break;
-                        case 15:inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
+                        case "Extreme":inv.setFoodCount(-party.getNumberOfPeopleAlive()*5);
                             break;
                         default:inv.setFoodCount(-party.getNumberOfPeopleAlive()*2);
                             break;

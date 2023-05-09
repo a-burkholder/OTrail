@@ -9,6 +9,7 @@
 package com.example.OTrail;
 
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Random;
 
 
@@ -20,7 +21,7 @@ public class Party implements Serializable
     private int health[] = {100, 100, 100, 100, 100};
     private static Party instance = null;
     private int speed = 10;
-
+    private String pace = "Easy";
     private boolean isAlive[] = {true, true, true, true, true};
     private boolean gameOver = false;
     private static Inventory inv;
@@ -223,8 +224,40 @@ public class Party implements Serializable
         this.isAlive = isAlive;
     }
 
-    /**
-     *
+    //Get Pace
+    public String getPace() {return pace;}
+
+    /**Set Pace
+     * Takes in the pace, then sets speed of cart based on selected pace
+     * Added to mitigate bugs wherein we judge events based on a switch statement of the speed (which doesn't work when modifying it like we are.
+     * @param pace0
+     */
+    public void setPace(String pace0)
+    {
+        this.pace = pace0;
+
+        if (Objects.equals(pace0, "Easy"))
+        {
+            setSpeed(10);
+        }
+        else if (Objects.equals(pace0, "Medium"))
+        {
+            setSpeed(12);
+        }
+        else if (Objects.equals(pace0, "Extreme"))
+        {
+            setSpeed(15);
+        }
+        else
+        {
+            setSpeed(10);
+        }
+    }
+
+
+
+    /**Set Speed
+     * Sets speed, modified based on how many oxen are in inventory
      * @param speed
      */
     public void setSpeed(int speed)
