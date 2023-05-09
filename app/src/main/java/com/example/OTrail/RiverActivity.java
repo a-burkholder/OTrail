@@ -32,14 +32,18 @@ public class RiverActivity extends AppCompatActivity
 
         final TextView textView92 = findViewById(R.id.textView92);
 
-       Button learn = (Button) findViewById(R.id.learn);
-       learn.setEnabled(true);
+        Button learn = (Button) findViewById(R.id.learn);
+        final int[] temp1 = {0};
        learn.setOnClickListener(new View.OnClickListener() {
            @Override
-           public void onClick(View view)
-           {
-               textView92.setText(event.riverCrossing(inv, 1));
-               learn.setEnabled(false);
+           public void onClick(View view) {
+               if(temp1[0] % 2 == 1) {
+                   textView92.setText("");
+               }
+               else {
+                   textView92.setText(event.riverCrossing(inv, 1));
+               }
+               temp1[0]++;
            }
        });
 
