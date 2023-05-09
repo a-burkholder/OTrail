@@ -12,12 +12,14 @@ public class OpenTrailInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //sets layout format
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trail_info);
 
+        //back button functionality
         Button backToTitleButton = (Button) findViewById(R.id.backToTitleButton);
         backToTitleButton.setOnClickListener(new View.OnClickListener() {
             @Override

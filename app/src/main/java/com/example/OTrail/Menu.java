@@ -12,6 +12,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 
+
+
+/*
+
+
+---------------DEPRECIATED/UNUSED---------------
+used for the MVP when it was only text based
+
+*/
+
 public class Menu {
     //Variables
     private Inventory inv;
@@ -22,8 +32,7 @@ public class Menu {
     /**
      * Default constructor for the Menu class.
      */
-    public Menu()
-    {
+    public Menu() {
 
     }
 
@@ -34,8 +43,7 @@ public class Menu {
      * @param map Map object for the game.
      * @param shop Shop object for the game.
      */
-    public Menu(Inventory inv, Party party, Map map, Shop shop)
-    {
+    public Menu(Inventory inv, Party party, Map map, Shop shop) {
         this.inv = inv;
         this.party = party;
         this.map = map;
@@ -46,8 +54,7 @@ public class Menu {
     /**Title Screen
      * Sets title screen
      */
-    public void titleScreen()
-    {
+    public void titleScreen() {
         System.out.println("[========================================================================]");
         System.out.println("""
                 ░▀▀█▀▀░█░░░░█▀▀░░░▒█▀▀▀█░█▀▀▄░█▀▀░█▀▀▀░▄▀▀▄░█▀▀▄░░░▀▀█▀▀░█▀▀▄░█▀▀▄░▀█▀░█░░
@@ -65,8 +72,7 @@ public class Menu {
      *      4. Choose Management Options
      *      5. End
      */
-    public void loadMainMenu()
-    {
+    public void loadMainMenu() {
         Scanner userIn = new Scanner(System.in); //Set up Scanner
         int userInput = 0;
         do {
@@ -119,8 +125,7 @@ public class Menu {
     /**Intro about trail
      * Short intro before main menu.
      */
-    public void introAboutTrail()
-    {
+    public void introAboutTrail() {
         System.out.println("""
                About the Oregon Trail:
                 The Oregon Trail was a legendary 2170 mile stretch of land from Independence, Missouri to Oregon City, Oregon.
@@ -136,8 +141,7 @@ public class Menu {
     /**Learn about Trail
      * Displays the "Learn about the trail" text to inform the user about the trail.
      */
-    public void learnAboutTrail()
-    {
+    public void learnAboutTrail() {
         System.out.println("""
                 About the Oregon Trail:
                  The Oregon Trail was a legendary 2170 mile stretch of land from Independence, Missouri to Oregon City, Oregon.
@@ -186,8 +190,7 @@ public class Menu {
     /**Learn about Hattie
      * Displays a picture of Hattie Campbell.
      */
-    public void learnAboutHattie()
-    {
+    public void learnAboutHattie() {
         System.out.println("""
                Hattie Campbell is a 13 year old pioneer, eldest child to Charles and Augusta Campbell,
                spending her time helping on the farm and keeping an eye on her two younger brothers.
@@ -216,8 +219,7 @@ public class Menu {
     /** Player Daily Choices
      * Blah Blah Blah
      */
-    public int playerDailyChoices(Map map)
-    {
+    public int playerDailyChoices(Map map) {
         Scanner in = new Scanner(System.in);
         int option = 1;
         System.out.println("What would you like to do? \n1. Continue on the trail. \n2. Check your supplies.");
@@ -252,16 +254,14 @@ public class Menu {
      * Y - display how points are earned, then return to main menu
      * n - return to main menu
      */
-    public void seeTopTen()
-    {
+    public void seeTopTen() {
         //display top 10 scores
         //tell them how to get a better score
     }
 
     /**Choose Management Options
      */
-    public void chooseManagementOptions()
-    {
+    public void chooseManagementOptions() {
         //See Current Top Ten List
         //     *      See Original Top Ten List
         //     *      Erase Current Top Ten List
@@ -277,8 +277,7 @@ public class Menu {
      * Asks the user if they are sure.
      * @return int[3] (the date: DAY, MONTH (int), YEAR)
      */
-    public int[] startDate()
-    {
+    public int[] startDate() {
         boolean validInput = false;
         int[] date = new int[3];
         System.out.println("""
@@ -344,8 +343,7 @@ public class Menu {
     /**Sets Names
      * Sets the inital names for the game.
      */
-    public void setNames()
-    {
+    public void setNames() {
         String names[] = new String[5];
         names[0] = "Hattie";
         Scanner in = new Scanner(System.in);
@@ -368,8 +366,7 @@ public class Menu {
      *      Provide descriptions for items available in the shop
      *      Provide hints for the trail.
      */
-    public void initialCash(int playerMoneyCount)
-    {
+    public void initialCash(int playerMoneyCount) {
         System.out.println("Every family has their own reason for leaving for Oregon, but our family is hoping to escape the overcrowding here in Louisiana.\nOur father, a banker, has stored us a healthy " + playerMoneyCount +  "$ for our trip... hopefully he spends it well.\nThe Clerk at the store told us to stock up on Oxen, Bullets, and medicine.\nWe were told only those with the speed of one hundred horses, the hunting spirit of Kit Carson, and plentiful medicine would make it to Oregon.\nHopefully his words hold true, but he wouldn't be the first to trying and swindle us out the last of our savings...");
         System.out.println("""
                You are about to visit the General Store, the cheapest shop along the oregon trail.   
@@ -395,14 +392,11 @@ public class Menu {
         System.out.println("[=========================================================================]");
     }
 
-
-
     /**Continue Class
      * Adds: "submit "0" to continue"
      * Once zero is submitted, code finishes.
      */
-    public void continu()
-    {
+    public void continu() {
         System.out.println("    Submit \"0\" to continue.");
         Scanner inContinu = new Scanner(System.in);    //Set up Scanner
         int input = 99;                          //initialize input
