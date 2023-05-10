@@ -1,3 +1,14 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Keefer McClure
+ * @since April 23, 2023
+ *
+ * Description: The BerryPickingMinigame class sets up a layout that allows the player to player the
+ * best mini game ever created, the berry picking mini game. This mini game has a count down timer and
+ * berries that the player must pick in a certain amount of time. This food will then be added to the
+ * players inventory.
+ */
+
 package com.example.OTrail;
 
 import android.annotation.SuppressLint;
@@ -7,7 +18,6 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.Window;
@@ -17,10 +27,6 @@ import java.util.Random;
 
 public class BerryPickingMinigame extends AppCompatActivity {
     public static final String RESULT = "com.example.OTrail.RESULT";
-    int miniGame;
-    private ImageButton button;
-    private TextView textView;
-    private EditText editText;
     private TextView score;
     private Inventory inv;
     int numOfBerryPicked = 0;
@@ -28,14 +34,13 @@ public class BerryPickingMinigame extends AppCompatActivity {
     int GAMETIME = 8; // how long the game runs for
     int GAMETIMEMS = GAMETIME * 1000;
     public double BERRY_DELAY = 0.6;  //seconds until berry re-appears.
-    int i = 0;
-    int food = 0;
-    private String output;
     private Boolean miniGameRunning = false;
     Random rand = new Random();
 
 
-
+    /**
+     * Default constructor for the BerryPickingMinigame class.
+     */
     public BerryPickingMinigame()
     {
     }
