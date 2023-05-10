@@ -1,13 +1,3 @@
-/**
- * Programming 2 Oregon Trail Project
- * @author Alexander Casada
- * @since March 28, 2023
- *
- * Description: This java Inventory class stores all the player's
- * items along the Oregon Trail that they will buy or use. This class
- * also can check to make sure the player's wagon will be able to
- * move along the Oregon Trail.
- */
 package com.example.OTrail;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.Serializable;
 import java.util.Random;
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada
+ * @since March 28, 2023
+ *
+ * Description: This java Inventory class stores all the player's
+ * items along the Oregon Trail that they will buy or use. This class
+ * also can check to make sure the player's wagon will be able to
+ * move along the Oregon Trail.
+ */
 public class InventoryActivity extends AppCompatActivity {
     private Inventory inv;
 

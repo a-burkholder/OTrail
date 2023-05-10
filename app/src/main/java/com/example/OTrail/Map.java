@@ -1,18 +1,14 @@
+package com.example.OTrail;
+import java.io.Serializable;
 /**
  * Programming 2 Oregon Trail Project
  * @author Alex Burkholder
  * @since March 30, 2023
  *
- * Description: The Map class stores all map data, including the distance from the start of the trail and all the various
- * locations and their data.
+ * Description: The Map class stores all map data. Specifically, it stores the
+ * location order, river status, shop status, last landmark, climate zone, and current position.
  */
-package com.example.OTrail;
-
-
-import java.io.Serializable;
-
-public class Map implements Serializable
-{
+public class Map implements Serializable {
     //--------Variables
     public static String[] LANDMARKS = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};
     private int[] distLMsToOrigin = {0, 102, 200, 250, 490, 830, 950, 1055, 1170, 1240, 1320, 1420, 1700, 1880, 1930, 2000, -1}; // distance from starting location in miles

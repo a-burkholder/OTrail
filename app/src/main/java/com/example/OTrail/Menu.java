@@ -1,3 +1,13 @@
+package com.example.OTrail;
+import java.util.Random;
+import java.util.Scanner;
+/*
+
+
+---------------DEPRECIATED/UNUSED---------------
+used for the MVP when it was only text based
+
+*/
 /**
  * Programming 2 Oregon Trail Project
  * @author Keefer McClure
@@ -6,22 +16,6 @@
  * Description: The Menu class contains the text based Oregon Trail information and user inputs for all the different menu
  * choices that the user can make in the Oregon Trail game.
  */
-package com.example.OTrail;
-
-import java.util.Random;
-import java.util.Scanner;
-
-
-
-
-/*
-
-
----------------DEPRECIATED/UNUSED---------------
-used for the MVP when it was only text based
-
-*/
-
 public class Menu {
     //Variables
     private Inventory inv;
