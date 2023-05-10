@@ -1,15 +1,11 @@
 package com.example.OTrail;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-
 /*
 
 
@@ -18,7 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-* */
+
+*/
+
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alex Burkholder
+ * @since April 30, 2023
+ *
+ * Description: EventActivity was a notification event to pull up a new screen if an event occurred.
+ * it was later decommissioned in favor of pop up notifications.
+ */
 public class EventActivity extends AppCompatActivity
 {
     public static final String POST_EVENT_INV = "com.example.OTrail.POST_EVENT_INV";

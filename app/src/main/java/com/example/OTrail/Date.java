@@ -1,15 +1,13 @@
+package com.example.OTrail;
+import java.io.Serializable;
+import java.util.Random;
 /**
  * ECCS: Programming 2 Oregon Trail Project
  * @author Alexnader Burkholder
- * @since March 28, 2023
+ * @since March 30, 2023
  *
  * Description: This class stores date data and does all daily calculations for weather and climate
  */
-package com.example.OTrail;
-
-import java.io.Serializable;
-import java.util.Random;
-
 public class Date implements Serializable {
     Random rand = new Random();
     //-------------variables
