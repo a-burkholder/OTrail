@@ -1,3 +1,13 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada
+ * @since April 30, 2023
+ *
+ * Description: This class allows the player to change the speed that they travel at. They can travel
+ * at a speed of EASY, MEDIUM, or EXTREME. For each of these speeds the player's party will move at
+ * 10 miles, 12 miles, or 15 miles a day respectively. Additionally, the faster your party travels,
+ * the more food you will use.
+ */
 package com.example.OTrail;
 
 import android.content.Intent;
@@ -55,8 +65,6 @@ public class SpeedActivity extends AppCompatActivity
                     {
                         party.setPace("Easy");
                     }
-
-
 
                 }
 

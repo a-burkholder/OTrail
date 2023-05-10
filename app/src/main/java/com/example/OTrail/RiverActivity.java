@@ -1,3 +1,13 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada and Alexander Burkholder
+ * @since April 20, 2023
+ *
+ * Description: This RiverActivity class allows the player to interact with the river crossings. They
+ * can choose to learn about the river which tells them its height and width, they can cross the river
+ * on a ferry for $75, or they can try to cross without a ferry and risk their wagon and items.
+ */
+
 package com.example.OTrail;
 
 import android.content.Intent;

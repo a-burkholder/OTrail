@@ -231,8 +231,6 @@ public class Shop extends AppCompatActivity {
                             default:
                         }
                         moneyUsed = moneyUsed + basketPurchased * BASKETPRICE;
-                        System.out.println(moneyUsed);
-                        System.out.println(basketPurchased);
                     }
                     break;
                     case R.id.buyOxen: {
@@ -452,7 +450,6 @@ public class Shop extends AppCompatActivity {
      */
     public void resetItems ()
     {
-        System.out.println(oxenPurchased);
         if (inv.getPlayerMoneyCount() >= moneyUsed) {
             inv.setPlayerMoneyCount((int) -moneyUsed);
             inv.setFoodCount(foodPurchased);
