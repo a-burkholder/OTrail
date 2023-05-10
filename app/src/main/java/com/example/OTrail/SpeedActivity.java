@@ -46,23 +46,19 @@ public class SpeedActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 switch(speedRadioGroup.getCheckedRadioButtonId()) {
-                    case R.id.speedEasy:
-                    {
+                    case R.id.speedEasy: {
                         party.setPace("Easy");
                     }
                     break;
-                    case R.id.speedMedium:
-                    {
+                    case R.id.speedMedium: {
                         party.setPace("Medium");
                     }
                     break;
-                    case R.id.speedExtreme:
-                    {
+                    case R.id.speedExtreme: {
                         party.setPace("Extreme");
                     }
                     break;
-                    default:
-                    {
+                    default: {
                         party.setPace("Easy");
                     }
 

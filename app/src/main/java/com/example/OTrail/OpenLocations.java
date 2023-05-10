@@ -1,3 +1,12 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Burkholder
+ * @since April 26, 2023
+ *
+ * Description: The OpenLocations class sets up a layout that displays historically accurate information
+ * about each of the important landmarks along the trail to help improve the educational value of playing
+ * the game.
+ */
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,3 +1,11 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Burkholder and Alexander Casada
+ * @since April 13, 2023
+ *
+ * Description: The OpenTrailInfo class sets up a layout that allows the player to learn more about
+ * the Oregon Trail at the start of the game.
+ */
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;

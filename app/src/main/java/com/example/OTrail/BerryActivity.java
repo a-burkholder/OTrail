@@ -1,3 +1,11 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Burkholder
+ * @since April 23, 2023
+ *
+ * Description: The BerryActivity class sets up a layout that allows the player to choose to play the
+ * berry picking mini game. This also displays information to them about how to play the mini game.
+ */
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;

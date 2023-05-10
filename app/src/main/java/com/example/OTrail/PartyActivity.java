@@ -1,3 +1,12 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada
+ * @since April 22, 2023
+ *
+ * Description: The PartyActivity class sets up a layout that allows the player to see all party members
+ * individual health, and also see if they are alive of dead.
+ */
+
 package com.example.OTrail;
 
 import android.content.Intent;
@@ -16,6 +25,9 @@ public class PartyActivity extends AppCompatActivity
     private String names[] = {"", "", "", "", ""};
     private int health[] = {100, 100, 100, 100, 100};
 
+    /**
+     * Default constructor for PartyActivity.
+     */
     public PartyActivity() {
 
     }

@@ -1,3 +1,12 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Burkholder
+ * @since May 2, 2023
+ *
+ * Description: The OpenTrades class sets up a layout that allows the player to trade with the
+ * legend Kento Akazawa.
+ */
+
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;

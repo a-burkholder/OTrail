@@ -25,14 +25,16 @@ public class RiverActivity extends AppCompatActivity
     public static final String POST_RIVER_EVENT = "com.example.OTrail.POST_RIVER_EVENT";
 
 
-
+    /**
+     * Default class constructor.
+     */
     public RiverActivity() {
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //sets layout stuff
+        //Sets the river activity layout.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rivercrossing);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -49,6 +51,7 @@ public class RiverActivity extends AppCompatActivity
         Button learn = (Button) findViewById(R.id.learn);
         final int[] temp1 = {0};
 
+        // learn about the river button
        learn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {

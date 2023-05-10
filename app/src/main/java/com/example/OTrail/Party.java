@@ -1,6 +1,6 @@
 /**
  * ECCS: Programming 2 Oregon Trail Project
- * @author Alexander Casada
+ * @author Alexander Casada and Alexander Burkholder
  * @since March 29, 2023
  *
  * Description: This java Party class stores all the names that are given to Hattie's 3 family members and
@@ -16,7 +16,9 @@ import java.util.Random;
 public class Party implements Serializable {
     private String difficulty[] = {"Easy", "Medium", "Hard", "Hardcore"};
     private String currentDifficulty = "Easy";
-    private String names[] = new String[5]; // five people and the pet
+
+    // four people and the pet
+    private String names[] = new String[5];
     private int health[] = {100, 100, 100, 100, 100};
     private static Party instance = null;
     private int speed = 10;
@@ -28,7 +30,16 @@ public class Party implements Serializable {
     private Random rand;
 
     /**
-     * Default constructor for the Inventory class.
+     * Default constructor for the Inventory.
+     */
+    public Party() {
+        rand = new Random();
+    }
+
+    /**
+     * Constructor for the Party class.
+     * @param inv is the inventory object that stores all the users items.
+     * @param names is the names of the members of the player's party.
      */
     public Party(Inventory inv, String names[]) {
         this.inv = inv;
@@ -73,10 +84,8 @@ public class Party implements Serializable {
      * */
     public int getNumberOfPeopleAlive() {
         int playersAlive = 0;
-        for(int i = 0;  i < 5; i++)
-        {
-            if(health[i] > 0)
-            {
+        for(int i = 0;  i < 5; i++) {
+            if(health[i] > 0) {
                 playersAlive++;
             }
         }
@@ -108,12 +117,10 @@ public class Party implements Serializable {
      * @return False if all the players are living and true if they are all dead.
      */
     public boolean getGameOverStatus() {
-        if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4])
-        {
+        if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4]) {
             gameOver = false;
         }
-        else
-        {
+        else {
             gameOver = true;
         }
         return gameOver;
@@ -125,12 +132,10 @@ public class Party implements Serializable {
      * @return true if someone is alive
      * */
     public boolean getAtLeastSomeoneAlive() {
-        if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4])
-        {
+        if(isAlive[0] || isAlive[1] || isAlive[2] || isAlive[3] || isAlive[4]) {
             return true;
         }
-        else
-        {
+        else {
             return false;
         }
     }
@@ -165,59 +170,48 @@ public class Party implements Serializable {
         int numberDead = 0;
         int numberAt100 = 0;
 
-        while (runLoop && healthAway < 0)
-        {
+        while (runLoop && healthAway < 0) {
             randomValue = rand.nextInt(5);
 
-            if(health[randomValue] > 0)
-            {
+            if(health[randomValue] > 0) {
                 health[randomValue] = health[randomValue] + healthAway;
 
-                if(health[randomValue] < 0)
-                {
+                if(health[randomValue] < 0) {
                     health[randomValue] = 0;
                 }
                 runLoop = false;
             }
-            else
-            {
+            else {
                 numberDead++;
             }
 
-            if(numberDead == 5)
-            {
+            if(numberDead == 5) {
                 gameOver = true;
                 runLoop = false;
 
             }
         }
 
-        while (runLoop && healthAway < 100 && healthAway > 0)
-        {
+        while (runLoop && healthAway < 100 && healthAway > 0) {
             randomValue = rand.nextInt(5);
 
-            if(health[randomValue] < 100 && health[randomValue] > 0)
-            {
+            if(health[randomValue] < 100 && health[randomValue] > 0) {
                 health[randomValue] = health[randomValue] + healthAway;
 
-                if(health[randomValue] > 100)
-                {
+                if(health[randomValue] > 100) {
                     health[randomValue] = 100;
                 }
 
-                if(health[randomValue] < 0)
-                {
+                if(health[randomValue] < 0) {
                     health[randomValue] = 0;
                 }
                 runLoop = false;
             }
-            else
-            {
+            else {
                 numberAt100++;
             }
 
-            if(numberAt100 == 5)
-            {
+            if(numberAt100 == 5) {
                 runLoop = false;
 
             }
@@ -249,20 +243,16 @@ public class Party implements Serializable {
     public void setPace(String pace0) {
         this.pace = pace0;
 
-        if (Objects.equals(pace0, "Easy"))
-        {
+        if (Objects.equals(pace0, "Easy")) {
             setSpeed(10);
         }
-        else if (Objects.equals(pace0, "Medium"))
-        {
+        else if (Objects.equals(pace0, "Medium")) {
             setSpeed(12);
         }
-        else if (Objects.equals(pace0, "Extreme"))
-        {
+        else if (Objects.equals(pace0, "Extreme")) {
             setSpeed(15);
         }
-        else
-        {
+        else {
             setSpeed(10);
         }
     }
@@ -313,41 +303,34 @@ public class Party implements Serializable {
     public void dailyFoodUsed(Inventory thisInv) {
         int counter = 0;
 
-        for(boolean needsFood : isAlive)
-        {
-            if(needsFood)
-            {
+        for(boolean needsFood : isAlive) {
+            if(needsFood) {
                 counter++;
             }
         }
 
         // negative because the people will use food each day and each individual eats 3 pounds a day
-        if (thisInv.getFoodCount() > 0)
-        {
+        if (thisInv.getFoodCount() > 0) {
             thisInv.setFoodCount(-1*counter*3);
         }
-        else if (thisInv.getFoodCount() == 0)
-        {
+        else if (thisInv.getFoodCount() == 0) {
             Random rand = new Random();
 
             int player = 0;
 
-            do
-            {
+            do {
                 player = rand.nextInt(5);
 
             }while(!isAlive[player]);
 
             health[player] = health[player] - 10;
 
-            if(health[player] <= 0)
-            {
+            if(health[player] <= 0) {
                 isAlive[player] = false;
                 System.out.println(names[player] + " is dead!");
             }
         }
-        else
-        {
+        else {
             thisInv.setFoodCount(0);
         }
 
@@ -357,10 +340,8 @@ public class Party implements Serializable {
      * Prints out the health of Hattie and her family members/pet.
      */
     public void printAllPeoplesHealth() {
-        for(int i = 0; i < names.length; i++)
-        {
-            if(health[i] > 0)
-            {
+        for(int i = 0; i < names.length; i++) {
+            if(health[i] > 0) {
                 System.out.println(names[i] + " has a health of " + health[i] + ".");
             }
         }
@@ -368,8 +349,7 @@ public class Party implements Serializable {
 
 
     public static Party getInstance(Inventory inv, String names[]) {
-        if(instance == null)
-        {
+        if(instance == null) {
             instance = new Party(inv, names);
         }
         return instance;
