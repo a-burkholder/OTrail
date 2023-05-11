@@ -48,16 +48,6 @@ public class BerryPickingMinigame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         inv = (Inventory)getIntent().getSerializableExtra(BerryActivity.BERRY_TITLE_TO_GAME);
 
-
-
-
-        /*if(inv.getBasketCount() == 0)
-        {
-            Intent intent = new Intent(BerryPickingMinigame.this, MainGame.class);
-            intent.putExtra(RESULT, inv);
-            startActivity(intent);
-        }
-*/
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
