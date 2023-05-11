@@ -1,12 +1,3 @@
-package com.example.OTrail;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.view.View;
 /**
  * ECCS: Programming 2 Oregon Trail Project
  * @author Alexnader Burkholder
@@ -18,6 +9,17 @@ import android.view.View;
  * Description: This class Deals with all the extra options before actually getting into a game.
  * It deals with title screens, credits, and info about the Oregon Trail.
  */
+
+package com.example.OTrail;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.view.View;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

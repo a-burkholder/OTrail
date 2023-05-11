@@ -25,7 +25,6 @@ import android.widget.TextView;
 
 public class Shop extends AppCompatActivity {
     public static final String POST_SHOP = "com.example.OTrail.POST_SHOP";
-
     private int playerMoneyCount = 0;
     private int foodPurchased = 0;
     private int clothingPurchased = 0;
@@ -421,14 +420,11 @@ public class Shop extends AppCompatActivity {
                 if (inv.getPlayerMoneyCount() >= moneyUsed) {
                     resetItems();
                 }
-                else
-                {
+                else {
                     textView89.setText("Not Enough Money");
 
                 }
                 moneyAmount.setText("Money: $" + String.valueOf(inv.getPlayerMoneyCount()));
-
-
             }
         });
 
@@ -470,7 +466,8 @@ public class Shop extends AppCompatActivity {
             wagonTonguePurchased = 0;
             medicalSupplyPurchased = 0;
             moneyUsed = 0;
-        } else {
+        }
+        else {
             inv.setPlayerMoneyCount((int)playerMoneyCount);
         }
     }

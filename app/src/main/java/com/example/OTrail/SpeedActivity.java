@@ -8,6 +8,7 @@
  * 10 miles, 12 miles, or 15 miles a day respectively. Additionally, the faster your party travels,
  * the more food you will use.
  */
+
 package com.example.OTrail;
 
 import android.content.Intent;
@@ -16,8 +17,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SpeedActivity extends AppCompatActivity
@@ -61,7 +60,6 @@ public class SpeedActivity extends AppCompatActivity
                     default: {
                         party.setPace("Easy");
                     }
-
                 }
 
                 Intent resultIntent = new Intent();

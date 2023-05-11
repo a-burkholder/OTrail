@@ -22,15 +22,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RiverActivity extends AppCompatActivity
 {
     public static final String POST_RIVER_INV = "com.example.OTrail.POST_RIVER_INV";
-    public static final String POST_RIVER_EVENT = "com.example.OTrail.POST_RIVER_EVENT";
-
 
     /**
      * Default class constructor.
      */
-    public RiverActivity() {
-
-    }
+    public RiverActivity() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

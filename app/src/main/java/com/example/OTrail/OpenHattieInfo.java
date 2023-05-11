@@ -1,3 +1,13 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada
+ * @author Alexander Burkholder
+ * @since April 13, 2023
+ *
+ * Description: OpenHattieInfo allows someone to open a new layout and
+ * view educational information about our main character, Hattie Campbell
+ */
+
 package com.example.OTrail;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,16 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
-/**
- * Programming 2 Oregon Trail Project
- * @author Alex Casada
- * @author Alexander Burkholder
- * @since April 13, 2023
- *
- * Description: OpenHattieInfo allows someone to open a new layout and
- * view educational information about our main character, Hattie Campbell
- */
+
 public class OpenHattieInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

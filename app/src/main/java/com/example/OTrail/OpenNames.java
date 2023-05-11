@@ -6,6 +6,7 @@
  * Description: The OpenNames class sets up a layout that allows the player to enter names for the
  * four family member that are on the trail with Hattie, and their family pet.
  */
+
 package com.example.OTrail;
 
 import androidx.appcompat.app.AppCompatActivity;

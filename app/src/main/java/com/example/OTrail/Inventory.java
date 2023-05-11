@@ -1,14 +1,16 @@
-package com.example.OTrail;
-import java.io.Serializable;
-import java.util.Random;
 /**
  * Programming 2 Oregon Trail Project
- * @author Alex Casada
+ * @author Alexander Casada
  * @since March 30, 2023
  *
  * Description: The Map class stores all map data. Specifically, it stores the
  * location order, river status, shop status, last landmark, climate zone, and current position.
  */
+
+package com.example.OTrail;
+import java.io.Serializable;
+import java.util.Random;
+
 public class Inventory implements Serializable {
     private int playerMoneyCount = 1600;
     private int foodCount = 0;

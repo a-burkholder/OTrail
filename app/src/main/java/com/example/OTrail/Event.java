@@ -1,9 +1,3 @@
-package com.example.OTrail;
-import android.content.Intent;
-
-import java.io.Serializable;
-import java.util.Random;
-import java.util.Scanner;
 /**
  * ECCS: Programming 2 Oregon Trail Project
  * @author Aaron Guzman
@@ -11,6 +5,14 @@ import java.util.Scanner;
  *
  * Description: This Event class will randomly generate random events throughout the game and update the player's items.
  */
+
+package com.example.OTrail;
+import android.content.Intent;
+
+import java.io.Serializable;
+import java.util.Random;
+import java.util.Scanner;
+
 public class Event implements Serializable
 {
     //-------------variables

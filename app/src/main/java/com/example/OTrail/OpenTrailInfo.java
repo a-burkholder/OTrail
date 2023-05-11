@@ -1,6 +1,7 @@
 /**
  * Programming 2 Oregon Trail Project
- * @author Alexander Burkholder and Alexander Casada
+ * @author Alexander Burkholder
+ * @author Alexander Casada
  * @since April 13, 2023
  *
  * Description: The OpenTrailInfo class sets up a layout that allows the player to learn more about

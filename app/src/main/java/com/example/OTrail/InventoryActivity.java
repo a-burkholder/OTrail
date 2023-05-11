@@ -1,15 +1,3 @@
-package com.example.OTrail;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.Serializable;
-import java.util.Random;
 /**
  * Programming 2 Oregon Trail Project
  * @author Alexander Casada
@@ -20,6 +8,15 @@ import java.util.Random;
  * also can check to make sure the player's wagon will be able to
  * move along the Oregon Trail.
  */
+
+package com.example.OTrail;
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class InventoryActivity extends AppCompatActivity {
     private Inventory inv;
 

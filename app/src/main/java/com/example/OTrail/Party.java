@@ -1,11 +1,13 @@
 /**
  * ECCS: Programming 2 Oregon Trail Project
- * @author Alexander Casada and Alexander Burkholder
+ * @author Alexander Casada
+ * @author Alexander Burkholder
  * @since March 29, 2023
  *
  * Description: This java Party class stores all the names that are given to Hattie's 3 family members and
  * her pet, along with their current health, if they are dead of alive, and if they have won the game or not.
  */
+
 package com.example.OTrail;
 
 import java.io.Serializable;
@@ -347,7 +349,12 @@ public class Party implements Serializable {
         }
     }
 
-
+    /**
+     * Checks whether the instance is null. If the instance is null a new object is created.
+     * @param inv is the inventory object.
+     * @param names are the names of the party members.
+     * @return
+     */
     public static Party getInstance(Inventory inv, String names[]) {
         if(instance == null) {
             instance = new Party(inv, names);

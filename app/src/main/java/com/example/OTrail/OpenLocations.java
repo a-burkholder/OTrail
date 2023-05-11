@@ -7,8 +7,8 @@
  * about each of the important landmarks along the trail to help improve the educational value of playing
  * the game.
  */
-package com.example.OTrail;
 
+package com.example.OTrail;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
