@@ -44,7 +44,7 @@ public class BerryActivity extends AppCompatActivity {
         inv = (Inventory) getIntent().getSerializableExtra(MainGame.GAME_INV);
 
 
-        //cont button
+        //Continue button on title screen
         Button startGame = (Button)findViewById(R.id.startGame);
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
