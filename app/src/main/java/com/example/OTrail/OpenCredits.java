@@ -1,3 +1,13 @@
+/**
+ * Programming 2 Oregon Trail Project
+ * @author Alexander Casada
+ * @since April 23, 2023
+ *
+ * Description: OpenCredits is the layout that displays the sources of all
+ * images and information used in the production of the game. It has 5 different pages to view,
+ * each with fully unique sources
+ */
+
 package com.example.OTrail;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,15 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-/**
- * Programming 2 Oregon Trail Project
- * @author Alex Casada
- * @since April 23, 2023
- *
- * Description: OpenCredits is the layout that displays the sources of all
- * images and information used in the production of the game. It has 5 different pages to view,
- * each with fully unique sources
- */
+
 public class OpenCredits extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

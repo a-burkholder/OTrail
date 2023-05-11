@@ -33,9 +33,6 @@
             android:name=".SpeedActivity"
             android:exported="false" />
         <activity
-            android:name=".EventActivity"
-            android:exported="false" />
-        <activity
             android:name=".OpenHattieInfo"
             android:exported="false" />
         <activity

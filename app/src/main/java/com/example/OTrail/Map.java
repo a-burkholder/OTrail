@@ -1,5 +1,3 @@
-package com.example.OTrail;
-import java.io.Serializable;
 /**
  * Programming 2 Oregon Trail Project
  * @author Alex Burkholder
@@ -8,6 +6,10 @@ import java.io.Serializable;
  * Description: The Map class stores all map data. Specifically, it stores the
  * location order, river status, shop status, last landmark, climate zone, and current position.
  */
+
+package com.example.OTrail;
+import java.io.Serializable;
+
 public class Map implements Serializable {
     //--------Variables
     public static String[] LANDMARKS = {"Independence, Missouri", "Kansas River Crossing", "Big Blue River Crossing", "Fort Kearny", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger" , "Green River", "Soda Springs", "Fort Hall", "Snake River", "Blue Mountains", "The Dalles", "Oregon City"};

@@ -1,17 +1,3 @@
-package com.example.OTrail;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Arrays;
 /**
  * Programming 2 Oregon Trail Project
  * @author Alexander Burkholder
@@ -20,6 +6,18 @@ import java.util.Arrays;
  * Description: OpenDate sets a new screen to grab a date. This date is then
  * serialized and passed to the main game loop, where it is the starting date of the game.
  */
+
+package com.example.OTrail;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.RadioGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 public class OpenDate extends AppCompatActivity {
     public static final String START_DATE = "com.example.OTrail.START_DATE";
     public static final String NAMES2 = "com.example.OTrail.NAMES2";

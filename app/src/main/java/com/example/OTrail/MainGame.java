@@ -1,3 +1,16 @@
+/**
+ * ECCS: Programming 2 Oregon Trail Project
+ * @author Alexnader Burkholder
+ * @author Alex Casada
+ * @author Aaron Guzman
+ * @author Keefer McClure
+ * @since April 14, 2023
+ *
+ * Description: This class acts as the main loop for the game. All data flows to and from here,
+ * as it is where all the data is stored. Different functions for different buttons allow
+ * this class to do all necessary things from the start of the game to the end of it.
+ */
+
 package com.example.OTrail;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,18 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
-/**
- * ECCS: Programming 2 Oregon Trail Project
- * @author Alexnader Burkholder
- * @author Alex Casada
- * @author Aaron Guzman
- * @author Keefer McClure
- * @since April 14, 2023
- *
- * Description: This class acts as the main loop for the game. All data flows to and from here,
- * as it is where all the data is stored. Different functions for different buttons allow
- * this class to do all necessary things from the start of the game to the end of it.
- */
+
 public class MainGame extends AppCompatActivity {
     public static final String GAME_MAP = "com.example.OTrail.GAME_MAP";
     public static final String GAME_INV = "com.example.OTrail.GAME_INV";
@@ -462,7 +464,7 @@ public class MainGame extends AppCompatActivity {
                         }
                     }
 
-                    //increment weather / terrian if needed.
+                    //increment weather / terrain if needed.
                     map.setClimateZone();
                     date.setWeather(map.getClimate());
                     date.setTemp(map.getClimate());
@@ -486,7 +488,6 @@ public class MainGame extends AppCompatActivity {
                     else {
                         foodDisplay.setText(" " + inv.getFoodCount());
                     }
-
 
                     //updates the weather icons
                     switch (date.getWeather()){

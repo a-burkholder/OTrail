@@ -1,6 +1,3 @@
-package com.example.OTrail;
-import java.io.Serializable;
-import java.util.Random;
 /**
  * ECCS: Programming 2 Oregon Trail Project
  * @author Alexnader Burkholder
@@ -8,6 +5,11 @@ import java.util.Random;
  *
  * Description: This class stores date data and does all daily calculations for weather and climate
  */
+
+package com.example.OTrail;
+import java.io.Serializable;
+import java.util.Random;
+
 public class Date implements Serializable {
     Random rand = new Random();
     //-------------variables
@@ -16,7 +18,6 @@ public class Date implements Serializable {
     private int[] lastRain;
     private String currentWeather;
     private int currentTemp;
-    private String currentGrass;
 
     //numbers taken from online historical data
     private int[][] avgTemps = {
@@ -64,8 +65,7 @@ public class Date implements Serializable {
 
     public static Date getInstance(int[] startDate)
     {
-        if(instance == null)
-        {
+        if(instance == null) {
             instance = new Date(startDate);
         }
         return instance;
@@ -112,14 +112,6 @@ public class Date implements Serializable {
      * */
     public int getTemp() {
         return this.currentTemp;
-    }
-
-    /**getGrass()
-     *<br>The easy way to get the grass conditions
-     * @return The grass condition as a string
-     * */
-    public String getGrass() {
-        return this.currentGrass;
     }
 
     /**getLastRain()
@@ -240,12 +232,5 @@ public class Date implements Serializable {
      * */
     public String toString(){
         return Integer.toString(date[0]) + "/" + Integer.toString(date[1]) + "/" + Integer.toString(date[2]);
-    }
-
-    /**printDate()
-     * <br>Prints the date with the current month, day, and year.
-     */
-    public void printDate() {
-        System.out.println("The current data is " + date[1] + "/" + date[0] + "/" + date[2] + ".");
     }
 }
